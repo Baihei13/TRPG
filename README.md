@@ -27,7 +27,7 @@ wang-pf2e-homebrew/
 在 Foundry **安装模块** → 粘贴清单地址：
 
 ```
-https://raw.githubusercontent.com/Baihei13/ziyong/main/module.json
+https://raw.githubusercontent.com/Baihei13/TRPG/main/module.json
 ```
 
 之后有更新时，在模块管理里点「检查更新」即可。
