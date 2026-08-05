@@ -8,9 +8,9 @@
       "name": "Wang"
     }
   ],
-  "url": "https://github.com/Baihei13/wang-pf2e-homebrew",
-  "manifest": "https://raw.githubusercontent.com/Baihei13/wang-pf2e-homebrew/main/module.json",
-  "download": "https://github.com/Baihei13/wang-pf2e-homebrew/archive/refs/heads/main.zip",
+  "url": "https://github.com/Baihei13/ziyong",
+  "manifest": "https://raw.githubusercontent.com/Baihei13/ziyong/main/module.json",
+  "download": "https://github.com/Baihei13/ziyong/archive/refs/heads/main.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
