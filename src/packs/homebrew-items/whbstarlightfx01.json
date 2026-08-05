@@ -1,0 +1,42 @@
+{
+  "_id": "whbstarlightfx01",
+  "name": "星月幻影",
+  "type": "effect",
+  "img": "icons/magic/light/orb-hands-humanoid-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>星月仿制卡牌捏碎后迸发的幻象。你免疫 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧} 状态。</p>",
+      "gm": "<p>配合「星月仿制品（低阶）」使用，持续 1 分钟。</p>"
+    },
+    "rules": [
+      {
+        "key": "Immunity",
+        "type": "frightened"
+      }
+    ],
+    "slug": "star-moon-phantasm",
+    "traits": {
+      "value": ["magical", "illusion"],
+      "rarity": "uncommon",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 5 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "pairedItem": "whbstarcardlow01" }
+  }
+}

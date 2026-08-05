@@ -1,0 +1,138 @@
+{
+  "id": "wang-pf2e-homebrew",
+  "title": "PF2e 自制合集 (Wang Homebrew)",
+  "description": "<p>PF2e 自制物品、NPC、宏与设定日志。<strong>以后新增的 homebrew 请放在本模块的合集与 src 目录中。</strong>含塔罗、「魔裁」商店，以及汉化 lore 日志（如《园丁日记》）。</p>",
+  "version": "1.8.2",
+  "authors": [
+    {
+      "name": "Wang"
+    }
+  ],
+  "url": "https://github.com/Baihei13/wang-pf2e-homebrew",
+  "manifest": "https://raw.githubusercontent.com/Baihei13/wang-pf2e-homebrew/main/module.json",
+  "download": "https://github.com/Baihei13/wang-pf2e-homebrew/archive/refs/heads/main.zip",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "systems": ["pf2e"],
+  "relationships": {
+    "requires": [
+      {
+        "id": "pf2e",
+        "type": "system"
+      }
+    ],
+    "recommends": [
+      {
+        "id": "ephemera",
+        "type": "module",
+        "compatibility": {
+          "minimum": "1.0.0"
+        }
+      }
+    ]
+  },
+  "esmodules": ["scripts/homebrew-automation.mjs"],
+  "styles": ["styles/homebrew-journals.css"],
+  "packs": [
+    {
+      "name": "homebrew-items",
+      "label": "PF2e 自制物品",
+      "path": "packs/homebrew-items",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "GAMEMASTER": "OWNER",
+        "ASSISTANT": "OWNER",
+        "TRUSTED": "OBSERVER",
+        "PLAYER": "OBSERVER"
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "description": "所有自制 Item 的正式存放位置"
+        }
+      }
+    },
+    {
+      "name": "mocai",
+      "label": "魔裁",
+      "path": "packs/mocai",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "GAMEMASTER": "OWNER",
+        "ASSISTANT": "OWNER",
+        "TRUSTED": "OBSERVER",
+        "PLAYER": "OBSERVER"
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "description": "魔女审判 · 黑白熊商店与校规道具（仅描述）"
+        }
+      }
+    },
+    {
+      "name": "homebrew-actors",
+      "label": "PF2e 自制怪物与 NPC",
+      "path": "packs/homebrew-actors",
+      "type": "Actor",
+      "system": "pf2e",
+      "ownership": {
+        "GAMEMASTER": "OWNER",
+        "ASSISTANT": "OWNER",
+        "TRUSTED": "OBSERVER",
+        "PLAYER": "OBSERVER"
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "description": "《再见教父》怪物与 NPC（1 级团强度）"
+        }
+      }
+    },
+    {
+      "name": "homebrew-macros",
+      "label": "PF2e 自制宏",
+      "path": "packs/homebrew-macros",
+      "type": "Macro",
+      "ownership": {
+        "GAMEMASTER": "OWNER",
+        "ASSISTANT": "OWNER",
+        "TRUSTED": "OBSERVER",
+        "PLAYER": "OBSERVER"
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "description": "诊断/修复/导入等工具宏"
+        }
+      }
+    },
+    {
+      "name": "homebrew-journals",
+      "label": "PF2e 自制日志",
+      "path": "packs/homebrew-journals",
+      "type": "JournalEntry",
+      "ownership": {
+        "GAMEMASTER": "OWNER",
+        "ASSISTANT": "OWNER",
+        "TRUSTED": "OBSERVER",
+        "PLAYER": "OBSERVER"
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "description": "汉化 lore / 手账 / 设定文档"
+        }
+      }
+    }
+  ],
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "PF2e homebrew 物品与脚本的统一模块",
+      "addNewItemsTo": "src/packs/homebrew-items/",
+      "addNewMocaiItemsTo": "src/packs/mocai/",
+      "addNewActorsTo": "src/packs/homebrew-actors/",
+      "addNewMacrosTo": "src/packs/homebrew-macros/",
+      "addNewJournalsTo": "src/packs/homebrew-journals/"
+    }
+  }
+}

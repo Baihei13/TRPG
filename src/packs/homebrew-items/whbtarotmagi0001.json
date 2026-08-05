@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotmagi0001",
+  "name": "I · 魔术师",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/01-tarot-the-magician.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>I · 魔术师</strong>（Magician）</p>\n<p><strong>获取</strong>：法术教室魔力回路（用魔力触碰显现）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在法术教室，消耗至少 5 点魔力一次性注入卡牌，使卡牌悬浮在空中。</p>\n<p><strong>正位效果</strong></p>\n<p>卡牌化作一枚魔力结晶镶嵌在你身上。接下来 48 小时内，你使用魔法时魔力消耗减半。结晶效果结束后自动碎裂，不产生污染。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在你魔力为空（0 点）的状态下，将卡牌贴在自己额头上，用 1 点生命值激活。</p>\n<p><strong>逆位效果</strong></p>\n<p>你获得透支魔力的能力——接下来 24 小时内，你可以无限使用魔法（仍需消耗魔力，但魔力消耗完后自动从生命值扣除，不造成昏迷但累积到生命值过半时仍昏迷）。在此期间每次使用魔法污染值获取概率翻倍。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-magician",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "I",
+      "english": "Magician",
+      "number": "01"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_id": "whbJiuliImp00001",
+  "name": "导入：妖刀·隐里切（全档位）",
+  "type": "script",
+  "img": "icons/svg/chest.svg",
+  "scope": "global",
+  "command": "const pack = game.packs.get(\"wang-pf2e-homebrew.homebrew-items\");\nif (!pack) return ui.notifications.error(\"找不到合集，请确认模块已启用。\");\nconst ids = [\"whbJiuliLsr00001\", \"whbJiuliMod00001\", \"whbJiuliGtr00001\", \"whbJiuliSated001\", \"whbJiuliParryA01\", \"whbJiuliEnticA01\"];\nconst docs = [];\nfor (const id of ids) {\n  const d = await pack.getDocument(id);\n  if (d) docs.push(d.toObject());\n}\nif (!docs.length) return ui.notifications.error(\"合集中未找到妖刀条目，请先运行 npm run pack。\");\nawait Item.createDocuments(docs);\nui.notifications.info(`已导入 ${docs.length} 个「妖刀·隐里切」相关条目到物品目录。`);",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "jiuli-katana-import" }
+  }
+}

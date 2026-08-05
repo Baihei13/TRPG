@@ -1,0 +1,340 @@
+{
+  "_id": "whbshuoshufrnk01",
+  "folder": "whbfolderNpc0001",
+  "name": "硕鼠·弗兰克",
+  "type": "npc",
+  "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+  "items": [
+    {
+      "_id": "QPwyZ45SlYAFWib9",
+      "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
+      "name": "皮夹克",
+      "sort": 300000,
+      "system": {
+        "acBonus": 1,
+        "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "category": "light",
+        "checkPenalty": -1,
+        "containerId": null,
+        "description": {
+          "value": "<p>1920 年代黑帮常见的皮夹克，略能挡子弹。</p>"
+        },
+        "dexCap": 4,
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "inSlot": true,
+          "invested": null
+        },
+        "group": "leather",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {}
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "slug": "leather-armor",
+        "speedPenalty": 0,
+        "strength": 0,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "armor"
+    },
+    {
+      "_id": "IOOxKtWxZjOjP8uf",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "匕首",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "BR64TbK54wZqTYbJ": {
+            "damage": "1d4+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "lY2x3XJMU4q01Jr5",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "手枪",
+      "sort": 200000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "6BTweILCysCnI5EP": {
+            "damage": "1d6+2",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": {
+          "increment": 20,
+          "max": 120
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "range-increment-30"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "ihpXBFzSeYHVuw2E",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "暗算",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对 @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aRb6T4Qd]{措手不及} 的目标，Strike 造成额外 1d6 精准伤害。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 26,
+        "temp": 0,
+        "value": 26
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "硕鼠",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 2
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>李奥纳多亲信，负责暗杀与赌场。狡猾而非蛮力。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 9
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 5
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 8
+      },
+      "intimidation": {
+        "base": 8
+      },
+      "stealth": {
+        "base": 9
+      },
+      "thievery": {
+        "base": 8
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "硕鼠·弗兰克",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

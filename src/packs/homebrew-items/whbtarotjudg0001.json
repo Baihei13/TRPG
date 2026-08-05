@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotjudg0001",
+  "name": "XX · 审判",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/20-tarot-judgement.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XX · 审判</strong>（Judgement）</p>\n<p><strong>获取</strong>：行刑区处刑座椅下方（力量-破坏 DC16 撬开固定在地面的座椅）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在行刑区，面对至少两名见证者（可以是任何角色），公开指认一名角色犯下的具体罪行。罪行必须是监狱内真实发生过的（包括入狱前的罪行也算，但必须有证据或你自己亲眼所见）。被指认者不需要在场。</p>\n<p><strong>正位效果</strong></p>\n<p>审判成立。被指认者 SAN 值 −3，污染值 +3（如果不在场则在下次见面时生效，黑白熊会通知）。你获得 4 枚硬币。在场的见证者中，随机一人获得 1 枚硬币（作为见证费）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在行刑区，独自站在处刑座椅前，用审判牌作为镜子照自己的脸，然后坦白一个你从未向任何人透露过的罪行（必须是你真实做过的，入狱前入狱后都算）。</p>\n<p><strong>逆位效果</strong></p>\n<p>你审判了自己。SAN 值 −2，污染值净化 3 点（罪恶感转化为实质的净化）。你的秘密被黑白熊记录在案。下次有人购买《某人的过去》情报时，你的这份秘密将作为随机附赠信息提供给购买者。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-judgement",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XX",
+      "english": "Judgement",
+      "number": "20"
+    }
+  }
+}

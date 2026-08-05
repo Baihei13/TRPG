@@ -1,0 +1,229 @@
+{
+  "_id": "whbRomiana000001",
+  "folder": "whbfolderNpc0001",
+  "name": "罗蜜安娜·卡亨",
+  "type": "npc",
+  "img": "icons/equipment/head/hat-bonnet-flowers-white.webp",
+  "items": [
+    {
+      "_id": "FhlQnE3y9yX8VA3v",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "巴掌",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "eK9ifRpAztQRBBPm": {
+            "damage": "1d4",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "nonlethal"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "ggvpM0pIr1vqF2aW",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "贵妇恳求",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>以家族名誉请求停火，一名敌人需通过意志 DC 18，失败则对你无法使用敌对动作 1 轮。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 18,
+        "temp": 0,
+        "value": 18
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>李奥纳多之妻，表面浮华、内心传统。非战斗 NPC，但可带保镖。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 6,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 8
+      },
+      "diplomacy": {
+        "base": 7
+      },
+      "society": {
+        "base": 8
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "罗蜜安娜·卡亨",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/equipment/head/hat-bonnet-flowers-white.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

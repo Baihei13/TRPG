@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotempe0001",
+  "name": "IV · 皇帝",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/04-tarot-the-emperor.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>IV · 皇帝</strong>（Emperor）</p>\n<p><strong>获取</strong>：锻造教室熔炉底部（力量-破坏 DC16 砸开凝固金属）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在任意房间门口贴上皇帝牌，宣告该房间是你的领地。必须在场至少有两名其他角色听到你的宣告。贴牌后你必须在领地内连续停留至少 3 回合。</p>\n<p><strong>正位效果</strong></p>\n<p>该房间成为你的绝对领地 48 小时。领地内其他角色所有检定处于劣势。你可以随时将一名角色驱逐出领地。领地存在期间，你在领地内免疫污染值获取。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>将皇帝牌烧毁于锻造教室的熔炉中。不需要任何人在场。</p>\n<p><strong>逆位效果</strong></p>\n<p>你的统治欲灼伤了自己。你的污染值 +2。但在接下来 24 小时内，你下一次进入任何房间时，如果该房间内有其他角色，他们必须在你进入后的 1 回合内选择离开或接受你提出的一个要求（不能是自残或自杀类要求）。每个人都只能被此效果影响一次。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-emperor",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "IV",
+      "english": "Emperor",
+      "number": "04"
+    }
+  }
+}

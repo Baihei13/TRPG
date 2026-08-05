@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotstar0001",
+  "name": "XVII · 星",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/17-tarot-the-star.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XVII · 星</strong>（Star）</p>\n<p><strong>获取</strong>：阳台栏杆刻字旁（仅夜晚 21:00–4:00 可见）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在阳台，于晴朗的夜晚（天空可见星星），手持星牌指向天空中最亮的一颗星，说出一个你最想实现的愿望（必须是具体可实现的，不能是「所有人复活」这种）。</p>\n<p><strong>正位效果</strong></p>\n<p>星光照亮了通往愿望的道路。黑白熊会告诉你为了实现这个愿望，你需要做的下一步行动（模糊但真实的方向指引）。你获得一次重骰机会（未来任意一次检定失败时使用，必须接受新结果）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在占星教室（必须处于黑暗状态），将星牌放在望远镜镜头上，观测任意一颗可见的星。观测 1 回合后，将星牌撕碎撒向空中。</p>\n<p><strong>逆位效果</strong></p>\n<p>你看到了一颗正在死亡的星。你获得一个预言——接下来 7 天内，随机一名角色将遭遇一次致命的危机（由黑白熊在暗中标记，不公开）。你知道危机会发生但不知道是谁。如果你能在那次危机中救下那个人，你获得一次祈愿权——可以改写一条小规则（强度低于世界牌）。如果你没能救下，你的 SAN 值 −3。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-star",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XVII",
+      "english": "Star",
+      "number": "17"
+    }
+  }
+}

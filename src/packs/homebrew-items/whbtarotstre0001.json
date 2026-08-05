@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotstre0001",
+  "name": "VIII · 力量",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/08-tarot-strength.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>VIII · 力量</strong>（Strength）</p>\n<p><strong>获取</strong>：军械室武器架顶部（敏捷-运动 DC14 攀爬，失败则武器架倒塌发出巨响）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>成功通过一次 DC16 以上的力量检定（可以是任何力量分支：运动、举重、破坏）。在成功的那一瞬间，将力量牌高高举起。</p>\n<p><strong>正位效果</strong></p>\n<p>你的力量值 +2，持续 48 小时。如果已满 6 则突破上限至 7。在此期间，你扛起重物时不需要进行举重检定（自动成功）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在一次力量检定中大失败（掷出 1–3 且最终结果未达到 DC）。在失败后将力量牌贴在胸口。</p>\n<p><strong>逆位效果</strong></p>\n<p>力量从你的身体流入意志。你的力量值 −1（持续 24 小时），但智力值 +2（持续 24 小时）。如果智力已满 6 则改为 SAN 值 +2。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-strength",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "VIII",
+      "english": "Strength",
+      "number": "08"
+    }
+  }
+}

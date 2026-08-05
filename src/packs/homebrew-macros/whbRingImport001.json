@@ -1,0 +1,14 @@
+{
+  "_id": "whbRingImport001",
+  "name": "导入：皇帝的戒指",
+  "type": "script",
+  "img": "icons/equipment/finger/ring-cabochon-gold-red.webp",
+  "scope": "global",
+  "command": "await game.modules.get(\"wang-pf2e-homebrew\").api.importEmperorsRing();",
+  "folder": null,
+  "sort": 2,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "emperors-ring-import" }
+  }
+}

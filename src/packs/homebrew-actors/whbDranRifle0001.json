@@ -1,0 +1,273 @@
+{
+  "_id": "whbDranRifle0001",
+  "folder": "whbfolderRemnt01",
+  "name": "德兰火枪手",
+  "type": "npc",
+  "img": "icons/weapons/guns/gun-rifle.webp",
+  "items": [
+    {
+      "_id": "G7KbQPeB7IwjkCKs",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "步枪",
+      "sort": 200000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "lWoKE03WDU9zrCFu": {
+            "damage": "1d8",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": {
+          "increment": 40,
+          "max": 240
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "range-increment-40"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "2aTWo6ZArvtJq2Rj",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "枪托砸击",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 6
+        },
+        "damageRolls": {
+          "Bo9YACNfB72pj8dE": {
+            "damage": "1d4+1",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "ILT5VLSc3iYZ0vyG",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "点射",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以步枪连续射击两次（正常多重攻击罚值）。射击后通常需花费 1 动作装填（由 GM 手操）。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 14,
+        "temp": 0,
+        "value": 14
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "德兰小怪 · 远程",
+      "languages": {
+        "details": "德兰口音",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 0
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Dran Rifleman</strong>——远距离支援的德兰射手。偏好保持距离点射，被逼近时用枪托砸人。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "微光视觉",
+      "mod": 6,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 4
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 7
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "dran"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "德兰火枪手",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/weapons/guns/gun-rifle.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

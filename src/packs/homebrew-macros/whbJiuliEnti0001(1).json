@@ -1,0 +1,14 @@
+{
+  "_id": "whbJiuliEnti0001",
+  "name": "妖刀·诱人诅咒",
+  "type": "script",
+  "img": "icons/magic/death/mouth-bite-fangs-red.webp",
+  "scope": "global",
+  "command": "const token = canvas.tokens.controlled[0] ?? game.user.character?.getActiveTokens()[0];\nconst actor = token?.actor ?? game.user.character;\nif (!actor) return ui.notifications.warn(\"请先选中持妖刀的角色或令牌。\");\nconst weapon = actor.itemTypes.weapon.find((w) => (w.system.traits?.otherTags ?? []).includes(\"jiuli-katana\"));\nconst wslug = weapon?.system.slug ?? \"\";\nconst bonus = wslug.includes(\"greater\") ? 3 : wslug.includes(\"moderate\") ? 2 : 1;\nconst slug = \"jiuli-enticing\";\nconst old = actor.itemTypes.effect.filter((e) => e.slug === slug);\nif (old.length) await actor.deleteEmbeddedDocuments(\"Item\", old.map((i) => i.id));\nconst effect = {\n  name: \"诱人诅咒（妖刀·隐里切）\",\n  type: \"effect\",\n  img: \"icons/magic/death/mouth-bite-fangs-red.webp\",\n  system: {\n    slug,\n    description: { value: `<p>本回合内，你以妖刀·隐里切进行的攻击与伤害获得 +${bonus} 状态加值。</p>` },\n    rules: [\n      { key: \"FlatModifier\", selector: [\"attack\", \"attack-roll\"], type: \"status\", value: bonus, label: \"诱人诅咒\" },\n      { key: \"FlatModifier\", selector: \"damage\", type: \"status\", value: bonus, label: \"诱人诅咒\" }\n    ],\n    traits: { value: [\"curse\", \"magical\"], rarity: \"rare\", otherTags: [\"jiuli-katana\"] },\n    level: { value: 4 },\n    duration: { value: 1, unit: \"rounds\", sustained: false, expiry: \"turn-end\" },\n    tokenIcon: { show: true }\n  }\n};\nawait actor.createEmbeddedDocuments(\"Item\", [effect]);\nui.notifications.info(`${actor.name}：诱人诅咒 +${bonus}（本回合，以妖刀攻击时生效）。`);",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "jiuli-katana-enticing" }
+  }
+}

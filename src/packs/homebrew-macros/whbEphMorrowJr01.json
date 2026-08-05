@@ -1,0 +1,14 @@
+{
+  "_id": "whbEphMorrowJr01",
+  "name": "生成：莫罗医生的日记（Ephemera）",
+  "type": "script",
+  "img": "icons/sundries/documents/document-signed-red.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"wang-pf2e-homebrew\")?.api;\nif (!api?.createMorrowEphemeraBook) {\n  ui.notifications.error(\"wang-pf2e-homebrew API 不可用\");\n  return;\n}\nif (!game.modules.get(\"ephemera\")?.active) {\n  ui.notifications.error(\"请先启用 Ephemera\");\n  return;\n}\nui.notifications.info(\"正在用 Ephemera 生成《莫罗医生的日记》…\");\nconst entry = await api.createMorrowEphemeraBook({ open: true });\nui.notifications.info(`已创建：${entry.name}`);",
+  "folder": null,
+  "sort": 100,
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "create-morrow-ephemera-book" }
+  }
+}

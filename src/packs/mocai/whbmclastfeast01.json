@@ -1,0 +1,61 @@
+{
+  "_id": "whbmclastfeast01",
+  "name": "最后的奢华圣餐",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-last-feast.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】基础补给</strong></p>\n<p><strong>价格</strong>：1 枚金币 · 基础补给</p><p>预定一餐由黑白熊准备的大餐：开始时间、送达地点由你决定，可决定是否通报其他人。</p><p>本回合内所有检定获得优势。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>可安排时间/地点/是否广播；食用当回合全检定优势。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-last-luxury-feast",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 1
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 1,
+      "tier": "基础补给"
+    }
+  }
+}

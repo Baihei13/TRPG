@@ -1,0 +1,187 @@
+{
+  "_id": "whbGrndJrnl00001",
+  "name": "园丁日记",
+  "img": "icons/sundries/books/book-embossed-bound-brown.webp",
+  "pages": [
+    {
+      "_id": "whbGrndJrnlHan01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>乌拉月 8 日</strong></p><p>最让我受不了的，是那些尖叫。这不该是医院吗？哪有医院会有这种鬼哭狼嚎。</p><p>可我什么都不能说。我有份差事。比多数人强，而我家里比多数人更需要这份工。只管低着头，把庭院收拾干净。别的什么都别多管。</p><hr><p><strong>雷朱尔月 18 日</strong></p><p>今天在楼附近打理庭院，听见里头在搞什么「团体治疗」。要我说全是胡扯。一半的病人药吃得神志不清，根本不知道发生了什么。医生就一个劲儿问他们有没有副作用之类的。看不出这有什么用。依我看，不过是喂他们吃药、做做笔记罢了。</p><p>可我什么都不能说。不想丢饭碗，更怕惹出更大的麻烦。</p><p>反正我也不是大夫。我只懂自己日子里见到的那些。谁知道呢？兴许药也能帮上我女儿。可她又没伤害过谁，而且她得到的照料，比这诸神遗弃的地方里谁都多。</p><hr><p><strong>布里吉尔月 10 日</strong></p><p>园子里的灯又暗了。我总算弄明白那是什么意思——为什么那会儿总有人喊。里头干的简直就是折磨。他们说不能放人出去，因为会伤人。可他们在里头又在干什么？</p><p>那些也是人啊。那也是在害人。</p><hr><p><strong>塔瓦德月 1 日</strong></p><p>今天新收进来一个病人，跟我女儿没什么两样。说话不利索。怪声、吠叫之类的。手停不下来。那不算病，只是不一样。那病人是人家的孩子。</p><p>我寻思，是谁把他送进来的——是声称会照顾他的社会，还是声称爱他的家人？</p><hr><p><strong>诺瓦齐斯月 22 日</strong></p><p>今天在园子里碰上了莫罗医生。她从我身边走过，像我根本不存在一样。要我说，这也算这差事的好处之一。没人会注意到园丁。</p><p>这样更好。我最不想的就是莫罗医生盯上我的活儿，或者我家的日子。</p><hr><p><strong>罗玛月 2 日</strong></p><p>昨天有人到家里来过——疯人院那边的人。他们什么也没找到，可着实吓死人了。我女儿发作的时候我都会请事假。他们是不是察觉了？不然凭什么关心我干了什么？</p><p>我绝不会失去她，这话我说定了。我女儿啊，或许这辈子都过不上你们所谓的正常生活，可在我还能撑着的时候，我他妈一定要给她最好的日子。她绝不会住进这座恐怖屋。他们敢来抢，我就跟他们拼到底。</p><p>或许，这就是我一直守在这么近的地方的缘故。</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "园丁日记",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1785818116418,
+        "updatedAt": 1785818116418,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "园丁日记",
+          "spine": "园丁日记",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#5c3a24",
+            "colorStrength": 40,
+            "gloss": 40,
+            "leather": 55,
+            "aging": 45
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 50,
+          "aging": 35,
+          "grain": 20,
+          "ink": 35,
+          "agingSeed": 101
+        },
+        "layoutMode": "flow",
+        "flowContent": "<p><strong>乌拉月 8 日</strong></p><p>最让我受不了的，是那些尖叫。这不该是医院吗？哪有医院会有这种鬼哭狼嚎。</p><p>可我什么都不能说。我有份差事。比多数人强，而我家里比多数人更需要这份工。只管低着头，把庭院收拾干净。别的什么都别多管。</p>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "乌拉月 8 日",
+            "flowContent": "<p><strong>乌拉月 8 日</strong></p><p>最让我受不了的，是那些尖叫。这不该是医院吗？哪有医院会有这种鬼哭狼嚎。</p><p>可我什么都不能说。我有份差事。比多数人强，而我家里比多数人更需要这份工。只管低着头，把庭院收拾干净。别的什么都别多管。</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "雷朱尔月 18 日",
+            "flowContent": "<p><strong>雷朱尔月 18 日</strong></p><p>今天在楼附近打理庭院，听见里头在搞什么「团体治疗」。要我说全是胡扯。一半的病人药吃得神志不清，根本不知道发生了什么。医生就一个劲儿问他们有没有副作用之类的。看不出这有什么用。依我看，不过是喂他们吃药、做做笔记罢了。</p><p>可我什么都不能说。不想丢饭碗，更怕惹出更大的麻烦。</p><p>反正我也不是大夫。我只懂自己日子里见到的那些。谁知道呢？兴许药也能帮上我女儿。可她又没伤害过谁，而且她得到的照料，比这诸神遗弃的地方里谁都多。</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-3",
+            "title": "布里吉尔月 10 日",
+            "flowContent": "<p><strong>布里吉尔月 10 日</strong></p><p>园子里的灯又暗了。我总算弄明白那是什么意思——为什么那会儿总有人喊。里头干的简直就是折磨。他们说不能放人出去，因为会伤人。可他们在里头又在干什么？</p><p>那些也是人啊。那也是在害人。</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-4",
+            "title": "塔瓦德月 1 日",
+            "flowContent": "<p><strong>塔瓦德月 1 日</strong></p><p>今天新收进来一个病人，跟我女儿没什么两样。说话不利索。怪声、吠叫之类的。手停不下来。那不算病，只是不一样。那病人是人家的孩子。</p><p>我寻思，是谁把他送进来的——是声称会照顾他的社会，还是声称爱他的家人？</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-5",
+            "title": "诺瓦齐斯月 22 日",
+            "flowContent": "<p><strong>诺瓦齐斯月 22 日</strong></p><p>今天在园子里碰上了莫罗医生。她从我身边走过，像我根本不存在一样。要我说，这也算这差事的好处之一。没人会注意到园丁。</p><p>这样更好。我最不想的就是莫罗医生盯上我的活儿，或者我家的日子。</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-6",
+            "title": "罗玛月 2 日",
+            "flowContent": "<p><strong>罗玛月 2 日</strong></p><p>昨天有人到家里来过——疯人院那边的人。他们什么也没找到，可着实吓死人了。我女儿发作的时候我都会请事假。他们是不是察觉了？不然凭什么关心我干了什么？</p><p>我绝不会失去她，这话我说定了。我女儿啊，或许这辈子都过不上你们所谓的正常生活，可在我还能撑着的时候，我他妈一定要给她最好的日子。她绝不会住进这座恐怖屋。他们敢来抢，我就跟他们拼到底。</p><p>或许，这就是我一直守在这么近的地方的缘故。</p>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Groundskeeper's Journal",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

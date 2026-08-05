@@ -1,0 +1,97 @@
+{
+  "name": "皇帝的戒指 — 活化共鸣",
+  "type": "effect",
+  "img": "icons/equipment/finger/ring-cabochon-gold-red.webp",
+  "system": {
+    "slug": "emperors-ring-resonance",
+    "description": {
+      "value": "<p>由<em>皇帝的戒指</em>在穿戴并 Invest 后自动授予。</p>\n<p>在角色卡<strong>「动作」</strong>栏勾选<strong>「活化状态（Upright — 完全共鸣）」</strong>开关，即可激活帝王之心、天佑吾王与浴血雄狮相关效果。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "emperors-ring-upright",
+        "toggleable": true,
+        "label": "皇帝的戒指 — 活化状态（Upright — 完全共鸣）"
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperors-heart-skills",
+        "selector": ["intimidation", "diplomacy"],
+        "type": "item",
+        "value": 1,
+        "predicate": ["emperors-ring-upright"]
+      },
+      {
+        "key": "AdjustDegreeOfSuccess",
+        "slug": "emperors-heart-resistance",
+        "selector": "saving-throw",
+        "adjustment": {
+          "success": "one-degree-better",
+          "failure": "one-degree-better",
+          "criticalFailure": "one-degree-better"
+        },
+        "predicate": [
+          "emperors-ring-upright",
+          {
+            "or": [
+              "item:trait:mental",
+              "item:trait:charm",
+              "item:trait:emotion",
+              "origin:action:slug:coerce",
+              "origin:action:slug:lie",
+              "origin:action:slug:request",
+              "origin:action:slug:make-an-impression",
+              "origin:action:slug:gather-information"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "saving-throw",
+        "title": "帝王之心 Emperor's Heart",
+        "text": "对抗社交/心灵效果时，你的成功度提升一级（成功→大成功，失败→成功，大失败→失败）。",
+        "predicate": [
+          "emperors-ring-upright",
+          {
+            "or": [
+              "item:trait:mental",
+              "item:trait:charm",
+              "item:trait:emotion",
+              "origin:action:slug:coerce",
+              "origin:action:slug:lie",
+              "origin:action:slug:request",
+              "origin:action:slug:make-an-impression",
+              "origin:action:slug:gather-information"
+            ]
+          }
+        ]
+      }
+    ],
+    "level": { "value": 0 },
+    "traits": {
+      "value": [],
+      "otherTags": ["emperors-ring"]
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "tokenIcon": { "show": false },
+    "publication": {
+      "title": "PF2e 自制合集 (Wang Homebrew)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "flags": {
+    "pf2e": {
+      "emperorsRingEffect": true
+    }
+  }
+}

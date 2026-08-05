@@ -1,0 +1,290 @@
+{
+  "_id": "whbDranDemo00001",
+  "folder": "whbfolderRemnt01",
+  "name": "德兰拆卸者",
+  "type": "npc",
+  "img": "icons/weapons/axes/axe-broadaxe-worn.webp",
+  "items": [
+    {
+      "_id": "CcFe34sZDUiAFu3c",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "动力锯",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "phJb3dLgcmljMtTy": {
+            "damage": "1d10+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>触及 10 尺。命中时附加 @Damage[1[persistent,bleed]]。</p>"
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "IktbMcLOgt54bz8d",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "旋转锯刃",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>只要动力锯在运转，与拆卸者相邻开始回合的生物受到 @Damage[1[slashing]]。（锯大约每数轮熄火一次，重启需 1 动作——GM 可偶尔给玩家喘息。）</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "2uJKSmdT7ZjVZYy5",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "锯刃冲锋",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>疾行两次，然后以动力锯打击。命中时目标须尝试 @Check[fortitude|dc:15]，失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{倒地}。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "HjLJl3AB6m85y7LA",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "废气喷吐",
+      "sort": 610000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>10 尺爆发内生物须尝试 @Check[fortitude|dc:15|traits:poison,inhaled]。</p><p>@Template[type:burst|distance:10]</p><hr /><p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.fesdP3LZ4CV37rQo]{恶心 1}。</p><p><strong>大失败</strong> 陷入恶心 2。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "poison",
+            "inhaled"
+          ]
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": -1
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 28,
+        "temp": 0,
+        "value": 28
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      }
+    },
+    "details": {
+      "blurb": "德兰精英",
+      "languages": {
+        "details": "德兰口音；低吼多于言语",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Dran Demolisher</strong>——体型魁梧的德兰精英，挥着轰鸣动力锯。常见于下水道与巷战伏击。流血与近身压力是其威胁核心。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "微光视觉",
+      "mod": 7,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 9
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 5
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 8
+      },
+      "intimidation": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "dran"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "德兰拆卸者",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/weapons/axes/axe-broadaxe-worn.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

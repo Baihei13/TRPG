@@ -1,0 +1,29 @@
+{
+  "_id": "whbJiuliEnA00001",
+  "name": "诱人诅咒（妖刀·隐里切）",
+  "type": "action",
+  "img": "icons/magic/death/mouth-bite-fangs-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>诱人诅咒</strong>（需处于「满足」状态）</p>\n<p>你顺应妖刀的低语。使用此自由动作，对自身施加<strong>诱人诅咒</strong>效果：本回合内，你以妖刀·隐里切进行的攻击与伤害获得状态加值（+1／+2／+3，随档位）。</p>",
+      "gm": "<p>selfEffect 自动施加「诱人诅咒（妖刀·隐里切）」效果；装备妖刀时由武器 GrantItem 授予。加值由武器 Rule Elements 按档位提供。</p>"
+    },
+    "rules": [],
+    "slug": "jiuli-enticing-action",
+    "traits": { "value": ["curse"], "rarity": "rare", "otherTags": ["jiuli-katana"] },
+    "publication": { "title": "PF2e 自制合集 (Wang Homebrew)", "authors": "Wang", "license": "OGL", "remaster": true },
+    "actionType": { "value": "free" },
+    "actions": { "value": null },
+    "category": "offensive",
+    "deathNote": false,
+    "frequency": null,
+    "selfEffect": {
+      "uuid": "Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbJiuliEnE00001",
+      "name": "诱人诅咒（妖刀·隐里切）"
+    },
+    "level": { "value": 4 }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "jiuli-katana" }
+  }
+}

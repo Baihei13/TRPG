@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarottowr0001",
+  "name": "XVI · 塔",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/16-tarot-the-tower.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XVI · 塔</strong>（Tower）</p>\n<p><strong>获取</strong>：血池底部骨堆（力量-游泳 DC14 潜入）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在血池旁，将一件你自己亲手制作或至少持有超过 48 小时的物品高举过头，大声宣告「我献上此物」，然后丢入血池。物品必须是你珍视的（由你定义，黑白熊会判断是否合格）。</p>\n<p><strong>正位效果</strong></p>\n<p>血池翻涌接受祭品。你获得 1d4+3 枚硬币。你下一次攻击额外造成 2d4 伤害。物品被永久销毁，但你在血池中看到了一个短暂的幻象——关于这座监狱的秘密。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在锻造教室，将塔牌烧熔在铁砧上，然后将熔化的牌液淬入冷水中。喝下那杯水。</p>\n<p><strong>逆位效果</strong></p>\n<p>你在体内建造了一座塔。你的生命值上限永久 +2。但你的 SAN 值上限永久 −2（从 10 降为 8）。这意味着你更容易被禁忌触发推到魔女化边缘，但身体更强韧。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-tower",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XVI",
+      "english": "Tower",
+      "number": "16"
+    }
+  }
+}

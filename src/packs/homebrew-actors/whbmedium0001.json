@@ -1,0 +1,222 @@
+{
+  "_id": "whbmedium0001",
+  "folder": "whbfolderNpc0001",
+  "name": "灵媒",
+  "type": "npc",
+  "img": "icons/magic/symbols/circled-gem-teal.webp",
+  "items": [
+    {
+      "_id": "bmCgmjdBMkunxgEZ",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "匕首",
+      "sort": 100000,
+      "system": {
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "uCYOjgQFMkKDw9YS": {
+            "damage": "1d4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "BETCIm6DAdzph6A8",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "血肉防护",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>触碰一名盟友，赋予 @Damage[(2d6)[temporary]]{2d6 临时 HP}（24 小时）。每日一次。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "GCPNK0hvfheg6wop",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "拜亚基哨声",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>吹响 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbbyakheewhist1]{拜亚基召唤哨}，60 尺内敌人意志 DC 18 或惊惧 2。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 0
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>安东尼奥阵营的神秘学家，了解大秘仪与逆转之祸。战斗极弱，应受保护。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 4
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 9
+      }
+    },
+    "skills": {
+      "occultism": {
+        "base": 9
+      },
+      "religion": {
+        "base": 7
+      },
+      "stealth": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "灵媒",
+    "texture": {
+      "src": "icons/magic/symbols/circled-gem-teal.webp"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

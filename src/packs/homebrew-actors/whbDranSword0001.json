@@ -1,0 +1,233 @@
+{
+  "_id": "whbDranSword0001",
+  "folder": "whbfolderRemnt01",
+  "name": "德兰剑客",
+  "type": "npc",
+  "img": "icons/weapons/swords/sword-guard-worn.webp",
+  "items": [
+    {
+      "_id": "6Wd4NOOYo0JpYWdT",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "军刀",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 8
+        },
+        "damageRolls": {
+          "EmfbnFL6vTeCTpcv": {
+            "damage": "1d6+2",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "eNA5J1uB0r8E1wUQ",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "冲刺突刺",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>疾行，然后以军刀打击。若此次疾行至少移动 10 尺，该次打击获得 +1 环境加值。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "德兰小怪 · 近战",
+      "languages": {
+        "details": "德兰口音；多数沉睡者只会低语与嘶吼",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 0
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Melee Dran</strong>——洛索姆街头的沉睡德兰人。尖耳、蜡黄皮肤，挥着简陋军刀。受集体无意识驱使，成群扑向外来者。适合巷战与伏击的杂兵。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "微光视觉",
+      "mod": 6,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 4
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 7
+      },
+      "athletics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "humanoid",
+        "dran"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "德兰剑客",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/weapons/swords/sword-guard-worn.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

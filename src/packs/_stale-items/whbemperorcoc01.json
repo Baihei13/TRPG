@@ -1,0 +1,97 @@
+{
+  "_id": "whbemperorcoc01",
+  "name": "皇帝的戒指（逆转·剧情版）",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-engraved-scrolls-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：《再见教父》模组中李奥纳多持有的权戒 — COC 原版效果（随逆转之祸逐日衰退）</p>\n<p>此为<strong>剧情向</strong>版本，还原模组中「失权的皇帝」阶段能力，与玩家向的「活化共鸣」版<strong>皇帝的戒指</strong>不同。</p>\n<p>穿戴且 Invest 期间（无需开关），你获得：</p>\n<ul>\n<li><strong>帝王之心（衰退）</strong>：对抗威吓、胁迫、交涉、欺骗等社交技能检定时，对方自动成功（等效 COC「交涉类技能自动失效」→ PF2e 为对方检定 +4 状态加值）。</li>\n<li><strong>天佑吾王（衰退）</strong>：对你进行的攻击检定承受 -1 状态减值（等效 COC「惩罚骰」的简化版）。</li>\n<li><strong>浴血雄狮（衰退）</strong>：力量与体质各 +2 增强加值，智力 +1 增强加值（等效 COC STR/CON +20 的压缩换算）。</li>\n</ul>\n<p><em>模组中上述能力分别在告别式后、第 3 日、第 5 日失效；跑团时由 GM 更换为失效版或直接移除物品。</em></p>",
+      "gm": "<p>给 NPC 李奥纳多使用。PC 请用「皇帝的戒指」+ 活化开关。</p>"
+    },
+    "rules": [
+      {
+        "key": "AdjustDegreeOfSuccess",
+        "slug": "emperor-coc-heart",
+        "selector": "saving-throw",
+        "adjustment": {
+          "success": "one-degree-better",
+          "failure": "one-degree-better",
+          "criticalFailure": "one-degree-better"
+        },
+        "predicate": [
+          {
+            "or": [
+              "item:trait:mental",
+              "item:trait:charm",
+              "item:trait:emotion",
+              "origin:action:slug:coerce",
+              "origin:action:slug:lie",
+              "origin:action:slug:request",
+              "origin:action:slug:make-an-impression"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "attack-roll",
+        "title": "天佑吾王（衰退）",
+        "text": "以你为目标的攻击检定承受 -1 状态减值（等效 COC 惩罚骰）。",
+        "predicate": []
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperor-coc-str",
+        "selector": "str",
+        "type": "enhancement",
+        "value": 2
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperor-coc-con",
+        "selector": "con",
+        "type": "enhancement",
+        "value": 2
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperor-coc-int",
+        "selector": "int",
+        "type": "enhancement",
+        "value": 1
+      }
+    ],
+    "slug": "emperors-ring-coc-story",
+    "traits": {
+      "value": ["invested", "magical", "cursed"],
+      "rarity": "unique",
+      "otherTags": ["goodbye-godfather", "npc-item"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 10 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "hp": { "value": 0, "max": 0 },
+    "hardness": 0,
+    "price": { "value": {} },
+    "equipped": { "carryType": "worn", "inSlot": true, "invested": true },
+    "containerId": null,
+    "size": "med",
+    "material": { "type": null, "grade": null },
+    "identification": {
+      "status": "identified",
+      "unidentified": { "name": "", "img": "", "data": { "description": { "value": "" } } }
+    },
+    "usage": { "value": "wornring" },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "emperor-ring-story-decline" }
+  }
+}

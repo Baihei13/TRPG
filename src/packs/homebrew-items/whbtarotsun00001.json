@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotsun00001",
+  "name": "XIX · 太阳",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/19-tarot-the-sun.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XIX · 太阳</strong>（Sun）</p>\n<p><strong>获取</strong>：花房玻璃穹顶下方（仅正午 12:00–14:00 阳光直射时可见）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在花房，于正午阳光直射时，将太阳牌高举过头顶，大声宣告「太阳升起」。不需要其他人在场，但你必须做到声音足够大（由黑白熊判断是否合格）。</p>\n<p><strong>正位效果</strong></p>\n<p>光芒四射。全场通报你的名字和「太阳已升起」。你身上所有由魔法造成的负面状态全部清除。同楼层所有角色污染值 −1，SAN 值 +1。你获得 3 枚硬币。此外，你身上会持续散发微光 24 小时（照亮黑暗房间，侦查劣势免疫）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在焚尸房，将太阳牌投入焚尸炉中焚烧，同时在炉火前静坐 1 回合，承受高温的炙烤。</p>\n<p><strong>逆位效果</strong></p>\n<p>你在火焰中看到了自己的影子。你的污染值 +2。但焚尸炉的火焰净化了你身上的一件诅咒物品（如果你持有恶魔牌灰白版、或任何带有负面效果的道具，可以选择销毁一件）。如果你没有可净化的物品，改为获得 1d4 硬币。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-sun",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XIX",
+      "english": "Sun",
+      "number": "19"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcnightveil01",
+  "name": "黑夜帷幕",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-night-veil.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】控场与仪式前置</strong></p>\n<p><strong>价格</strong>：5 枚金币 · 控场与仪式前置</p><p>关闭校内电力与常态光源 24 小时，但监控器和学校封锁等基础运行设施正常运行。除 2F 占星教室外，其余人在黑暗区域的战斗和侦查检定全部处于劣势。</p><p>仅能使用一次。</p><p><em>购买 ≥5 金币：1 小时后全校通报（特殊校规）。</em></p>\n<p><strong>库存</strong>：仅能使用一次</p><p><em>⚠ 特殊校规：购买 ≥5 金币物品将在 1 小时后全校通报。</em></p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>全校黑暗 24h；占星教室除外；战斗/侦查劣势。一次性。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-night-veil",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 5
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 5,
+      "tier": "控场与仪式前置"
+    }
+  }
+}

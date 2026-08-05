@@ -1,0 +1,305 @@
+{
+  "_id": "whbMafThug000001",
+  "folder": "whbfolderMafia01",
+  "name": "西西里帮杂兵",
+  "type": "npc",
+  "img": "icons/equipment/head/hood-cloth-red.webp",
+  "items": [
+    {
+      "_id": "wKBLXSlq3SttaJrS",
+      "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
+      "name": "皮夹克",
+      "sort": 300000,
+      "system": {
+        "acBonus": 1,
+        "baseItem": "leather-armor",
+        "bulk": {
+          "value": 1
+        },
+        "category": "light",
+        "checkPenalty": -1,
+        "containerId": null,
+        "description": {
+          "value": "<p>1920 年代黑帮常见的皮夹克，略能挡子弹。</p>"
+        },
+        "dexCap": 4,
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0,
+          "inSlot": true,
+          "invested": null
+        },
+        "group": "leather",
+        "hardness": 0,
+        "hp": {
+          "max": 0,
+          "value": 0
+        },
+        "level": {
+          "value": 0
+        },
+        "material": {
+          "grade": null,
+          "type": null
+        },
+        "price": {
+          "value": {}
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "quantity": 1,
+        "rules": [],
+        "runes": {
+          "potency": 0,
+          "property": [],
+          "resilient": 0
+        },
+        "size": "med",
+        "slug": "leather-armor",
+        "speedPenalty": 0,
+        "strength": 0,
+        "traits": {
+          "rarity": "common",
+          "value": []
+        }
+      },
+      "type": "armor"
+    },
+    {
+      "_id": "Ssijvh3oAEMTtunR",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "拳头",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "xQgc74mvLUFhReUl": {
+            "damage": "1d4+1",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "nonlethal",
+            "unarmed"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "EKoB44M4g83rY590",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "左轮手枪",
+      "sort": 200000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "M4LP5inCHkgifwqD": {
+            "damage": "1d6",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": {
+          "increment": 20,
+          "max": 120
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "range-increment-20"
+          ]
+        }
+      },
+      "type": "melee"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 8,
+        "temp": 0,
+        "value": 8
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "黑手帮杂兵",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>卡亨家族或敌对帮派的普通打手。适合成组出现（建议 3–4 名对付 4 名 1 级 PC）。</p><p><em>COC 黑帮打手弱化版。</em></p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 3,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 4
+      },
+      "intimidation": {
+        "base": 3
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "西西里帮杂兵",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/equipment/head/hood-cloth-red.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

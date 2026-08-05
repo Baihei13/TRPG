@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcincinerat01",
+  "name": "焚烧炉使用权",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-incinerator.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】恢复与功能道具</strong></p>\n<p><strong>价格</strong>：3 枚金币 · 恢复与功能道具</p><p>将一件物品送入 B1 焚烧炉彻底销毁，但垃圾处理器/炉体本身不会消失。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>销毁一件物品；炉体保留。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-incinerator-pass",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 3
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 3,
+      "tier": "恢复与功能道具"
+    }
+  }
+}

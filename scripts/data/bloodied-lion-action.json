@@ -1,0 +1,35 @@
+{
+  "name": "浴血雄狮 Bloodied Lion",
+  "type": "action",
+  "img": "icons/skills/wounds/injury-stitched-flesh-red.webp",
+  "system": {
+    "slug": "bloodied-lion",
+    "actionType": { "value": "passive" },
+    "category": "defensive",
+    "description": {
+      "value": "<p>快速治疗 1。@Localize[PF2E.NPC.Abilities.Glossary.FastHealing]</p>\n<p>此被动能力由<em>皇帝的戒指</em>在<strong>活化状态</strong>且你<strong>受伤</strong>时授予。在战斗中，于你的回合开始时自动恢复 1 点生命值。</p>",
+      "gm": "<p>由模块 <code>wang-pf2e-homebrew</code> 脚本自动添加/移除。</p>"
+    },
+    "rules": [],
+    "traits": {
+      "value": [],
+      "otherTags": ["emperors-ring"],
+      "rarity": "common"
+    },
+    "publication": {
+      "title": "PF2e 自制合集 (Wang Homebrew)",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    },
+    "actions": { "value": null },
+    "deathNote": false,
+    "frequency": null,
+    "level": { "value": 0 }
+  },
+  "flags": {
+    "pf2e": {
+      "emperorsRingGranted": true
+    }
+  }
+}

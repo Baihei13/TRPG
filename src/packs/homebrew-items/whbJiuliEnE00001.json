@@ -1,0 +1,26 @@
+{
+  "_id": "whbJiuliEnE00001",
+  "name": "诱人诅咒（妖刀·隐里切）",
+  "type": "effect",
+  "img": "icons/magic/death/mouth-bite-fangs-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>妖刀低语着诱惑，血意涌上刀锋。本回合内，你以妖刀·隐里切进行的攻击与伤害获得状态加值（+1／+2／+3，取决于妖刀档位）。</p>",
+      "gm": "<p>由动作「诱人诅咒（妖刀·隐里切）」自施。仅设置骰值选项 <code>jiuli-enticing</code>；实际加值由武器自身的 Rule Elements 按档位提供。回合结束自动移除。</p>"
+    },
+    "rules": [
+      { "key": "RollOption", "domain": "all", "option": "jiuli-enticing" }
+    ],
+    "slug": "jiuli-enticing-effect",
+    "traits": { "value": ["curse", "magical"], "rarity": "rare", "otherTags": ["jiuli-katana"] },
+    "publication": { "title": "PF2e 自制合集 (Wang Homebrew)", "authors": "Wang", "license": "OGL", "remaster": true },
+    "level": { "value": 4 },
+    "duration": { "value": 1, "unit": "rounds", "expiry": "turn-end", "sustained": false },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "jiuli-katana" }
+  }
+}

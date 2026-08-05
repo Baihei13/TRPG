@@ -1,0 +1,61 @@
+{
+  "_id": "whbmccausenee001",
+  "name": "因果逆转刺针",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-causality-needle.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】禁忌陷阱与防身</strong></p>\n<p><strong>价格</strong>：4 枚金币 · 禁忌陷阱与防身</p><p>一个圆形干扰器，可安置于任何附带电力或门把箱柜上。对第一个碰到该物品的角色造成 <strong>1d8+3</strong> 点物理伤害，并因看到恐怖景象立刻扣除 <strong>2 点 SAN</strong>。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>陷阱：首触者 1d8+3 物理 + SAN−2。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-causality-needle",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 4,
+      "tier": "禁忌陷阱与防身"
+    }
+  }
+}

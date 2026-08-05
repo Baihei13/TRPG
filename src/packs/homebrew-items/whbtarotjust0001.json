@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotjust0001",
+  "name": "XI · 正义",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/11-tarot-justice.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XI · 正义</strong>（Justice）</p>\n<p><strong>获取</strong>：审判间主席台下方抽屉（仅学裁结束后可进入获取）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在学级裁判中，投票正确指认真凶。学裁结束后手持正义牌站在审判间中央。</p>\n<p><strong>正位效果</strong></p>\n<p>获得正义执行——你下次对已确认凶手的攻击自动命中且伤害翻倍。可保留至下一案件。此外，你在下一次学裁中的发言权重 +1（你的指控更受重视）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在学级裁判中，公开指认了一个错误的人（在讨论环节就指认，不是投票环节），并且在投票前意识到自己错了。</p>\n<p><strong>逆位效果</strong></p>\n<p>你为自己的误判付出代价。SAN 值 −1。但被你误指的角色对你产生一种奇怪的理解——你们成为暂时的盟友（接下来的 24 小时内，双方不能互相伤害）。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-justice",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XI",
+      "english": "Justice",
+      "number": "11"
+    }
+  }
+}

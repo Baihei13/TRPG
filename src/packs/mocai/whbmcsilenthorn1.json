@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcsilenthorn1",
+  "name": "审判静默号角",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-silent-horn.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】禁忌陷阱与防身</strong></p>\n<p><strong>价格</strong>：4 枚金币 · 禁忌陷阱与防身</p><p>持续 6 小时。持续时间内黑白熊除时间广播及尸体发现广播外不会通报其他任何事宜（如重伤消息）。</p><p>限定 2 件，不会刷新。</p>\n<p><strong>库存</strong>：限定 2 件，不会刷新</p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>静默 6h；仅保留时间/尸体广播。限量 2，不刷新。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-silent-judgment-horn",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 4,
+      "tier": "禁忌陷阱与防身"
+    }
+  }
+}

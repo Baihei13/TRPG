@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotdevi0001",
+  "name": "XV · 恶魔",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/15-tarot-the-devil.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XV · 恶魔</strong>（Devil）</p>\n<p><strong>获取</strong>：酿酒室最深酒桶底部（需喝下未过滤毒酒，体质 DC14 失败呕吐昏迷 1 小时）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>向一名角色提出公平交易——用你持有的某件道具交换对方的某件道具。双方必须自愿、知情、且交换的物品价值相当（由双方自行判断）。交易完成后将恶魔牌放在交易物品之间。</p>\n<p><strong>正位效果</strong></p>\n<p>契约成立。双方获得交换物品的永久所有权（无法被偷回或抢夺）。双方都知道对方的一个秘密（各自选一个告诉对方）。但双方成为契约绑定——其中一人触发禁忌时，另一人获得 1 枚硬币作为「违约金」。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在商店购买任意一件标价 ≥5 硬币的商品。购买后将恶魔牌贴在商品上，然后将其赠予另一名角色。对方接受时并不知道你的意图。</p>\n<p><strong>逆位效果</strong></p>\n<p>接受者获得了商品，但也被恶魔标记。接下来 24 小时内，接受者每次使用魔法，你获得 1 枚硬币（从虚空中产生，不是从对方那里拿）。接受者对此不知情。24 小时后标记消失，但如果期间接受者发现自己被标记，你的 SAN 值 −2。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-devil",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XV",
+      "english": "Devil",
+      "number": "15"
+    }
+  }
+}

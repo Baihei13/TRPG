@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotwhee0001",
+  "name": "X · 命运之轮",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/10-tarot-wheel-of-fortune.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>X · 命运之轮</strong>（Wheel of Fortune）</p>\n<p><strong>获取</strong>：娱乐室扑克牌堆中（与他人玩牌时随机抽出）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在商店消费恰好 5 枚硬币（不能多不能少），将消费的小票和命运之轮牌一起交给黑白熊。</p>\n<p><strong>正位效果</strong></p>\n<p>命运眷顾精打细算者。掷 d20：1–5 不触发（牌退回但不碎裂，可重新激活）；6–20 你获得 2d6 硬币，并查看商店下一次刷新的完整清单（可以预购一件）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在持有命运之轮牌的状态下，参加一次学级裁判。在投票环节，故意投错票（你知道凶手是谁，但投了别人）。</p>\n<p><strong>逆位效果</strong></p>\n<p>命运的恶作剧。你的投票被忽略不计（不影响结果）。但在学裁结束后，你秘密获得被处刑者的遗物（黑白熊私交给你）。你获得 2 枚硬币。污染值 +1。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-wheel-of-fortune",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "X",
+      "english": "Wheel of Fortune",
+      "number": "10"
+    }
+  }
+}

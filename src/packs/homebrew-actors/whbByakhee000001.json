@@ -1,0 +1,300 @@
+{
+  "_id": "whbByakhee000001",
+  "folder": "whbfolderMonst01",
+  "name": "拜亚基（削弱）",
+  "type": "npc",
+  "img": "icons/creatures/mammals/bat-giant-tattered-purple.webp",
+  "items": [
+    {
+      "_id": "8SEenwOGt6Esf0zl",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "利爪",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 12
+        },
+        "damageRolls": {
+          "hLeVgV2a5UqrwAm1": {
+            "damage": "1d6+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "WFTe8E5ZfifiBCQG",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "啃咬",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 12
+        },
+        "damageRolls": {
+          "vO6yh07wlcyc6mMe": {
+            "damage": "1d4+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "8wptiYPrtwsUe5UT",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "宇宙寒意",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>5 尺内生物在回合开始时受到 1 点寒冷伤害。飞行速度 40 尺。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "YXL837Qe5kU8op8d",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "俯冲掠袭",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>飞行至多速度，进行一次利爪 Strike；若命中，目标额外惊惧 1（意志 DC 20 _negates）。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 18
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 42,
+        "temp": 0,
+        "value": 42
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 40
+          }
+        ],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 3
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>灵媒召唤的异界仆从，<strong>已按 1 级团削弱</strong>（原 COC 拜亚基远强于此）。建议作为可逃跑的精英战或剧情 Boss，而非必死战。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 9,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 10
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 10
+      },
+      "stealth": {
+        "base": 9
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "aberration",
+        "dream"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "拜亚基（削弱）",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/creatures/mammals/bat-giant-tattered-purple.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

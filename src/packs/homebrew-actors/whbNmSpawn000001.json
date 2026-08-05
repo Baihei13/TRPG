@@ -1,0 +1,243 @@
+{
+  "_id": "whbNmSpawn000001",
+  "folder": "whbfolderRemnt01",
+  "name": "梦魇幼蛛",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/spider-pink-teal.webp",
+  "items": [
+    {
+      "_id": "HxMKx2wDuiWkGP9d",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "啃咬",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 6
+        },
+        "damageRolls": {
+          "h2wy9pTZhycAgMnB": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "VmnfozomNiwbnU34",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "濒死爆发",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>HP 降至 0 时炸裂。5 尺弥漫内生物受到 @Damage[1d4[mental]|options:area-damage]，并须尝试 @Check[reflex|dc:13|basic]。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "弱点 寒铁 2、神圣 2",
+        "max": 6,
+        "temp": 0,
+        "value": 6
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 15
+          }
+        ],
+        "value": 25
+      },
+      "weaknesses": [
+        {
+          "type": "cold-iron",
+          "value": 2
+        },
+        {
+          "type": "holy",
+          "value": 2
+        }
+      ]
+    },
+    "details": {
+      "blurb": "夜织者仆从",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>夜织者召唤的弱小梦魇虫豸。每场战斗通常只出现 1 只。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "黑暗视觉",
+      "mod": 4,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 2
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "sm"
+      },
+      "value": [
+        "fey",
+        "dream"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "梦魇幼蛛",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/creatures/invertebrates/spider-pink-teal.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

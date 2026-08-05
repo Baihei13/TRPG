@@ -1,0 +1,53 @@
+{
+  "_id": "whbsilveramulet01",
+  "name": "银质护身符",
+  "type": "equipment",
+  "img": "icons/equipment/neck/amulet-runed-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：卡牌商人「M」的古董店（《再见教父》· IV 皇帝）</p>\n<p>一枚刻有古老符文的银质护身符。佩戴者在进行意志豁免检定时获得 +1 物品加值。</p>\n<p><em>（COC 原效：理智检定时获得一次奖励骰 → PF2e 换算为意志豁免 +1 物品加值。）</em></p>",
+      "gm": "<p>M 的等价交换货物之一。可酌情定价为一段记忆或仿制卡牌。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "silver-amulet-will",
+        "selector": "will",
+        "type": "item",
+        "value": 1
+      }
+    ],
+    "slug": "silver-amulet",
+    "traits": {
+      "value": ["invested", "magical"],
+      "rarity": "uncommon",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "hp": { "value": 0, "max": 0 },
+    "hardness": 0,
+    "price": { "value": { "gp": 25 } },
+    "equipped": { "carryType": "worn", "inSlot": false, "invested": null },
+    "containerId": null,
+    "size": "med",
+    "material": { "type": null, "grade": null },
+    "identification": {
+      "status": "identified",
+      "unidentified": { "name": "", "img": "", "data": { "description": { "value": "" } } }
+    },
+    "usage": { "value": "wornamulet" },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "M-shop-silver-amulet" }
+  }
+}

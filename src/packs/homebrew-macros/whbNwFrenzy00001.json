@@ -1,0 +1,20 @@
+{
+  "_id": "whbNwFrenzy00001",
+  "name": "夜织者·疯狂乱抓",
+  "type": "script",
+  "img": "icons/skills/melee/blood-slash-purple.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"wang-pf2e-homebrew\")?.api;\nif (!api?.nightweaverFrenzy) return ui.notifications.error(\"夜织者 API 未加载，请确认模块已启用并刷新（F5）。\");\nawait api.nightweaverFrenzy();\n",
+  "folder": "whbfolderRemMac1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "nightweaver-action",
+      "source": "remnant2-nightweaver",
+      "api": "nightweaverFrenzy"
+    }
+  }
+}

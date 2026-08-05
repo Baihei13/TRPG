@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarottemp0001",
+  "name": "XIV · 节制",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/14-tarot-temperance.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XIV · 节制</strong>（Temperance）</p>\n<p><strong>获取</strong>：魔药教室配方书夹层（知识-魔药 DC14 发现空心书）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在魔药教室，亲手制作一瓶治疗药水（药草×2），并将它无偿送给一名非朋友关系的角色治疗伤势。对方必须真的有伤（生命值不满）。</p>\n<p><strong>正位效果</strong></p>\n<p>你的无私获得了平衡的回报。你与接受者各回复 3 点 SAN 值，各净化污染值 2 点。两人建立临时的友好关系（24 小时内不能互相伤害）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在魔药教室，制作一瓶毒药（毒草×1），然后自己喝下去（承受毒药效果：1d8+5 伤害）。</p>\n<p><strong>逆位效果</strong></p>\n<p>你从毒药中幸存（毒药伤害减半，向下取整）。你的身体产生了毒抗性——接下来 48 小时内，你对毒药和药物类效果的伤害/影响减半。但你呕吐出了污染——污染值 +2。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-temperance",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XIV",
+      "english": "Temperance",
+      "number": "14"
+    }
+  }
+}

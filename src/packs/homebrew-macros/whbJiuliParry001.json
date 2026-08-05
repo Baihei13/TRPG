@@ -1,0 +1,14 @@
+{
+  "_id": "whbJiuliParry001",
+  "name": "妖刀·格挡",
+  "type": "script",
+  "img": "icons/skills/melee/sword-block-blue.webp",
+  "scope": "global",
+  "command": "const token = canvas.tokens.controlled[0] ?? game.user.character?.getActiveTokens()[0];\nconst actor = token?.actor ?? game.user.character;\nif (!actor) return ui.notifications.warn(\"请先选中要举刀格挡的角色或令牌。\");\nconst slug = \"jiuli-parry\";\nconst old = actor.itemTypes.effect.filter((e) => e.slug === slug);\nif (old.length) await actor.deleteEmbeddedDocuments(\"Item\", old.map((i) => i.id));\nconst effect = {\n  name: \"格挡（妖刀·隐里切）\",\n  type: \"effect\",\n  img: \"icons/skills/melee/sword-block-blue.webp\",\n  system: {\n    slug,\n    description: { value: \"<p>举刀格架，直到你的下一回合开始获得 +1 环境 AC。</p>\" },\n    rules: [{ key: \"FlatModifier\", selector: \"ac\", type: \"circumstance\", value: 1, label: \"格挡 Parry\" }],\n    traits: { value: [\"magical\"], rarity: \"rare\", otherTags: [\"jiuli-katana\"] },\n    level: { value: 4 },\n    duration: { value: 1, unit: \"rounds\", sustained: false, expiry: \"turn-start\" },\n    tokenIcon: { show: true }\n  }\n};\nawait actor.createEmbeddedDocuments(\"Item\", [effect]);\nui.notifications.info(`${actor.name}：格挡生效，+1 环境 AC（至你下回合开始）。`);",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "jiuli-katana-parry" }
+  }
+}

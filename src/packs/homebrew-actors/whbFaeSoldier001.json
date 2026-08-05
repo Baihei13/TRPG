@@ -1,0 +1,243 @@
+{
+  "_id": "whbFaeSoldier001",
+  "folder": "whbfolderRemnt01",
+  "name": "翡族卫兵",
+  "type": "npc",
+  "img": "icons/weapons/swords/sword-gold-winged.webp",
+  "items": [
+    {
+      "_id": "sDA1BsbgaCABbdq0",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "华饰长刃",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 8
+        },
+        "damageRolls": {
+          "FiG5wsLDMlcgN0ID": {
+            "damage": "1d8+2",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "15b3djWCLfdOZQSi",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "魅影步",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>疾行 5 尺并变得隐蔽，直至下回合开始，或直到你发动攻击/施法。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "illusion",
+            "visual",
+            "manipulate"
+          ]
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "弱点 寒铁 2",
+        "max": 15,
+        "temp": 0,
+        "value": 15
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 30
+      },
+      "weaknesses": [
+        {
+          "type": "cold-iron",
+          "value": 2
+        }
+      ]
+    },
+    "details": {
+      "blurb": "翡族小怪 · 近战",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "fey"
+        ]
+      },
+      "level": {
+        "value": 0
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Fae Soldier</strong>——宫殿走廊上的翡族士兵，华美却致命。幻术短步让他们难以被锁定。弱点寒铁。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "微光视觉",
+      "mod": 6,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 6
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 7
+      },
+      "deception": {
+        "base": 5
+      },
+      "stealth": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fey",
+        "fae"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "翡族卫兵",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/weapons/swords/sword-gold-winged.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

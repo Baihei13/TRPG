@@ -1,0 +1,140 @@
+{
+  "_id": "whbEmperorRing01",
+  "name": "皇帝的戒指",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-cabochon-gold-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>活化状态（Upright — 完全共鸣）</strong></p>\n<p>当持有者的行为与卡牌调性一致时（坚守规则、维护秩序、履行责任），在角色卡<strong>「动作」</strong>栏开启<strong>「活化状态（Upright — 完全共鸣）」</strong>开关，即可获得以下增益。</p>\n<p><em>将戒指<strong>穿戴到戒指槽</strong>后，开关即出现在角色卡「动作」栏。（无需 D&amp;D 式「同调」；本物品也不要求 PF2e「投入」槽位。）</em></p>\n<hr />\n<p><strong>帝王之心（Emperor's Heart）</strong></p>\n<p>你将自身权威化为绝对领域。当你进行以下检定以对抗社交效果时，将结果的成功度提升一级（成功→大成功，失败→成功，大失败→失败）：</p>\n<ul>\n<li>对抗带有 @Trait[mental]{心灵（Mental）} 特征的检定或豁免；</li>\n<li>对抗 [[/act coerce]]{胁迫（Coerce)}、[[/act lie]]{撒谎（Lie)} 或带有 @Trait[charm]{魅惑（Charm）} 特征的效果；</li>\n<li>对抗 [[/act request]]{请求（Request)}、[[/act make-an-impression]]{留下印象（Make an Impression)} 等试图通过交涉影响你立场或决策的行为。</li>\n</ul>\n<p>你同时在威吓（Intimidation）和交涉（Diplomacy）技能检定上获得 +1 物品加值。</p>\n<hr />\n<p><strong>天佑吾王（Fortune of the Crown）</strong></p>\n<p>在你穿戴此戒指且处于活化状态期间，你获得 @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{隐蔽（Concealed）} 状态。攻击者以你为目标的攻击、法术或其他效果须成功通过 @Check[flat|dc:5|showDC:all] 纯骰检定，否则失手。范围效果无需此检定。</p>\n<hr />\n<p><strong>浴血雄狮（Bloodied Lion）</strong></p>\n<p>你的生命力在战斗中愈发顽强。当你受伤时（当前生命值低于最大值），你获得 @Localize[PF2E.NPC.Abilities.Glossary.FastHealing] 1。受伤后，角色卡「动作/能力」栏会自动出现被动能力<strong>浴血雄狮</strong>；战斗中于你的回合开始时自动恢复 1 点生命值。</p>",
+      "gm": "<p><strong>自动化说明（模块 wang-pf2e-homebrew）</strong></p>\n<ul>\n<li>「活化状态」开关在角色卡「动作」栏（Rule Elements 在戒指上）。</li>\n<li>帝王之心：戒指 Rule Elements 自动处理。</li>\n<li>天佑吾王 / 浴血雄狮：<code>scripts/homebrew-automation.mjs</code>。</li>\n</ul>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "emperors-ring-upright",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "皇帝的戒指 — 活化状态（Upright — 完全共鸣）",
+        "requiresInvestment": false
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperors-heart-skills",
+        "selector": ["intimidation", "diplomacy"],
+        "type": "item",
+        "value": 1,
+        "predicate": ["emperors-ring-upright"],
+        "requiresInvestment": false
+      },
+      {
+        "key": "AdjustDegreeOfSuccess",
+        "slug": "emperors-heart-resistance",
+        "selector": "saving-throw",
+        "adjustment": {
+          "success": "one-degree-better",
+          "failure": "one-degree-better",
+          "criticalFailure": "one-degree-better"
+        },
+        "predicate": [
+          "emperors-ring-upright",
+          {
+            "or": [
+              "item:trait:mental",
+              "item:trait:charm",
+              "item:trait:emotion",
+              "origin:action:slug:coerce",
+              "origin:action:slug:lie",
+              "origin:action:slug:request",
+              "origin:action:slug:make-an-impression",
+              "origin:action:slug:gather-information"
+            ]
+          }
+        ],
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "saving-throw",
+        "title": "帝王之心 Emperor's Heart",
+        "text": "对抗社交/心灵效果时，你的成功度提升一级（成功→大成功，失败→成功，大失败→失败）。",
+        "predicate": [
+          "emperors-ring-upright",
+          {
+            "or": [
+              "item:trait:mental",
+              "item:trait:charm",
+              "item:trait:emotion",
+              "origin:action:slug:coerce",
+              "origin:action:slug:lie",
+              "origin:action:slug:request",
+              "origin:action:slug:make-an-impression",
+              "origin:action:slug:gather-information"
+            ]
+          }
+        ],
+        "requiresInvestment": false
+      }
+    ],
+    "slug": "emperors-ring",
+    "traits": {
+      "value": ["magical"],
+      "rarity": "unique",
+      "otherTags": []
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 0
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {}
+    },
+    "equipped": {
+      "carryType": "worn",
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "",
+        "img": "",
+        "data": {
+          "description": {
+            "value": ""
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "wornring"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "automation": "emperors-ring"
+    }
+  }
+}

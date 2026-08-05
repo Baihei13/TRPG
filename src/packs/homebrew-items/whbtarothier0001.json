@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarothier0001",
+  "name": "V · 教皇",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/05-tarot-the-hierophant.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>V · 教皇</strong>（Hierophant）</p>\n<p><strong>获取</strong>：忏悔室暗格（需要在此进行一次真实告解才会显现）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在忏悔室，为一名不在场的角色进行辩护——说出你认为对方值得被信任的理由，必须是真实的。黑白熊会判断是否真诚。</p>\n<p><strong>正位效果</strong></p>\n<p>你与辩护对象建立神圣羁绊。羁绊存在期间，一方触发禁忌时，另一方可主动代受 1 点 SAN 扣除（可拒绝）。此外，羁绊双方每天首次交谈后各回复 1 点 SAN。羁绊持续到有人死亡。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在忏悔室，检举一名在场角色的罪行——必须是对方真实做过的事。如果对方否认但你坚持，检举仍然有效。</p>\n<p><strong>逆位效果</strong></p>\n<p>你与被检举者之间产生罪孽连线。接下来 48 小时内，你知道对方所在的楼层（模糊位置），对方也知道你所在的楼层。如果其中一方在知道对方位置的前提下主动接近并造成伤害，伤害 +2。但如果最终没有互相伤害，48 小时后两人各净化 1 点污染。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-hierophant",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "V",
+      "english": "Hierophant",
+      "number": "05"
+    }
+  }
+}

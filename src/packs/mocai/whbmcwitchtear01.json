@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcwitchtear01",
+  "name": "魔女之泪",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-witch-tear.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】命运扭转</strong></p>\n<p><strong>价格</strong>：7 枚金币 · 命运扭转</p><p>挂在 1F 教堂神坛上使用。24 小时内直接改写或者抹消一位魔法少女（包括自己）的一条精神禁忌。</p><p><strong>购买限制</strong>：该道具只能使用单一角色身上持有的金币购买（不可凑钱/代付）。</p>\n<p><em>⚠ 特殊校规：购买 ≥5 金币物品将在 1 小时后全校通报。</em></p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>改写/抹消一条精神禁忌，持续窗口 24h。须个人金币支付。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-witches-tear",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 7
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 7
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 7,
+      "tier": "命运扭转"
+    }
+  }
+}

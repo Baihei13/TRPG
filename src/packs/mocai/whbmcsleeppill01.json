@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcsleeppill01",
+  "name": "安眠药",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-sleep-pills.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】恢复与功能道具</strong></p>\n<p><strong>价格</strong>：3 枚金币 · 恢复与功能道具</p><p>服用后陷入 6 小时睡眠，醒来时恢复 <strong>4 点 HP</strong> 与 <strong>3 点 SAN</strong>。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>强制睡眠 6h；醒后 HP+4、SAN+3。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-sleeping-pills",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 3
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 3,
+      "tier": "恢复与功能道具"
+    }
+  }
+}

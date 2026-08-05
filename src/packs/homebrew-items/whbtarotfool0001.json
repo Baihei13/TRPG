@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotfool0001",
+  "name": "0 · 愚者",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/00-tarot-the-fool.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>0 · 愚者</strong>（Fool）</p>\n<p><strong>获取</strong>：娱乐室台球桌球袋深处（巧手 DC14）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>将自己持有的所有道具（不包括无法丢弃的物品）全部赠予他人，一件不留。然后手持愚者牌，独自走进一个你从未去过的房间。</p>\n<p><strong>正位效果</strong></p>\n<p>获得一次新生。清除所有污染值，SAN 值回复至满。你失去的道具中，黑白熊随机选一件，以升级版形态归还（效果增强或使用次数翻倍）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>身上持有至少 5 枚硬币。在商店关门前，将所有硬币花光（买什么都行），然后在空荡荡的钱袋上放置愚者牌。</p>\n<p><strong>逆位效果</strong></p>\n<p>你获得了愚者的直觉——接下来 24 小时内，你无法进行任何计划性行动（不能提交杀人计划，不能使用攻略笔记等预演类能力），但你在此期间免疫所有污染值获取。24 小时后，你获得在此期间你目击的所有事件的模糊记录。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-fool",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "0",
+      "english": "Fool",
+      "number": "00"
+    }
+  }
+}

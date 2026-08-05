@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotlove0001",
+  "name": "VI · 恋人",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/06-tarot-the-lovers.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>VI · 恋人</strong>（Lovers）</p>\n<p><strong>获取</strong>：艺术教室未完成画作后面（发现颜料未干才能注意到）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>与一名角色在任意房间独处至少 3 回合，期间两人必须交换一件随身物品作为信物。然后将恋人牌撕成两半，各持一半。</p>\n<p><strong>正位效果</strong></p>\n<p>两人互相知晓对方的禁忌具体内容。交换的信物成为羁绊信物——持有对方信物者，在对方受到伤害时能感知到（知道对方受伤了，但不知道具体细节）。羁绊持续到有人死亡或信物被销毁。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>独自在艺术教室，用恋人牌作为画布，画上你最爱或最恨的人的脸（不需要画得像，只需要画出你心中所想）。完成后将牌留在画架上。</p>\n<p><strong>逆位效果</strong></p>\n<p>你对那个人的执念被牌吸收。你获得执念印记——当你与画像对象同处一个房间时，你对 TA 造成的伤害 +3，但你也无法对 TA 说谎（说谎时对方智力-侦查自动成功）。持续到其中一人死亡。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-lovers",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "VI",
+      "english": "Lovers",
+      "number": "06"
+    }
+  }
+}

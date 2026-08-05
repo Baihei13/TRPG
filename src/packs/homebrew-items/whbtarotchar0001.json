@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotchar0001",
+  "name": "VII · 战车",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/07-tarot-the-chariot.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>VII · 战车</strong>（Chariot）</p>\n<p><strong>获取</strong>：道场榻榻米下（力量-破坏 DC14 掀开地板）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在道场，向一名角色发起正式对决邀请。双方同意后，使用木刀或徒手对决。你必须获胜（将对方生命值打到半血以下或对方认输）。</p>\n<p><strong>正位效果</strong></p>\n<p>你的战斗意志得到淬炼。你下一次进入战斗时，先攻自动第一，第一次攻击伤害 +3。此效果持续到触发或 72 小时后失效。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在道场，向一名角色发起正式对决邀请。你战败（被对方打到半血以下或你主动认输）。</p>\n<p><strong>逆位效果</strong></p>\n<p>战败让你学会了谦卑。你的 AC 永久 +1（不叠加）。但你下一次战斗的第一次攻击自动失手（过于谨慎）。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-chariot",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "VII",
+      "english": "Chariot",
+      "number": "07"
+    }
+  }
+}

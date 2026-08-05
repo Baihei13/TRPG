@@ -1,0 +1,37 @@
+{
+  "_id": "whbstarcardlow01",
+  "name": "星月仿制品（低阶）",
+  "type": "consumable",
+  "img": "icons/sundries/gaming/playing-cards-grey.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：卡牌商人「M」的古董店</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">F</span> 自由动作（捏碎卡牌）</p>\n<p>低阶的【星星】/【月亮】仿制卡牌。捏碎后，你在 1 分钟内免疫 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 Frightened} 状态。</p>\n<p>此外，当你因 @Trait[incorporeal]{虚体}、@Trait[mental]{心灵} 或 @Trait[fear]{恐惧} 类效果而陷入危机时，可立即对引发该效果的来源进行一次 @Check[will|dc:22|against:class] 意志豁免对抗。若其失败，其在 1 轮内无法对你进行敌对动作（视为以星月幻象将其短暂驱逐——可用来对付「吞噬之物」类存在一次）。</p>\n<p><em>使用后，将合集内的「星月幻影」效果拖入角色卡以应用免疫；或由 GM 手动移除惊惧。</em></p>",
+      "gm": "<p>对 Eater 的专用保命道具。PF2e 中无法完全自动化「驱逐概念生物」，以意志对抗 + 1 轮禁 hostile 动作表示。</p>"
+    },
+    "rules": [],
+    "slug": "star-moon-replica-low",
+    "traits": {
+      "value": ["consumable", "magical", "talisman"],
+      "rarity": "rare",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "category": "talisman",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "price": { "value": { "gp": 50 } }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "M-shop-star-moon-replica", "linkedEffect": "whbstarlightfx01" }
+  }
+}

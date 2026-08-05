@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotwrld0001",
+  "name": "XXI · 世界",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/21-tarot-the-world.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XXI · 世界</strong>（World）</p>\n<p><strong>获取</strong>：图书馆禁书区保险箱内（巧手 DC20 + 至少 5 张其他塔罗牌的触发记录；不需要是持有者本人触发，但必须有 5 张牌已经在这个游戏中碎裂）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>手持世界牌，完成朝圣之旅每一个地点，各停留至少 1 回合：<br>• B1：在行刑区，触摸处刑座椅<br>• 1F：在教堂，点燃一支蜡烛（从商店购买或自己制作）<br>• 2F：在占星教室，于黑暗中静坐<br>• 3F：在图书馆，读完一本书的完整一章（由黑白熊判断长度，通常是 1 回合）<br>• 任意：回到你第一次获得塔罗牌的地方，放下世界牌<br>完成所有地点后，回到图书馆禁书区，将世界牌放在保险箱上。</p>\n<p><strong>正位效果</strong></p>\n<p>获得世界之愿——改写一条当前存在的规则（不可改变魔女审判根本规则），持续 72 小时。例如：「血池不再增加污染值」「商店价格减半」「某人的禁忌暂时无效」「地牢不再触发束缚禁忌」。由黑白熊最终裁定范围和强度。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>持有世界牌的状态下，在游戏的最后阶段（只剩 3 名或更少魔法少女存活时），将它撕成 22 片，撒向空中。</p>\n<p><strong>逆位效果</strong></p>\n<p>世界碎裂，但碎片中藏着出口。你获得一次脱出机会——你可以选择立刻离开监狱，带着所有记忆回到现实世界。但你留下的所有人将继续游戏，且因为少了一人，剩下的魔法少女中随机一人 SAN 值 −2。如果你选择留下，逆位效果不触发，世界牌回到你手中（不碎裂，可再次尝试正位）。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-world",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XXI",
+      "english": "World",
+      "number": "21"
+    }
+  }
+}

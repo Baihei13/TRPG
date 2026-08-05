@@ -1,0 +1,25 @@
+{
+  "_id": "whbJiuliParryA01",
+  "name": "格挡（妖刀·隐里切）",
+  "type": "action",
+  "img": "icons/skills/melee/sword-block-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>格挡 Parry</strong>（单动作）</p>\n<p>举起妖刀格架来袭，直到你的下一回合开始，你获得 +1 环境 AC。</p>\n<p><em>把宏「妖刀·格挡」拖到本动作上（Item Macro），点击此动作即可施加效果。</em></p>",
+      "gm": "<p>动作外壳，无内置规则；效果由宏「妖刀·格挡」实现。</p>"
+    },
+    "rules": [],
+    "slug": "jiuli-parry-action",
+    "traits": { "value": [], "rarity": "rare", "otherTags": ["jiuli-katana"] },
+    "publication": { "title": "PF2e 自制合集 (Wang Homebrew)", "authors": "Wang", "license": "OGL", "remaster": true },
+    "actionType": { "value": "action" },
+    "actions": { "value": 1 },
+    "category": "defensive",
+    "deathNote": false,
+    "frequency": null,
+    "level": { "value": 4 }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "jiuli-katana" }
+  }
+}

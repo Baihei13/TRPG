@@ -1,0 +1,247 @@
+{
+  "_id": "whbeaterseed1",
+  "folder": "whbfolderMonst01",
+  "name": "吞噬之物·窥影",
+  "type": "npc",
+  "img": "icons/magic/unholy/orb-beam-pink.webp",
+  "items": [
+    {
+      "_id": "MOpJcTSOFnYDc84s",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "噬咬",
+      "sort": 100000,
+      "system": {
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 11
+        },
+        "damageRolls": {
+          "e6BmUk48BQhQNxCS": {
+            "damage": "1d8+2",
+            "damageType": "void"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "finesse",
+            "magical"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "kihSmJkdJYf0KCJI",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "概念生物",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>免疫非魔法物理伤害；对 @Trait[cold-iron]{寒铁} 与 @Trait[silver]{银} 武器失去免疫。虚体。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "RIhFjX2tHX3YyBCe",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "贪婪吞噬",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对受伤（未满 HP）目标发动噬咬；命中则你恢复 1d8 生命值，目标额外受到 @Damage[1d4[mental]] 伤害。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "kV5cEppWfm2UdRCg",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "次元窥视",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>30 尺内所有生物意志 DC 20，失败则 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}（大失败惊惧 2）。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -5
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 19
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 35,
+        "temp": 0,
+        "value": 35
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 3
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Eater 早期显形</strong>，非完全体。建议用于 Day 4–5 的恐怖场景：打几下就消散，或靠星月仿制品驱逐。完全体不适合 1 级团。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 11,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 12
+      }
+    },
+    "skills": {
+      "stealth": {
+        "base": 12
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "aberration",
+        "incorporeal"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "吞噬之物·窥影",
+    "texture": {
+      "src": "icons/magic/unholy/orb-beam-pink.webp"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

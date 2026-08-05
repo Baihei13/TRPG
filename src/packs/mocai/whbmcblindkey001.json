@@ -1,0 +1,83 @@
+{
+  "_id": "whbmcblindkey001",
+  "name": "夜巡者的盲眼钥匙",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-blind-key.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】控场与仪式前置</strong></p>\n<p><strong>价格</strong>：5 枚金币 · 控场与仪式前置</p><p>任意一个指定房间的钥匙。</p><p><em>购买 ≥5 金币：1 小时后全校通报（特殊校规）。</em></p>\n<p><em>⚠ 特殊校规：购买 ≥5 金币物品将在 1 小时后全校通报。</em></p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>指定任一房间钥匙。触发高价通报校规。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-nightwatch-blind-key",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 5
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的商店货物",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>黑白熊商店货架上的一件商品。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 5,
+      "tier": "控场与仪式前置"
+    }
+  }
+}

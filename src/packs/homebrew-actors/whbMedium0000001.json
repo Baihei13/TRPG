@@ -1,0 +1,490 @@
+{
+  "_id": "whbMedium0000001",
+  "folder": "whbfolderNpc0001",
+  "name": "灵媒",
+  "type": "npc",
+  "img": "icons/magic/symbols/circled-gem-teal.webp",
+  "items": [
+    {
+      "_id": "C32hLNedHBt2FlBC",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "匕首",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 5
+        },
+        "damageRolls": {
+          "0MVcs5sjLgwIGjHJ": {
+            "damage": "1d4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "yJCMbZ2HfoqTkYAN",
+      "name": "拜亚基召唤哨",
+      "type": "equipment",
+      "img": "icons/tools/instruments/pipe-flute-simple-wood.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>来源</strong>：「灵媒」秘术（《再见教父》）</p>\n<p>一支附魔骨哨，可在毕宿五星升起于地平线的夜晚吹响，尝试召唤拜亚基。PF2e 规则下简化为：</p>\n<p><strong>频率</strong> 每日一次</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）</p>\n<p>吹响哨声，在 60 尺内选择一个你可见的敌人。该生物必须尝试 @Check[will|dc:20|against:class] 意志豁免。</p>\n<hr />\n<p><strong>大成功</strong> 不受影响，且免疫此哨 24 小时。</p>\n<p><strong>成功</strong> 不受影响。</p>\n<p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 2}。</p>\n<p><strong>大失败</strong> 陷入惊惧 2 且 @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{逃跑} 1 轮。</p>\n<p><em>（COC 原效：消耗 MP 召唤拜亚基仆从。PF2e 中改为恐惧类超自然哨声，避免完整召唤流程。）</em></p>",
+          "gm": "<p>若剧情需要真实拜亚基，请从最佳iary 拖入并以其意志对抗吹哨者的职业 DC。</p>"
+        },
+        "rules": [
+          {
+            "key": "RollOption",
+            "domain": "all",
+            "option": "byakhee-whistle-daily",
+            "toggleable": true,
+            "placement": "actions",
+            "label": "拜亚基召唤哨 — 今日已使用",
+            "value": false,
+            "requiresInvestment": false
+          },
+          {
+            "key": "Note",
+            "selector": "will",
+            "title": "拜亚基召唤哨",
+            "text": "每日一次：60 尺内单目标意志 DC 20，失败则惊惧 2，大失败则惊惧 2 且逃跑 1 轮。使用后请勾选「今日已使用」。",
+            "predicate": [
+              {
+                "not": "byakhee-whistle-daily"
+              }
+            ]
+          }
+        ],
+        "slug": "byakhee-summoning-whistle",
+        "traits": {
+          "value": [
+            "magical",
+            "occult"
+          ],
+          "rarity": "rare",
+          "otherTags": [
+            "goodbye-godfather"
+          ]
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 6
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 80
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "handsHeld": 1,
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "",
+            "img": "",
+            "data": {
+              "description": {
+                "value": ""
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "goodbye-godfather-iv-emperor",
+          "cocRef": "medium-byakhee-whistle"
+        }
+      },
+      "sort": 350000
+    },
+    {
+      "_id": "WtRPAezpaKwZVp5I",
+      "name": "血肉护符",
+      "type": "consumable",
+      "img": "icons/commodities/bones/tooth-molar-red.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>来源</strong>：「灵媒」的萨满防护符文（《再见教父》）</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）</p>\n<p>以血肉与咒文编织的护符，灵感来自「血肉防护术」。使用后，你获得 @Damage[(2d6)[temporary]]{2d6 临时生命值}，持续 24 小时或直至临时生命值耗尽。</p>\n<p><em>使用后，将合集内的「血肉防护术」效果拖入角色卡；或由 GM 在角色上添加临时生命值。</em></p>",
+          "gm": "<p>COC 原效：每点 MP 给予 1d6 对非魔法武器的护甲。PF2e 简化为 2d6 临时 HP。</p>"
+        },
+        "rules": [],
+        "slug": "flesh-ward-charm",
+        "traits": {
+          "value": [
+            "consumable",
+            "magical",
+            "occult"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "goodbye-godfather"
+          ]
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 4
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "other",
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "autoDestroy": true
+        },
+        "damage": null,
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "price": {
+          "value": {
+            "gp": 15
+          }
+        }
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "goodbye-godfather-iv-emperor",
+          "cocRef": "medium-flesh-ward",
+          "linkedEffect": "whbfleshwardefx1"
+        }
+      },
+      "sort": 360000
+    },
+    {
+      "_id": "3IUC862d82VJ7VBo",
+      "name": "芭丝特的祝福",
+      "type": "consumable",
+      "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
+      "system": {
+        "description": {
+          "value": "<p><strong>来源</strong>：「灵媒」秘术（《再见教父》）</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）</p>\n<p>向猫女神芭丝特祈祷后饮下的圣油。你恢复 @Damage[(1d6+4)[healing]]{1d6+4 生命值}，并移除 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}（若你有更高等级的惊惧，则降低 1 级）。</p>\n<p><em>（COC 原效：回复 1d6 HP 与 1d6 SAN → PF2e 换算为治疗 + 移除惊惧。虐待猫者可能遭女神不悦，由 GM 裁定。）</em></p>",
+          "gm": "<p>可对虐待猫的角色改为造成 @Damage[1[slashing]]{1 挥砍}（爪痕）而非治疗。</p>"
+        },
+        "rules": [],
+        "slug": "bastets-blessing",
+        "traits": {
+          "value": [
+            "consumable",
+            "magical",
+            "healing",
+            "divine"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "goodbye-godfather"
+          ]
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "category": "potion",
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "autoDestroy": true
+        },
+        "damage": {
+          "formula": "1d6+4",
+          "kind": "healing",
+          "type": "untyped"
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "price": {
+          "value": {
+            "gp": 12
+          }
+        }
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "goodbye-godfather-iv-emperor",
+          "cocRef": "medium-bastet-blessing"
+        }
+      },
+      "sort": 370000
+    },
+    {
+      "_id": "pmxwnc9ScrgoTiye",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "血肉防护",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>触碰一名盟友，赋予 @Damage[(2d6)[temporary]]{2d6 临时 HP}（24 小时）。每日一次。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "Ne79eyIHbuob0e7d",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "拜亚基哨声",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>吹响 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbbyakheewhist1]{拜亚基召唤哨}，60 尺内敌人意志 DC 18 或惊惧 2。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 0
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 14
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>安东尼奥阵营的神秘学家，了解大秘仪与逆转之祸。战斗极弱，应受保护。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 7,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 4
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 9
+      }
+    },
+    "skills": {
+      "occultism": {
+        "base": 9
+      },
+      "religion": {
+        "base": 7
+      },
+      "stealth": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "灵媒",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/magic/symbols/circled-gem-teal.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

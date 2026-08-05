@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotherm0001",
+  "name": "IX · 隐者",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/09-tarot-the-hermit.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>IX · 隐者</strong>（Hermit）</p>\n<p><strong>获取</strong>：占星教室天花板星图（仅凌晨 3:00–4:00 月光显现）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>连续独处满 6 回合（3 小时游戏内时间），不与其他任何角色接触、交谈、传递物品。期间必须停留在同一个房间。结束时手持隐者牌。</p>\n<p><strong>正位效果</strong></p>\n<p>获得一次隐遁——即刻传送到图书馆阅读室。接下来 12 小时内，你的行踪不会被任何魔法追踪，监控和预知能力对你失效。SAN 值回复 3 点，并获得 1 条关于监狱隐藏结构的信息。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在地牢的牢房中，被锁在里面的状态下，独自待满 3 回合。不需要连续，可以被放出再进去，但总计必须满 3 回合。</p>\n<p><strong>逆位效果</strong></p>\n<p>你习惯了孤独的黑暗。获得黑暗适应——在黑暗环境中你的侦查不再处于劣势。此外，你免疫「孤独」带来的 SAN 值惩罚。但你下次主动与人交谈时，需要先通过 SAN 检定 DC10，否则会不自觉地疏远对方（对方察觉到你不对劲）。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-hermit",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "IX",
+      "english": "Hermit",
+      "number": "09"
+    }
+  }
+}

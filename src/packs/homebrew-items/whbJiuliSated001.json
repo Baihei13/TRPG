@@ -1,0 +1,35 @@
+{
+  "_id": "whbJiuliSated001",
+  "name": "满足（妖刀·隐里切）",
+  "type": "effect",
+  "img": "icons/magic/death/mouth-bite-fangs-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>妖刀·隐里切已然饮血，暂时平息。</p>\n<p>处于满足状态时，你可激活<strong>诱人诅咒</strong>，且不会因血渴累积毁灭。因血渴而获得的毁灭，可在满足后的下一次休息时正常降低。</p>",
+      "gm": "<p>由「妖刀·隐里切 控制台」宏创建；时长按档位设定（初现 8 小时 / 渐醒·真名 12 小时）。</p>"
+    },
+    "rules": [
+      { "key": "RollOption", "domain": "all", "option": "jiuli-sated" }
+    ],
+    "slug": "jiuli-sated",
+    "traits": {
+      "value": ["curse", "magical"],
+      "rarity": "rare",
+      "otherTags": ["jiuli-katana"]
+    },
+    "publication": {
+      "title": "PF2e 自制合集 (Wang Homebrew)",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "duration": { "value": 480, "unit": "minutes", "expiry": null, "sustained": false },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "jiuli-katana" }
+  }
+}

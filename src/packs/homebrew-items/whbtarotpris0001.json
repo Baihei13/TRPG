@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotpris0001",
+  "name": "II · 女祭司",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/02-tarot-the-high-priestess.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>II · 女祭司</strong>（High Priestess）</p>\n<p><strong>获取</strong>：教堂祭坛下方隐藏隔层（巧手 DC16）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>在教堂，于深夜（21:00–6:00）独自静坐 2 回合（1 小时），全程不发出任何声音。结束时将卡牌放在祭坛上。</p>\n<p><strong>正位效果</strong></p>\n<p>获得一次神谕——向黑白熊询问一个「是/否」问题，黑白熊必须真实回答。此外，接下来 24 小时内你对谎言的直觉敏锐（涉及欺骗的检定获得优势）。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在教堂，当着至少两名其他角色的面，大声说出一个关于自己的真实秘密（必须是你从未对监狱中任何人透露过的）。</p>\n<p><strong>逆位效果</strong></p>\n<p>黑白熊被你的自我暴露取悦了。你获得 3 枚硬币，但 SAN 值 −1。在场的其他角色中，随机一人对你产生怀疑（黑白熊会私下告知对方「你听到了一些让你不安的事情」，但不具体说明）。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-high-priestess",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "II",
+      "english": "High Priestess",
+      "number": "02"
+    }
+  }
+}

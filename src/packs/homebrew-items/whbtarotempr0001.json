@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarotempr0001",
+  "name": "III · 女皇",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/03-tarot-the-empress.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>III · 女皇</strong>（Empress）</p>\n<p><strong>获取</strong>：田地花丛中（仅早晨 6:00–9:00 可见）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>从田地或花房采摘一束鲜花，连同女皇牌一起赠予另一名角色。对方必须自愿接受。赠予时不需要见证人，但你必须说出赠予理由。</p>\n<p><strong>正位效果</strong></p>\n<p>接受者获得女皇的加护——48 小时内所有伤害 −2，且每天回复 1 点 SAN 值（共 2 天）。你与接受者成为朋友（等同于莱尔派对效果）。你获得 2 枚硬币。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>将女皇牌埋在田地的泥土中，浇上你自己的血（1 点生命值），然后离开。24 小时后回来挖出。</p>\n<p><strong>逆位效果</strong></p>\n<p>牌已经腐烂了一半。你获得枯萎的加护——接下来 24 小时内，你受到的伤害 +1，但你造成的伤害也 +2。你变得危险但脆弱。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-empress",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "III",
+      "english": "Empress",
+      "number": "03"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcechocam0001",
+  "name": "灵魂回响摄影机",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-soul-camera.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】禁忌陷阱与防身</strong></p>\n<p><strong>价格</strong>：4 枚金币 · 禁忌陷阱与防身</p><p>安置于门、柜、箱附近，当物件被打开时自动拍下一张照片。可设定是否使用灵体闪光：使用闪光灯必定会被发现，且被拍到的角色在接下来 1 小时内 AC（防御）−2。拍下一张照片后失效。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>开门触发拍照；闪光必被发现 + 目标 1h AC−2；拍一次失效。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-soul-echo-camera",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 4,
+      "tier": "禁忌陷阱与防身"
+    }
+  }
+}

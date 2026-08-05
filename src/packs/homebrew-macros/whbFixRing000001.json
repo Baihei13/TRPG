@@ -1,0 +1,14 @@
+{
+  "_id": "whbFixRing000001",
+  "name": "修复：皇帝的戒指",
+  "type": "script",
+  "img": "icons/svg/regen.svg",
+  "scope": "global",
+  "command": "await game.modules.get(\"wang-pf2e-homebrew\").api.fixEmperorsRing();",
+  "folder": null,
+  "sort": 1,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "emperors-ring-fix" }
+  }
+}

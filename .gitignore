@@ -1,0 +1,25 @@
+# Dependencies / build tooling
+node_modules/
+.npm/
+
+# Staging packs written while Foundry holds locks
+packs-staging/
+
+# LevelDB runtime lock / log files (not needed for install)
+packs/**/LOCK
+packs/**/*.log
+packs/**/LOG
+packs/**/LOG.old
+
+# Temp / local scratch
+_tmp_unpack_test/
+*.log
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Editor
+.vscode/
+.idea/
+*.swp

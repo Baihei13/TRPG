@@ -1,0 +1,14 @@
+{
+  "_id": "whbDiagRing00001",
+  "name": "诊断：皇帝的戒指",
+  "type": "script",
+  "img": "icons/svg/dice-target.svg",
+  "scope": "global",
+  "command": "await game.modules.get(\"wang-pf2e-homebrew\").api.diagnoseAndSync();",
+  "folder": null,
+  "sort": 0,
+  "ownership": { "default": 3 },
+  "flags": {
+    "wang-pf2e-homebrew": { "purpose": "emperors-ring-diagnose" }
+  }
+}

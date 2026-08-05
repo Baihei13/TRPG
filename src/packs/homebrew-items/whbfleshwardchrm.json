@@ -1,0 +1,37 @@
+{
+  "_id": "whbfleshwardchrm",
+  "name": "血肉护符",
+  "type": "consumable",
+  "img": "icons/commodities/bones/tooth-molar-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：「灵媒」的萨满防护符文（《再见教父》）</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）</p>\n<p>以血肉与咒文编织的护符，灵感来自「血肉防护术」。使用后，你获得 @Damage[(2d6)[temporary]]{2d6 临时生命值}，持续 24 小时或直至临时生命值耗尽。</p>\n<p><em>使用后，将合集内的「血肉防护术」效果拖入角色卡；或由 GM 在角色上添加临时生命值。</em></p>",
+      "gm": "<p>COC 原效：每点 MP 给予 1d6 对非魔法武器的护甲。PF2e 简化为 2d6 临时 HP。</p>"
+    },
+    "rules": [],
+    "slug": "flesh-ward-charm",
+    "traits": {
+      "value": ["consumable", "magical", "occult"],
+      "rarity": "uncommon",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "price": { "value": { "gp": 15 } }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "medium-flesh-ward", "linkedEffect": "whbfleshwardefx1" }
+  }
+}

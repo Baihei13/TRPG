@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "_id": "whbfolderMafia01",
+      "name": "黑手帮",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbfolderNpc0001",
+      "name": "剧情 NPC",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbfolderMonst01",
+      "name": "怪物",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbfolderRemnt01",
+      "name": "遗迹2",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    }
+  ]
+}

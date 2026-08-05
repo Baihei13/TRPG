@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcabysstent01",
+  "name": "深渊触手",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-abyss-tentacle.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】强行介入</strong></p>\n<p><strong>价格</strong>：6 枚金币 · 强行介入</p><p>强行夺走一个学生身上的指定物品，并在夺取时对其造成 <strong>1 点精神污染</strong>（扣除 1 点 SAN 值）。</p><p>限定一件。</p>\n<p><strong>库存</strong>：限定一件</p><p><em>⚠ 特殊校规：购买 ≥5 金币物品将在 1 小时后全校通报。</em></p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>强制夺取指定物品 + 目标 SAN−1。限量 1。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-abyss-tentacle",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 6
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 6
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 6,
+      "tier": "强行介入"
+    }
+  }
+}

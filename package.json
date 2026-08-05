@@ -1,0 +1,22 @@
+{
+  "name": "wang-pf2e-homebrew",
+  "private": true,
+  "dependencies": {
+    "classic-level": "^1.4.1"
+  },
+  "scripts": {
+    "pack": "node scripts/build-compendium-packs.mjs",
+    "promote-packs": "node scripts/promote-staging-packs.mjs",
+    "sync-packs": "node scripts/sync-staging-to-live.mjs",
+    "pack:legacy": "fvtt package pack --id wang-pf2e-homebrew --type Module --compendiumName homebrew-items --compendiumType Item --in src/packs/homebrew-items --out packs",
+    "pack:all": "node scripts/build-compendium-packs.mjs",
+    "build:groundskeeper": "node scripts/build-groundskeeper-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:morrow": "node scripts/build-morrow-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:journals": "node scripts/build-groundskeeper-journal.mjs && node scripts/build-morrow-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:actors": "python scripts/build-homebrew-actors.py && node scripts/build-compendium-packs.mjs",
+    "unpack": "fvtt package unpack --id wang-pf2e-homebrew --type Module --compendiumName homebrew-items --compendiumType Item --in packs/homebrew-items --out src/packs/homebrew-items --clean"
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.1.0"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "_id": "whbtarothang0001",
+  "name": "XII · 倒吊人",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/tarot-major/12-tarot-the-hanged-man.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>XII · 倒吊人</strong>（Hanged Man）</p>\n<p><strong>获取</strong>：地牢天花板铁钩上（需被束缚姿态抬头才能看到）</p>\n<hr />\n<p><strong>正位条件</strong></p>\n<p>自愿进入地牢牢房，让人将你锁在里面。在束缚状态下保持至少 3 回合，期间不挣扎不求救不喊叫。结束时将倒吊人牌握在手中。</p>\n<p><strong>正位效果</strong></p>\n<p>你的牺牲得到了回报。获得一条关于魔女审判真相的核心世界观碎片（比一般的碎片更详细）。SAN 值回复 2 点，污染值净化 3 点。</p>\n<hr />\n<p><strong>逆位条件</strong></p>\n<p>在血池中，将倒吊人牌浸入血液，然后贴在受伤的部位（必须是自己已有的伤口，不能为此自残）。保持 1 回合。</p>\n<p><strong>逆位效果</strong></p>\n<p>痛苦中你看到了不该看的东西。你获得一次血之预知——可以查看任意一名角色当前的 SAN 值和污染值。但你自己污染值 +1，且该伤口在 24 小时内无法被治疗。</p>\n<p><em>无自动化：由 GM 裁定触发与结算。触发后卡牌通常碎裂（个别效果另有说明）。</em></p>",
+      "gm": "<p>魔女审判自制大阿卡纳。仅描述效果，无 Rule Elements。获取位置与正/逆位仪式需现场裁定。图片基于公有领域 Rider–Waite–Smith，经魔女风色调处理。</p>"
+    },
+    "rules": [],
+    "slug": "tarot-the-hanged-man",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "tarot-major"
+      ]
+    },
+    "publication": {
+      "title": "魔女审判 — 大阿卡纳塔罗",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的塔罗牌",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>一张散发不祥魔力的卡牌。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "magical-girl-trial-tarot",
+      "arcana": "XII",
+      "english": "Hanged Man",
+      "number": "12"
+    }
+  }
+}

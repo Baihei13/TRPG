@@ -1,0 +1,300 @@
+{
+  "_id": "whbFaeExecut0001",
+  "folder": "whbfolderRemnt01",
+  "name": "翡族处刑者",
+  "type": "npc",
+  "img": "icons/weapons/polearms/halberd-crescent-engraved-steel.webp",
+  "items": [
+    {
+      "_id": "rHaDp6pp8LR0x37J",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "处刑戟",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "mtRtEnitJJwAU4Xz": {
+            "damage": "1d10+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>触及 10 尺。</p>"
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "reach"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "SuwiGxBtdJ4i3ovx",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "借机攻击",
+      "sort": 700000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>标准借机攻击。触发后使用处刑戟打击（点攻击区的 +9）。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "NvQvPviYFLjBPJdk",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "处决斩",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以处刑戟打击。若目标处于惊惧或措手不及，额外造成 @Damage[1d8[slashing]]。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "RYbEO1oiUeZ7JwoQ",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "威压冲锋",
+      "sort": 610000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>疾行两次，然后以处刑戟打击。命中时目标须尝试 @Check[will|dc:15|traits:fear,mental,emotion]，失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "fear",
+            "mental",
+            "emotion"
+          ]
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "弱点 寒铁 3",
+        "max": 26,
+        "temp": 0,
+        "value": 26
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 20
+      },
+      "weaknesses": [
+        {
+          "type": "cold-iron",
+          "value": 3
+        }
+      ]
+    },
+    "details": {
+      "blurb": "翡族精英",
+      "languages": {
+        "details": "",
+        "value": [
+          "common",
+          "fey"
+        ]
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>Heavy Fae / Executioner</strong>——挥着巨大处刑戟的翡族精英。负责清理「僭越者」与德兰俘虏。借机与处决斩让近身周旋很危险。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "微光视觉",
+      "mod": 7,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 9
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 7
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 8
+      },
+      "intimidation": {
+        "base": 7
+      }
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fey",
+        "fae"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "翡族处刑者",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/weapons/polearms/halberd-crescent-engraved-steel.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

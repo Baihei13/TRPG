@@ -1,0 +1,9 @@
+/* Ephemera / Scriptorium sc-paper 在日志里显示时的兜底 */
+
+.journal-entry-page.text .journal-page-content article.sc-paper {
+  display: block;
+}
+
+.journal-entry-page.text .journal-page-content article.sc-paper .sc-text-block p {
+  margin: 0 0 0.75em;
+}

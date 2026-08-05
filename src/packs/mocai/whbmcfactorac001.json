@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcfactorac001",
+  "name": "魔女因子的活性剂",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-factor-activator.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】等价交换</strong></p>\n<p><strong>价格</strong>：2 枚金币 · 等价交换</p><p>饮用后立刻回满全部 MP。但代价是体内因子暴走：在接下来的一天内，触发精神禁忌时受到的 SAN 值扣除翻倍；初始 SAN 值上限永久 −2。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>MP 回满；24h 禁忌 SAN 扣翻倍；SAN 上限永久−2。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-witch-factor-activator",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 2
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 2,
+      "tier": "等价交换"
+    }
+  }
+}

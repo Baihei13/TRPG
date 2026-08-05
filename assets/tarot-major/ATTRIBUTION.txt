@@ -1,0 +1,7 @@
+# Tarot Major Arcana assets
+
+Source artwork: Rider–Waite–Smith Major Arcana (1909), public domain.
+Downloaded from Wikimedia Commons (`RWS_Tarot_*.jpg`).
+
+Local processing: magenta/violet grade, vignette, gothic frame for 魔女审判 tone.
+Raw originals kept in `_raw/` for regeneration via `scripts/build-tarot-major.py`.

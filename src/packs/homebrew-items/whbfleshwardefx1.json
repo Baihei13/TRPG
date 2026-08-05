@@ -1,0 +1,42 @@
+{
+  "_id": "whbfleshwardefx1",
+  "name": "血肉防护术",
+  "type": "effect",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>血肉咒文在你体表形成缓冲。你拥有 @Damage[(2d6)[temporary]]{2d6 临时生命值}。</p>",
+      "gm": "<p>配合「血肉护符」使用。临时 HP 耗尽或 24 小时后移除。</p>"
+    },
+    "rules": [
+      {
+        "key": "TempHP",
+        "value": "2d6"
+      }
+    ],
+    "slug": "flesh-ward-effect",
+    "traits": {
+      "value": ["magical", "occult"],
+      "rarity": "uncommon",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 4 },
+    "duration": {
+      "value": 1440,
+      "unit": "minutes",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "pairedItem": "whbfleshwardchrm" }
+  }
+}

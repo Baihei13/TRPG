@@ -1,0 +1,20 @@
+{
+  "_id": "whbNwSummon00001",
+  "name": "夜织者·召唤梦魇幼蛛",
+  "type": "script",
+  "img": "icons/creatures/invertebrates/spider-pink-teal.webp",
+  "scope": "global",
+  "command": "const api = game.modules.get(\"wang-pf2e-homebrew\")?.api;\nif (!api?.nightweaverSummon) return ui.notifications.error(\"夜织者 API 未加载，请确认模块已启用并刷新（F5）。\");\nawait api.nightweaverSummon();\n",
+  "folder": "whbfolderRemMac1",
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "nightweaver-action",
+      "source": "remnant2-nightweaver",
+      "api": "nightweaverSummon"
+    }
+  }
+}

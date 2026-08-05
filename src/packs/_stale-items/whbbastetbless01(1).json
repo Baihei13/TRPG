@@ -1,0 +1,41 @@
+{
+  "_id": "whbbastetbless01",
+  "name": "芭丝特的祝福",
+  "type": "consumable",
+  "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：「灵媒」秘术（《再见教父》）</p>\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）</p>\n<p>向猫女神芭丝特祈祷后饮下的圣油。你恢复 @Damage[(1d6+4)[healing]]{1d6+4 生命值}，并移除 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}（若你有更高等级的惊惧，则降低 1 级）。</p>\n<p><em>（COC 原效：回复 1d6 HP 与 1d6 SAN → PF2e 换算为治疗 + 移除惊惧。虐待猫者可能遭女神不悦，由 GM 裁定。）</em></p>",
+      "gm": "<p>可对虐待猫的角色改为造成 @Damage[1[slashing]]{1 挥砍}（爪痕）而非治疗。</p>"
+    },
+    "rules": [],
+    "slug": "bastets-blessing",
+    "traits": {
+      "value": ["consumable", "magical", "healing", "divine"],
+      "rarity": "uncommon",
+      "otherTags": ["goodbye-godfather"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "category": "potion",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": {
+      "formula": "1d6+4",
+      "kind": "healing",
+      "type": "untyped"
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "price": { "value": { "gp": 12 } }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "medium-bastet-blessing" }
+  }
+}

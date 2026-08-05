@@ -1,0 +1,61 @@
+{
+  "_id": "whbmcfalseclue01",
+  "name": "虚假线索",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-false-clue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】等价交换</strong></p>\n<p><strong>价格</strong>：2 枚金币 · 等价交换</p><p>添加一条虚假线索。</p>\n<p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>向线索池投入一条伪证/假线索，由买家描述、GM 审核。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-false-clue",
+    "traits": {
+      "value": [
+        "consumable",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "price": {
+      "value": {
+        "gp": 2
+      }
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 2,
+      "tier": "等价交换"
+    }
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "_id": "whbleonardo001",
+  "folder": "whbfolderNpc0001",
+  "name": "李奥纳多·卡亨",
+  "type": "npc",
+  "img": "icons/equipment/head/hat-top-hat-grey.webp",
+  "items": [
+    {
+      "_id": "92Xg4ndAyc6JU3eY",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "拳头",
+      "sort": 100000,
+      "system": {
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "8fXEMkJ69gujzO1Z": {
+            "damage": "1d4+1",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "nonlethal",
+            "unarmed"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "s58iNqR9O0ADcGG8",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "手枪",
+      "sort": 200000,
+      "system": {
+        "attackEffects": {
+          "value": []
+        },
+        "bonus": {
+          "value": 6
+        },
+        "damageRolls": {
+          "a72OtYhKu8U7HDCZ": {
+            "damage": "1d6",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": {
+          "increment": 20,
+          "max": 120
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "range-increment-30"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "3sAlXtCyt751bGfp",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "皇帝权戒（衰退）",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>穿戴 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbemperorcoc01]{皇帝的戒指（逆转·剧情版）}。十尺内子弹会莫名偏转（AC +1 对远程）。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "Vuo5wofS3nuaYvr8",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "权威呵斥",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>30 尺内一名生物尝试 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧} 豁免 DC 18；失败则惊惧 1。</p>"
+        },
+        "publication": {
+          "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+          "authors": "叉烧饭加蛋",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "",
+        "max": 28,
+        "temp": 0,
+        "value": 28
+      },
+      "speed": {
+        "otherSpeeds": [],
+        "value": 25
+      }
+    },
+    "details": {
+      "blurb": "新教父",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 2
+      },
+      "privateNotes": "",
+      "publicNotes": "<p><strong>新教父继承人</strong>，野心勃勃，佩戴衰退中的皇帝权戒。战斗非其强项；建议以社交、追逐与帮派冲突为主，而非硬碰。</p>",
+      "publication": {
+        "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+        "authors": "叉烧饭加蛋",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 6,
+      "senses": []
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 8
+      },
+      "diplomacy": {
+        "base": 9
+      },
+      "intimidation": {
+        "base": 7
+      },
+      "society": {
+        "base": 8
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "李奥纳多·卡亨",
+    "texture": {
+      "src": "icons/equipment/head/hat-top-hat-grey.webp"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "goodbye-godfather-iv-emperor"
+    }
+  }
+}

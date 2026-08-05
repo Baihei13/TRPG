@@ -1,0 +1,477 @@
+{
+  "_id": "whbNwCrawl000001",
+  "folder": "whbfolderRemnt01",
+  "name": "夜织者·爬行恶鬼",
+  "type": "npc",
+  "img": "icons/creatures/magical/humanoid-silhouette-dashing-blue.webp",
+  "items": [
+    {
+      "_id": "knbZEBmKg6VuA6UR",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "爪击",
+      "sort": 100000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 10
+        },
+        "damageRolls": {
+          "olMmiKZPYneEuKhG": {
+            "damage": "1d8+3",
+            "damageType": "slashing"
+          },
+          "FfiRh1LyK37DEkUD": {
+            "damage": "1",
+            "damageType": "mental"
+          }
+        },
+        "description": {
+          "value": "<p>触及 10 尺。</p>"
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "BdRzzcRGk5JOtJOb",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "梦魇攫抓",
+      "sort": 110000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": [
+            "grabbed"
+          ]
+        },
+        "bonus": {
+          "value": 10
+        },
+        "damageRolls": {
+          "uYhcCxSCN66QbMfD": {
+            "damage": "1d4+2",
+            "damageType": "mental"
+          }
+        },
+        "description": {
+          "value": "<p>触及 10 尺。命中后目标被 @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{擒抱}（逃脱 DC 16）。</p>"
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "1OnoUz2P2QroDDub",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "噩梦钉刺",
+      "sort": 200000,
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 10
+        },
+        "damageRolls": {
+          "ye8X1OzwIDQaOER5": {
+            "damage": "1d4+2",
+            "damageType": "force"
+          }
+        },
+        "description": {
+          "value": ""
+        },
+        "publication": {
+          "license": "OGL",
+          "remaster": false,
+          "title": ""
+        },
+        "range": {
+          "increment": 30,
+          "max": 180
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "range-increment-30"
+          ]
+        }
+      },
+      "type": "melee"
+    },
+    {
+      "_id": "qfV9KWQlBFTVlCzg",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "织梦者",
+      "sort": 500000,
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>任何试图以心灵、情绪或睡眠效果影响夜织者的生物，必须尝试 @Check[will|dc:16|traits:mental,emotion,fear]。</p><hr /><p><strong>大成功 / 成功</strong> 不受影响。</p><p><strong>失败 / 大失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{呆滞 1}，持续 1 轮。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "B2UMGd6MHHMK7oJI",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "借机攻击",
+      "sort": 700000,
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>标准借机攻击。触发后使用爪击打击（点攻击区的 +10）。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "zu8n7x9hZpqOuslb",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "噩梦爆破",
+      "sort": 600000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d6[force]|options:area-damage]，并须尝试 @Check[reflex|dc:16|basic|traits:fear,mental,force]。</p><p>@Template[type:cone|distance:15]</p><hr /><p><strong>大成功 / 成功</strong> 不受额外惊惧影响。</p><p><strong>失败 / 大失败</strong> 额外陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "force",
+            "mental",
+            "fear"
+          ]
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "4a2rknMUn4vAGVXA",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "召唤梦魇幼蛛",
+      "sort": 610000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场战斗一次（与一阶段共用，GM 记次）</p><p>若本场尚未召唤过：点播放生成 1 只幼蛛并陷入措手不及。中断：近战命中则召唤失败；@Damage[1d6[mental]] 并震慑 1。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    },
+    {
+      "_id": "kyov4WZdV2YPA2c0",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "疯狂乱抓",
+      "sort": 620000,
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>点播放会连续掷两次爪击。若两次均命中同一目标，附加 @Damage[1d4[persistent,bleed]]。</p>"
+        },
+        "publication": {
+          "title": "遗迹2 — PF2e 自制转换",
+          "authors": "Wang",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      },
+      "type": "action"
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": -1
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 18
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "免疫睡眠；弱点 寒铁 3、神圣 3",
+        "max": 20,
+        "temp": 0,
+        "value": 20
+      },
+      "speed": {
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 20
+          }
+        ],
+        "value": 30
+      },
+      "immunities": [
+        {
+          "type": "sleep"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "cold-iron",
+          "value": 3
+        },
+        {
+          "type": "holy",
+          "value": 3
+        }
+      ]
+    },
+    "details": {
+      "blurb": "遗迹2 · Boss 二阶段",
+      "languages": {
+        "details": "只能说零碎词语；心灵感应 30 尺",
+        "value": [
+          "common",
+          "fey"
+        ]
+      },
+      "level": {
+        "value": 2
+      },
+      "privateNotes": "",
+      "publicNotes": "<p>夜织者二阶段（Crawling Horror）。一阶段 HP 归零后换上本 Token，<strong>20 HP</strong> 入场。失去飞行；陆地 30、攀爬 20；获得借机攻击。无贴墙 / 无遁入；攻击与 DC 同一阶段。</p>",
+      "publication": {
+        "title": "遗迹2 — PF2e 自制转换",
+        "authors": "Wang",
+        "license": "OGL",
+        "remaster": false
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "黑暗视觉；心灵感应 30 尺",
+      "mod": 8,
+      "senses": [
+        {
+          "type": "darkvision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 9
+      },
+      "deception": {
+        "base": 8
+      },
+      "intimidation": {
+        "base": 8
+      },
+      "stealth": {
+        "base": 9
+      },
+      "occultism": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "fey",
+        "dream",
+        "unholy"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "夜织者·爬行恶鬼",
+    "width": 1,
+    "height": 1,
+    "depth": 0,
+    "texture": {
+      "src": "icons/creatures/magical/humanoid-silhouette-dashing-blue.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 2
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-nightweaver"
+    }
+  }
+}

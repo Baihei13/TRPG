@@ -1,0 +1,83 @@
+{
+  "_id": "whbmcseedfragb01",
+  "name": "悲叹之种的碎片 · 组件二",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/mocai/mocai-seed-b.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>【魔裁商店】终焉的安息</strong></p>\n<p><strong>价格</strong>：10 枚金币 · 【终焉的安息】组件</p><p>传闻中集齐三个组件可开启？？仪式。仅此一件，售完即止。</p><p><em>组件二 / 三（其余组件另行寻得）。</em></p>\n<p><strong>库存</strong>：仅此一件，售完即止</p><p><em>⚠ 特殊校规：购买 ≥5 金币物品将在 1 小时后全校通报。</em></p><p><em>无自动化：由 GM / 黑白熊裁定。</em></p>",
+      "gm": "<p>悲叹之种仪式相关组件。限量 1。与组件一配套。</p>"
+    },
+    "rules": [],
+    "slug": "mocai-lament-seed-fragment-2",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "magical-girl-trial",
+        "mocai-shop"
+      ]
+    },
+    "publication": {
+      "title": "魔裁 — 黑白熊商店",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 10
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 10
+      }
+    },
+    "equipped": {
+      "carryType": "held",
+      "handsHeld": 1,
+      "inSlot": false,
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "神秘的商店货物",
+        "img": "",
+        "data": {
+          "description": {
+            "value": "<p>黑白熊商店货架上的一件商品。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "mocai-shop",
+      "priceCoins": 10,
+      "tier": "终焉的安息"
+    }
+  }
+}

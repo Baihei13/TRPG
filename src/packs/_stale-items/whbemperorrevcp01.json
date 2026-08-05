@@ -1,0 +1,67 @@
+{
+  "_id": "whbemperorrevcp01",
+  "name": "皇帝卡牌·逆位复制品",
+  "type": "equipment",
+  "img": "icons/sundries/gaming/playing-cards-black.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>来源</strong>：《再见教父》结局「击碎冠冕」— 逆位能量碎片</p>\n<p>漆黑与金色交织的逆位【皇帝】碎片，散发着暴虐与失控的威压。此物品为<strong>诅咒物品</strong>，穿戴期间：</p>\n<ul>\n<li><strong>逆位之缚</strong>：意志豁免 -1 状态减值。</li>\n<li><strong>血冠冲动</strong>：威吓检定 +1 状态加值，但你在威吓检定大失败时，会陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}（对失控权威的恐惧）。</li>\n</ul>\n<p><em>（对应模组中李奥纳多逆位失控的意象；移除需摧毁卡牌或完成净化剧情。）</em></p>",
+      "gm": "<p>罗蜜安娜线结局「血皇冠」亦可参考此物品气质。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "emperor-reversed-will",
+        "selector": "will",
+        "type": "status",
+        "value": -1
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "emperor-reversed-intimidation",
+        "selector": "intimidation",
+        "type": "status",
+        "value": 1
+      },
+      {
+        "key": "Note",
+        "selector": "intimidation",
+        "title": "血冠冲动",
+        "text": "威吓检定大失败时，你陷入惊惧 1。",
+        "predicate": []
+      }
+    ],
+    "slug": "emperor-card-reversed-copy",
+    "traits": {
+      "value": ["cursed", "magical", "relic"],
+      "rarity": "unique",
+      "otherTags": ["goodbye-godfather", "major-arcana"]
+    },
+    "publication": {
+      "title": "再见教父 — 圣卡琳娜的大秘仪 II 期 · IV 皇帝",
+      "authors": "叉烧饭加蛋",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": { "value": 8 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "hp": { "value": 0, "max": 0 },
+    "hardness": 0,
+    "price": { "value": {} },
+    "equipped": { "carryType": "worn", "inSlot": false, "invested": null },
+    "containerId": null,
+    "size": "med",
+    "material": { "type": null, "grade": null },
+    "identification": {
+      "status": "identified",
+      "unidentified": { "name": "", "img": "", "data": { "description": { "value": "" } } }
+    },
+    "usage": { "value": "worn" },
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": { "source": "goodbye-godfather-iv-emperor", "cocRef": "ending-shatter-crown-reversed-copy" }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "_id": "whbDblBarrel0001",
+  "folder": "whbfolderRemIt01",
+  "name": "双管手枪",
+  "type": "weapon",
+  "img": "systems/pf2e/icons/equipment/weapons/double-barreled-pistol.webp",
+  "system": {
+    "description": {
+      "value": "<p>这把枪枪管短小、坚固耐用，能将人体撕成碎片——这种武器通常只有不信任身边人、预感到最坏情况的人才会持有。</p>\n<blockquote><p>一个糟糕的领导者，如果不能信任下属会做正确的事——如果总是担心笑容背后隐藏着背叛——那她就是糟糕的领导者。即便她有时是对的，这样的生活也毫无意义。</p></blockquote>\n<hr />\n<p><strong>绑定</strong> 此枪与你绑定。你可以用一个动作将其召唤至手中（需求：与你同在一个位面）。若他人持用此枪，它会在 1 分钟后自行消失并回到你手中。只有<em>解除魔法</em>（DC 20）或<em>移除诅咒</em>能解除此绑定。</p>\n<hr />\n<p><strong>近距压制</strong> 当你对 30 尺内的目标使用此枪进行攻击时，伤害骰获得 +1 物品加值。（已自动化。）</p>\n<hr />\n<p><strong>双管齐发</strong> 你可以用一个交互动作同时装填两发弹药。若你如此做，下一次攻击时进行一次攻击检定，命中后投两次伤害骰并取高（若持有 +1 强击符文等，仅应用一次，不翻倍）。</p>\n<p><em>（自动化：双装填后在角色卡「动作」栏开启「双管齐发」；命中结算伤害时按提示取高，然后关闭开关。）</em></p>",
+      "gm": "<p><strong>Short-Barreled Double-Barrel</strong>（遗迹2）。物品 3，罕见，魔法。90 gp。1d6 P，射程增量 30，装填 1，容量 2，火器，单手，负载 1。</p>\n<p>绑定与召唤手操。近距压制：30 尺内伤害 +1 物品。双管齐发：开关 + 聊天提示取高，非标准 PF2e double-barrel 加骰。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "short-barrel-close-suppression",
+        "selector": "short-barreled-double-barrel-damage",
+        "type": "item",
+        "value": 1,
+        "predicate": [
+          {
+            "lte": ["target:distance", 30]
+          }
+        ],
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "short-barrel-double-load",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "双管手枪 — 双管齐发（已双装填）",
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "short-barreled-double-barrel-damage",
+        "title": "双管齐发",
+        "text": "投<strong>两次</strong>伤害骰并取高（强击等符文仅应用一次）。结算后请关闭「双管齐发」开关。",
+        "predicate": ["short-barrel-double-load"],
+        "outcome": ["success", "criticalSuccess"],
+        "requiresInvestment": false
+      }
+    ],
+    "slug": "short-barreled-double-barrel",
+    "traits": {
+      "value": ["magical", "capacity-2"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant2", "bonded"]
+    },
+    "publication": {
+      "title": "遗迹2 — PF2e 自制转换",
+      "authors": "Wang",
+      "license": "OGL",
+      "remaster": false
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": "double-barreled-pistol",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 90
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "短管双管枪",
+        "img": "systems/pf2e/icons/equipment/weapons/double-barreled-pistol.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪管短小的双管火器，保养得意外完好。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d6",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": null,
+      "builtIn": false,
+      "capacity": 2
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant2-losomn",
+      "remnantRef": "short-barreled-double-barrel"
+    }
+  }
+}
