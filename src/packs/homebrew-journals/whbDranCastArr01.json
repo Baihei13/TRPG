@@ -14,7 +14,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p>德兰回忆</p><p>致后来人</p><p>它确实是从天而降的。我会把事情的来龙去脉完整地记录下来，留给后人，让他们知道。</p><p>我当时正在散步，突然感觉空气中有些异样。之前已经下了好几天的雨，但就在那一刻，一场巨大的风暴凭空而起。巨浪滔天，电闪雷鸣，大地摇晃崩裂，各种景象令人触目惊心。然后我抬头一看，就看到了它。</p><p>城堡旋转着从天而降，直到「噗通」一声！它开始坠落，我喊道：「如果非要找人算账，那就去抓那些傲慢自大的德兰人！」果然，我一声令下，城堡仿佛点了点头，飞走了，把上城区的德兰人碾成了纸片。</p><p>这就是德兰国王和他的城堡来到这里的由来。</p><p>某目击者</p>"
+        "content": "<p>德兰回忆</p><p>致后来人</p><p>它确实是从天而降的。我会把事情的来龙去脉完整地记录下来，留给后人，让他们知道。</p><p>我当时正在散步，突然感觉空气中有些异样。之前已经下了好几天的雨，但就在那一刻，一场巨大的风暴凭空而起。巨浪滔天，电闪雷鸣，大地摇晃崩裂，各种景象令人触目惊心。然后我抬头一看，就看到了它。</p><p>城堡旋转着从天而降，直到「噗通」一声！它开始坠落，我喊道：「如果非要找人算账，那就去抓那些傲慢自大的德兰人！」果然，我一声令下，城堡仿佛点了点头，飞走了，把上城区的德兰人碾成了纸片。</p><p>这就是德兰国王和他的城堡来到这里的由来。</p><p>——某目击者</p>"
       },
       "video": {
         "controls": true,
@@ -49,12 +49,12 @@
         "composition": "blocks",
         "title": "德兰回忆：城堡抵达",
         "theme": "aged-letter",
-        "createdAt": 1786245656026,
-        "updatedAt": 1786245656026,
+        "createdAt": 1786276141637,
+        "updatedAt": 1786276141637,
         "data": {},
         "paper": {
           "width": 720,
-          "height": 980
+          "height": 1100
         },
         "textBlocks": [
           {
@@ -69,12 +69,12 @@
           },
           {
             "id": "classic-letter-body",
-            "text": "它确实是从天而降的。我会把事情的来龙去脉完整地记录下来，留给后人，让他们知道。\n\n我当时正在散步，突然感觉空气中有些异样。之前已经下了好几天的雨，但就在那一刻，一场巨大的风暴凭空而起。巨浪滔天，电闪雷鸣，大地摇晃崩裂，各种景象令人触目惊心。然后我抬头一看，就看到了它。\n\n城堡旋转着从天而降，直到「噗通」一声！它开始坠落，我喊道：「如果非要找人算账，那就去抓那些傲慢自大的德兰人！」果然，我一声令下，城堡仿佛点了点头，飞走了，把上城区的德兰人碾成了纸片。\n\n这就是德兰国王和他的城堡来到这里的由来。",
+            "text": "它确实是从天而降的。我会把事情的来龙去脉完整地记录下来，留给后人，让他们知道。\n\n我当时正在散步，突然感觉空气中有些异样。之前已经下了好几天的雨，但就在那一刻，一场巨大的风暴凭空而起。巨浪滔天，电闪雷鸣，大地摇晃崩裂，各种景象令人触目惊心。然后我抬头一看，就看到了它。\n\n城堡旋转着从天而降，直到「噗通」一声！它开始坠落，我喊道：「如果非要找人算账，那就去抓那些傲慢自大的德兰人！」果然，我一声令下，城堡仿佛点了点头，飞走了，把上城区的德兰人碾成了纸片。\n\n这就是德兰国王和他的城堡来到这里的由来。\n\n——某目击者",
             "html": ""
           },
           {
             "id": "classic-letter-signature",
-            "text": "某目击者",
+            "text": "",
             "html": ""
           },
           {
@@ -96,7 +96,7 @@
         "imageBlocks": [],
         "styles": {
           "textBlocks.classic-letter-date": {
-            "fontSize": 16,
+            "fontSize": 15,
             "fontWeight": 400,
             "fontFamily": "",
             "italic": false,
@@ -112,7 +112,7 @@
             "textAlign": "left"
           },
           "textBlocks.classic-letter-body": {
-            "fontSize": 20,
+            "fontSize": 16,
             "fontWeight": 400,
             "fontFamily": "EB Garamond",
             "italic": false,
@@ -138,34 +138,34 @@
         },
         "layout": {
           "customText-classic-letter-date": {
-            "width": 180,
-            "height": 30,
-            "x": 455,
-            "y": 110
+            "width": 240,
+            "height": 32,
+            "x": 400,
+            "y": 96
           },
           "customText-classic-letter-to": {
-            "width": 500,
-            "height": 36,
-            "x": 85,
-            "y": 170
+            "width": 540,
+            "height": 32,
+            "x": 80,
+            "y": 150
           },
           "customText-classic-letter-body": {
-            "width": 550,
-            "height": 350,
-            "x": 85,
-            "y": 230
+            "width": 560,
+            "height": 640,
+            "x": 80,
+            "y": 205
           },
           "customText-classic-letter-signature": {
-            "width": 190,
-            "height": 90,
-            "x": 430,
-            "y": 640
+            "width": 260,
+            "height": 70,
+            "x": 360,
+            "y": 857
           },
           "customText-classic-letter-ps": {
-            "width": 550,
-            "height": 70,
-            "x": 85,
-            "y": 785
+            "width": 560,
+            "height": 50,
+            "x": 80,
+            "y": 1010
           },
           "customRule-classic-letter-top": {
             "width": 570,
@@ -177,11 +177,12 @@
             "width": 570,
             "height": 8,
             "x": 75,
-            "y": 880
+            "y": 1030
           }
         },
         "hiddenBlocks": [
-          "classic-letter-ps"
+          "classic-letter-ps",
+          "classic-letter-signature"
         ],
         "elementLayer": {
           "strokes": []

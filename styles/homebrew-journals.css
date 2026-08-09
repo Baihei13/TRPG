@@ -7,3 +7,49 @@
 .journal-entry-page.text .journal-page-content article.sc-paper .sc-text-block p {
   margin: 0 0 0.75em;
 }
+
+/* —— 书页：左右页边距对称、避免外缘裁切、正文吃满版心 —— */
+.ephemera-book-leaf .ephemera-document {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  box-sizing: border-box;
+  left: 0 !important;
+  top: 0 !important;
+  transform: none !important;
+}
+
+.ephemera-book-leaf-left .ephemera-flow-layout .ephemera-content,
+.ephemera-book-turn-face-left .ephemera-flow-layout .ephemera-content {
+  padding: 48px 44px 52px 58px !important;
+  box-sizing: border-box;
+}
+
+.ephemera-book-leaf-right .ephemera-flow-layout .ephemera-content,
+.ephemera-book-turn-face-right .ephemera-flow-layout .ephemera-content {
+  padding: 48px 58px 52px 44px !important;
+  box-sizing: border-box;
+}
+
+.ephemera-book-leaf .ephemera-flow-content,
+.ephemera-book-turn-face .ephemera-flow-content {
+  max-width: 100%;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.ephemera-book-leaf .ephemera-flow-content > p:first-child,
+.ephemera-book-turn-face .ephemera-flow-content > p:first-child {
+  margin-top: 0;
+}
+
+/* —— 信件：正文框可溢出时不被裁切叠字；隐藏空收件人占位 —— */
+.ephemera-letter .ephemera-custom-text-block[data-multiline="true"] {
+  overflow: visible;
+}
+
+.ephemera-letter .ephemera-letter-body {
+  overflow: visible;
+}

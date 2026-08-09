@@ -26,7 +26,7 @@ export async function buildDranWorkerLetterDocument() {
     template: "classic-letter",
     fields: {
       date: "夜班",
-      to: "——",
+      to: "",
       body: BODY,
       signature: "一名德兰工人",
       ps: "",

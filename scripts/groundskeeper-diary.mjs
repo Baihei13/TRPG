@@ -61,8 +61,11 @@ function esc(s) {
 }
 
 function flowHtml(entry) {
-  return `<p><strong>${esc(entry.title)}</strong></p>${entry.paragraphs
-    .map((p) => `<p>${esc(p)}</p>`)
+  return `<p style="margin:0 0 0.9em;font-size:1.18em;font-weight:700;letter-spacing:0.08em;line-height:1.35;"><strong>${esc(entry.title)}</strong></p>${entry.paragraphs
+    .map(
+      (p) =>
+        `<p style="margin:0 0 0.9em;line-height:1.85;text-align:justify;">${esc(p)}</p>`
+    )
     .join("")}`;
 }
 

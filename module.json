@@ -2,7 +2,7 @@
   "id": "wang-pf2e-homebrew",
   "title": "PF2e 自制合集 (Wang Homebrew)",
   "description": "<p>PF2e 自制物品、NPC、宏与设定日志。<strong>以后新增的 homebrew 请放在本模块的合集与 src 目录中。</strong>含塔罗、「魔裁」商店，以及汉化 lore 日志（如《园丁日记》）。</p>",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "authors": [
     {
       "name": "Wang"

@@ -26,7 +26,7 @@ export async function buildLighthouseLetterDocument() {
     template: "classic-letter",
     fields: {
       date: "灯塔守夜",
-      to: "——",
+      to: "",
       body: BODY,
       signature: "灯塔看守",
       ps: "",
