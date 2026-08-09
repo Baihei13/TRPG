@@ -21,13 +21,13 @@
 
 .ephemera-book-leaf-left .ephemera-flow-layout .ephemera-content,
 .ephemera-book-turn-face-left .ephemera-flow-layout .ephemera-content {
-  padding: 48px 44px 52px 58px !important;
+  padding: 44px 40px 64px 56px !important;
   box-sizing: border-box;
 }
 
 .ephemera-book-leaf-right .ephemera-flow-layout .ephemera-content,
 .ephemera-book-turn-face-right .ephemera-flow-layout .ephemera-content {
-  padding: 48px 58px 52px 44px !important;
+  padding: 44px 56px 64px 40px !important;
   box-sizing: border-box;
 }
 

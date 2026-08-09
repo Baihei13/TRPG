@@ -49,12 +49,12 @@
         "composition": "blocks",
         "title": "灯塔日志",
         "theme": "aged-letter",
-        "createdAt": 1786276141553,
-        "updatedAt": 1786276141553,
+        "createdAt": 1786277840919,
+        "updatedAt": 1786277840919,
         "data": {},
         "paper": {
           "width": 720,
-          "height": 1100
+          "height": 980
         },
         "textBlocks": [
           {
@@ -112,7 +112,7 @@
             "textAlign": "left"
           },
           "textBlocks.classic-letter-body": {
-            "fontSize": 16,
+            "fontSize": 15,
             "fontWeight": 400,
             "fontFamily": "EB Garamond",
             "italic": false,
@@ -151,21 +151,21 @@
           },
           "customText-classic-letter-body": {
             "width": 560,
-            "height": 640,
+            "height": 710,
             "x": 80,
-            "y": 155
+            "y": 150
           },
           "customText-classic-letter-signature": {
             "width": 260,
             "height": 70,
             "x": 360,
-            "y": 807
+            "y": 880
           },
           "customText-classic-letter-ps": {
             "width": 560,
             "height": 50,
             "x": 80,
-            "y": 1010
+            "y": 900
           },
           "customRule-classic-letter-top": {
             "width": 570,
@@ -177,7 +177,7 @@
             "width": 570,
             "height": 8,
             "x": 75,
-            "y": 1030
+            "y": 910
           }
         },
         "hiddenBlocks": [

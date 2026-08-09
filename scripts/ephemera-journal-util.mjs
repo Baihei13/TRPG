@@ -22,6 +22,39 @@ export function emptyBlocks() {
   };
 }
 
+/**
+ * Ephemera flow 不会自动把溢出拆到下一页，需按字数预切。
+ * @param {Array<{kind?: string, text: string}>} segments
+ * @param {number} [maxChars=400]
+ * @returns {Array<Array<{kind?: string, text: string}>>}
+ */
+export function chunkSegmentsByChars(segments, maxChars = 400) {
+  const pages = [];
+  let cur = [];
+  let n = 0;
+  for (const seg of segments) {
+    const len = [...String(seg.text ?? "")].length;
+    if (cur.length && n + len > maxChars) {
+      pages.push(cur);
+      cur = [];
+      n = 0;
+    }
+    cur.push(seg);
+    n += len + 1;
+  }
+  if (cur.length) pages.push(cur);
+  return pages.length ? pages : [[]];
+}
+
+/** 补成偶数页，避免书末单页空白不对称 */
+export function padBookPagesEven(pages, blankFlow = "<p></p>") {
+  const out = [...pages];
+  if (out.length % 2 === 1) {
+    out.push({ title: "", flowContent: blankFlow });
+  }
+  return out;
+}
+
 function stubFoundry() {
   if (globalThis.foundry?.utils?.randomID) return;
   globalThis.foundry = {
@@ -218,8 +251,75 @@ function handoutHtmlFromDocument(document) {
 }
 
 /**
+ * 过长「纸条」→ 多页小书，每页保持可读字数。
+ */
+async function buildDiaryBookFromLetterFields({
+  title,
+  date,
+  to,
+  body,
+  effects,
+  bookLabels = {},
+}) {
+  const BODY =
+    "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.08rem;line-height:1.8;color:#1a120c;text-align:justify;";
+  const HEAD =
+    "margin:0 0 0.75rem;font-size:1.2rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;";
+  const META = "margin:0 0 0.85rem;font-size:0.95rem;color:#5a4030;opacity:0.9;";
+  const PARA = "margin:0 0 0.85rem;line-height:1.8;text-align:justify;";
+
+  const paras = String(body)
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+  const chunks = chunkSegmentsByChars(
+    paras.map((text) => ({ kind: "p", text })),
+    320
+  );
+
+  let pages = chunks.map((segs, i) => {
+    const isFirst = i === 0;
+    const heading = isFirst ? date || title : `${date || title}（续）`;
+    const meta =
+      isFirst && to
+        ? `<p style="${META}">${esc(to)}</p>`
+        : "";
+    const content = segs
+      .map((s) => `<p style="${PARA}">${esc(s.text)}</p>`)
+      .join("");
+    return {
+      title: heading,
+      flowContent: `<div style="${BODY}"><p style="${HEAD}">${esc(heading)}</p>${meta}${content}</div>`,
+    };
+  });
+
+  pages = padBookPagesEven(
+    pages,
+    `<div style="${BODY}"><p style="text-align:center;opacity:0.55;">✦</p></div>`
+  );
+
+  return buildEphemeraBookDocument({
+    title,
+    pages,
+    template: "old-book",
+    bookLabels: {
+      appearance: {
+        coverColor: "#6b4a32",
+        colorStrength: 36,
+        gloss: 28,
+        leather: 48,
+        aging: 50,
+        ...(bookLabels.appearance ?? {}),
+      },
+      ...bookLabels,
+    },
+    effects: effects ?? { yellowing: 42, aging: 40, grain: 18, ink: 36, agingSeed: 88 },
+  });
+}
+
+/**
  * Ephemera 信件（单页 lore）
- * 署名并入正文，隐藏 to/signature/ps，拉高正文框，避免叠字。
+ * 署名并入正文，隐藏 to/signature/ps；过长自动改多页日记书。
  */
 export async function buildEphemeraLetterDocument(opts) {
   const {
@@ -255,26 +355,28 @@ export async function buildEphemeraLetterDocument(opts) {
   if (!fieldMap.signature) autoHide.add("signature");
   if (!fieldMap.ps) autoHide.add("ps");
 
+  // 纸条保持标准纸高；过长则改成多页日记书，避免「一条巨纸」
   const bodyLen = [...body].length;
-  let paperH = 980;
-  let bodyH = 500;
+  const forceLetter = opts.forceLetter === true;
+  if (!forceLetter && bodyLen > 420) {
+    return buildDiaryBookFromLetterFields({
+      title,
+      date,
+      to: fieldMap.to,
+      body,
+      effects,
+      bookLabels: opts.bookLabels,
+    });
+  }
+
+  const PAPER_H = 980;
+  const bodyY = autoHide.has("to") ? 150 : 198;
+  const bodyH = 860 - bodyY;
   let fontSize = 17;
-  if (bodyLen > 180) {
-    paperH = 1100;
-    bodyH = 640;
-    fontSize = 16;
-  }
-  if (bodyLen > 380) {
-    paperH = 1320;
-    bodyH = 900;
-    fontSize = 15;
-  }
-  if (bodyLen > 550) {
-    paperH = 1480;
-    bodyH = 1050;
-    fontSize = 14;
-  }
-  const bodyY = autoHide.has("to") ? 155 : 205;
+  if (bodyLen > 200) fontSize = 16;
+  if (bodyLen > 300) fontSize = 15;
+  if (bodyLen > 380) fontSize = 14;
+
   const layoutPatch = {
     [`customText-${template}-date`]: { width: 240, height: 32, x: 400, y: 96 },
     [`customText-${template}-to`]: { width: 540, height: 32, x: 80, y: 150 },
@@ -288,19 +390,19 @@ export async function buildEphemeraLetterDocument(opts) {
       width: 260,
       height: 70,
       x: 360,
-      y: Math.min(bodyY + bodyH + 12, paperH - 140),
+      y: 880,
     },
     [`customText-${template}-ps`]: {
       width: 560,
       height: 50,
       x: 80,
-      y: paperH - 90,
+      y: 900,
     },
     [`customRule-${template}-bottom`]: {
       width: 570,
       height: 8,
       x: 75,
-      y: paperH - 70,
+      y: 910,
     },
   };
 
@@ -339,7 +441,7 @@ export async function buildEphemeraLetterDocument(opts) {
     const m = await import(url);
     let doc = m.createDefaultDocument("letter", { template });
     doc.title = title;
-    doc.paper = { ...(doc.paper ?? {}), width: 720, height: paperH };
+    doc.paper = { ...(doc.paper ?? {}), width: 720, height: PAPER_H };
     doc.textBlocks = (doc.textBlocks ?? []).map((b) => {
       const key = String(b.id).split("-").pop();
       return { ...b, text: fieldMap[key] ?? "", html: "" };
@@ -351,7 +453,7 @@ export async function buildEphemeraLetterDocument(opts) {
     doc.hiddenBlocks = [...new Set([...(doc.hiddenBlocks ?? []), ...hide])];
     doc = m.normalizeEphemeraDocument(doc);
     doc.title = title;
-    doc.paper = { ...(doc.paper ?? {}), width: 720, height: paperH };
+    doc.paper = { ...(doc.paper ?? {}), width: 720, height: PAPER_H };
     doc.textBlocks = (doc.textBlocks ?? []).map((b) => {
       const key = String(b.id).split("-").pop();
       if (key in fieldMap) return { ...b, text: fieldMap[key], html: "" };
@@ -376,7 +478,7 @@ export async function buildEphemeraLetterDocument(opts) {
       createdAt: now,
       updatedAt: now,
       data: {},
-      paper: { width: 720, height: paperH },
+      paper: { width: 720, height: PAPER_H },
       textBlocks: [
         { id: `${prefix}-date`, text: fieldMap.date, html: "" },
         { id: `${prefix}-to`, text: fieldMap.to, html: "" },

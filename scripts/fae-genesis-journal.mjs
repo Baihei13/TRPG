@@ -6,6 +6,8 @@
 import {
   esc,
   emptyBlocks,
+  chunkSegmentsByChars,
+  padBookPagesEven,
   buildEphemeraBookDocument,
   buildJournalEntryFromDocument,
   createEphemeraBookInWorld,
@@ -15,15 +17,17 @@ const TITLE = "仙灵的诞生";
 const JOURNAL_ID = "whbFaeBirth00001";
 const HANDOUT_ID = "whbFaeBirthHand1";
 
+/** 字号略降 + 每页字数上限，避免单章撑爆书页被裁切 */
 const BODY =
-  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.22rem;line-height:1.95;color:#1a120c;text-align:justify;";
+  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.08rem;line-height:1.85;color:#1a120c;text-align:justify;";
 const DATE =
-  "margin:0 0 1rem;font-size:1.45rem;font-weight:700;letter-spacing:0.1em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.35rem;";
-const PARA = "margin:0 0 1rem;font-size:1.22rem;line-height:1.95;text-align:justify;";
+  "margin:0 0 0.85rem;font-size:1.28rem;font-weight:700;letter-spacing:0.08em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.3rem;";
+const PARA = "margin:0 0 0.85rem;font-size:1.08rem;line-height:1.85;text-align:justify;";
 const QUOTE =
-  "margin:0.4rem 0 1rem;padding:0.35rem 0 0.35rem 0.85rem;border-left:3px solid rgba(60,35,20,0.35);font-style:italic;font-size:1.18rem;line-height:1.9;color:#2a180c;";
+  "margin:0.35rem 0 0.85rem;padding:0.3rem 0 0.3rem 0.75rem;border-left:3px solid rgba(60,35,20,0.35);font-style:italic;font-size:1.05rem;line-height:1.8;color:#2a180c;";
 const ORNAMENT =
-  "margin:0 0 1.1rem;text-align:center;font-size:0.95rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
+  "margin:0 0 0.9rem;text-align:center;font-size:0.9rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
+const PAGE_CHARS = 380;
 
 /** @type {Array<{title:string, paragraphs?:string[], quotes?:string[], closing?:boolean}>} */
 const CHAPTERS = [
@@ -150,49 +154,73 @@ const CHAPTERS = [
   },
 ];
 
-function flowHtml(chapter) {
-  const paras = (chapter.paragraphs ?? [])
-    .map((p) => `<p style="${PARA}">${esc(p)}</p>`)
-    .join("");
-  const quotes = (chapter.quotes ?? [])
-    .map((q) => `<p style="${QUOTE}">${esc(q)}</p>`)
-    .join("");
-  const after = (chapter.paragraphsAfter ?? [])
-    .map((p) => `<p style="${PARA}">${esc(p)}</p>`)
-    .join("");
+function chapterSegments(chapter) {
+  /** @type {Array<{kind: string, text: string}>} */
+  const segs = [];
+  for (const p of chapter.paragraphs ?? []) segs.push({ kind: "p", text: p });
+  for (const q of chapter.quotes ?? []) segs.push({ kind: "q", text: q });
+  for (const p of chapter.paragraphsAfter ?? []) segs.push({ kind: "p", text: p });
+  return segs;
+}
 
-  if (chapter.closing) {
+function renderSegments(segs) {
+  return segs
+    .map((s) =>
+      s.kind === "q"
+        ? `<p style="${QUOTE}">${esc(s.text)}</p>`
+        : `<p style="${PARA}">${esc(s.text)}</p>`
+    )
+    .join("");
+}
+
+function flowHtmlPage(title, segs, { continuation = false, closing = false } = {}) {
+  const heading = continuation ? `${title}（续）` : title;
+  const content = renderSegments(segs);
+
+  if (closing) {
     return `<div style="${BODY}">
 <p style="${ORNAMENT}">✦ &nbsp;—&nbsp; ✦</p>
-<p style="${DATE}">${esc(chapter.title)}</p>
-${paras}
-<p style="margin:1.6rem 0 0.5rem;text-align:center;font-size:1.55rem;font-weight:900;letter-spacing:0.28em;color:#1a2e22;text-shadow:0 0 6px rgba(20,50,35,0.35);">除了我们自己，别无神明</p>
-<div aria-hidden="true" style="margin:1.2rem auto 0;max-width:55%;height:1px;background:linear-gradient(to right,transparent,#2a4a38 20%,#2a4a38 80%,transparent);opacity:0.7;"></div>
+<p style="${DATE}">${esc(heading)}</p>
+${content}
+<p style="margin:1.4rem 0 0.45rem;text-align:center;font-size:1.35rem;font-weight:900;letter-spacing:0.28em;color:#1a2e22;text-shadow:0 0 6px rgba(20,50,35,0.35);">除了我们自己，别无神明</p>
+<div aria-hidden="true" style="margin:1.1rem auto 0;max-width:55%;height:1px;background:linear-gradient(to right,transparent,#2a4a38 20%,#2a4a38 80%,transparent);opacity:0.7;"></div>
 </div>`;
   }
 
   return `<div style="${BODY}">
 <p style="${ORNAMENT}">✦ &nbsp;—&nbsp; ✦</p>
-<p style="${DATE}">${esc(chapter.title)}</p>
-${paras}
-${quotes}
-${after}
-<div aria-hidden="true" style="margin:1.4rem auto 0;max-width:42%;height:1px;background:linear-gradient(to right,transparent,rgba(70,45,25,0.45) 30%,rgba(70,45,25,0.45) 70%,transparent);"></div>
+<p style="${DATE}">${esc(heading)}</p>
+${content}
+<div aria-hidden="true" style="margin:1.2rem auto 0;max-width:42%;height:1px;background:linear-gradient(to right,transparent,rgba(70,45,25,0.45) 30%,rgba(70,45,25,0.45) 70%,transparent);"></div>
 </div>`;
 }
 
-export async function buildFaeBirthEphemeraDocument() {
-  const pages = CHAPTERS.map((chapter) => ({
-    title: chapter.title,
-    flowContent: flowHtml(chapter),
-  }));
-
-  if (pages.length % 2 === 1) {
-    pages.push({
-      title: "",
-      flowContent: `<div style="${BODY}"><p style="${ORNAMENT}">✦</p></div>`,
-    });
+function pagesFromChapter(chapter) {
+  const segs = chapterSegments(chapter);
+  if (!segs.length) {
+    return [
+      {
+        title: chapter.title,
+        flowContent: flowHtmlPage(chapter.title, [], { closing: !!chapter.closing }),
+      },
+    ];
   }
+  const chunks = chunkSegmentsByChars(segs, PAGE_CHARS);
+  return chunks.map((chunk, i) => ({
+    title: i === 0 ? chapter.title : `${chapter.title}（续）`,
+    flowContent: flowHtmlPage(chapter.title, chunk, {
+      continuation: i > 0,
+      closing: !!chapter.closing && i === chunks.length - 1,
+    }),
+  }));
+}
+
+export async function buildFaeBirthEphemeraDocument() {
+  let pages = CHAPTERS.flatMap((chapter) => pagesFromChapter(chapter));
+  pages = padBookPagesEven(
+    pages,
+    `<div style="${BODY}"><p style="${ORNAMENT}">✦</p></div>`
+  );
 
   const document = await buildEphemeraBookDocument({
     title: TITLE,

@@ -49,12 +49,12 @@
         "composition": "blocks",
         "title": "德兰回忆：城堡抵达",
         "theme": "aged-letter",
-        "createdAt": 1786276141637,
-        "updatedAt": 1786276141637,
+        "createdAt": 1786277841025,
+        "updatedAt": 1786277841025,
         "data": {},
         "paper": {
           "width": 720,
-          "height": 1100
+          "height": 980
         },
         "textBlocks": [
           {
@@ -151,21 +151,21 @@
           },
           "customText-classic-letter-body": {
             "width": 560,
-            "height": 640,
+            "height": 662,
             "x": 80,
-            "y": 205
+            "y": 198
           },
           "customText-classic-letter-signature": {
             "width": 260,
             "height": 70,
             "x": 360,
-            "y": 857
+            "y": 880
           },
           "customText-classic-letter-ps": {
             "width": 560,
             "height": 50,
             "x": 80,
-            "y": 1010
+            "y": 900
           },
           "customRule-classic-letter-top": {
             "width": 570,
@@ -177,7 +177,7 @@
             "width": 570,
             "height": 8,
             "x": 75,
-            "y": 1030
+            "y": 910
           }
         },
         "hiddenBlocks": [
