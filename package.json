@@ -12,7 +12,12 @@
     "pack:all": "node scripts/build-compendium-packs.mjs",
     "build:groundskeeper": "node scripts/build-groundskeeper-journal.mjs && node scripts/build-compendium-packs.mjs",
     "build:morrow": "node scripts/build-morrow-journal.mjs && node scripts/build-compendium-packs.mjs",
-    "build:journals": "node scripts/build-groundskeeper-journal.mjs && node scripts/build-morrow-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:fae-genesis": "node scripts/build-fae-genesis-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:dran-worker": "node scripts/build-dran-worker-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:dran-high": "node scripts/build-dran-high-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:lighthouse": "node scripts/build-lighthouse-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:dran-castle": "node scripts/build-dran-castle-arrival-journal.mjs && node scripts/build-compendium-packs.mjs",
+    "build:journals": "node scripts/build-groundskeeper-journal.mjs && node scripts/build-morrow-journal.mjs && node scripts/build-fae-genesis-journal.mjs && node scripts/build-dran-worker-journal.mjs && node scripts/build-dran-high-journal.mjs && node scripts/build-lighthouse-journal.mjs && node scripts/build-dran-castle-arrival-journal.mjs && node scripts/build-compendium-packs.mjs",
     "build:actors": "python scripts/build-homebrew-actors.py && node scripts/build-compendium-packs.mjs",
     "unpack": "fvtt package unpack --id wang-pf2e-homebrew --type Module --compendiumName homebrew-items --compendiumType Item --in packs/homebrew-items --out src/packs/homebrew-items --clean"
   },

@@ -1,0 +1,76 @@
+{
+  "_id": "whbDranRemRing01",
+  "folder": "whbfolderRemIt01",
+  "name": "德兰纪念",
+  "type": "equipment",
+  "img": "icons/equipment/finger/ring-band-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>这枚戒指一定蕴藏着某种魔力。戴上它，你会感觉自己变得更强壮、更轻盈——但这种感觉却又难以察觉？</p>\n<blockquote><p>仿佛人们对这枚戒指的信仰与戒指本身一样重要。<br>德兰人或许看起来并非如此，但他们能忍受任何苦难。事实上，他们所经历的苦难远远超过大多数人——当然，并非所有人，远非如此，但绝大多数人确实如此。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 佩戴（戒指）；<strong>负载</strong> —；需<strong>投资</strong></p>\n<p><strong>持续</strong> 投资期间，你获得强韧豁免检定 +1 状态加值，并将你的负重上限视为提高 1（感觉更「扛得住」）。</p>\n<hr />\n<p><strong>激活</strong> <span class=\"action-glyph\">1</span> 想象；<strong>频率</strong> 每日 1 次；<strong>效果</strong> 你借助德兰人对苦难的信念。你获得 8 点临时生命值，并获得速度 +5 尺状态加值，持续 1 分钟。</p>\n<p><em>（自动化：投资后强韧 +1 已挂上。激活时将合集内「德兰信念」效果拖到角色上；负重 +1 与每日次数请手记。）</em></p>",
+      "gm": "<p><strong>Dran Remembrance</strong>（遗迹2 · 德兰纪念戒指）。物品 3，罕见，魔法，投资。价格 60 gp。</p>\n<p>设计意图：法师 / 神术施法者 / 诗人 / 枪手都能吃到——强韧与临时代价偏低的生存向收益，速度利于枪手走位与施法者拉开距离，不绑定攻击属性或专注点。</p>\n<p>信仰主题：激活靠「想象」而非操纵，呼应「对戒指的信仰与戒指本身一样重要」。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "dran-remembrance-fort",
+        "selector": "fortitude",
+        "type": "status",
+        "value": 1,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "fortitude",
+        "title": "德兰纪念",
+        "text": "负重上限视为 +1（手操）。每日 1 次可用 1 动作激活，获得「德兰信念」（8 临时生命 + 速度 +5 尺，1 分钟）。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "dran-remembrance",
+    "traits": {
+      "value": ["invested", "magical"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — PF2e 自制转换",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "price": { "value": { "gp": 60 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "inSlot": false
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "素银戒指",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一枚朴素的银戒指，触感微凉。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "wornring" },
+    "apex": { "attribute": null }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Dran Remembrance",
+      "linkedEffect": "whbDranRemFx0001"
+    }
+  }
+}

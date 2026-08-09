@@ -148,12 +148,14 @@ export async function createEphemeraBookInWorld({ title, document, source, open 
   const eph = game.modules.get("ephemera");
   if (!eph?.active) throw new Error("请先启用 Ephemera 模块");
 
+  const docType = document?.type === "letter" ? "letter" : "book";
+
   let entry;
   const manager = eph.api?.manager;
   if (manager?.createDocument) {
-    entry = await manager.createDocument("book", {
-      template: document.template ?? "old-book",
-      layoutMode: "flow",
+    entry = await manager.createDocument(docType, {
+      template: document.template ?? (docType === "letter" ? "classic-letter" : "old-book"),
+      layoutMode: document.layoutMode ?? (docType === "book" ? "flow" : undefined),
     });
     const journal = entry?.documentName === "JournalEntry" ? entry : entry;
     if (manager.saveDocument) {
@@ -168,7 +170,7 @@ export async function createEphemeraBookInWorld({ title, document, source, open 
 
   if (!entry) {
     const format = CONST.JOURNAL_ENTRY_PAGE_FORMATS?.HTML ?? 1;
-    const handoutHtml = document.pages.map((p) => p.flowContent).join("<hr>");
+    const handoutHtml = handoutHtmlFromDocument(document);
     entry = await JournalEntry.create(
       {
         name: title,
@@ -183,7 +185,7 @@ export async function createEphemeraBookInWorld({ title, document, source, open 
         ],
         flags: {
           ephemera: { document },
-          "wang-pf2e-homebrew": { source, translated: "zh-CN", style: "ephemera-book" },
+          "wang-pf2e-homebrew": { source, translated: "zh-CN", style: "ephemera-" + docType },
         },
       },
       { renderSheet: false }
@@ -203,6 +205,108 @@ export async function createEphemeraBookInWorld({ title, document, source, open 
   return entry;
 }
 
+function handoutHtmlFromDocument(document) {
+  if (document?.pages?.length) {
+    return document.pages.map((p) => p.flowContent).filter(Boolean).join("<hr>");
+  }
+  const blocks = document?.textBlocks ?? [];
+  const parts = blocks
+    .map((b) => String(b.text ?? "").trim())
+    .filter(Boolean)
+    .map((t) => `<p>${esc(t).replace(/\n+/g, "</p><p>")}</p>`);
+  return parts.join("") || `<p>${esc(document?.title ?? "")}</p>`;
+}
+
+/**
+ * Ephemera 信件（单页，适合短文/回忆/便条）
+ * @param {object} opts
+ * @param {string} opts.title
+ * @param {{date?:string,to?:string,body:string,signature?:string,ps?:string}} opts.fields
+ * @param {string} [opts.template]
+ * @param {object} [opts.effects]
+ * @param {string[]} [opts.hideBlockIds] 隐藏的 block id 后缀，如 ['ps']
+ */
+export async function buildEphemeraLetterDocument(opts) {
+  const {
+    title,
+    fields,
+    template = "classic-letter",
+    effects = { yellowing: 42, aging: 40, grain: 18, ink: 36, agingSeed: 88 },
+    hideBlockIds = [],
+  } = opts;
+
+  const fieldMap = {
+    date: fields.date ?? "",
+    to: fields.to ?? "",
+    body: fields.body ?? "",
+    signature: fields.signature ?? "",
+    ps: fields.ps ?? "",
+  };
+
+  try {
+    stubFoundry();
+    const url =
+      "file:///C:/Users/王昊/AppData/Local/FoundryVTT/Data/modules/ephemera/scripts/template-data.js";
+    const m = await import(url);
+    let doc = m.createDefaultDocument("letter", { template });
+    doc.title = title;
+    doc.textBlocks = (doc.textBlocks ?? []).map((b) => {
+      const key = String(b.id).split("-").pop();
+      const text = fieldMap[key] ?? b.text ?? "";
+      return { ...b, text, html: "" };
+    });
+    if (effects) doc.effects = { ...doc.effects, ...effects };
+    const hide = new Set(
+      hideBlockIds.flatMap((suffix) =>
+        (doc.textBlocks ?? [])
+          .filter((b) => String(b.id).endsWith(`-${suffix}`) || String(b.id) === suffix)
+          .map((b) => b.id)
+      )
+    );
+    if (hide.size) doc.hiddenBlocks = [...new Set([...(doc.hiddenBlocks ?? []), ...hide])];
+    doc = m.normalizeEphemeraDocument(doc);
+    doc.title = title;
+    // normalize 可能清掉自定义 text，再写回
+    doc.textBlocks = (doc.textBlocks ?? []).map((b) => {
+      const key = String(b.id).split("-").pop();
+      if (key in fieldMap) return { ...b, text: fieldMap[key], html: "" };
+      return b;
+    });
+    if (hide.size) doc.hiddenBlocks = [...new Set([...(doc.hiddenBlocks ?? []), ...hide])];
+    return doc;
+  } catch (err) {
+    console.warn("[ephemera-journal-util] letter normalize 失败，用后备结构", err);
+    const now = Date.now();
+    const prefix = template;
+    return {
+      version: 1,
+      type: "letter",
+      template,
+      composition: "blocks",
+      title,
+      theme: "oldpage-newsprint",
+      createdAt: now,
+      updatedAt: now,
+      data: {},
+      paper: { width: 760, height: 980 },
+      textBlocks: [
+        { id: `${prefix}-date`, text: fieldMap.date, html: "" },
+        { id: `${prefix}-to`, text: fieldMap.to, html: "" },
+        { id: `${prefix}-body`, text: fieldMap.body, html: "" },
+        { id: `${prefix}-signature`, text: fieldMap.signature, html: "" },
+        { id: `${prefix}-ps`, text: fieldMap.ps, html: "" },
+      ],
+      ruleBlocks: [],
+      imageBlocks: [],
+      styles: {},
+      layout: {},
+      hiddenBlocks: hideBlockIds.map((s) => `${prefix}-${s}`),
+      elementLayer: { strokes: [] },
+      effects,
+    };
+  }
+}
+
 /**
  * @param {object} opts
  * @param {string} opts.journalId
@@ -220,7 +324,9 @@ export function buildJournalEntryFromDocument({
   source,
   document,
 }) {
-  const handoutHtml = document.pages.map((p) => p.flowContent).filter(Boolean).join("<hr>");
+  const handoutHtml = handoutHtmlFromDocument(document);
+  const style =
+    document?.type === "letter" ? "ephemera-letter" : "ephemera-book";
   return {
     _id: journalId,
     name: title,
@@ -246,7 +352,7 @@ export function buildJournalEntryFromDocument({
     ownership: { default: 0 },
     flags: {
       ephemera: { document },
-      "wang-pf2e-homebrew": { source, translated: "zh-CN", style: "ephemera-book" },
+      "wang-pf2e-homebrew": { source, translated: "zh-CN", style },
     },
   };
 }

@@ -5,15 +5,16 @@ node_modules/
 # Staging packs written while Foundry holds locks
 packs-staging/
 
-# LevelDB runtime lock / log files (not needed for install)
+# LevelDB runtime only (numbered 000*.log may hold pack data — keep those)
 packs/**/LOCK
-packs/**/*.log
 packs/**/LOG
 packs/**/LOG.old
 
+# Leftover / scratch packs
+packs/homebrew-items-new/
+
 # Temp / local scratch
 _tmp_unpack_test/
-*.log
 .DS_Store
 Thumbs.db
 *.bak

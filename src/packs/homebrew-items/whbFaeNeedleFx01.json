@@ -1,0 +1,50 @@
+{
+  "_id": "whbFaeNeedleFx01",
+  "folder": "whbfolderRemIt01",
+  "name": "仙灵漆涌",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/fae-lacquer-needle.png",
+  "system": {
+    "description": {
+      "value": "<p>鲜艳的漆色魔力在你血管中奔流。你获得<strong>快速愈合 2</strong>（每回合开始时恢复 2 生命值）。</p>",
+      "gm": "<p>配合「仙灵漆针」使用，持续 1 分钟。原作能量回复的 PF2e 换算效果。</p>"
+    },
+    "rules": [
+      {
+        "key": "FastHealing",
+        "value": 2,
+        "type": "fast-healing"
+      }
+    ],
+    "slug": "fae-lacquer-surge",
+    "traits": {
+      "value": ["magical", "primal", "healing"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — 仙灵工艺",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "pairedItem": "whbFaeNeedle0001"
+    }
+  }
+}

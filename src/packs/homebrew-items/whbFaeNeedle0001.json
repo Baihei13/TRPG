@@ -1,0 +1,61 @@
+{
+  "_id": "whbFaeNeedle0001",
+  "folder": "whbfolderRemIt01",
+  "name": "仙灵漆针",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/fae-lacquer-needle.png",
+  "system": {
+    "description": {
+      "value": "<p>这根细针浸过一种柔滑鲜艳的液体，让人联想到漆。仙灵们用它来给丝带、玩偶，甚至衣服上着色。</p>\n<blockquote><p>精灵魔法渗透到我们存在的每一个角落，从肌肤到秀发，再到血管中流淌的血液。它是我们的一部分，正如我们也是世界的一部分——混沌与创造的魔法。因此，除了我们自身，别无神明。</p></blockquote>\n<hr />\n<p><strong>激活</strong> <span class=\"action-glyph\">2</span>（操作）Interact；<strong>效果</strong> 你用针尖轻刺肌肤，让漆色魔力渗入血液。你获得<strong>快速愈合 2</strong>，持续 1 分钟（每回合开始时恢复 2 生命值）。作为激活的一部分，你还可以将针上的漆色抹到一件你触碰的小型物件或衣物上，永久染上鲜艳色彩（纯粹外观，无游戏效果）。</p>\n<p><em>使用后将合集内的「仙灵漆涌」效果拖到角色上；针中的漆液耗尽，物品被消耗。</em></p>",
+      "gm": "<p><strong>Fae Lacquer Needle</strong>（遗迹2）。物品 3，罕见，消耗品，魔法，原力，治疗。价格 12 gp。</p>\n<p>原作：每秒恢复 10 点模组能量，持续 60 秒。PF2e 换算：60 秒≈1 分钟≈10 轮；能量≈生命力，定为快速愈合 2（共约 20 HP），对标 3 级次级治疗药水（2d8+5，均值约 14）的持续版，战斗中更稳但需存活满持续时间。</p>"
+    },
+    "rules": [],
+    "slug": "fae-lacquer-needle",
+    "traits": {
+      "value": ["consumable", "magical", "primal", "healing"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — 仙灵工艺",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 12 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "彩漆细针",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一根装着蓝色液体的精致细针，针眼穿有黑线。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "linkedEffect": "whbFaeNeedleFx01"
+    }
+  }
+}

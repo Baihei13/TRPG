@@ -1,0 +1,76 @@
+{
+  "_id": "whbCharredRing01",
+  "folder": "whbfolderRemIt01",
+  "name": "烧焦的戒指",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/charred-ring.png",
+  "system": {
+    "description": {
+      "value": "<p>摸起来很烫，但奇怪的是不会烫伤。放在手指上反而感觉凉凉的，只是凡是碰到衣角的地方都会冒出一缕轻烟。</p>\n<blockquote><p>我们曾被烈火焚烧，我们曾被溺水淹没，我们曾被榨干最后一滴血，任其自生自灭。德兰人之所以如此，自有其原因。作为他们的先知，我感同身受。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 佩戴（戒指）；<strong>负载</strong> —；需<strong>投资</strong></p>\n<p><strong>持续</strong> 投资期间，你造成的伤害获得 +1 状态加值。</p>\n<p><strong>燃烧</strong> 你造成的伤害忽略目标对该伤害类型的前 2 点抗力。（若目标对该伤害有抗力 5，则按抗力 3 结算。）</p>\n<p><em>（自动化：伤害 +1 状态已挂上。「燃烧」忽略抗力请在结算时手操；频率无限制，属持续效果。）</em></p>",
+      "gm": "<p><strong>Burning Ring / Charred Ring</strong>（遗迹2 · 失眠）。物品 4，罕见，魔法，火焰，投资。价格 100 gp。</p>\n<p>原作：增加对所有目标造成的伤害；燃烧：敌人（抗力/减伤）减少 12%。PF2e 换算：全伤害 +1 状态（法师法术、神术、诗人、枪手射击皆适用）；忽略抗力 2 ≈ 低等级下约一成出头的穿透感，避免写百分比。</p>\n<p>结算忽略抗力时，只降低「抗力」数值，不忽略免疫，也不影响坚固物体硬度，除非你另有允许。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "charred-ring-damage",
+        "selector": "damage",
+        "type": "status",
+        "value": 1,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "damage",
+        "title": "燃烧",
+        "text": "此伤害忽略目标对应抗力的前 <strong>2</strong> 点（免疫仍完全生效）。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "charred-ring",
+    "traits": {
+      "value": ["invested", "magical", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — 失眠",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "price": { "value": { "gp": 100 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "inSlot": false
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "焦黑戒指",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一枚焦黑开裂的戒指，缝隙里隐约透着暗红光。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "wornring" },
+    "apex": { "attribute": null }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Burning Ring",
+      "world": "losomn"
+    }
+  }
+}

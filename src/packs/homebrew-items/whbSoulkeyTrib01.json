@@ -1,0 +1,58 @@
+{
+  "_id": "whbSoulkeyTrib01",
+  "folder": "whbfolderRemIt01",
+  "name": "魂钥贡品",
+  "type": "treasure",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/soulkey-tribute.png",
+  "system": {
+    "description": {
+      "value": "<p>一颗德兰人的心脏被一层厚厚的、黏腻的蛛网包裹着。这颗心脏在你手中颤抖，仿佛还在努力地想要继续跳动，尽管已经十分微弱。</p>\n<blockquote><p>亲爱的姐姐，梦境女神，噩梦的化身……这些扭曲的世界真的改变了你吗？还是它们只是揭示了我不想看到的真相？</p></blockquote>\n<p><em>任务物品。无游戏效果。</em></p>",
+      "gm": "<p><strong>Soulkey Tribute</strong>（遗迹2 · 魂钥贡品）。剧情/任务物品，无机械效果。价格 —。可在相关任务节点交出或展示。</p>"
+    },
+    "rules": [],
+    "slug": "soulkey-tribute",
+    "traits": {
+      "value": [],
+      "rarity": "unique",
+      "otherTags": ["remnant-2", "quest"]
+    },
+    "publication": {
+      "title": "遗迹2 — 魂钥",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 0 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": {} },
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "蛛网裹住的心脏",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一团黏腻蛛网裹着某种仍在微微抽动的血肉。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "containerId": null,
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Soulkey Tribute",
+      "questItem": true
+    }
+  }
+}

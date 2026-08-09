@@ -1,0 +1,204 @@
+{
+  "_id": "whbLighthousJr01",
+  "name": "灯塔日志",
+  "img": "icons/sundries/documents/document-letter-sealed-brown.webp",
+  "pages": [
+    {
+      "_id": "whbLighthousHan1",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>灯塔守夜</p><p>——</p><p>最近听了太多鬼故事，吵得我睡不着觉。一些愚蠢的渔民和工人失踪了，然后各种窃窃私语就开始流传。等他们最终回来的时候，大家都会明白是怎么回事。居然还有海巫之类的东西。真是荒谬至极。</p><p>我承认，我着了迷。那个女巫传说远比我想象的要复杂得多。我原以为那只是个吓唬小孩的故事，没想到沉没女巫的传说竟然流传已久。我从小就住在这破灯塔里，却从未见过什么。可是，万一她真的存在呢？</p><p>她嗓音沙哑，带着嘲讽，显然不适应陆地干燥的空气。她用一个巨大的锚来剖开猎物的肚子。在她发动攻击之前，远处传来一阵令人毛骨悚然的笑声。所有的故事都一样。如果她就在这里呢？</p><p>我看见她了。在岸边。真的是她！这太危险了。就算拼了命，我也要搬到内陆去。这灯塔就让它坍塌吧，我才不在乎。</p><p>灯塔看守</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "letter",
+        "template": "classic-letter",
+        "composition": "blocks",
+        "title": "灯塔日志",
+        "theme": "aged-letter",
+        "createdAt": 1786245842928,
+        "updatedAt": 1786245842928,
+        "data": {},
+        "paper": {
+          "width": 720,
+          "height": 980
+        },
+        "textBlocks": [
+          {
+            "id": "classic-letter-date",
+            "text": "灯塔守夜",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-to",
+            "text": "——",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-body",
+            "text": "最近听了太多鬼故事，吵得我睡不着觉。一些愚蠢的渔民和工人失踪了，然后各种窃窃私语就开始流传。等他们最终回来的时候，大家都会明白是怎么回事。居然还有海巫之类的东西。真是荒谬至极。\n\n我承认，我着了迷。那个女巫传说远比我想象的要复杂得多。我原以为那只是个吓唬小孩的故事，没想到沉没女巫的传说竟然流传已久。我从小就住在这破灯塔里，却从未见过什么。可是，万一她真的存在呢？\n\n她嗓音沙哑，带着嘲讽，显然不适应陆地干燥的空气。她用一个巨大的锚来剖开猎物的肚子。在她发动攻击之前，远处传来一阵令人毛骨悚然的笑声。所有的故事都一样。如果她就在这里呢？\n\n我看见她了。在岸边。真的是她！这太危险了。就算拼了命，我也要搬到内陆去。这灯塔就让它坍塌吧，我才不在乎。",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-signature",
+            "text": "灯塔看守",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-ps",
+            "text": "",
+            "html": ""
+          }
+        ],
+        "ruleBlocks": [
+          {
+            "id": "classic-letter-top",
+            "style": "single"
+          },
+          {
+            "id": "classic-letter-bottom",
+            "style": "single"
+          }
+        ],
+        "imageBlocks": [],
+        "styles": {
+          "textBlocks.classic-letter-date": {
+            "fontSize": 16,
+            "fontWeight": 400,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "right"
+          },
+          "textBlocks.classic-letter-to": {
+            "fontSize": 22,
+            "fontWeight": 500,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-body": {
+            "fontSize": 20,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-signature": {
+            "fontSize": 20,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "center"
+          },
+          "textBlocks.classic-letter-ps": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          }
+        },
+        "layout": {
+          "customText-classic-letter-date": {
+            "width": 180,
+            "height": 30,
+            "x": 455,
+            "y": 110
+          },
+          "customText-classic-letter-to": {
+            "width": 500,
+            "height": 36,
+            "x": 85,
+            "y": 170
+          },
+          "customText-classic-letter-body": {
+            "width": 550,
+            "height": 350,
+            "x": 85,
+            "y": 230
+          },
+          "customText-classic-letter-signature": {
+            "width": 190,
+            "height": 90,
+            "x": 430,
+            "y": 640
+          },
+          "customText-classic-letter-ps": {
+            "width": 550,
+            "height": 70,
+            "x": 85,
+            "y": 785
+          },
+          "customRule-classic-letter-top": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 70
+          },
+          "customRule-classic-letter-bottom": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 880
+          }
+        },
+        "hiddenBlocks": [
+          "classic-letter-ps"
+        ],
+        "elementLayer": {
+          "strokes": []
+        },
+        "effects": {
+          "yellowing": 44,
+          "aging": 46,
+          "grain": 24,
+          "ink": 38,
+          "agingSeed": 721
+        }
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Lighthouse Journal",
+      "translated": "zh-CN",
+      "style": "ephemera-letter"
+    }
+  }
+}

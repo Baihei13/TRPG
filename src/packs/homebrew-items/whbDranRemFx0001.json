@@ -1,0 +1,56 @@
+{
+  "_id": "whbDranRemFx0001",
+  "folder": "whbfolderRemIt01",
+  "name": "德兰信念",
+  "type": "effect",
+  "img": "icons/magic/life/heart-cross-strong-flame-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>德兰人忍受苦难的信念流过你的血脉。你获得 <strong>8 点临时生命值</strong>，以及速度 <strong>+5 尺</strong> 状态加值。</p>",
+      "gm": "<p>配合「德兰纪念」每日激活。持续 1 分钟。</p>"
+    },
+    "rules": [
+      {
+        "key": "TempHP",
+        "value": 8
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "dran-faith-speed",
+        "selector": "speed",
+        "type": "status",
+        "value": 5
+      }
+    ],
+    "slug": "dran-faith",
+    "traits": {
+      "value": ["magical"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — PF2e 自制转换",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "pairedItem": "whbDranRemRing01"
+    }
+  }
+}
