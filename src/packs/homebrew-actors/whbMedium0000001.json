@@ -6,7 +6,7 @@
   "img": "icons/magic/symbols/circled-gem-teal.webp",
   "items": [
     {
-      "_id": "C32hLNedHBt2FlBC",
+      "_id": "0prfPpo3e7n3cMI9",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "匕首",
       "sort": 100000,
@@ -22,7 +22,7 @@
           "value": 5
         },
         "damageRolls": {
-          "0MVcs5sjLgwIGjHJ": {
+          "cHTwDyGlWCjZMIzk": {
             "damage": "1d4",
             "damageType": "piercing"
           }
@@ -47,7 +47,7 @@
       "type": "melee"
     },
     {
-      "_id": "yJCMbZ2HfoqTkYAN",
+      "_id": "on9qaMlTJkSoxjo5",
       "name": "拜亚基召唤哨",
       "type": "equipment",
       "img": "icons/tools/instruments/pipe-flute-simple-wood.webp",
@@ -151,7 +151,7 @@
       "sort": 350000
     },
     {
-      "_id": "WtRPAezpaKwZVp5I",
+      "_id": "HbByrdrfsmy0Ncsp",
       "name": "血肉护符",
       "type": "consumable",
       "img": "icons/commodities/bones/tooth-molar-red.webp",
@@ -213,7 +213,7 @@
       "sort": 360000
     },
     {
-      "_id": "3IUC862d82VJ7VBo",
+      "_id": "kizAUwK5H7rVWqoR",
       "name": "芭丝特的祝福",
       "type": "consumable",
       "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
@@ -279,7 +279,7 @@
       "sort": 370000
     },
     {
-      "_id": "pmxwnc9ScrgoTiye",
+      "_id": "b2vyEbwXSztz6J6g",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "血肉防护",
       "sort": 600000,
@@ -309,7 +309,7 @@
       "type": "action"
     },
     {
-      "_id": "Ne79eyIHbuob0e7d",
+      "_id": "4YlmEAqZhmg1Zs8A",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "拜亚基哨声",
       "sort": 600000,

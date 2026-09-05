@@ -6,7 +6,7 @@
   "img": "icons/equipment/head/hat-fedora-brown.webp",
   "items": [
     {
-      "_id": "8ScZIKXePoKlZZfI",
+      "_id": "jd3z1v2u9vxqPPPC",
       "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
       "name": "皮夹克",
       "sort": 300000,
@@ -70,7 +70,7 @@
       "type": "armor"
     },
     {
-      "_id": "KnQT7tzojzzb9qEi",
+      "_id": "ySaN6uejqx5RZkW2",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "重拳",
       "sort": 100000,
@@ -86,7 +86,7 @@
           "value": 9
         },
         "damageRolls": {
-          "iIEOZZdBGS785zQu": {
+          "6kq0jlsN4BrpNgqm": {
             "damage": "1d6+4",
             "damageType": "bludgeoning"
           }
@@ -109,7 +109,7 @@
       "type": "melee"
     },
     {
-      "_id": "wMrzrxW6dRJLeOpD",
+      "_id": "7ZaNpHtn5PY1NDSF",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "手枪",
       "sort": 200000,
@@ -125,7 +125,7 @@
           "value": 8
         },
         "damageRolls": {
-          "pnBhp8wLzUnKaAzI": {
+          "fv6ntsjXNpLNTRda": {
             "damage": "1d6+1",
             "damageType": "piercing"
           }
@@ -153,7 +153,7 @@
       "type": "melee"
     },
     {
-      "_id": "KfCsxLTdoG9PWEpT",
+      "_id": "Egp13FtlU41Dky5l",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "家族荣耀",
       "sort": 600000,

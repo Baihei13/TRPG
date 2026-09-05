@@ -6,7 +6,7 @@
   "img": "icons/weapons/axes/axe-broadaxe-worn.webp",
   "items": [
     {
-      "_id": "CcFe34sZDUiAFu3c",
+      "_id": "GDtAMJ6M0SAVTqcU",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "动力锯",
       "sort": 100000,
@@ -19,11 +19,11 @@
           "value": []
         },
         "bonus": {
-          "value": 9
+          "value": 10
         },
         "damageRolls": {
-          "phJb3dLgcmljMtTy": {
-            "damage": "1d10+4",
+          "JrueOh4zhalmlW8I": {
+            "damage": "1d10+5",
             "damageType": "slashing"
           }
         },
@@ -39,13 +39,15 @@
         "rules": [],
         "slug": null,
         "traits": {
-          "value": []
+          "value": [
+            "reach"
+          ]
         }
       },
       "type": "melee"
     },
     {
-      "_id": "IktbMcLOgt54bz8d",
+      "_id": "QX8rZLrZkl5JXZfb",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "旋转锯刃",
       "sort": 500000,
@@ -58,7 +60,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>只要动力锯在运转，与拆卸者相邻开始回合的生物受到 @Damage[1[slashing]]。（锯大约每数轮熄火一次，重启需 1 动作——GM 可偶尔给玩家喘息。）</p>"
+          "value": "<p>只要动力锯在运转，与拆卸者相邻开始回合的生物受到 @Damage[1d4[slashing]]。（锯大约每数轮熄火一次，重启需 1 动作——GM 可偶尔给玩家喘息。）</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -75,7 +77,7 @@
       "type": "action"
     },
     {
-      "_id": "2uJKSmdT7ZjVZYy5",
+      "_id": "y8gDew93ymZad4YD",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "锯刃冲锋",
       "sort": 600000,
@@ -88,7 +90,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>疾行两次，然后以动力锯打击。命中时目标须尝试 @Check[fortitude|dc:15]，失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{倒地}。</p>"
+          "value": "<p>疾行两次，然后以动力锯打击。命中时目标须尝试 @Check[fortitude|dc:17]，失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{倒地}。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -105,7 +107,7 @@
       "type": "action"
     },
     {
-      "_id": "HjLJl3AB6m85y7LA",
+      "_id": "Ndi7ycHV3S0rJfoh",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "废气喷吐",
       "sort": 610000,
@@ -118,7 +120,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>10 尺爆发内生物须尝试 @Check[fortitude|dc:15|traits:poison,inhaled]。</p><p>@Template[type:burst|distance:10]</p><hr /><p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.fesdP3LZ4CV37rQo]{恶心 1}。</p><p><strong>大失败</strong> 陷入恶心 2。</p>"
+          "value": "<p>10 尺爆发内生物须尝试 @Check[fortitude|dc:17|traits:poison,inhaled]。</p><p>@Template[type:burst|distance:10]</p><hr /><p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.fesdP3LZ4CV37rQo]{恶心 1}。</p><p><strong>大失败</strong> 陷入恶心 2。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -163,16 +165,16 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 17
+        "value": 18
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "",
-        "max": 28,
+        "max": 34,
         "temp": 0,
-        "value": 28
+        "value": 34
       },
       "speed": {
         "otherSpeeds": [],
@@ -188,10 +190,10 @@
         ]
       },
       "level": {
-        "value": 1
+        "value": 2
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Dran Demolisher</strong>——体型魁梧的德兰精英，挥着轰鸣动力锯。常见于下水道与巷战伏击。流血与近身压力是其威胁核心。</p>",
+      "publicNotes": "<p><strong>Dran Demolisher</strong>——体型魁梧的德兰精英，挥着轰鸣动力锯。常见于下水道与巷战伏击。流血与近身压力是其威胁核心。</p><p><em>四人 2 级团 · Creature 2（中等）</em></p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -204,7 +206,7 @@
     },
     "perception": {
       "details": "微光视觉",
-      "mod": 7,
+      "mod": 8,
       "senses": [
         {
           "type": "low-light-vision"
@@ -215,23 +217,23 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 9
+        "value": 10
       },
       "reflex": {
         "saveDetail": "",
-        "value": 6
+        "value": 7
       },
       "will": {
         "saveDetail": "",
-        "value": 5
+        "value": 6
       }
     },
     "skills": {
       "athletics": {
-        "base": 8
+        "base": 9
       },
       "intimidation": {
-        "base": 6
+        "base": 7
       }
     },
     "traits": {

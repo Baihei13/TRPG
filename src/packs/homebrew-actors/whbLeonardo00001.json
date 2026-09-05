@@ -6,7 +6,7 @@
   "img": "icons/equipment/head/hat-top-hat-grey.webp",
   "items": [
     {
-      "_id": "IvgGq2YCgxvJ2qdD",
+      "_id": "aJqge4hkyXM5M4Vs",
       "name": "皇帝的戒指（逆转·剧情版）",
       "type": "equipment",
       "img": "icons/equipment/finger/ring-band-engraved-scrolls-gold.webp",
@@ -144,7 +144,7 @@
       "sort": 100000
     },
     {
-      "_id": "omS3SGz8fkMYYP6a",
+      "_id": "VOkd5VWsXUX61uY6",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "拳头",
       "sort": 100000,
@@ -160,7 +160,7 @@
           "value": 7
         },
         "damageRolls": {
-          "GopIrz52A1vvxm5s": {
+          "ZMgVPn3MRW5NjrE7": {
             "damage": "1d4+1",
             "damageType": "bludgeoning"
           }
@@ -187,7 +187,7 @@
       "type": "melee"
     },
     {
-      "_id": "KgZ7tvDnrcx0fqKq",
+      "_id": "C0hyiCT3qG4Q0j4N",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "手枪",
       "sort": 200000,
@@ -203,7 +203,7 @@
           "value": 6
         },
         "damageRolls": {
-          "Y9hAFNIHlVue6PQN": {
+          "b84NoGQIeIR2cETV": {
             "damage": "1d6",
             "damageType": "piercing"
           }
@@ -231,7 +231,7 @@
       "type": "melee"
     },
     {
-      "_id": "BMr9JLKmP0Hsgrkt",
+      "_id": "kuRaNxRopJfTu9lX",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "权威呵斥",
       "sort": 600000,

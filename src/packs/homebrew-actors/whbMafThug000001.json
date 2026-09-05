@@ -6,7 +6,7 @@
   "img": "icons/equipment/head/hood-cloth-red.webp",
   "items": [
     {
-      "_id": "6ZBVojagw0i3m25X",
+      "_id": "im8ohbRpYJKp4TuA",
       "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
       "name": "皮夹克",
       "sort": 300000,
@@ -70,7 +70,7 @@
       "type": "armor"
     },
     {
-      "_id": "IpZwP2FCGPlLyrXr",
+      "_id": "gCjjmoYwNEboSC07",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "拳头",
       "sort": 100000,
@@ -86,7 +86,7 @@
           "value": 5
         },
         "damageRolls": {
-          "ahS8Z2vygyp9wf40": {
+          "4Iomd1lfbSnIWtKL": {
             "damage": "1d4+1",
             "damageType": "bludgeoning"
           }
@@ -113,7 +113,7 @@
       "type": "melee"
     },
     {
-      "_id": "G2Go0nYPTUwNStfv",
+      "_id": "DYyLyIMFlfF3Iop3",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "左轮手枪",
       "sort": 200000,
@@ -129,7 +129,7 @@
           "value": 5
         },
         "damageRolls": {
-          "9fsTe3ydeepyD4zj": {
+          "HxjJGVkDzdaynMxV": {
             "damage": "1d6",
             "damageType": "piercing"
           }

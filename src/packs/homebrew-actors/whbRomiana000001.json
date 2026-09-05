@@ -6,7 +6,7 @@
   "img": "icons/equipment/head/hat-bonnet-flowers-white.webp",
   "items": [
     {
-      "_id": "FhlQnE3y9yX8VA3v",
+      "_id": "LVmMoqA3LSbPKSxc",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "巴掌",
       "sort": 100000,
@@ -22,7 +22,7 @@
           "value": 5
         },
         "damageRolls": {
-          "eK9ifRpAztQRBBPm": {
+          "02cp18PBuvApY9Y9": {
             "damage": "1d4",
             "damageType": "bludgeoning"
           }
@@ -48,7 +48,7 @@
       "type": "melee"
     },
     {
-      "_id": "ggvpM0pIr1vqF2aW",
+      "_id": "dbcf0D3VBzqlpH4b",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "贵妇恳求",
       "sort": 600000,

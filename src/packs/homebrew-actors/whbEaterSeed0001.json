@@ -6,7 +6,7 @@
   "img": "icons/magic/unholy/orb-beam-pink.webp",
   "items": [
     {
-      "_id": "2xTqEVaDhFkDMbAZ",
+      "_id": "JLh6nnaUM0z4aeu2",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "噬咬",
       "sort": 100000,
@@ -22,7 +22,7 @@
           "value": 11
         },
         "damageRolls": {
-          "xJpFsHHUJj6QdjeP": {
+          "okzu8c4Qk5SGTQ4G": {
             "damage": "1d8+2",
             "damageType": "void"
           }
@@ -48,7 +48,7 @@
       "type": "melee"
     },
     {
-      "_id": "VNtNjim02QvdtXlE",
+      "_id": "KwRPDwECVOGmKrWM",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "概念生物",
       "sort": 500000,
@@ -78,7 +78,7 @@
       "type": "action"
     },
     {
-      "_id": "HVCmkgFoeSonFBlO",
+      "_id": "6iVHRlTmoRJEYNRj",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "贪婪吞噬",
       "sort": 600000,
@@ -108,7 +108,7 @@
       "type": "action"
     },
     {
-      "_id": "rrhKRgXYNgdlS3n0",
+      "_id": "OROcVZCSuPljynd5",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "次元窥视",
       "sort": 600000,

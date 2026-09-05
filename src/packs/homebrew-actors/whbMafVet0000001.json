@@ -6,7 +6,7 @@
   "img": "icons/equipment/shoulder/epaulet-white-gold.webp",
   "items": [
     {
-      "_id": "zW6uKPWDkWrfOkVa",
+      "_id": "dd5UG2FRf0Hebj74",
       "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
       "name": "皮夹克",
       "sort": 300000,
@@ -70,7 +70,7 @@
       "type": "armor"
     },
     {
-      "_id": "BQFkwd8XDPJd98zi",
+      "_id": "uMJQ0XgqyXvY1qmb",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "重拳",
       "sort": 100000,
@@ -86,7 +86,7 @@
           "value": 8
         },
         "damageRolls": {
-          "hDroOWXregz0b4XE": {
+          "FClZXkPWbS67ToUy": {
             "damage": "1d6+3",
             "damageType": "bludgeoning"
           }
@@ -109,7 +109,7 @@
       "type": "melee"
     },
     {
-      "_id": "JHEAgP7kKt2XSKOD",
+      "_id": "tOoHAKuYL8eswwxf",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "戒指庇护",
       "sort": 500000,

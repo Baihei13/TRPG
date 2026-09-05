@@ -6,7 +6,7 @@
   "img": "icons/equipment/head/hood-cloth-black.webp",
   "items": [
     {
-      "_id": "Vd2cBHZvxk5vAnEk",
+      "_id": "EZRylpjnWqW9Ftl5",
       "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
       "name": "皮夹克",
       "sort": 300000,
@@ -70,7 +70,7 @@
       "type": "armor"
     },
     {
-      "_id": "m3PR7X7hiiuPjkXD",
+      "_id": "q6z7k1vo06WNIlAH",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "铜指虎",
       "sort": 100000,
@@ -86,7 +86,7 @@
           "value": 7
         },
         "damageRolls": {
-          "YmPE1E2X0duGHzzi": {
+          "MlYxkS7VBgAr11Lt": {
             "damage": "1d4+3",
             "damageType": "bludgeoning"
           }
@@ -111,7 +111,7 @@
       "type": "melee"
     },
     {
-      "_id": "ztB78hqCykcLQoWX",
+      "_id": "bTulkI2ARcBnFxEZ",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "汤姆逊冲锋枪",
       "sort": 200000,
@@ -127,7 +127,7 @@
           "value": 7
         },
         "damageRolls": {
-          "V0aDHGWColgbe4SB": {
+          "bwOcCYA69oDhNM6Y": {
             "damage": "1d6+2",
             "damageType": "piercing"
           }
@@ -155,7 +155,7 @@
       "type": "melee"
     },
     {
-      "_id": "OMwbZZF5qXsGWvaa",
+      "_id": "TnG9DXnhMkWPSNZ4",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "压制射击",
       "sort": 600000,

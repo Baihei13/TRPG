@@ -6,7 +6,7 @@
   "img": "icons/weapons/guns/gun-rifle.webp",
   "items": [
     {
-      "_id": "G7KbQPeB7IwjkCKs",
+      "_id": "tC1dRD6mxPR1AGzE",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "步枪",
       "sort": 200000,
@@ -19,11 +19,11 @@
           "value": []
         },
         "bonus": {
-          "value": 7
+          "value": 9
         },
         "damageRolls": {
-          "lWoKE03WDU9zrCFu": {
-            "damage": "1d8",
+          "6tFTv1LBEeo5ROkb": {
+            "damage": "1d8+1",
             "damageType": "piercing"
           }
         },
@@ -43,14 +43,15 @@
         "slug": null,
         "traits": {
           "value": [
-            "range-increment-40"
+            "range-increment-40",
+            "concussive"
           ]
         }
       },
       "type": "melee"
     },
     {
-      "_id": "2aTWo6ZArvtJq2Rj",
+      "_id": "x2auPBtGmMdlhyGB",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "枪托砸击",
       "sort": 100000,
@@ -63,11 +64,11 @@
           "value": []
         },
         "bonus": {
-          "value": 6
+          "value": 7
         },
         "damageRolls": {
-          "Bo9YACNfB72pj8dE": {
-            "damage": "1d4+1",
+          "2yeQVGIY2DReisel": {
+            "damage": "1d4+2",
             "damageType": "bludgeoning"
           }
         },
@@ -91,7 +92,7 @@
       "type": "melee"
     },
     {
-      "_id": "ILT5VLSc3iYZ0vyG",
+      "_id": "d0DV9E03h8oVeTzI",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "点射",
       "sort": 600000,
@@ -104,7 +105,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>以步枪连续射击两次（正常多重攻击罚值）。射击后通常需花费 1 动作装填（由 GM 手操）。</p>"
+          "value": "<p>以步枪连续射击两次（正常多重攻击罚值）。若至少一次命中，目标须尝试 @Check[fortitude|dc:16]，失败则陷入措手不及，直至其下一回合开始。射击后通常需花费 1 动作装填（由 GM 手操）。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -131,13 +132,13 @@
         "mod": 3
       },
       "con": {
-        "mod": 1
+        "mod": 2
       },
       "int": {
         "mod": 0
       },
       "wis": {
-        "mod": 1
+        "mod": 2
       },
       "cha": {
         "mod": 0
@@ -146,16 +147,16 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 15
+        "value": 16
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "",
-        "max": 14,
+        "max": 18,
         "temp": 0,
-        "value": 14
+        "value": 18
       },
       "speed": {
         "otherSpeeds": [],
@@ -171,10 +172,10 @@
         ]
       },
       "level": {
-        "value": 0
+        "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Dran Rifleman</strong>——远距离支援的德兰射手。偏好保持距离点射，被逼近时用枪托砸人。</p>",
+      "publicNotes": "<p><strong>Dran Rifleman</strong>——远距离支援的德兰射手。偏好保持距离点射，被逼近时用枪托砸人。</p><p><em>四人 2 级团 · Creature 1</em></p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -187,7 +188,7 @@
     },
     "perception": {
       "details": "微光视觉",
-      "mod": 6,
+      "mod": 7,
       "senses": [
         {
           "type": "low-light-vision"
@@ -198,23 +199,23 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 5
+        "value": 6
       },
       "reflex": {
         "saveDetail": "",
-        "value": 8
+        "value": 9
       },
       "will": {
         "saveDetail": "",
-        "value": 4
+        "value": 5
       }
     },
     "skills": {
       "acrobatics": {
-        "base": 6
+        "base": 8
       },
       "stealth": {
-        "base": 7
+        "base": 8
       }
     },
     "traits": {

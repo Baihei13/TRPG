@@ -715,26 +715,26 @@ def build_all():
     )
 
     # ==================================================================
-    # 遗迹2 — 德兰人 / 翡族 小怪与精英（1 级团）
+    # 遗迹2 — 德兰人 / 翡族 小怪与精英（2 级团）
     # ==================================================================
 
-    # --- 德兰剑客 Creature 0（Melee Dran）---
+    # --- 德兰剑客 Creature 1（Melee Dran）---
     actors.append(
         npc(
             "whbDranSword0001",
             "德兰剑客",
-            0,
-            16,
-            16,
-            6,
-            (6, 8, 4),
-            {"str": 2, "dex": 3, "con": 1, "int": 0, "wis": 1, "cha": 0},
-            {"acrobatics": 7, "athletics": 6, "stealth": 6},
+            1,
+            17,
+            20,
+            7,
+            (7, 9, 5),
+            {"str": 2, "dex": 3, "con": 2, "int": 0, "wis": 1, "cha": 0},
+            {"acrobatics": 8, "athletics": 7, "stealth": 7},
             [
                 melee(
                     "军刀",
-                    8,
-                    "1d6+2",
+                    9,
+                    "1d6+3",
                     "slashing",
                     ["agile", "finesse"],
                     sort=100000,
@@ -742,13 +742,15 @@ def build_all():
                 action_ability(
                     "冲刺突刺",
                     2,
-                    "<p>疾行，然后以军刀打击。若此次疾行至少移动 10 尺，该次打击获得 +1 环境加值。</p>",
+                    "<p>疾行，然后以军刀打击。若此次疾行至少移动 10 尺，该次打击获得 +1 环境加值；"
+                    "每轮一次，若满足移动条件，额外造成 @Damage[1d4[precision]]。</p>",
                     sort=600000,
                     publication=PUB_REMNANT,
                 ),
             ],
             "<p><strong>Melee Dran</strong>——洛索姆街头的沉睡德兰人。尖耳、蜡黄皮肤，挥着简陋军刀。"
-            "受集体无意识驱使，成群扑向外来者。适合巷战与伏击的杂兵。</p>",
+            "受集体无意识驱使，成群扑向外来者。适合巷战与伏击的杂兵。</p>"
+            "<p><em>四人 2 级团 · Creature 1</em></p>",
             FOLDERS["remnant"],
             traits=["humanoid", "dran"],
             speed=25,
@@ -765,32 +767,32 @@ def build_all():
         )
     )
 
-    # --- 德兰火枪手 Creature 0（Rifleman）---
+    # --- 德兰火枪手 Creature 1（Rifleman）---
     actors.append(
         npc(
             "whbDranRifle0001",
             "德兰火枪手",
-            0,
-            15,
-            14,
-            6,
-            (5, 8, 4),
-            {"str": 1, "dex": 3, "con": 1, "int": 0, "wis": 1, "cha": 0},
-            {"acrobatics": 6, "stealth": 7},
+            1,
+            16,
+            18,
+            7,
+            (6, 9, 5),
+            {"str": 1, "dex": 3, "con": 2, "int": 0, "wis": 2, "cha": 0},
+            {"acrobatics": 8, "stealth": 8},
             [
                 ranged(
                     "步枪",
-                    7,
-                    "1d8",
+                    9,
+                    "1d8+1",
                     40,
                     "piercing",
-                    ["range-increment-40"],
+                    ["range-increment-40", "concussive"],
                     sort=200000,
                 ),
                 melee(
                     "枪托砸击",
-                    6,
-                    "1d4+1",
+                    7,
+                    "1d4+2",
                     "bludgeoning",
                     ["agile"],
                     sort=100000,
@@ -798,12 +800,15 @@ def build_all():
                 action_ability(
                     "点射",
                     2,
-                    "<p>以步枪连续射击两次（正常多重攻击罚值）。射击后通常需花费 1 动作装填（由 GM 手操）。</p>",
+                    "<p>以步枪连续射击两次（正常多重攻击罚值）。若至少一次命中，目标须尝试 "
+                    "@Check[fortitude|dc:16]，失败则陷入措手不及，直至其下一回合开始。"
+                    "射击后通常需花费 1 动作装填（由 GM 手操）。</p>",
                     sort=600000,
                     publication=PUB_REMNANT,
                 ),
             ],
-            "<p><strong>Dran Rifleman</strong>——远距离支援的德兰射手。偏好保持距离点射，被逼近时用枪托砸人。</p>",
+            "<p><strong>Dran Rifleman</strong>——远距离支援的德兰射手。偏好保持距离点射，被逼近时用枪托砸人。</p>"
+            "<p><em>四人 2 级团 · Creature 1</em></p>",
             FOLDERS["remnant"],
             traits=["humanoid", "dran"],
             speed=25,
@@ -820,31 +825,31 @@ def build_all():
         )
     )
 
-    # --- 德兰拆卸者 Creature 1（Demolisher，精英）---
+    # --- 德兰拆卸者 Creature 2（Demolisher，精英）---
     actors.append(
         npc(
             "whbDranDemo00001",
             "德兰拆卸者",
-            1,
-            17,
-            28,
-            7,
-            (9, 6, 5),
+            2,
+            18,
+            34,
+            8,
+            (10, 7, 6),
             {"str": 3, "dex": 1, "con": 3, "int": -1, "wis": 1, "cha": 0},
-            {"athletics": 8, "intimidation": 6},
+            {"athletics": 9, "intimidation": 7},
             [
                 melee(
                     "动力锯",
-                    9,
-                    "1d10+4",
+                    10,
+                    "1d10+5",
                     "slashing",
-                    [],
+                    ["reach"],
                     sort=100000,
                     description="<p>触及 10 尺。命中时附加 @Damage[1[persistent,bleed]]。</p>",
                 ),
                 action_passive_pub(
                     "旋转锯刃",
-                    "<p>只要动力锯在运转，与拆卸者相邻开始回合的生物受到 @Damage[1[slashing]]。"
+                    "<p>只要动力锯在运转，与拆卸者相邻开始回合的生物受到 @Damage[1d4[slashing]]。"
                     "（锯大约每数轮熄火一次，重启需 1 动作——GM 可偶尔给玩家喘息。）</p>",
                     sort=500000,
                     publication=PUB_REMNANT,
@@ -853,7 +858,7 @@ def build_all():
                 action_ability(
                     "锯刃冲锋",
                     2,
-                    "<p>疾行两次，然后以动力锯打击。命中时目标须尝试 @Check[fortitude|dc:15]，"
+                    "<p>疾行两次，然后以动力锯打击。命中时目标须尝试 @Check[fortitude|dc:17]，"
                     "失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{倒地}。</p>",
                     sort=600000,
                     publication=PUB_REMNANT,
@@ -861,7 +866,7 @@ def build_all():
                 action_ability(
                     "废气喷吐",
                     2,
-                    "<p>10 尺爆发内生物须尝试 @Check[fortitude|dc:15|traits:poison,inhaled]。</p>"
+                    "<p>10 尺爆发内生物须尝试 @Check[fortitude|dc:17|traits:poison,inhaled]。</p>"
                     "<p>@Template[type:burst|distance:10]</p>"
                     "<hr />"
                     "<p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.fesdP3LZ4CV37rQo]{恶心 1}。</p>"
@@ -872,7 +877,8 @@ def build_all():
                 ),
             ],
             "<p><strong>Dran Demolisher</strong>——体型魁梧的德兰精英，挥着轰鸣动力锯。"
-            "常见于下水道与巷战伏击。流血与近身压力是其威胁核心。</p>",
+            "常见于下水道与巷战伏击。流血与近身压力是其威胁核心。</p>"
+            "<p><em>四人 2 级团 · Creature 2（中等）</em></p>",
             FOLDERS["remnant"],
             traits=["humanoid", "dran"],
             speed=20,
@@ -889,23 +895,23 @@ def build_all():
         )
     )
 
-    # --- 翡族卫兵 Creature 0（Fae Soldier）---
+    # --- 翡族卫兵 Creature 1（Fae Soldier）---
     actors.append(
         npc(
             "whbFaeSoldier001",
             "翡族卫兵",
-            0,
-            16,
-            15,
-            6,
-            (5, 8, 6),
-            {"str": 2, "dex": 3, "con": 1, "int": 0, "wis": 1, "cha": 1},
-            {"acrobatics": 7, "deception": 5, "stealth": 6},
+            1,
+            17,
+            18,
+            7,
+            (6, 9, 7),
+            {"str": 2, "dex": 3, "con": 2, "int": 0, "wis": 1, "cha": 2},
+            {"acrobatics": 8, "deception": 6, "stealth": 7},
             [
                 melee(
                     "华饰长刃",
-                    8,
-                    "1d8+2",
+                    9,
+                    "1d8+3",
                     "slashing",
                     ["finesse"],
                     sort=100000,
@@ -913,14 +919,16 @@ def build_all():
                 action_ability(
                     "魅影步",
                     1,
-                    "<p>疾行 5 尺并变得隐蔽，直至下回合开始，或直到你发动攻击/施法。</p>",
+                    "<p>疾行 10 尺并变得隐蔽，直至下回合开始，或直到你发动攻击/施法。"
+                    "若结束位置处于掩护后，你获得该掩护。</p>",
                     sort=600000,
                     publication=PUB_REMNANT,
                     traits=["illusion", "visual", "manipulate"],
                 ),
             ],
             "<p><strong>Fae Soldier</strong>——宫殿走廊上的翡族士兵，华美却致命。"
-            "幻术短步让他们难以被锁定。弱点寒铁。</p>",
+            "幻术短步让他们难以被锁定。弱点寒铁。</p>"
+            "<p><em>四人 2 级团 · Creature 1</em></p>",
             FOLDERS["remnant"],
             traits=["fey", "fae"],
             speed=30,
@@ -939,23 +947,23 @@ def build_all():
         )
     )
 
-    # --- 翡族皇家弓手 Creature 0（Royal Fae Archer）---
+    # --- 翡族皇家弓手 Creature 1（Royal Fae Archer）---
     actors.append(
         npc(
             "whbFaeArcher0001",
             "翡族皇家弓手",
-            0,
-            15,
-            14,
-            7,
-            (4, 8, 6),
+            1,
+            16,
+            16,
+            8,
+            (5, 9, 7),
             {"str": 1, "dex": 3, "con": 1, "int": 0, "wis": 2, "cha": 1},
-            {"acrobatics": 7, "stealth": 7, "survival": 5},
+            {"acrobatics": 8, "stealth": 8, "survival": 6},
             [
                 ranged(
                     "皇家猎弓",
-                    8,
-                    "1d8",
+                    9,
+                    "1d8+2",
                     60,
                     "piercing",
                     ["range-increment-60"],
@@ -963,8 +971,8 @@ def build_all():
                 ),
                 melee(
                     "短刃",
-                    6,
-                    "1d4+1",
+                    7,
+                    "1d4+2",
                     "piercing",
                     ["agile", "finesse"],
                     sort=100000,
@@ -972,12 +980,14 @@ def build_all():
                 action_ability(
                     "游猎齐射",
                     2,
-                    "<p>后退一步（若可能），然后以皇家猎弓打击两次（正常多重攻击罚值）。</p>",
+                    "<p>后退一步（若可能），然后以皇家猎弓打击两次（正常多重攻击罚值）。"
+                    "若两次均对同一目标，且至少一次命中，额外造成 @Damage[1d4[precision]]。</p>",
                     sort=600000,
                     publication=PUB_REMNANT,
                 ),
             ],
-            "<p><strong>Royal Fae Archer</strong>——翡族宫廷猎手，用华丽长弓从回廊与阳台压制旅人。</p>",
+            "<p><strong>Royal Fae Archer</strong>——翡族宫廷猎手，用华丽长弓从回廊与阳台压制旅人。</p>"
+            "<p><em>四人 2 级团 · Creature 1</em></p>",
             FOLDERS["remnant"],
             traits=["fey", "fae"],
             speed=30,
@@ -996,23 +1006,23 @@ def build_all():
         )
     )
 
-    # --- 翡族处刑者 Creature 1（Heavy Fae / Executioner，精英）---
+    # --- 翡族处刑者 Creature 2（Heavy Fae / Executioner，精英）---
     actors.append(
         npc(
             "whbFaeExecut0001",
             "翡族处刑者",
-            1,
-            17,
-            26,
-            7,
-            (9, 6, 7),
-            {"str": 3, "dex": 1, "con": 2, "int": 0, "wis": 2, "cha": 1},
-            {"athletics": 8, "intimidation": 7},
+            2,
+            18,
+            32,
+            8,
+            (10, 7, 8),
+            {"str": 3, "dex": 1, "con": 3, "int": 0, "wis": 2, "cha": 2},
+            {"athletics": 9, "intimidation": 8},
             [
                 melee(
                     "处刑戟",
-                    9,
-                    "1d10+4",
+                    10,
+                    "1d10+5",
                     "slashing",
                     ["reach"],
                     sort=100000,
@@ -1020,7 +1030,7 @@ def build_all():
                 ),
                 action_reaction(
                     "借机攻击",
-                    "<p>标准借机攻击。触发后使用处刑戟打击（点攻击区的 +9）。</p>",
+                    "<p>标准借机攻击。触发后使用处刑戟打击（点攻击区的 +10）。</p>",
                     category="offensive",
                     sort=700000,
                     publication=PUB_REMNANT,
@@ -1035,15 +1045,18 @@ def build_all():
                 action_ability(
                     "威压冲锋",
                     2,
-                    "<p>疾行两次，然后以处刑戟打击。命中时目标须尝试 @Check[will|dc:15|traits:fear,mental,emotion]，"
-                    "失败则陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>",
+                    "<p>疾行两次，然后以处刑戟打击。命中时目标须尝试 @Check[will|dc:17|traits:fear,mental,emotion]。</p>"
+                    "<hr />"
+                    "<p><strong>失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+                    "<p><strong>大失败</strong> 陷入惊惧 2。</p>",
                     sort=610000,
                     publication=PUB_REMNANT,
                     traits=["fear", "mental", "emotion"],
                 ),
             ],
             "<p><strong>Heavy Fae / Executioner</strong>——挥着巨大处刑戟的翡族精英。"
-            "负责清理「僭越者」与德兰俘虏。借机与处决斩让近身周旋很危险。</p>",
+            "负责清理「僭越者」与德兰俘虏。借机与处决斩让近身周旋很危险。</p>"
+            "<p><em>四人 2 级团 · Creature 2（中等）</em></p>",
             FOLDERS["remnant"],
             traits=["fey", "fae"],
             speed=20,
@@ -1063,28 +1076,28 @@ def build_all():
     )
 
     # ==================================================================
-    # 遗迹2 — 夜织者·梦魇碎片（1 级团终局 Boss）
-    # 生物 2：一阶段 + 弱化二阶段；无贴墙 / 无遁入；召唤每场 1 只
+    # 遗迹2 — 夜织者·梦魇碎片（2 级团终局 Boss）
+    # 生物 2：一阶段 + 弱化二阶段；召唤每场 1 只；对 PL2 约为严重遭遇
     # ==================================================================
-    NW_ATK = 10
-    NW_DC = 16
+    NW_ATK = 11
+    NW_DC = 18
     shard_items = [
         melee(
             "爪击",
             NW_ATK,
-            "1d8+3",
+            "1d8+4",
             "slashing",
-            ["agile", "finesse"],
+            ["agile", "finesse", "reach"],
             sort=100000,
-            extra_damage=[("1", "mental")],
+            extra_damage=[("1d4", "mental")],
             description="<p>触及 10 尺。</p>",
         ),
         melee(
             "梦魇攫抓",
             NW_ATK,
-            "1d4+2",
+            "1d6+2",
             "mental",
-            ["agile", "finesse"],
+            ["agile", "finesse", "reach"],
             sort=110000,
             attack_effects=["grabbed"],
             description="<p>触及 10 尺。命中后目标被 "
@@ -1094,7 +1107,7 @@ def build_all():
         ranged(
             "噩梦钉刺",
             NW_ATK,
-            "1d4+2",
+            "1d6+2",
             30,
             "force",
             ["range-increment-30"],
@@ -1115,13 +1128,14 @@ def build_all():
         action_ability(
             "噩梦爆破",
             2,
-            f"<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d6[force]|options:area-damage]，"
+            f"<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d8[force]|options:area-damage]，"
             f"并须尝试 @Check[reflex|dc:{NW_DC}|basic|traits:fear,mental,force]。</p>"
             "<p>@Template[type:cone|distance:15]</p>"
             "<hr />"
             "<p><strong>大成功 / 成功</strong> 不受额外惊惧影响。</p>"
-            "<p><strong>失败 / 大失败</strong> 额外陷入 "
-            "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>",
+            "<p><strong>失败</strong> 额外陷入 "
+            "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+            "<p><strong>大失败</strong> 额外陷入惊惧 2。</p>",
             sort=600000,
             publication=PUB_REMNANT,
             traits=["force", "mental", "fear"],
@@ -1132,7 +1146,7 @@ def build_all():
             "<p><strong>频率</strong> 每场战斗一次</p>"
             "<p>站立召唤，陷入措手不及。点播放会在身旁生成 <strong>1</strong> 只梦魇幼蛛"
             "（幼蛛立即获得 1 个动作）。</p>"
-            "<p><strong>中断：</strong>下回合开始前若被近战命中，召唤失败；额外 @Damage[1d6[mental]]，"
+            "<p><strong>中断：</strong>下回合开始前若被近战命中，召唤失败；额外 @Damage[1d8[mental]]，"
             "并陷入 @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{震慑 1}。</p>",
             sort=610000,
             publication=PUB_REMNANT,
@@ -1149,7 +1163,7 @@ def build_all():
             "<p>当 HP 降至 0 时，她尖啸碎裂但<strong>并不死亡</strong>：当轮无法被选为目标。"
             "在她的下一回合开始时，删除本 Token，换成"
             "@UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbNwCrawl000001]{夜织者·爬行恶鬼}"
-            "（<strong>20 HP</strong>）。</p>",
+            "（<strong>28 HP</strong>）。</p>",
             sort=520000,
             publication=PUB_REMNANT,
             category="defensive",
@@ -1162,21 +1176,21 @@ def build_all():
             "夜织者·梦魇碎片",
             2,
             18,
-            40,
-            8,
-            (7, 11, 8),
-            {"str": 2, "dex": 3, "con": 1, "int": -1, "wis": 2, "cha": 2},
+            48,
+            9,
+            (8, 11, 9),
+            {"str": 3, "dex": 3, "con": 2, "int": -1, "wis": 3, "cha": 3},
             {
-                "acrobatics": 9,
-                "deception": 8,
-                "intimidation": 8,
-                "stealth": 9,
-                "occultism": 5,
+                "acrobatics": 10,
+                "deception": 9,
+                "intimidation": 9,
+                "stealth": 10,
+                "occultism": 7,
             },
             shard_items,
             "<p><strong>Shard of the Nightweaver</strong>——夜织者投射的梦魇碎片。"
-            "<strong>按 1 级团终局战削砍</strong>：生物 2；无贴墙 / 无遁入；召唤每场 1 只。"
-            "一阶段 HP 40，归零后换二阶段「爬行恶鬼」（20 HP）。对 1 级四人团约为严重～极限。</p>",
+            "<strong>四人 2 级团终局</strong>：生物 2；召唤每场 1 只。"
+            "一阶段 HP 48，归零后换二阶段「爬行恶鬼」（28 HP）。对 PL2 四人团约为严重遭遇。</p>",
             FOLDERS["remnant"],
             traits=["fey", "dream", "unholy"],
             speed=25,
@@ -1188,33 +1202,33 @@ def build_all():
             senses=[{"type": "darkvision"}],
             languages=["common", "fey"],
             language_details="只能说零碎词语；心灵感应 30 尺",
-            hp_details="免疫睡眠；弱点 寒铁 3、神圣 3",
+            hp_details="免疫睡眠；弱点 寒铁 4、神圣 4",
             perception_details="黑暗视觉；心灵感应 30 尺",
             publication=PUB_REMNANT,
             flags=FLAG_REMNANT,
             immunities=["sleep"],
-            weaknesses=[("cold-iron", 3), ("holy", 3)],
+            weaknesses=[("cold-iron", 4), ("holy", 4)],
         )
     )
 
-    # 二阶段：保留形态变化，但数值与机制同步削弱
+    # 二阶段：保留形态变化，攻击与 DC 同一阶段
     crawl_items = [
         melee(
             "爪击",
             NW_ATK,
-            "1d8+3",
+            "1d8+4",
             "slashing",
-            ["agile", "finesse"],
+            ["agile", "finesse", "reach"],
             sort=100000,
-            extra_damage=[("1", "mental")],
+            extra_damage=[("1d4", "mental")],
             description="<p>触及 10 尺。</p>",
         ),
         melee(
             "梦魇攫抓",
             NW_ATK,
-            "1d4+2",
+            "1d6+2",
             "mental",
-            ["agile", "finesse"],
+            ["agile", "finesse", "reach"],
             sort=110000,
             attack_effects=["grabbed"],
             description="<p>触及 10 尺。命中后目标被 "
@@ -1224,7 +1238,7 @@ def build_all():
         ranged(
             "噩梦钉刺",
             NW_ATK,
-            "1d4+2",
+            "1d6+2",
             30,
             "force",
             ["range-increment-30"],
@@ -1244,7 +1258,7 @@ def build_all():
         ),
         action_reaction(
             "借机攻击",
-            "<p>标准借机攻击。触发后使用爪击打击（点攻击区的 +10）。</p>",
+            f"<p>标准借机攻击。触发后使用爪击打击（点攻击区的 +{NW_ATK}）。</p>",
             category="offensive",
             sort=700000,
             publication=PUB_REMNANT,
@@ -1252,13 +1266,14 @@ def build_all():
         action_ability(
             "噩梦爆破",
             2,
-            f"<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d6[force]|options:area-damage]，"
+            f"<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d8[force]|options:area-damage]，"
             f"并须尝试 @Check[reflex|dc:{NW_DC}|basic|traits:fear,mental,force]。</p>"
             "<p>@Template[type:cone|distance:15]</p>"
             "<hr />"
             "<p><strong>大成功 / 成功</strong> 不受额外惊惧影响。</p>"
-            "<p><strong>失败 / 大失败</strong> 额外陷入 "
-            "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>",
+            "<p><strong>失败</strong> 额外陷入 "
+            "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+            "<p><strong>大失败</strong> 额外陷入惊惧 2。</p>",
             sort=600000,
             publication=PUB_REMNANT,
             traits=["force", "mental", "fear"],
@@ -1268,7 +1283,7 @@ def build_all():
             2,
             "<p><strong>频率</strong> 每场战斗一次（与一阶段共用，GM 记次）</p>"
             "<p>若本场尚未召唤过：点播放生成 1 只幼蛛并陷入措手不及。"
-            "中断：近战命中则召唤失败；@Damage[1d6[mental]] 并震慑 1。</p>",
+            "中断：近战命中则召唤失败；@Damage[1d8[mental]] 并震慑 1。</p>",
             sort=610000,
             publication=PUB_REMNANT,
         ),
@@ -1287,21 +1302,21 @@ def build_all():
             "夜织者·爬行恶鬼",
             2,
             18,
-            20,
-            8,
-            (7, 11, 8),
-            {"str": 2, "dex": 3, "con": 1, "int": -1, "wis": 2, "cha": 2},
+            28,
+            9,
+            (8, 11, 9),
+            {"str": 3, "dex": 3, "con": 2, "int": -1, "wis": 3, "cha": 3},
             {
-                "acrobatics": 9,
-                "deception": 8,
-                "intimidation": 8,
-                "stealth": 9,
-                "occultism": 5,
+                "acrobatics": 10,
+                "deception": 9,
+                "intimidation": 9,
+                "stealth": 10,
+                "occultism": 7,
             },
             crawl_items,
             "<p>夜织者二阶段（Crawling Horror）。一阶段 HP 归零后换上本 Token，"
-            "<strong>20 HP</strong> 入场。失去飞行；陆地 30、攀爬 20；获得借机攻击。"
-            "无贴墙 / 无遁入；攻击与 DC 同一阶段。</p>",
+            "<strong>28 HP</strong> 入场。失去飞行；陆地 30、攀爬 20；获得借机攻击。"
+            "攻击与 DC 同一阶段（+11 / DC 18）。</p>",
             FOLDERS["remnant"],
             traits=["fey", "dream", "unholy"],
             speed=30,
@@ -1313,12 +1328,12 @@ def build_all():
             senses=[{"type": "darkvision"}],
             languages=["common", "fey"],
             language_details="只能说零碎词语；心灵感应 30 尺",
-            hp_details="免疫睡眠；弱点 寒铁 3、神圣 3",
+            hp_details="免疫睡眠；弱点 寒铁 4、神圣 4",
             perception_details="黑暗视觉；心灵感应 30 尺",
             publication=PUB_REMNANT,
             flags=FLAG_REMNANT,
             immunities=["sleep"],
-            weaknesses=[("cold-iron", 3), ("holy", 3)],
+            weaknesses=[("cold-iron", 4), ("holy", 4)],
         )
     )
 
@@ -1326,32 +1341,34 @@ def build_all():
         npc(
             "whbNmSpawn000001",
             "梦魇幼蛛",
-            -1,
-            14,
+            0,
+            15,
+            10,
             6,
-            4,
-            (2, 6, 3),
-            {"str": 0, "dex": 2, "con": 0, "int": -4, "wis": 0, "cha": -2},
-            {"acrobatics": 6, "stealth": 6},
+            (4, 7, 4),
+            {"str": 1, "dex": 3, "con": 1, "int": -4, "wis": 1, "cha": -2},
+            {"acrobatics": 7, "stealth": 7},
             [
                 melee(
                     "啃咬",
-                    6,
-                    "1d4+1",
+                    7,
+                    "1d4+2",
                     "piercing",
                     ["agile", "finesse"],
                     sort=100000,
+                    extra_damage=[("1", "mental")],
                 ),
                 action_passive_pub(
                     "濒死爆发",
                     "<p>HP 降至 0 时炸裂。5 尺弥漫内生物受到 @Damage[1d4[mental]|options:area-damage]，"
-                    "并须尝试 @Check[reflex|dc:13|basic]。</p>",
+                    "并须尝试 @Check[reflex|dc:15|basic]。</p>",
                     sort=500000,
                     publication=PUB_REMNANT,
                     category="offensive",
                 ),
             ],
-            "<p>夜织者召唤的弱小梦魇虫豸。每场战斗通常只出现 1 只。</p>",
+            "<p>夜织者召唤的弱小梦魇虫豸。每场战斗通常只出现 1 只。</p>"
+            "<p><em>四人 2 级团 · Creature 0</em></p>",
             FOLDERS["remnant"],
             traits=["fey", "dream"],
             speed=25,
@@ -1370,6 +1387,8 @@ def build_all():
             weaknesses=[("cold-iron", 2), ("holy", 2)],
         )
     )
+
+
 
     folders = {
         "folders": [

@@ -6,7 +6,7 @@
   "img": "icons/weapons/bows/shortbow-recurve-bone.webp",
   "items": [
     {
-      "_id": "RtObOZ7kiSw4Eo7m",
+      "_id": "G9Xq0vdJmZZEDOJj",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "皇家猎弓",
       "sort": 200000,
@@ -19,11 +19,11 @@
           "value": []
         },
         "bonus": {
-          "value": 8
+          "value": 9
         },
         "damageRolls": {
-          "xYuHP2C4lYtkbFhQ": {
-            "damage": "1d8",
+          "DlSiLHvW6botFCjE": {
+            "damage": "1d8+2",
             "damageType": "piercing"
           }
         },
@@ -50,7 +50,7 @@
       "type": "melee"
     },
     {
-      "_id": "6wdPypcliVKh3Aco",
+      "_id": "ubzcYwVAVhyoJw57",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "短刃",
       "sort": 100000,
@@ -63,11 +63,11 @@
           "value": []
         },
         "bonus": {
-          "value": 6
+          "value": 7
         },
         "damageRolls": {
-          "gvjMJ4pjbnqK7Ubw": {
-            "damage": "1d4+1",
+          "f95duC0LBAa0D34q": {
+            "damage": "1d4+2",
             "damageType": "piercing"
           }
         },
@@ -92,7 +92,7 @@
       "type": "melee"
     },
     {
-      "_id": "P8CSkVdhsqpH51Sy",
+      "_id": "40wTfYNuTQHVocmO",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "游猎齐射",
       "sort": 600000,
@@ -105,7 +105,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>后退一步（若可能），然后以皇家猎弓打击两次（正常多重攻击罚值）。</p>"
+          "value": "<p>后退一步（若可能），然后以皇家猎弓打击两次（正常多重攻击罚值）。若两次均对同一目标，且至少一次命中，额外造成 @Damage[1d4[precision]]。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -147,16 +147,16 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 15
+        "value": 16
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "弱点 寒铁 2",
-        "max": 14,
+        "max": 16,
         "temp": 0,
-        "value": 14
+        "value": 16
       },
       "speed": {
         "otherSpeeds": [],
@@ -179,10 +179,10 @@
         ]
       },
       "level": {
-        "value": 0
+        "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Royal Fae Archer</strong>——翡族宫廷猎手，用华丽长弓从回廊与阳台压制旅人。</p>",
+      "publicNotes": "<p><strong>Royal Fae Archer</strong>——翡族宫廷猎手，用华丽长弓从回廊与阳台压制旅人。</p><p><em>四人 2 级团 · Creature 1</em></p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -195,7 +195,7 @@
     },
     "perception": {
       "details": "微光视觉",
-      "mod": 7,
+      "mod": 8,
       "senses": [
         {
           "type": "low-light-vision"
@@ -206,26 +206,26 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 4
+        "value": 5
       },
       "reflex": {
         "saveDetail": "",
-        "value": 8
+        "value": 9
       },
       "will": {
         "saveDetail": "",
-        "value": 6
+        "value": 7
       }
     },
     "skills": {
       "acrobatics": {
-        "base": 7
+        "base": 8
       },
       "stealth": {
-        "base": 7
+        "base": 8
       },
       "survival": {
-        "base": 5
+        "base": 6
       }
     },
     "traits": {

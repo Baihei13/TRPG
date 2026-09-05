@@ -6,7 +6,7 @@
   "img": "icons/creatures/invertebrates/spider-pink-teal.webp",
   "items": [
     {
-      "_id": "HxMKx2wDuiWkGP9d",
+      "_id": "Ns5VE8o3svKIZwq4",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "啃咬",
       "sort": 100000,
@@ -19,12 +19,16 @@
           "value": []
         },
         "bonus": {
-          "value": 6
+          "value": 7
         },
         "damageRolls": {
-          "h2wy9pTZhycAgMnB": {
-            "damage": "1d4+1",
+          "EtEBBpFlOyX1WmK5": {
+            "damage": "1d4+2",
             "damageType": "piercing"
+          },
+          "tQZRXXy261Uv7Sb8": {
+            "damage": "1",
+            "damageType": "mental"
           }
         },
         "description": {
@@ -48,7 +52,7 @@
       "type": "melee"
     },
     {
-      "_id": "VmnfozomNiwbnU34",
+      "_id": "0A0X2T7eWDfNrrnz",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "濒死爆发",
       "sort": 500000,
@@ -61,7 +65,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>HP 降至 0 时炸裂。5 尺弥漫内生物受到 @Damage[1d4[mental]|options:area-damage]，并须尝试 @Check[reflex|dc:13|basic]。</p>"
+          "value": "<p>HP 降至 0 时炸裂。5 尺弥漫内生物受到 @Damage[1d4[mental]|options:area-damage]，并须尝试 @Check[reflex|dc:15|basic]。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -82,19 +86,19 @@
   "system": {
     "abilities": {
       "str": {
-        "mod": 0
+        "mod": 1
       },
       "dex": {
-        "mod": 2
+        "mod": 3
       },
       "con": {
-        "mod": 0
+        "mod": 1
       },
       "int": {
         "mod": -4
       },
       "wis": {
-        "mod": 0
+        "mod": 1
       },
       "cha": {
         "mod": -2
@@ -103,16 +107,16 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 14
+        "value": 15
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "弱点 寒铁 2、神圣 2",
-        "max": 6,
+        "max": 10,
         "temp": 0,
-        "value": 6
+        "value": 10
       },
       "speed": {
         "otherSpeeds": [
@@ -141,10 +145,10 @@
         "value": []
       },
       "level": {
-        "value": -1
+        "value": 0
       },
       "privateNotes": "",
-      "publicNotes": "<p>夜织者召唤的弱小梦魇虫豸。每场战斗通常只出现 1 只。</p>",
+      "publicNotes": "<p>夜织者召唤的弱小梦魇虫豸。每场战斗通常只出现 1 只。</p><p><em>四人 2 级团 · Creature 0</em></p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -157,7 +161,7 @@
     },
     "perception": {
       "details": "黑暗视觉",
-      "mod": 4,
+      "mod": 6,
       "senses": [
         {
           "type": "darkvision"
@@ -168,23 +172,23 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 2
+        "value": 4
       },
       "reflex": {
         "saveDetail": "",
-        "value": 6
+        "value": 7
       },
       "will": {
         "saveDetail": "",
-        "value": 3
+        "value": 4
       }
     },
     "skills": {
       "acrobatics": {
-        "base": 6
+        "base": 7
       },
       "stealth": {
-        "base": 6
+        "base": 7
       }
     },
     "traits": {

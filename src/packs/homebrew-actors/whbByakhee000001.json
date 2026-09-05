@@ -6,7 +6,7 @@
   "img": "icons/creatures/mammals/bat-giant-tattered-purple.webp",
   "items": [
     {
-      "_id": "8SEenwOGt6Esf0zl",
+      "_id": "01btSs29TmYlSFKe",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "利爪",
       "sort": 100000,
@@ -22,7 +22,7 @@
           "value": 12
         },
         "damageRolls": {
-          "hLeVgV2a5UqrwAm1": {
+          "OyOM8bny6skHiQtn": {
             "damage": "1d6+4",
             "damageType": "slashing"
           }
@@ -48,7 +48,7 @@
       "type": "melee"
     },
     {
-      "_id": "WFTe8E5ZfifiBCQG",
+      "_id": "g8zOTxmNcL17jFU5",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "啃咬",
       "sort": 100000,
@@ -64,7 +64,7 @@
           "value": 12
         },
         "damageRolls": {
-          "vO6yh07wlcyc6mMe": {
+          "SV4nM7OVMPDFbIQJ": {
             "damage": "1d4+4",
             "damageType": "piercing"
           }
@@ -87,7 +87,7 @@
       "type": "melee"
     },
     {
-      "_id": "8wptiYPrtwsUe5UT",
+      "_id": "fDqzlXfqgcfr7wVd",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "宇宙寒意",
       "sort": 500000,
@@ -117,7 +117,7 @@
       "type": "action"
     },
     {
-      "_id": "YXL837Qe5kU8op8d",
+      "_id": "zyivZ547cG8dIkI2",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "俯冲掠袭",
       "sort": 600000,

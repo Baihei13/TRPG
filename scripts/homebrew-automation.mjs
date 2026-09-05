@@ -11,6 +11,8 @@ import {
   createMorrowEphemeraBook,
   buildMorrowJournalDoc
 } from "./morrow-journal.mjs";
+import { openPartyTrapDialog, applyPartyTrap } from "./party-trap-macro.mjs";
+import { installCharredRingIwrPatch } from "./charred-ring-iwr.mjs";
 
 const MODULE_ID = "wang-pf2e-homebrew";
 
@@ -630,6 +632,8 @@ Hooks.once("init", () => {
       buildGroundskeeperJournalDoc,
       createMorrowEphemeraBook,
       buildMorrowJournalDoc,
+      openPartyTrapDialog,
+      applyPartyTrap,
     };
   }
 });
@@ -637,6 +641,7 @@ Hooks.once("init", () => {
 Hooks.once("ready", async () => {
   if (game.system.id !== "pf2e") return;
   if (!game.modules.get(MODULE_ID)?.active) return;
+  installCharredRingIwrPatch();
   await foundry.utils.delay(100);
   await syncAllActors();
 });

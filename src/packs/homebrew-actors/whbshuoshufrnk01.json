@@ -6,7 +6,7 @@
   "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
   "items": [
     {
-      "_id": "tRgEqJ1KQWq7d1U4",
+      "_id": "weiVi07XkLn2WJx3",
       "img": "icons/equipment/chest/breastplate-layered-leather-brown.webp",
       "name": "皮夹克",
       "sort": 300000,
@@ -70,7 +70,7 @@
       "type": "armor"
     },
     {
-      "_id": "fI3nOR7ofosmeYmo",
+      "_id": "CKd1LlnIO92iybbn",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "匕首",
       "sort": 100000,
@@ -86,7 +86,7 @@
           "value": 9
         },
         "damageRolls": {
-          "9ejsciib8zkytc3g": {
+          "j8CTI3tWwsoGMWpA": {
             "damage": "1d4+3",
             "damageType": "piercing"
           }
@@ -112,7 +112,7 @@
       "type": "melee"
     },
     {
-      "_id": "28Hyxa0VBUSscCXH",
+      "_id": "iKMg8rlD7sd2cKht",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "手枪",
       "sort": 200000,
@@ -128,7 +128,7 @@
           "value": 9
         },
         "damageRolls": {
-          "eOi5nZhA2Zj78J61": {
+          "NSBhGeuo6tCXNfOS": {
             "damage": "1d6+2",
             "damageType": "piercing"
           }
@@ -156,7 +156,7 @@
       "type": "melee"
     },
     {
-      "_id": "CtfD7NRgAfLfNp0I",
+      "_id": "SvP2T52nxFK6JQbw",
       "img": "systems/pf2e/icons/actions/OneAction.webp",
       "name": "暗算",
       "sort": 600000,

@@ -6,7 +6,7 @@
   "img": "icons/weapons/swords/sword-guard-worn.webp",
   "items": [
     {
-      "_id": "6Wd4NOOYo0JpYWdT",
+      "_id": "boRXJJ6fxmjZzVrg",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "军刀",
       "sort": 100000,
@@ -19,11 +19,11 @@
           "value": []
         },
         "bonus": {
-          "value": 8
+          "value": 9
         },
         "damageRolls": {
-          "EmfbnFL6vTeCTpcv": {
-            "damage": "1d6+2",
+          "dRYFQBwjp3GEsNNc": {
+            "damage": "1d6+3",
             "damageType": "slashing"
           }
         },
@@ -48,7 +48,7 @@
       "type": "melee"
     },
     {
-      "_id": "eNA5J1uB0r8E1wUQ",
+      "_id": "FbvU1EoouCVX4Ect",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "冲刺突刺",
       "sort": 600000,
@@ -61,7 +61,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>疾行，然后以军刀打击。若此次疾行至少移动 10 尺，该次打击获得 +1 环境加值。</p>"
+          "value": "<p>疾行，然后以军刀打击。若此次疾行至少移动 10 尺，该次打击获得 +1 环境加值；每轮一次，若满足移动条件，额外造成 @Damage[1d4[precision]]。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -88,7 +88,7 @@
         "mod": 3
       },
       "con": {
-        "mod": 1
+        "mod": 2
       },
       "int": {
         "mod": 0
@@ -103,16 +103,16 @@
     "attributes": {
       "ac": {
         "details": "",
-        "value": 16
+        "value": 17
       },
       "allSaves": {
         "value": ""
       },
       "hp": {
         "details": "",
-        "max": 16,
+        "max": 20,
         "temp": 0,
-        "value": 16
+        "value": 20
       },
       "speed": {
         "otherSpeeds": [],
@@ -128,10 +128,10 @@
         ]
       },
       "level": {
-        "value": 0
+        "value": 1
       },
       "privateNotes": "",
-      "publicNotes": "<p><strong>Melee Dran</strong>——洛索姆街头的沉睡德兰人。尖耳、蜡黄皮肤，挥着简陋军刀。受集体无意识驱使，成群扑向外来者。适合巷战与伏击的杂兵。</p>",
+      "publicNotes": "<p><strong>Melee Dran</strong>——洛索姆街头的沉睡德兰人。尖耳、蜡黄皮肤，挥着简陋军刀。受集体无意识驱使，成群扑向外来者。适合巷战与伏击的杂兵。</p><p><em>四人 2 级团 · Creature 1</em></p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -144,7 +144,7 @@
     },
     "perception": {
       "details": "微光视觉",
-      "mod": 6,
+      "mod": 7,
       "senses": [
         {
           "type": "low-light-vision"
@@ -155,26 +155,26 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 6
+        "value": 7
       },
       "reflex": {
         "saveDetail": "",
-        "value": 8
+        "value": 9
       },
       "will": {
         "saveDetail": "",
-        "value": 4
+        "value": 5
       }
     },
     "skills": {
       "acrobatics": {
-        "base": 7
+        "base": 8
       },
       "athletics": {
-        "base": 6
+        "base": 7
       },
       "stealth": {
-        "base": 6
+        "base": 7
       }
     },
     "traits": {

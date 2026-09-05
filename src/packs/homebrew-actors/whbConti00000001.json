@@ -6,7 +6,7 @@
   "img": "icons/creatures/mammals/human-child-gray.webp",
   "items": [
     {
-      "_id": "xVVsecRftHuZf6qP",
+      "_id": "HPM2R9N74ccqQcQ7",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "石头",
       "sort": 100000,
@@ -22,7 +22,7 @@
           "value": 3
         },
         "damageRolls": {
-          "c9XSQa4caZdaXy0B": {
+          "vLu0lzDP8fyjCFK3": {
             "damage": "1d4-1",
             "damageType": "bludgeoning"
           }

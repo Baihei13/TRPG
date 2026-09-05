@@ -6,7 +6,7 @@
   "img": "icons/creatures/magical/humanoid-silhouette-dashing-blue.webp",
   "items": [
     {
-      "_id": "knbZEBmKg6VuA6UR",
+      "_id": "EhK9JAGrQSmFJe1r",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "爪击",
       "sort": 100000,
@@ -19,15 +19,15 @@
           "value": []
         },
         "bonus": {
-          "value": 10
+          "value": 11
         },
         "damageRolls": {
-          "olMmiKZPYneEuKhG": {
-            "damage": "1d8+3",
+          "KbnHW57t7ZhtP01W": {
+            "damage": "1d8+4",
             "damageType": "slashing"
           },
-          "FfiRh1LyK37DEkUD": {
-            "damage": "1",
+          "GrXg4ZeRPocC1usk": {
+            "damage": "1d4",
             "damageType": "mental"
           }
         },
@@ -45,14 +45,15 @@
         "traits": {
           "value": [
             "agile",
-            "finesse"
+            "finesse",
+            "reach"
           ]
         }
       },
       "type": "melee"
     },
     {
-      "_id": "BdRzzcRGk5JOtJOb",
+      "_id": "T9K6EfbYMo09l8bh",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "梦魇攫抓",
       "sort": 110000,
@@ -67,16 +68,16 @@
           ]
         },
         "bonus": {
-          "value": 10
+          "value": 11
         },
         "damageRolls": {
-          "uYhcCxSCN66QbMfD": {
-            "damage": "1d4+2",
+          "V6xkG597wJYcU7vE": {
+            "damage": "1d6+2",
             "damageType": "mental"
           }
         },
         "description": {
-          "value": "<p>触及 10 尺。命中后目标被 @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{擒抱}（逃脱 DC 16）。</p>"
+          "value": "<p>触及 10 尺。命中后目标被 @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{擒抱}（逃脱 DC 18）。</p>"
         },
         "publication": {
           "license": "OGL",
@@ -89,14 +90,15 @@
         "traits": {
           "value": [
             "agile",
-            "finesse"
+            "finesse",
+            "reach"
           ]
         }
       },
       "type": "melee"
     },
     {
-      "_id": "1OnoUz2P2QroDDub",
+      "_id": "s7b6CkuQ2BCdSwKh",
       "img": "systems/pf2e/icons/default-icons/melee.svg",
       "name": "噩梦钉刺",
       "sort": 200000,
@@ -109,11 +111,11 @@
           "value": []
         },
         "bonus": {
-          "value": 10
+          "value": 11
         },
         "damageRolls": {
-          "ye8X1OzwIDQaOER5": {
-            "damage": "1d4+2",
+          "akWpNAKMFBeiW8z8": {
+            "damage": "1d6+2",
             "damageType": "force"
           }
         },
@@ -140,7 +142,7 @@
       "type": "melee"
     },
     {
-      "_id": "qfV9KWQlBFTVlCzg",
+      "_id": "nvEMcJxK0joMkWfx",
       "img": "systems/pf2e/icons/actions/Passive.webp",
       "name": "织梦者",
       "sort": 500000,
@@ -153,7 +155,7 @@
         },
         "category": "defensive",
         "description": {
-          "value": "<p>任何试图以心灵、情绪或睡眠效果影响夜织者的生物，必须尝试 @Check[will|dc:16|traits:mental,emotion,fear]。</p><hr /><p><strong>大成功 / 成功</strong> 不受影响。</p><p><strong>失败 / 大失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{呆滞 1}，持续 1 轮。</p>"
+          "value": "<p>任何试图以心灵、情绪或睡眠效果影响夜织者的生物，必须尝试 @Check[will|dc:18|traits:mental,emotion,fear]。</p><hr /><p><strong>大成功 / 成功</strong> 不受影响。</p><p><strong>失败 / 大失败</strong> 陷入 @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{呆滞 1}，持续 1 轮。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -170,7 +172,7 @@
       "type": "action"
     },
     {
-      "_id": "B2UMGd6MHHMK7oJI",
+      "_id": "hOYj5hizoAwI32gV",
       "img": "systems/pf2e/icons/actions/Reaction.webp",
       "name": "借机攻击",
       "sort": 700000,
@@ -183,7 +185,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>标准借机攻击。触发后使用爪击打击（点攻击区的 +10）。</p>"
+          "value": "<p>标准借机攻击。触发后使用爪击打击（点攻击区的 +11）。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -200,7 +202,7 @@
       "type": "action"
     },
     {
-      "_id": "zu8n7x9hZpqOuslb",
+      "_id": "JNmOxmXznDcZYIi4",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "噩梦爆破",
       "sort": 600000,
@@ -213,7 +215,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d6[force]|options:area-damage]，并须尝试 @Check[reflex|dc:16|basic|traits:fear,mental,force]。</p><p>@Template[type:cone|distance:15]</p><hr /><p><strong>大成功 / 成功</strong> 不受额外惊惧影响。</p><p><strong>失败 / 大失败</strong> 额外陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p>"
+          "value": "<p>释放锥形梦魇能量。区域内每个生物受到 @Damage[2d8[force]|options:area-damage]，并须尝试 @Check[reflex|dc:18|basic|traits:fear,mental,force]。</p><p>@Template[type:cone|distance:15]</p><hr /><p><strong>大成功 / 成功</strong> 不受额外惊惧影响。</p><p><strong>失败</strong> 额外陷入 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}。</p><p><strong>大失败</strong> 额外陷入惊惧 2。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -234,7 +236,7 @@
       "type": "action"
     },
     {
-      "_id": "4a2rknMUn4vAGVXA",
+      "_id": "AfZVD5S4oVsttbCJ",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "召唤梦魇幼蛛",
       "sort": 610000,
@@ -247,7 +249,7 @@
         },
         "category": "offensive",
         "description": {
-          "value": "<p><strong>频率</strong> 每场战斗一次（与一阶段共用，GM 记次）</p><p>若本场尚未召唤过：点播放生成 1 只幼蛛并陷入措手不及。中断：近战命中则召唤失败；@Damage[1d6[mental]] 并震慑 1。</p>"
+          "value": "<p><strong>频率</strong> 每场战斗一次（与一阶段共用，GM 记次）</p><p>若本场尚未召唤过：点播放生成 1 只幼蛛并陷入措手不及。中断：近战命中则召唤失败；@Damage[1d8[mental]] 并震慑 1。</p>"
         },
         "publication": {
           "title": "遗迹2 — PF2e 自制转换",
@@ -264,7 +266,7 @@
       "type": "action"
     },
     {
-      "_id": "kyov4WZdV2YPA2c0",
+      "_id": "4e6okRmi1LWrJmnX",
       "img": "systems/pf2e/icons/actions/TwoActions.webp",
       "name": "疯狂乱抓",
       "sort": 620000,
@@ -298,22 +300,22 @@
   "system": {
     "abilities": {
       "str": {
-        "mod": 2
+        "mod": 3
       },
       "dex": {
         "mod": 3
       },
       "con": {
-        "mod": 1
+        "mod": 2
       },
       "int": {
         "mod": -1
       },
       "wis": {
-        "mod": 2
+        "mod": 3
       },
       "cha": {
-        "mod": 2
+        "mod": 3
       }
     },
     "attributes": {
@@ -325,10 +327,10 @@
         "value": ""
       },
       "hp": {
-        "details": "免疫睡眠；弱点 寒铁 3、神圣 3",
-        "max": 20,
+        "details": "免疫睡眠；弱点 寒铁 4、神圣 4",
+        "max": 28,
         "temp": 0,
-        "value": 20
+        "value": 28
       },
       "speed": {
         "otherSpeeds": [
@@ -347,11 +349,11 @@
       "weaknesses": [
         {
           "type": "cold-iron",
-          "value": 3
+          "value": 4
         },
         {
           "type": "holy",
-          "value": 3
+          "value": 4
         }
       ]
     },
@@ -368,7 +370,7 @@
         "value": 2
       },
       "privateNotes": "",
-      "publicNotes": "<p>夜织者二阶段（Crawling Horror）。一阶段 HP 归零后换上本 Token，<strong>20 HP</strong> 入场。失去飞行；陆地 30、攀爬 20；获得借机攻击。无贴墙 / 无遁入；攻击与 DC 同一阶段。</p>",
+      "publicNotes": "<p>夜织者二阶段（Crawling Horror）。一阶段 HP 归零后换上本 Token，<strong>28 HP</strong> 入场。失去飞行；陆地 30、攀爬 20；获得借机攻击。攻击与 DC 同一阶段（+11 / DC 18）。</p>",
       "publication": {
         "title": "遗迹2 — PF2e 自制转换",
         "authors": "Wang",
@@ -381,7 +383,7 @@
     },
     "perception": {
       "details": "黑暗视觉；心灵感应 30 尺",
-      "mod": 8,
+      "mod": 9,
       "senses": [
         {
           "type": "darkvision"
@@ -392,7 +394,7 @@
     "saves": {
       "fortitude": {
         "saveDetail": "",
-        "value": 7
+        "value": 8
       },
       "reflex": {
         "saveDetail": "",
@@ -400,24 +402,24 @@
       },
       "will": {
         "saveDetail": "",
-        "value": 8
+        "value": 9
       }
     },
     "skills": {
       "acrobatics": {
-        "base": 9
+        "base": 10
       },
       "deception": {
-        "base": 8
-      },
-      "intimidation": {
-        "base": 8
-      },
-      "stealth": {
         "base": 9
       },
+      "intimidation": {
+        "base": 9
+      },
+      "stealth": {
+        "base": 10
+      },
       "occultism": {
-        "base": 5
+        "base": 7
       }
     },
     "traits": {
