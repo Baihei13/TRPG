@@ -13,6 +13,7 @@ import {
 } from "./morrow-journal.mjs";
 import { openPartyTrapDialog, applyPartyTrap } from "./party-trap-macro.mjs";
 import { installCharredRingIwrPatch } from "./charred-ring-iwr.mjs";
+import { installNightweaverRewards } from "./nightweaver-rewards.mjs";
 
 const MODULE_ID = "wang-pf2e-homebrew";
 
@@ -636,6 +637,7 @@ Hooks.once("init", () => {
       applyPartyTrap,
     };
   }
+  installNightweaverRewards();
 });
 
 Hooks.once("ready", async () => {
