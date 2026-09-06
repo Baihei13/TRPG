@@ -1,0 +1,83 @@
+{
+  "_id": "whbNwArmor000001",
+  "folder": "whbfolderRemIt01",
+  "name": "织梦残茧",
+  "type": "armor",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-armor.png",
+  "system": {
+    "description": {
+      "value": "<p>用<strong>诅咒之梦丝绸</strong>织成的灰绿轻甲，层层缠在肩背与肋侧，像一层未破的茧。边缘抽成细丝，走动时几乎无声。肋骨般的暗色甲片嵌在丝层之间，透着夜织者残骸的冷意。</p>\n<blockquote><p>茧不是为了囚禁——是为了让你在噩梦里多撑一息。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 着装（护甲）；<strong>负载</strong> 1；需<strong>投资</strong></p>\n<p><strong>AC</strong> +2；<strong>敏捷上限</strong> +3；<strong>检定罚值</strong> −1；<strong>速度罚值</strong> —</p>\n<p><strong>持续</strong> 投资期间，你获得<strong>心灵抗性 2</strong>。</p>\n<hr />\n<p><strong>激活</strong> <span class=\"action-glyph\">R</span> 想象；<strong>频率</strong> 每日 1 次；<strong>触发</strong> 你被造成伤害时；<strong>效果</strong> 蛛丝自甲缝涌出。你变为<strong>隐蔽</strong>，直至你下个回合开始（若你发动攻击或施法，该隐蔽提前结束）。</p>\n<p><em>（自动化：将合集「抽丝蔽体」效果拖到角色；并施加隐蔽状态。频率自记。）</em></p>",
+      "gm": "<p><strong>Cocoon of Dreamsilk</strong>（遗迹2 · 夜织者奖赏 · 菲洛）。物品 3，罕见。价格 60 gp。轻甲，comfort。</p>\n<p>心灵抗性 2 已挂 RE。反应隐蔽：拖「抽丝蔽体」+ 隐蔽条件。</p>"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "mental",
+        "value": 2,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "damage-taken",
+        "title": "织梦残茧 — 抽丝蔽体",
+        "text": "每日 1 次：受伤害时可反应，变为隐蔽直至你下个回合开始（攻击/施法提前结束）。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "cocoon-of-dreamsilk",
+    "traits": {
+      "value": ["comfort", "invested", "magical", "occult"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2", "nightweaver"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 1 },
+    "price": { "value": { "gp": 60 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "inSlot": false
+    },
+    "containerId": null,
+    "size": "med",
+    "material": { "type": null, "grade": null },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "灰绿丝甲",
+        "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-armor.png",
+        "data": {
+          "description": {
+            "value": "<p>一层缠着灰绿蛛丝的轻甲，触感发黏。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "light",
+    "group": "leather",
+    "acBonus": 2,
+    "strength": 1,
+    "dexCap": 3,
+    "checkPenalty": -1,
+    "speedPenalty": 0,
+    "runes": { "potency": 0, "resilient": 0, "property": [] },
+    "usage": { "value": "wornarmor" }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Cocoon of Dreamsilk",
+      "linkedEffect": "whbNwArmorFx0001",
+      "recipient": "菲洛"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "whbNwMaskFx00001",
+  "folder": "whbfolderRemIt01",
+  "name": "织影帷幕",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-mask.png",
+  "system": {
+    "description": {
+      "value": "<p>夜织假面的蛛纱在你周围张开薄幕。你在对抗<strong>恐惧 / 情绪</strong>效应的意志豁免上获得<strong>环境加值 +1</strong>。</p>",
+      "gm": "<p>由佩戴「夜织假面」者提供给 15 尺内盟友。持续可维持至面具投资结束，或按遭遇重新拖放。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "woven-shadow-veil-will",
+        "selector": "will",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          {
+            "or": ["item:trait:fear", "item:trait:emotion", "fear", "emotion"]
+          }
+        ]
+      }
+    ],
+    "slug": "woven-shadow-veil",
+    "traits": {
+      "value": ["magical", "occult", "emotion", "aura"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "pairedItem": "whbNwMask0000001"
+    }
+  }
+}

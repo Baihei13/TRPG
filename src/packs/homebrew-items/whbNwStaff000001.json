@@ -1,0 +1,96 @@
+{
+  "_id": "whbNwStaff000001",
+  "folder": "whbfolderRemIt01",
+  "name": "残月织弦",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-staff.png",
+  "system": {
+    "description": {
+      "value": "<p>漆黑杖身，顶端弯成银白残月；挥动时拖出丝状月辉，像在夜空里绷开一根用<strong>诅咒之梦丝绸</strong>捻成的弦。杖心隐有梦核脉动。</p>\n<blockquote><p>残月不救人于白昼——它只在噩梦最深时，给你一根可攀的弦。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 持用（杖）；<strong>负载</strong> 1；需<strong>投资</strong>（持用并投资时生效）</p>\n<p><strong>武器</strong> 杖；伤害 1d4 钝击；特质 monk、two-hand d8</p>\n<p><strong>持续</strong> 投资且持用期间：对抗<strong>情绪 / 恐惧 / 心灵</strong>效应的豁免获得<strong>环境加值 +1</strong>。当你施放带<strong>治疗</strong>特质的法术时，目标额外获得<strong>心灵抗性 2</strong>，持续至你下个回合开始（将合集「月弦缝心」拖到目标）。</p>\n<hr />\n<p><strong>激活 —— 拨弦</strong> <span class=\"action-glyph\">1</span> 操纵、专注；<strong>频率</strong> 每日 1 次；选择 30 尺内一个生物：</p>\n<ul>\n<li><strong>盟友</strong>：恢复 <strong>1d8 + 你的魅力调整值</strong> HP，并移除<strong>惧怕 1</strong>或<strong>呆滞 1</strong>（自选）。</li>\n<li><strong>敌人</strong>：意志 <strong>DC 17</strong>（情绪、恐惧、心灵、视觉）。失败则<strong>惧怕 1</strong>，并对你的下一次攻击检定<strong>措手不及</strong>；大失败改为<strong>惧怕 2</strong>（1 轮）。</li>\n</ul>\n<hr />\n<p><strong>法杖充能</strong>（标准法杖规则；以神术传统准备）</p>\n<table><thead><tr><th>环阶</th><th>法术</th></tr></thead><tbody>\n<tr><td>戏法</td><td>神导术 Guidance、命能袭 Vitality Lash</td></tr>\n<tr><td>1 环</td><td>安抚术 Soothe、恐惧术 Fear、祝佑术 Benediction</td></tr>\n</tbody></table>\n<p><em>充能与自本法术位分开记录；本杖偏稳心与慑敌，治疗主力仍用法术位。</em></p>",
+      "gm": "<p><strong>Crescent Dreamstring</strong>（遗迹2 · 曦）。物品 3，罕见。价格 75 gp。意志环境 +1（情绪/恐惧/心灵）手操裁定；治疗附带心灵抗用「月弦缝心」。拨弦：盟友 1d8+Cha；敌人 Will DC 17。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "crescent-dreamstring-will",
+        "selector": "will",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          {
+            "or": ["item:trait:mental", "item:trait:emotion", "item:trait:fear", "mental", "emotion", "fear"]
+          }
+        ],
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "will",
+        "title": "残月织弦",
+        "text": "对抗情绪/恐惧/心灵时，你应获得环境加值 +1（若未自动计入请手动加）。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "crescent-dreamstring",
+    "traits": {
+      "value": ["invested", "magical", "divine", "occult", "monk", "two-hand-d8"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2", "nightweaver", "staff"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": "staff",
+    "bulk": { "value": 1 },
+    "price": { "value": { "gp": 75 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": { "type": null, "grade": null },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "残月黑杖",
+        "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-staff.png",
+        "data": {
+          "description": {
+            "value": "<p>顶端弯成残月的黑杖，隐有银辉。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "category": "simple",
+    "group": "club",
+    "bonus": { "value": 0 },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "bludgeoning",
+      "modifier": 0
+    },
+    "splashDamage": { "value": 0 },
+    "range": null,
+    "reload": { "value": null },
+    "runes": { "potency": 0, "striking": 0, "property": [] },
+    "bonusDamage": { "value": 0 }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Crescent Dreamstring",
+      "linkedEffect": "whbNwStaffFx0001",
+      "recipient": "曦"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "_id": "whbNwMask0000001",
+  "folder": "whbfolderRemIt01",
+  "name": "夜织假面",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-mask.png",
+  "system": {
+    "description": {
+      "value": "<p>半透明蛛纱覆于无眸金属面甲之上，兜帽边缘绽成碎缕。纱上偶有别人的五官轮廓掠过——像夜织者曾戴过、又随时能换掉的一张脸。戴上它时，你的声音会带着丝丝回响，仿佛从梦的另一侧传来。</p>\n<blockquote><p>面具不是为了隐藏，是为了让整支队伍都站进同一场噩梦的帷幕里。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 佩戴（面具）；<strong>负载</strong> —；需<strong>投资</strong></p>\n<p><strong>持续</strong> 投资期间：</p>\n<ul>\n<li>你的<strong>恐吓</strong>与<strong>表演</strong>检定获得<strong>物品加值 +1</strong>。</li>\n<li><strong>织影帷幕</strong>：以你为中心 <strong>15 尺弥漫</strong>内的盟友，在对抗<strong>恐惧 / 情绪</strong>效应的意志豁免上获得<strong>环境加值 +1</strong>（你本人同样受益）。此加值不与战将灵光等同类环境加值叠加时取高。</li>\n</ul>\n<hr />\n<p><strong>激活 —— 揭纱</strong> <span class=\"action-glyph\">1</span> 操纵、情绪、恐惧、心灵、视觉；<strong>频率</strong> 每日 1 次；<strong>效果</strong> 你揭起面纱一角，露出那张不属于你的脸。选择 30 尺内一个能看见你的生物，令其尝试<strong>意志 DC 17</strong>。</p>\n<ul>\n<li><strong>大成功</strong> 不受影响，且对该生物而言你今日无法再以揭纱影响它。</li>\n<li><strong>成功</strong> 不受影响。</li>\n<li><strong>失败</strong> 目标对你<strong>措手不及</strong> 1 轮；对你而言你获得<strong>隐蔽</strong> 1 分钟；且在持续期间你对该目标的恐吓检定额外获得<strong>环境加值 +1</strong>。</li>\n<li><strong>大失败</strong> 同上，并额外<strong>惧怕 2</strong>（1 轮；之后降为惧怕 1，再持续 1 轮）。</li>\n</ul>\n<p><em>（自动化：恐吓/表演 +1 已挂。织影帷幕与揭纱请手操；可将「织影帷幕」效果拖给范围内盟友。）</em></p>",
+      "gm": "<p><strong>Nightweaver's Visage</strong>（遗迹2 · 帕特里奇亚）。物品 3，罕见。价格 75 gp。恐吓/表演 +1 已挂 RE。织影帷幕 15 尺：Will vs fear/emotion +1 环境。揭纱 DC 17。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "nightweaver-visage-intimidation",
+        "selector": "intimidation",
+        "type": "item",
+        "value": 1,
+        "requiresInvestment": true
+      },
+      {
+        "key": "FlatModifier",
+        "slug": "nightweaver-visage-performance",
+        "selector": "performance",
+        "type": "item",
+        "value": 1,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "will",
+        "title": "夜织假面 — 织影帷幕",
+        "text": "你与 15 尺内盟友对抗恐惧/情绪的意志豁免应有环境加值 +1（手操）。每日 1 次可揭纱。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "nightweaver-visage",
+    "traits": {
+      "value": ["invested", "magical", "occult", "emotion"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2", "nightweaver"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "price": { "value": { "gp": 75 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "inSlot": false
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "蛛纱兜帽面甲",
+        "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-mask.png",
+        "data": {
+          "description": {
+            "value": "<p>一件罩着灰纱的金属面甲，透着不祥的冷光。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "wornmask" }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Nightweaver's Visage",
+      "linkedEffect": "whbNwMaskFx00001",
+      "recipient": "帕特里奇亚"
+    }
+  }
+}

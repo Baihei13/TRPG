@@ -1,0 +1,44 @@
+{
+  "_id": "whbNwArmorFx0001",
+  "folder": "whbfolderRemIt01",
+  "name": "抽丝蔽体",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-armor.png",
+  "system": {
+    "description": {
+      "value": "<p>诅咒之梦丝绸自甲缝涌出，将你笼入半透明的丝幕。你处于<strong>隐蔽</strong>，直至效果结束；若你发动攻击或施法，立即结束。</p>",
+      "gm": "<p>配合「织梦残茧」每日反应。请同时施加隐蔽条件。持续至目标下个回合开始。</p>"
+    },
+    "rules": [],
+    "slug": "dreamsilk-shroud",
+    "traits": {
+      "value": ["magical", "occult"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "pairedItem": "whbNwArmor000001"
+    }
+  }
+}

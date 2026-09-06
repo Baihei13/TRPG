@@ -1,0 +1,81 @@
+{
+  "_id": "whbNwAmulet00001",
+  "folder": "whbfolderRemIt01",
+  "name": "清醒茧核",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-amulet.png",
+  "system": {
+    "description": {
+      "value": "<p>一小截漆黑梦核被<strong>诅咒之梦丝绸</strong>结成的骨白丝笼裹住；脉动时亮起病态青纹，像被困住的神经网络。可嵌进仿生人锁骨线路，也可当护石佩戴。</p>\n<blockquote><p>它记得夜织者的梦——所以它也知道如何把梦掐断。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 佩戴（护石）；<strong>负载</strong> —；需<strong>投资</strong></p>\n<p><strong>持续</strong> 投资期间：意志豁免获得<strong>物品加值 +1</strong>；并对<strong>心灵伤害</strong>获得抗性 2。</p>\n<hr />\n<p><strong>激活 —— 断梦</strong> <span class=\"action-glyph\">F</span>；<strong>频率</strong> 每日 1 次；<strong>触发</strong> 你因心灵 / 情绪 / 恐惧效应将陷入<strong>呆滞、惧怕或困惑</strong>时；<strong>效果</strong> 该状态等级降低 1（最低 0）。若你当前处于<strong>隐蔽</strong>或<strong>躲藏</strong>，则你对引发该效应的生物下一次打击额外造成 <strong>1d4 心灵</strong>伤害。</p>\n<p><em>（自动化：心灵抗性与意志 +1 已挂；断梦降状态与附加伤害请手操。与「校友戒指」同占投资槽，按需取舍。）</em></p>",
+      "gm": "<p><strong>Lucid Cocoon Core</strong>（遗迹2 · M14）。物品 3，罕见。价格 60 gp。Will +1、心灵抗 2 已挂 RE。断梦手操。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "slug": "lucid-cocoon-will",
+        "selector": "will",
+        "type": "item",
+        "value": 1,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Resistance",
+        "type": "mental",
+        "value": 2,
+        "requiresInvestment": true
+      },
+      {
+        "key": "Note",
+        "selector": "will",
+        "title": "清醒茧核 — 断梦",
+        "text": "每日 1 次：因心灵/情绪/恐惧将陷入呆滞、惧怕或困惑时，可自由动作使该状态等级 −1。若隐蔽/躲藏，对来源下一次打击 +1d4 心灵。",
+        "requiresInvestment": true
+      }
+    ],
+    "slug": "lucid-cocoon-core",
+    "traits": {
+      "value": ["invested", "magical", "occult"],
+      "rarity": "uncommon",
+      "otherTags": ["remnant-2", "nightweaver", "android"]
+    },
+    "publication": {
+      "title": "遗迹2 — 夜织者奖赏",
+      "authors": "Wang Homebrew",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0 },
+    "price": { "value": { "gp": 60 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null,
+      "inSlot": false
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "丝笼青纹核",
+        "img": "modules/wang-pf2e-homebrew/assets/remnant/nightweaver-amulet.png",
+        "data": {
+          "description": {
+            "value": "<p>被苍白丝笼裹住的暗蓝光核，纹路像神经。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "wornamulet" }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "remnant-2",
+      "enName": "Lucid Cocoon Core",
+      "recipient": "M14"
+    }
+  }
+}
