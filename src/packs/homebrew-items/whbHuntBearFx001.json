@@ -1,0 +1,50 @@
+{
+  "_id": "whbHuntBearFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：熊陷阱咬合 Bear Trap",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png",
+  "system": {
+    "description": {
+      "value": "<p>钢夹咬住你的肢体。你处于 @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{定身}，并受到重度持续流血（通常 @Damage[1d6[persistent,bleed]]）。</p>\n<p>花费一次操作尝试挣脱：@Check[athletics|dc:20] 或 @Check[thievery|dc:20]（Escape）。成功则结束本效果与定身；夹子仍留在原地，但已触发。</p>",
+      "gm": "<p>与危境「熊陷阱」配对。持续至 Escape 成功或夹子被撬开。</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe"
+      }
+    ],
+    "slug": "effect-bear-trap",
+    "traits": {
+      "value": ["mechanical"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntBearTrp01",
+      "pairedHazard": "whbHuntHzBear001"
+    }
+  }
+}

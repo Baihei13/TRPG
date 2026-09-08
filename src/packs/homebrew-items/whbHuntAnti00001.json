@@ -1,0 +1,64 @@
+{
+  "_id": "whbHuntAnti00001",
+  "folder": "whbfolderHunt001",
+  "name": "解毒针 Antidote Shot",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>标准医用注射器，管内装有绿色液体解毒剂。注射到人体动脉后，可以解毒多种毒素。（另见抗蛇毒血清、野战医疗。）</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 你有一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 立刻移除 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒}（及同类中毒状态）。你在 1 分钟内<strong>免疫毒素伤害</strong>。</p>\n<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAntiFx001]</p>",
+      "gm": "<p><strong>Antidote Shot</strong>（猎杀对决）。医疗，25 $，1 格。立即移除中毒，并在 1 分钟内免疫毒素伤害。</p>\n<p>PF2e：比核心「解毒剂」更强（直接清中毒 + 伤害免疫，而非仅豁免加值）。价格 25 gp。</p>\n<p>使用时请手动删除 <code>whbHuntPsnFx0001</code> 猎杀中毒，再施加解毒针效果。</p>"
+    },
+    "rules": [],
+    "slug": "antidote-shot",
+    "traits": {
+      "value": ["alchemical", "consumable", "elixir", "healing"],
+      "rarity": "common",
+      "otherTags": ["hunt-showdown", "hunt-medical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 25 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "医用注射器",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一支装着绿色液体的旧式金属注射器。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "medical",
+      "huntPrice": 25,
+      "linkedEffect": "whbHuntAntiFx001"
+    }
+  }
+}

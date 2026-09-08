@@ -1,0 +1,97 @@
+{
+  "_id": "whbHuntHzAlert01",
+  "folder": "whbfolderHntHz01",
+  "name": "警报拌雷（危境）",
+  "type": "hazard",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/alert-trip-mine.png",
+  "items": [
+    {
+      "_id": "whbHzAlrtTrig001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "烟花示警",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": null,
+        "description": {
+          "value": "<p><strong>触发</strong> 一个生物进入绊线所在格、越过绊线，或打开绊线横跨的门/窗。</p>\n<hr />\n<p><strong>效果</strong> 爆竹与信号焰点燃：</p>\n<ul>\n<li><strong>声响</strong> 巨响可在约 150 尺内清晰听见（听觉）。</li>\n<li><strong>闪光</strong> 触发者须尝试 @Check[fortitude|dc:16]{强韧 DC 16}；失败则获得 @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{目眩} 1 轮。</li>\n<li><strong>灼伤</strong> 触发者受到 @Damage[1d4[fire]] 火焰伤害。</li>\n<li>信号焰短暂照亮该格及邻接格（如提灯，持续 1 轮，GM 裁定）。</li>\n</ul>\n<p>此危境随即耗尽，不再重置。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAlrtTM001]{警报拌雷}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 陷阱",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "rarity": "common", "value": ["auditory", "fire", "visual"] }
+      },
+      "effects": []
+    }
+  ],
+  "effects": [],
+  "system": {
+    "attributes": {
+      "ac": { "value": 16 },
+      "emitsSound": false,
+      "hardness": 5,
+      "hasHealth": true,
+      "hp": { "details": "", "max": 16, "temp": 0, "tempmax": 0, "value": 16 },
+      "immunities": [
+        { "type": "critical-hits" },
+        { "type": "precision" },
+        { "type": "object-immunities" }
+      ],
+      "stealth": {
+        "details": "<p>默认 DC 18；若布置者 Crafting DC 更高则用之。受训察觉即可发现。</p>",
+        "value": 8
+      }
+    },
+    "details": {
+      "description": "<p>两根短桩之间绷着细线，桩内藏有爆竹与信号焰。触发后发出巨响与闪光，警示四周而非以求杀伤。</p>",
+      "disable": "<p>@Check[thievery|dc:18|name:切断绊线|traits:action:disable-a-device]（受训）切断绊线或拆掉引信。成功可回收为消耗品「警报拌雷」。</p>",
+      "isComplex": false,
+      "level": { "value": 3 },
+      "publication": {
+        "title": "猎杀对决 — 陷阱",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      },
+      "reset": "<p>无。触发或被成功解除后失效。</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 8 },
+      "reflex": { "saveDetail": "", "value": 6 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "uncommon",
+      "size": { "value": "med" },
+      "value": ["mechanical", "trap"]
+    }
+  },
+  "prototypeToken": {
+    "name": "警报拌雷",
+    "width": 1,
+    "height": 1,
+    "texture": { "src": "modules/wang-pf2e-homebrew/assets/hunt/alert-trip-mine.png", "scaleX": 1, "scaleY": 1 },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": false },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntAlrtTM001"
+    }
+  }
+}

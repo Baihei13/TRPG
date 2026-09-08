@@ -1,0 +1,174 @@
+{
+  "_id": "whbHuntLeech0001",
+  "folder": "whbfolderHntMn01",
+  "name": "腐沼水蛭 Meathead Leech",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/leech-pink.webp",
+  "items": [
+    {
+      "_id": "whbLchBite000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "叮咬",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 7 },
+        "damageRolls": {
+          "whbLchDmgBite001": {
+            "damage": "1d4+1",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>注入腐沼毒素。命中后目标须尝试 @Check[fortitude|dc:15|traits:poison]{强韧 DC 15}；失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。</p>\n<p>猎杀中毒会立刻让肉头怪的「毒素感知」锁定该目标。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["agile"] }
+      }
+    },
+    {
+      "_id": "whbLchVision0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "有限视力",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>水蛭视力极差：仅有不精确视觉 <strong>15 尺</strong>。察觉到生物后会朝其爬去，并把位置「反馈」给所属肉头怪（见肉头怪「几乎失明」）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbLchAlert00001",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "示警宿主",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "free" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p><strong>触发</strong> 你以有限视力察觉到一个先前未察觉的敌人，或对该敌人造成毒素伤害</p>\n<p><strong>效果</strong> 60 尺内的所属肉头怪立即知晓该敌人的位置（对该敌人启用毒素感知的「可直接打击」待遇，持续至战斗结束或目标离开 60 尺）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 1 },
+      "dex": { "mod": 3 },
+      "con": { "mod": 1 },
+      "int": { "mod": -5 },
+      "wis": { "mod": 1 },
+      "cha": { "mod": -4 }
+    },
+    "attributes": {
+      "ac": { "details": "", "value": 15 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "",
+        "max": 8,
+        "temp": 0,
+        "value": 8
+      },
+      "speed": {
+        "value": 20,
+        "otherSpeeds": [{ "type": "climb", "value": 15 }]
+      }
+    },
+    "details": {
+      "blurb": "肉头怪伴生 · 侦查与上毒",
+      "languages": { "details": "", "value": [] },
+      "level": { "value": -1 },
+      "privateNotes": "<p>杂兵。打死会触发宿主「蛭巢反哺」。XP 可忽略或按杂兵计。</p>",
+      "publicNotes": "<p>从肉头怪身躯滋生的腐沼水蛭。视力极差，却会爬向猎人叮咬上毒，把位置暴露给几乎失明的宿主。</p>\n<p><em>Creature −1 · 肉头怪护卫</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": {
+      "details": "有限视力 15 尺（不精确）",
+      "mod": 5,
+      "senses": [
+        { "type": "low-light-vision", "acuity": "imprecise", "range": 15 },
+        { "type": "scent", "acuity": "imprecise", "range": 30 }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 5 },
+      "reflex": { "saveDetail": "", "value": 7 },
+      "will": { "saveDetail": "", "value": 3 }
+    },
+    "skills": {
+      "athletics": { "base": 5 },
+      "stealth": { "base": 7 }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": { "value": "tiny" },
+      "value": ["animal", "mindless"]
+    }
+  },
+  "prototypeToken": {
+    "name": "腐沼水蛭",
+    "width": 0.5,
+    "height": 0.5,
+    "texture": {
+      "src": "icons/creatures/invertebrates/leech-pink.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": true, "range": 5, "visionMode": "basic" },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": false
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "meathead-leech",
+      "pairedHost": "whbHuntMeatHed01"
+    }
+  }
+}

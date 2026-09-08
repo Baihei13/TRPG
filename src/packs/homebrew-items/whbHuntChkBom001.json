@@ -1,0 +1,83 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "窒息炸弹 Choke Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/choke-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>释放窒息云以扑灭火焰的装置；名称虽像毒气，真正用途是「呛灭」火势，顺带让人剧烈咳嗽。</p>\n<blockquote><p><strong>兵器之书 · CHOKE BOMB</strong>（另见爆炸物、扰乱）与其说是常规爆炸物，不如说是灭火巧具。引爆后喷出的气体在烟云中扼杀火焰。倒地的同伴若在范围内可免遭火噬，但也会引发剧烈干咳。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（投掷）</p>\n<p><strong>射程</strong> 20 尺</p>\n<p><strong>效果</strong> 选择 20 尺内一点，产生 @Template[type:burst|distance:5]{5 尺爆发}（原约 3 尺）的窒息云，持续 <strong>1 分钟</strong>或被强风吹散（GM 裁定）：</p>\n<ul>\n<li><strong>熄火</strong>：云内所有非魔法火焰与火场立刻熄灭；生物身上的 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 立刻清除。</li>\n<li><strong>咳嗽</strong>：云内每个生物须尝试 @Check[fortitude|dc:17|traits:consumable]{强韧 DC 17}。失败则剧烈咳嗽：获得 @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{措手不及}，持续至其下一回合结束；大失败则额外获得 @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{恶心 1} 1 轮。</li>\n</ul>",
+      "gm": "<p>Hunt Choke Bombs。原 25$/1格。灭火+清灼烬；Fort DC 17。与窒息甲虫不同。</p>"
+    },
+    "rules": [],
+    "slug": "choke-bomb",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tactical"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "铁罐",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>带着短引信的密封铁罐。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactical",
+      "wikiIcon": "Tool_Choke_Bombs.png"
+    }
+  },
+  "_id": "whbHuntChkBom001"
+}

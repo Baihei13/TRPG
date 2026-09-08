@@ -1,0 +1,98 @@
+{
+  "_id": "whbHuntHzPois001",
+  "folder": "whbfolderHntHz01",
+  "name": "毒气拌雷（危境）",
+  "type": "hazard",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+  "items": [
+    {
+      "_id": "whbHzPoisTrig001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "毒雾释放",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": null,
+        "description": {
+          "value": "<p><strong>触发</strong> 一个生物进入绊线所在格、越过绊线，或打开绊线横跨的门/窗。</p>\n<hr />\n<p><strong>效果</strong> 释放毒气云，以触发点为中心产生 @Template[type:burst|distance:5]{5 尺爆发}，持续 <strong>3 轮</strong>：</p>\n<ul>\n<li>爆发瞬间：区内每个生物受到 @Damage[1d4[poison]] 毒素伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。</li>\n<li>生物<strong>进入</strong>毒云或在毒云内<strong>开始其回合</strong>时，再受 @Damage[1d4[poison]]，并再叠 1 层猎杀中毒。</li>\n<li>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisFx001]</li>\n</ul>\n<p>此危境随即耗尽。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisTM001]{毒气拌雷}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 陷阱",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "rarity": "common", "value": ["poison"] }
+      },
+      "effects": []
+    }
+  ],
+  "effects": [],
+  "system": {
+    "attributes": {
+      "ac": { "value": 17 },
+      "emitsSound": false,
+      "hardness": 5,
+      "hasHealth": true,
+      "hp": { "details": "", "max": 20, "temp": 0, "tempmax": 0, "value": 20 },
+      "immunities": [
+        { "type": "critical-hits" },
+        { "type": "precision" },
+        { "type": "object-immunities" },
+        { "type": "poison" }
+      ],
+      "stealth": {
+        "details": "<p>默认 DC 18；若布置者 Crafting DC 更高则用之。</p>",
+        "value": 8
+      }
+    },
+    "details": {
+      "description": "<p>绊线连着毒气筒。触发后在贴身距离喷出毒雾，意在失能而非立即杀死。</p>",
+      "disable": "<p>@Check[thievery|dc:18|name:拆除毒气拌雷|traits:action:disable-a-device]（受训）。成功可回收为消耗品「毒气拌雷」。大失败可能提前触发。</p>",
+      "isComplex": false,
+      "level": { "value": 4 },
+      "publication": {
+        "title": "猎杀对决 — 陷阱",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      },
+      "reset": "<p>无。触发后毒云仍持续剩余轮数，拌雷本身不再触发。</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 10 },
+      "reflex": { "saveDetail": "", "value": 7 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "uncommon",
+      "size": { "value": "med" },
+      "value": ["mechanical", "trap"]
+    }
+  },
+  "prototypeToken": {
+    "name": "毒气拌雷",
+    "width": 1,
+    "height": 1,
+    "texture": { "src": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png", "scaleX": 1, "scaleY": 1 },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": false },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntPoisTM001"
+    }
+  }
+}

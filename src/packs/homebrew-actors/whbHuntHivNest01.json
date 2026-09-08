@@ -1,0 +1,337 @@
+{
+  "_id": "whbHuntHivNest01",
+  "folder": "whbfolderHntMn01",
+  "name": "蜂巢怪 Hive",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hive.png",
+  "items": [
+    {
+      "_id": "whbHivScreech001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "尖锐嘶鸣",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "interaction",
+        "description": {
+          "value": "<p>蜂巢怪持续发出高频嘶鸣。约 <strong>120 尺</strong>内可被听见（听觉）；其他猎人/怪物可能因此定位战场。察觉它时，可凭声响获得方向提示（GM 裁定）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "auditory"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbHivSideHead01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "侧垂头颅",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>头从颈侧耷拉下来。若攻击者位于它的<strong>正后方</strong>（背对），瞄准头部/要害的打击视为对隐蔽目标：须先通过 @Check[flat|dc:5]{DC 5 持平检定}，否则未击中；且该类打击不造成精密伤害（「爆头」很难）。从正面或侧面攻击不受此限。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHivNoMelee001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "不直接攻击",
+      "sort": 520000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>蜂巢怪本身几乎不做近战打击。威胁来自毒蜂群与嘶鸣暴露。移动极其缓慢（速度 10 尺）。因擅长远程骚扰，是少数可出现在<strong>屋顶</strong>的怪物，也可出现在别处。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHivRelease001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "放出毒蜂",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>自敞开的胸腔蜂巢放出一群毒蜂。在邻接空格生成 1 个 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntBeeSwm001]{腐沼毒蜂群}。场上由同一蜂巢怪放出的毒蜂群最多 <strong>1</strong> 个；若已有存活蜂群，此动作无效。</p>\n<p>毒蜂群会追击猎人；飞离母体超过 60 尺则消散。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHivReplen0001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "再放一群",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每轮一次</p>\n<p><strong>触发</strong> 你放出的毒蜂群被消灭或因离母体过远而消散，且你仍存活</p>\n<p><strong>效果</strong> 你可立刻使用「放出毒蜂」的效果（不花费动作），在邻接空格生成新的毒蜂群。若本回合已用过反应，则改为在你下一回合开始时免费放出。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHivFireWeak01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "惧火",
+      "sort": 530000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>干枯躯壳与蜂巢易燃：对火焰伤害具有弱点 5。着火时胸腔内的蜂群也会躁动（GM 可让其立刻放出毒蜂，若场上尚无蜂群）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": -1
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "慢速远程巢；弱火；杀母则蜂散",
+        "max": 38,
+        "temp": 0,
+        "value": 38
+      },
+      "speed": {
+        "value": 10,
+        "otherSpeeds": []
+      },
+      "immunities": [],
+      "weaknesses": [
+        {
+          "type": "fire",
+          "value": 5
+        }
+      ],
+      "resistances": []
+    },
+    "details": {
+      "blurb": "猎杀对决 · 屋顶/营地蜂巢",
+      "languages": {
+        "details": "无语言；尖锐嘶鸣",
+        "value": []
+      },
+      "level": {
+        "value": 2
+      },
+      "privateNotes": "<p>四人 2 级团 +0。本体不近战。优先烧/远程拆巢；别被毒蜂拖到中毒+没体力。开场可放 1 蜂群。</p>",
+      "publicNotes": "<p>部分腐烂、挂在自身骨架上的生物。移动极慢，不直接近战，而是放出追随猎人的毒蜂群，并以尖锐嘶鸣暴露战场。头从侧面耷拉，背对时很难爆头。可生成于屋顶，也可出现在别处。</p>\n<p>毒蜂速度约等于奔跑的猎人，可拉开距离直至脱离母体范围消散；近战可拍死蜂群，但不杀巢会再放。叮中施加<strong>猎杀中毒</strong>（无法回血，层数每回合 −1）。弱点是火焰。</p>\n<p><em>四人 2 级团 · Creature 2（+0）</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "嘶鸣示位",
+      "mod": 9,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 4
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
+    },
+    "skills": {
+      "stealth": {
+        "base": 4
+      }
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "蜂巢怪",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/hive.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 40,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "hive",
+      "pairedMinion": "whbHuntBeeSwm001"
+    }
+  }
+}

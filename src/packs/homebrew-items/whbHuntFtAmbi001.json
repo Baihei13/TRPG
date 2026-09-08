@@ -1,0 +1,54 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：双持精通 Ambidextrous",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-ambidextrous.png",
+  "system": {
+    "description": {
+      "value": "<p>加快双持武器与半自动手枪的换弹。</p>\n<p><strong>猎杀特性花费</strong> 3 点（普通）</p>\n<hr />\n<p>当你<strong>双手各持一件武器</strong>时：每轮一次，你可以把一次对此类武器的<strong>装填</strong>（通常为 Interact 1 动作）改为<strong>自由动作</strong>。</p>\n<p>此外，当你使用带 capacity 的半自动手枪（如 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}）装填时，装填所需动作减少 1（最少为自由动作；与上款合计仍受「每轮一次免费装填」限制）。</p>",
+      "gm": "<p>Hunt Ambidextrous。3 点。手动执行免费装填。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-feat-ambi001",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 3,
+      "huntTraitCategory": "supportive",
+      "wikiIcon": "Trait_Ambidextrous_Small.png"
+    }
+  },
+  "_id": "whbHuntFtAmbi001"
+}

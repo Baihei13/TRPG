@@ -1,0 +1,64 @@
+{
+  "_id": "whbHuntRegen0001",
+  "folder": "whbfolderHunt001",
+  "name": "再生针 Regeneration Shot",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/regeneration-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>一种通过注射器给药的兴奋剂，声称能立即缓解症状，并能影响人体自身的自然愈合过程，使其加速运转。与其他类型的活力注射剂相比，再生针的效果并非立竿见影，但其优势在于药效持久。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 你有一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 你获得持续 1 分钟的再生：每回合开始时恢复生命值（见下方效果）。将合集中的效果拖到角色上，或使用物品后手动赋予。</p>\n<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntRgnFx0001]</p>",
+      "gm": "<p><strong>Regeneration Shot</strong>（猎杀对决）。医疗，95 $，1 格。持续再生：1 分钟内每轮恢复 1d6 生命值。</p>\n<p>PF2e：效果为快速愈合 4（约等于 1d6/轮），持续 1 分钟。价格 95 gp（$→gp 1:1）。</p>"
+    },
+    "rules": [],
+    "slug": "regeneration-shot",
+    "traits": {
+      "value": ["alchemical", "consumable", "elixir", "healing"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-medical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 95 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "医用注射器",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一支装着紫色液体的旧式金属注射器。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "medical",
+      "huntPrice": 95,
+      "linkedEffect": "whbHuntRgnFx0001"
+    }
+  }
+}

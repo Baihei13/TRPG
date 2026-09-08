@@ -1,0 +1,44 @@
+{
+  "_id": "whbHuntHellFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：地狱火场 Hellfire Bomb",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hellfire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>你正处在地狱火炸弹点燃的炼狱火场中。</p>\n<p>在你的回合开始时，若你仍在火场范围内，受到 @Damage[2d6[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。离开火场后移除此火场标记（灼烬仍保留）。</p>\n<p><strong>不灭之火</strong>：这些火焰<strong>无法</strong>被非魔法手段熄灭（水、窒息、沙土掩埋等均无效）。只有能够熄灭魔法火焰的效果、或火场持续时间结束，才能消灭它们。</p>",
+      "gm": "<p>火场默认持续 1 分钟 + 叠猎杀灼烬。非魔法灭火无效。</p>"
+    },
+    "rules": [],
+    "slug": "effect-hellfire-bomb-blaze",
+    "traits": {
+      "value": ["alchemical", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 7 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntHellFr001"
+    }
+  }
+}

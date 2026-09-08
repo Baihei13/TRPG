@@ -1,0 +1,58 @@
+{
+  "_id": "whbHuntBearTrp01",
+  "folder": "whbfolderHunt001",
+  "name": "熊陷阱 Bear Trap",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png",
+  "system": {
+    "description": {
+      "value": "<p>便携踏板捕兽夹：触发板被踩下时会大声咬合，撕咬受害者。体型大，通常占两格，难以简单跳过。</p>\n<blockquote><p>沉重的钢制捕兽夹，踏板一压便如兽颚般合拢。它吵、它狠，专惩罚那些忙着数赏金、却忘了看脚下的猎人。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">3</span>（操作）Interact（布置）</p>\n<p><strong>效果</strong> 在邻接的<strong>两格</strong>（通常排成一线或 2×1）布置捕兽夹。消耗本物品，并放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzBear001]{熊陷阱}（令牌建议占 2 格）。</p>\n<ul>\n<li><strong>隐匿</strong> 默认 隐匿 DC 18（或布置者 Crafting DC，取较高）。未专门掩盖时，GM 可降低 DC。</li>\n<li><strong>解除</strong> @Check[thievery|dc:20|traits:action:disable-a-device]（受训）卡住弹簧；成功可回收本物品。强行撬开可用 Athletics DC 20（失败可能触发）。</li>\n<li>触发后造成钝击伤害、重度持续流血，并定身（见危境）。</li>\n<li><strong>无法轻易跃过</strong>：对该夹所占空间，跳跃越过通常不可行，或需 @Check[acrobatics|dc:20]（GM 裁定）；失败则视为踩中触发。</li>\n</ul>",
+      "gm": "<p>Hunt Bear Trap。占 2 格。1d10 钝击 + 持续流血 1d6 + immobilized。危境 whbHuntHzBear001。</p>"
+    },
+    "rules": [],
+    "slug": "bear-trap",
+    "traits": {
+      "value": ["consumable", "mechanical", "snare", "trap"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-trap"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "生锈钢夹",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>一对带齿的钢圈，中间有踏板。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d10", "kind": "damage", "type": "bludgeoning" },
+    "usage": { "value": "held-in-two-hands" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 2,
+      "huntCategory": "trap",
+      "linkedHazard": "whbHuntHzBear001",
+      "linkedEffect": "whbHuntBearFx001",
+      "wikiIcon": "Tool_Bear_Traps.png"
+    }
+  }
+}

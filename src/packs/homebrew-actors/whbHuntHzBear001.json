@@ -1,0 +1,97 @@
+{
+  "_id": "whbHuntHzBear001",
+  "folder": "whbfolderHntHz01",
+  "name": "熊陷阱（危境）",
+  "type": "hazard",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png",
+  "items": [
+    {
+      "_id": "whbHzBearTrig001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "钢颚咬合",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": null,
+        "description": {
+          "value": "<p><strong>触发</strong> 一个生物踩上触发板（占据夹子所占任一格），或在该空间内跌倒。</p>\n<hr />\n<p><strong>效果</strong> 钢夹大声咬合。触发者受到 @Damage[1d10[bludgeoning]] 钝击伤害，并尝试 @Check[reflex|dc:20|traits:trap]{反射 DC 20}：</p>\n<ul>\n<li><strong>成功</strong>：仅受伤害，夹子咬空（危境仍耗尽）。</li>\n<li><strong>失败</strong>：额外受到 @Damage[1d6[persistent,bleed]] 持续流血，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBearFx001]（定身；Escape DC 20）。</li>\n<li><strong>大失败</strong>：同上，且持续流血改为 @Damage[1d8[persistent,bleed]]。</li>\n</ul>\n<p>已被咬合的夹子不再隐藏。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBearTrp01]{熊陷阱}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 陷阱",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "rarity": "common", "value": [] }
+      },
+      "effects": []
+    }
+  ],
+  "effects": [],
+  "system": {
+    "attributes": {
+      "ac": { "value": 19 },
+      "emitsSound": "encounter",
+      "hardness": 8,
+      "hasHealth": true,
+      "hp": { "details": "BT 12；降至 BT 以下弹簧损坏，无法再咬合", "max": 28, "temp": 0, "tempmax": 0, "value": 28 },
+      "immunities": [
+        { "type": "critical-hits" },
+        { "type": "precision" },
+        { "type": "object-immunities" }
+      ],
+      "stealth": {
+        "details": "<p>默认 DC 18；未掩盖时 GM 可降至 DC 14。占两格，跳跃越过通常不可行或需特技 DC 20。</p>",
+        "value": 8
+      }
+    },
+    "details": {
+      "description": "<p>大型钢制捕兽夹，踏板一压便如兽颚合拢。占两格，难以跳跃越过；咬合时声音很大。</p>",
+      "disable": "<p>@Check[thievery|dc:20|name:卡住弹簧|traits:action:disable-a-device]（受训）卡住弹簧；或 @Check[athletics|dc:20|name:强行撬开] 撬开。Thievery 成功可回收为消耗品「熊陷阱」。若已咬住生物，须先 Escape 或撬开才能回收。</p>",
+      "isComplex": false,
+      "level": { "value": 5 },
+      "publication": {
+        "title": "猎杀对决 — 陷阱",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      },
+      "reset": "<p>无自动重置。未触发前可被拆收；触发咬合后需手动撬开并重新上弦（通常视为重新布置，消耗新的物品或 10 分钟维修，GM 裁定）。</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 12 },
+      "reflex": { "saveDetail": "", "value": 6 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "uncommon",
+      "size": { "value": "lg" },
+      "value": ["mechanical", "trap"]
+    }
+  },
+  "prototypeToken": {
+    "name": "熊陷阱",
+    "width": 2,
+    "height": 1,
+    "texture": { "src": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png", "scaleX": 1, "scaleY": 1 },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": false },
+    "flags": { "pf2e": { "linkToActorSize": false, "autoscale": false } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntBearTrp01"
+    }
+  }
+}

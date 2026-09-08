@@ -1,0 +1,44 @@
+{
+  "_id": "whbHuntWireFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：铁丝网封锁 Concertina Bomb",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>你正处在铁丝网炸弹展开的刀丝荆棘中。该区域为<strong>困难地形</strong>。在你的回合开始时，若仍在网区中，受到 @Damage[1d6[slashing]] 挥砍伤害。</p>\n<p>花费一次 Interact 小心穿过可免去当回合开始的伤害（仍受困难地形影响），由 GM 裁定。</p>",
+      "gm": "<p>可选：进入网区时施加。网区本身持续 1 分钟。</p>"
+    },
+    "rules": [],
+    "slug": "effect-concertina-wire",
+    "traits": {
+      "value": ["alchemical"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntConcrt001"
+    }
+  }
+}

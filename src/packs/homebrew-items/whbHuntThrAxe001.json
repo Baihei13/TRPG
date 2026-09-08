@@ -1,0 +1,135 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "投掷斧 Throwing Axes",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-axes.png",
+  "system": {
+    "description": {
+      "value": "<p>可投掷的小型战斧。成对携带。</p>\n<blockquote><p><strong>兵器之书 · THROWING AXE</strong>（另见战斧、工具）投掷斧可追溯至远古，至今仍可靠有效。过肩投出形成旋转，撞击时保留强大动能；需精确判断距离才能让斧刃朝向目标。美式棒球的流行或许让部分猎人更熟悉这种出手。</p>\n<p>沼地中多数投掷斧都经过仔细调校平衡——哪怕只是野地里临时加减配重。因其简单、有力且相对安静，善用者视之为命脉伴侣。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用斧；<strong>负载</strong> L；<strong>单手</strong></p>\n<p><strong>伤害</strong> 1d8 挥砍；特质：敏捷、横扫、thrown-20</p>\n<hr />\n<p><strong>破甲投掷</strong> 当你以<strong>投掷</strong>方式用此武器打击时：若目标穿戴<strong>轻甲</strong>（或未着甲），你忽略其护甲提供的物品 AC 加值（通常使 AC 降低 1–2，由 GM 按护甲结算）。近战挥击不适用本效果。</p>",
+      "gm": "<p>Hunt Throwing Axes。原 30$/2格。数量默认 2。投掷时忽略轻甲物品 AC。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "破甲投掷",
+        "predicate": [
+          "item:id:{item|_id}",
+          "item:ranged"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "破甲投掷",
+        "text": "投掷时 +2 环境（近似忽略轻甲物品 AC）。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "item:ranged"
+        ]
+      }
+    ],
+    "slug": "hunt-throwing-axes",
+    "traits": {
+      "value": [
+        "agile",
+        "sweep",
+        "thrown-20"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tool"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "quantity": 2,
+    "baseItem": "hatchet",
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "小斧",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>一对配重古怪的短柄斧。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "axe",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": "-"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tool",
+      "huntSlots": 2,
+      "wikiIcon": "Tool_Throwing_Axes.png"
+    }
+  },
+  "_id": "whbHuntThrAxe001"
+}

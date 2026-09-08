@@ -1,0 +1,247 @@
+{
+  "_id": "whbHuntArmored01",
+  "folder": "whbfolderHntMn01",
+  "name": "装甲兵 Armored",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/armored.png",
+  "items": [
+    {
+      "_id": "whbArmClaw000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "利爪",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 11 },
+        "damageRolls": {
+          "whbArmDmgClaw001": {
+            "damage": "1d8+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>乌黑尖爪从甲壳缝隙探出。</p>\n<p><em>铁丝网装甲变体（可选）：</em>命中时额外造成 @Damage[1d4[persistent,bleed]]；该变体壳略薄，物理抗性改为 2。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbArmHiveShel01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "蜂巢甲壳",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p>全身覆着蜂巢状硬化壳。你拥有对钝击、穿刺、挥砍的<strong>抗性 4</strong>，以及对<strong>精密</strong>伤害的抗性 5（普通「爆头」式精密一击很难一击致命）。</p>\n<p>每当你受到火焰伤害时，甲壳焦裂：直至你下一回合结束，上述物理抗性降为 0（精密抗性仍保留 2）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbArmStagger001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "甲壳震荡",
+      "sort": 520000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "free" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>触发</strong> 你被近战 Strike 命中</p>\n<p><strong>效果</strong> 沉重甲壳被震得一滞：你获得 @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{笨拙 1}，持续至你下一回合结束。近战是拆壳的好办法。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbArmStalk00001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "潜行与冲锋",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": {
+          "value": "<p>未警觉时以步行速度游荡（速度 20 尺）。一旦察觉猎人并进入敌对，进入<strong>冲锋态</strong>：速度变为 30 尺，并会撞开关闭的门（见「撞门」）。</p>\n<p>冲锋态持续至战斗结束，或连续 1 分钟无法感知任何敌人。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbArmBreakDoor1",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "撞门",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "interaction",
+        "description": {
+          "value": "<p><strong>要求</strong> 处于冲锋态</p>\n<p>对邻接的门、简单木障或类似障碍尝试 @Check[athletics|dc:15]{运动 DC 15}（寻常木门）或由 GM 定 DC。成功则破开并进入该空间；大成功不引发额外噪音惩罚（仍可能被听见）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["move"] }
+      }
+    },
+    {
+      "_id": "whbArmLumber0001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "甲壳扑击",
+      "sort": 610000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stride，然后发动一次利爪打击。若此次 Stride 至少移动 10 尺，该次打击额外造成 @Damage[1d6[bludgeoning]]（甲壳撞击）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 3 },
+      "dex": { "mod": 0 },
+      "con": { "mod": 3 },
+      "int": { "mod": -4 },
+      "wis": { "mod": 1 },
+      "cha": { "mod": -2 }
+    },
+    "attributes": {
+      "ac": { "details": "蜂巢甲壳", "value": 20 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "厚壳续航；怕火",
+        "max": 42,
+        "temp": 0,
+        "value": 42
+      },
+      "speed": { "value": 20, "otherSpeeds": [] },
+      "immunities": [],
+      "weaknesses": [{ "type": "fire", "value": 5 }],
+      "resistances": [
+        { "type": "bludgeoning", "value": 4 },
+        { "type": "piercing", "value": 4 },
+        { "type": "slashing", "value": 4 },
+        { "type": "precision", "value": 5 }
+      ]
+    },
+    "details": {
+      "blurb": "猎杀对决 · 营地甲壳杂兵",
+      "languages": { "details": "无语言", "value": [] },
+      "level": { "value": 2 },
+      "privateNotes": "<p>四人 2 级团 +0。高 AC + 物理抗性，精密抗性模拟「爆头不够」。火让壳暂时失效。铁丝网变体见利爪描述。</p>",
+      "publicNotes": "<p>全身覆着蜂巢状保护壳的腐化人形，出没于营地附近。厚壳让它能多挨许多下——寻常爆头也难以一击致命。早期亦称装甲步兵。</p>\n<p>传闻其起源成谜，或与拙劣的人工「石化」实验有关。</p>\n<p><em>四人 2 级团 · Creature 2（+0）· 甲壳坦克</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": {
+      "details": "",
+      "mod": 8,
+      "senses": [{ "type": "low-light-vision" }]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 11 },
+      "reflex": { "saveDetail": "", "value": 5 },
+      "will": { "saveDetail": "", "value": 6 }
+    },
+    "skills": {
+      "athletics": { "base": 11 },
+      "stealth": { "base": 5 }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": { "value": "med" },
+      "value": ["undead"]
+    }
+  },
+  "prototypeToken": {
+    "name": "装甲兵",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/armored.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": true, "range": 30, "visionMode": "basic" },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": false
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "armored"
+    }
+  }
+}

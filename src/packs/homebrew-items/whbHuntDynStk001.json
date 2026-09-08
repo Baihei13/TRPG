@@ -1,0 +1,68 @@
+{
+  "_id": "whbHuntDynStk001",
+  "folder": "whbfolderHunt001",
+  "name": "炸药棒 Dynamite Stick",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-stick.png",
+  "system": {
+    "description": {
+      "value": "<p>标准炸药，约 4 秒引信。炸药头部写着「史密斯和迈尔斯炸药和火药公司 | 加利福尼亚州旧金山」。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷或放置）</p>\n<p><strong>效果</strong> 在目标点产生 @Template[type:burst|distance:5]{5 尺爆发}。区域内生物受到 @Damage[3d6[bludgeoning]] 钝击伤害，@Check[reflex|basic]{基础反射豁免}成功则减半。</p>",
+      "gm": "<p><strong>Dynamite Stick</strong>（猎杀对决 · 爆炸物）。原设定 30$ / 1 格。4 秒引信，3d6 钝击，5 尺爆发，反射减半。价格仅供参考，以战役物价为准。</p>"
+    },
+    "rules": [],
+    "slug": "dynamite-stick",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "common",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "纸裹药棍",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一根带着短引信的褐色纸卷。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": {
+      "formula": "3d6",
+      "kind": "damage",
+      "type": "bludgeoning"
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "explosive",
+      "huntBurstFeet": 5,
+      "huntDamage": "3d6"
+    }
+  }
+}

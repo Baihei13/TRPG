@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntFireBm001",
+  "folder": "whbfolderHunt001",
+  "name": "火焰瓶 Fire Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>易碎玻璃瓶中装着酒精或油等易燃物，用浸过灯油的布芯点燃后投出。结构简单，常在野外即兴制作。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷）</p>\n<p><strong>射程</strong> 20 尺</p>\n<p><strong>效果</strong> 选择 20 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发} 的火场（原设定约 3 尺半径，按网格取整）。</p>\n<ul>\n<li>火场持续 <strong>3 轮</strong>。</li>\n<li>生物<strong>进入</strong>火场或在火场内<strong>开始其回合</strong>时，受到 @Damage[1d6[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</li>\n<li>此为普通火焰，可用水浇灭、窒息扑灭或其他合适的普通手段提前熄灭（熄灭为一次操作 Interact，由 GM 裁定）。</li>\n</ul>\n<p>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFireFx001]</p>",
+      "gm": "<p>Hunt Fire Bomb。原 30$/1格。火场伤害 + 猎杀灼烬叠层。</p>"
+    },
+    "rules": [],
+    "slug": "fire-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable", "fire"],
+      "rarity": "common",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "油布瓶",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>带着布芯的易碎瓶子。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d6", "kind": "damage", "type": "fire" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "fire",
+      "linkedEffect": "whbHuntFireFx001",
+      "wikiIcon": "Consumable_Fire_Bomb.png"
+    }
+  }
+}

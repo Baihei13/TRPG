@@ -1,0 +1,254 @@
+{
+  "_id": "whbHuntImmolat01",
+  "folder": "whbfolderHntMn01",
+  "name": "喷火怪 Immolator",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/immolator.png",
+  "items": [
+    {
+      "_id": "whbImmClaw000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "焦爪",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 11 },
+        "damageRolls": {
+          "whbImmDmgClaw001": {
+            "damage": "1d6+3",
+            "damageType": "slashing"
+          },
+          "whbImmDmgFire001": {
+            "damage": "1d4",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": "<p>带着余烬的爪击。近战贴脸极危险——它更常先喷火再逼近。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["agile"] }
+      }
+    },
+    {
+      "_id": "whbImmBreath0001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "喷焰吐息",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>自口腔喷出烈焰，覆盖 @Template[type:cone|distance:15]{15 尺锥形}（约数米）。区内每个生物受到 @Damage[2d6[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:18|traits:fire]{基础反射豁免 DC 18}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>\n<p>这使得近战难以安全接战：贴进锥形距离就会被烧。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    },
+    {
+      "_id": "whbImmQuickBr001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "短喷",
+      "sort": 610000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对准 15 尺内一个生物短促喷火。目标受到 @Damage[1d6[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:18|traits:fire]{基础反射豁免 DC 18}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    },
+    {
+      "_id": "whbImmDeathFr001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "临终喷焰",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": {
+          "value": "<p>当喷火怪降至 0 HP 时，胸口与口腔喷溅余焰：以它为中心产生 @Template[type:burst|distance:5]{5 尺爆发}，区内生物受到 @Damage[2d6[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:18|traits:fire]{基础反射豁免 DC 18}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>\n<p><strong>例外：</strong>若它是因<strong>毒素</strong>伤害被降至 0 HP（或最后一击的主要伤害类型为毒素，GM 裁定），则<strong>不</strong>触发临终喷焰——毒是最干净的杀法。</p>\n<p>因此击杀后不要立刻冲进邻格搜刮。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    },
+    {
+      "_id": "whbImmGlow000001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "炽心喘息",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>外形近似普通咕噜兽，但胸腔透出炉火般光芒，并发出独特的灼热喘息。黑暗中 30 尺内可凭光亮与声响更容易发现它（察觉检定 +2 环境，GM 裁定）。</p>\n<p>对火焰伤害具有抗性；对毒素伤害具有弱点。窒息性毒气/烟云（如窒息甲虫）可对其造成毒素伤害，并视为有助于「毒杀不爆」。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbImmVolatile01",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "锋刃引燃（可选）",
+      "sort": 520000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "free" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p><em>贴近猎杀原作的可选规则：</em></p>\n<p><strong>触发</strong> 你受到穿刺或挥砍伤害（子弹、刀刃、尖刺等「锋利」伤害）</p>\n<p><strong>效果</strong> 尝试 @Check[flat|dc:11]{DC 11 持平检定}；失败则你被引燃：速度 +5 尺，爪击火焰骰变为 1d6，且在 1d4 轮后自动降至 0 HP 并触发「临终喷焰」（除非期间被毒素伤害击杀）。钝击伤害不会触发本效果。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 2 },
+      "dex": { "mod": 3 },
+      "con": { "mod": 2 },
+      "int": { "mod": -4 },
+      "wis": { "mod": 1 },
+      "cha": { "mod": -1 }
+    },
+    "attributes": {
+      "ac": { "details": "", "value": 17 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "脆皮喷火；毒杀可避免临终爆焰",
+        "max": 30,
+        "temp": 0,
+        "value": 30
+      },
+      "speed": { "value": 30, "otherSpeeds": [] },
+      "immunities": [],
+      "weaknesses": [{ "type": "poison", "value": 5 }],
+      "resistances": [{ "type": "fire", "value": 5 }]
+    },
+    "details": {
+      "blurb": "猎杀对决 · 世界喷火杂兵",
+      "languages": { "details": "无语言；灼热喘息", "value": [] },
+      "level": { "value": 2 },
+      "privateNotes": "<p>四人 2 级团 +0。安全击杀：远程爆头/投掷矛叉，或毒杀（无临终喷焰）。近战易被 15 尺锥喷点燃。击杀后别立刻贴脸。</p>",
+      "publicNotes": "<p>外形近似咕噜兽，但胸腔发光，喘息独特。遍布各地。会向数米外喷火，近战很难不被点燃；死亡时也会喷溅火焰——勿过早靠太近。弱点是毒素：被毒杀死时不会喷火。</p>\n<p>传闻最早一例或与神父遭殴时怒火化为实质烈焰有关。</p>\n<p><em>四人 2 级团 · Creature 2（+0）· 脆皮喷火</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": {
+      "details": "炽心喘息；胸部发光",
+      "mod": 8,
+      "senses": [{ "type": "low-light-vision" }]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 9 },
+      "reflex": { "saveDetail": "", "value": 10 },
+      "will": { "saveDetail": "", "value": 6 }
+    },
+    "skills": {
+      "acrobatics": { "base": 9 },
+      "athletics": { "base": 8 },
+      "stealth": { "base": 7 }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": { "value": "med" },
+      "value": ["undead", "fire"]
+    }
+  },
+  "prototypeToken": {
+    "name": "喷火怪",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/immolator.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": true, "range": 40, "visionMode": "basic" },
+    "light": {
+      "bright": 0,
+      "dim": 10,
+      "color": "#ff6a1a",
+      "alpha": 0.35,
+      "animation": { "type": "torch", "speed": 3, "intensity": 3 }
+    },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": false
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "immolator"
+    }
+  }
+}

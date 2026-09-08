@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntHive00001",
+  "folder": "whbfolderHunt001",
+  "name": "蜂巢炸弹 Hive Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hive-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>毒蜂从这枚炸弹中涌出，折磨落在范围内的倒霉蛋。<strong>对怪物无效</strong>。</p>\n<blockquote><p><strong>兵器之书 · 蜂巢炸弹</strong>（另见爆炸物）由于没有幸存的可用实物，相关记述只能大量推测。19 世纪末至 20 世纪初若干文献将其发明归于名为林奇（Lynch）之人，但记载过于荒诞，真伪难辨。若此物确实存在，则它将手榴弹与一群攻击性毒虫合而为一：蜂群会锁定范围内最近的人类目标，追击并反复叮咬，注入妨碍愈合与视觉的毒素——极适合驱赶固守或藏身的对手。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（投掷）</p>\n<p><strong>射程</strong> 30 尺</p>\n<p><strong>效果</strong> 选择 30 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发}。爆发内每个<strong>非怪物</strong>生物获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} <strong>3 层</strong>（已有则层数 +3，上限仍按该效果）。</p>\n<p>拍打驱离：花费一次 Interact，尝试 @Check[flat|dc:15]{DC 15 持平检定}；成功则立刻清除自己身上的猎杀中毒（或由 GM 改为 −2 层）。</p>",
+      "gm": "<p>Hunt Hive Bomb。原约 35–40$。施加猎杀中毒 3 层（禁疗、每回合 −1 层）。怪物可忽略。</p>"
+    },
+    "rules": [],
+    "slug": "hive-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable", "poison"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-throwable"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 投掷",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "嗡鸣玻璃瓶",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>瓶内隐约有东西在爬动。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d4", "kind": "damage", "type": "poison" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "throwable",
+      "linkedEffect": "whbHuntPsnFx0001",
+      "wikiIcon": "Consumable_Hive_Bomb.png"
+    }
+  }
+}

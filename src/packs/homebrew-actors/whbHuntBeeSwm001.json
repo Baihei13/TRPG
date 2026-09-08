@@ -1,0 +1,303 @@
+{
+  "_id": "whbHuntBeeSwm001",
+  "folder": "whbfolderHntMn01",
+  "name": "腐沼毒蜂群 Hive Swarm",
+  "type": "npc",
+  "img": "icons/creatures/invertebrates/bee-yellow.webp",
+  "items": [
+    {
+      "_id": "whbBeeSting00001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "蜂群叮刺",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 8
+        },
+        "damageRolls": {
+          "whbBeeDmgSting01": {
+            "damage": "1d4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>蜂群裹住目标叮刺。命中即造成 @Damage[1d4[piercing]]，并立刻获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。<strong>无豁免</strong>。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "swarm"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbBeePursue0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "追随猎人",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>飞行速度 30 尺，约等于奔跑中的猎人。每回合须尽量朝最近的敌对猎人飞近并叮刺。若与所属蜂巢怪的距离超过 <strong>60 尺</strong>，蜂群在其回合结束时<strong>消散</strong>（移除令牌，不触发死亡效果）。</p>\n<p>所属蜂巢怪死亡时，蜂群同样消散。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbBeeFragile001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "脆弱蜂群",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>任意近战打击命中即可轻易驱散：对来自近战武器或无武装打击的伤害视为额外受到 5 点精确伤害（便于一击拍掉）。对火焰伤害具有弱点 5。</p>\n<p>拍掉蜂群却不杀母巢，母巢会再放新群。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": -2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "近战易拍；离巢 60 尺消散",
+        "max": 10,
+        "temp": 0,
+        "value": 10
+      },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": [
+          {
+            "type": "fly",
+            "value": 30
+          }
+        ]
+      },
+      "immunities": [
+        {
+          "type": "precision"
+        },
+        {
+          "type": "grappled"
+        },
+        {
+          "type": "prone"
+        },
+        {
+          "type": "restrained"
+        }
+      ],
+      "weaknesses": [
+        {
+          "type": "area-damage",
+          "value": 5
+        },
+        {
+          "type": "splash-damage",
+          "value": 5
+        },
+        {
+          "type": "fire",
+          "value": 5
+        },
+        {
+          "type": "bludgeoning",
+          "value": 5
+        }
+      ],
+      "resistances": [
+        {
+          "type": "slashing",
+          "value": 5
+        },
+        {
+          "type": "piercing",
+          "value": 5
+        }
+      ]
+    },
+    "details": {
+      "blurb": "蜂巢怪放出的毒蜂",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
+      "privateNotes": "<p>杂兵蜂群。跑开 60 尺消散；近战拍掉。中毒是真正威胁。</p>",
+      "publicNotes": "<p>自蜂巢怪胸腔放出的毒蜂群。飞行速度约等于奔跑的猎人，会紧追叮咬上<strong>猎杀中毒</strong>；离母体过远或母体死亡则消散。近战可轻易拍灭，但不杀巢会再来。</p>\n<p><em>Creature −1 · 蜂巢怪仆从</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 6,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 8
+      },
+      "stealth": {
+        "base": 7
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "animal",
+        "mindless",
+        "swarm"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "腐沼毒蜂群",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "icons/creatures/invertebrates/bee-yellow.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "hive-swarm",
+      "pairedHost": "whbHuntHivNest01"
+    }
+  }
+}

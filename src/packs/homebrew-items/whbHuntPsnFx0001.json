@@ -1,0 +1,77 @@
+{
+  "_id": "whbHuntPsnFx0001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：猎杀中毒 Hunt Poisoned",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>猎杀对决式<strong>中毒</strong>：毒素压制愈合。此效果带有层数徽章，可挂在任意生物上。</p>\n<ul>\n<li>期间你<strong>无法恢复生命值</strong>（治疗、快速愈合、再生、临时生命等凡属「回血」均无效；已自动化拦截治疗结算）。</li>\n<li>每层表示毒素仍在体内的强度；<strong>你的回合结束时层数自动 −1</strong>。</li>\n<li>再次中毒时：自动将徽章<strong>+1</strong>（叠层）；上限 6。</li>\n<li>层数降至 <strong>0</strong> 时移除此效果。</li>\n</ul>\n<p><strong>移除</strong>：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAnti00001]{解毒针} 可<strong>立刻清除全部层数</strong>。</p>",
+      "gm": "<p>通用状态，对应 Hunt: Showdown 的 Poison（禁疗 + 随时间消退）。不绑定特定怪物。</p>\n<p>规则：FlatModifier selector <code>healing-received</code> = −1000。回合结束 / 再次施加叠层由 hunt-showdown-automation 处理；解毒针清除。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "healing-received",
+        "slug": "hunt-poisoned",
+        "type": "untyped",
+        "value": -1000,
+        "label": "猎杀中毒"
+      },
+      {
+        "key": "Note",
+        "selector": "healing-received",
+        "title": "{item|name}",
+        "text": "猎杀中毒：你无法恢复生命值，直到层数耗尽或被解毒。"
+      }
+    ],
+    "slug": "effect-hunt-poisoned",
+    "traits": {
+      "value": [
+        "poison"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-poisoned"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "min": 0,
+      "max": 6
+    },
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntPoisoned": true,
+      "blocksHealing": true
+    }
+  }
+}

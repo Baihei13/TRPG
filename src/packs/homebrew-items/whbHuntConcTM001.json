@@ -1,0 +1,58 @@
+{
+  "_id": "whbHuntConcTM001",
+  "folder": "whbfolderHunt001",
+  "name": "铁丝网拌雷 Concertina Trip Mine",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>便携绊线雷，触发后弹出一小卷刀丝网，适于封锁门窗与狭窄通道。</p>\n<blockquote><p><strong>兵器之书 · 铁丝网拌雷</strong>（另见战术装置）这是塞缪尔·麦科林 1879 年专利非致命装置的更恶毒、更强力版本：绊线触发后，爆炸式刀丝卷迅速展开，缠住触发者或堵死瓶颈。与警报拌雷不同，它的目的更具攻击性——闯入者必须尽快脱身，否则布置者便会带着杀意赶来。同样未大规模量产，多以图纸在猎人间流传、自行制作。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact（布置）</p>\n<p><strong>效果</strong> 在邻接的一格布置绊线。消耗本物品，并放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzConc001]{铁丝网拌雷}。</p>\n<ul>\n<li><strong>隐匿</strong> 默认 隐匿 DC 19（或布置者 Crafting DC，取较高）。</li>\n<li><strong>解除</strong> @Check[thievery|dc:19|traits:action:disable-a-device]（受训）；成功可回收本物品。</li>\n<li>触发后在约 <strong>2×2 格</strong>（10 尺方形）展开刀丝网：造成挥砍伤害、困难地形，失败时可能迟缓（见危境）。</li>\n</ul>",
+      "gm": "<p>Hunt Concertina Trip Mine。触发后参考铁丝网炸弹区域，2×2 格。危境 whbHuntHzConc001。</p>"
+    },
+    "rules": [],
+    "slug": "concertina-trip-mine",
+    "traits": {
+      "value": ["consumable", "mechanical", "snare", "trap"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-trap"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "带刺线圈",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>缠得死紧的金属丝卷，连着细线。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d6", "kind": "damage", "type": "slashing" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "trap",
+      "linkedHazard": "whbHuntHzConc001",
+      "linkedEffect": "whbHuntWireFx001",
+      "wikiIcon": "Tool_Concertina_Trip_Mines.png"
+    }
+  }
+}

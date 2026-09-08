@@ -1,0 +1,45 @@
+{
+  "_id": "whbHuntPoisFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：毒气拌雷毒云 Poison Trip Mine",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>你处于毒气拌雷释放的毒雾中。毒雾为 @Template[type:burst|distance:5]{5 尺爆发} 区域，持续至本效果结束。</p>\n<p>你<strong>进入</strong>毒雾或在毒雾内<strong>开始你的回合</strong>时，受到 @Damage[1d4[poison]]，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。</p>",
+      "gm": "<p>可选：对处于毒云内的生物施加。毒云本身持续 3 轮。主状态用猎杀中毒。</p>"
+    },
+    "rules": [],
+    "slug": "effect-poison-trip-cloud",
+    "traits": {
+      "value": ["poison"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-trap"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "duration": {
+      "value": 3,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntPoisTM001",
+      "appliesHuntPoison": "whbHuntPsnFx0001"
+    }
+  }
+}

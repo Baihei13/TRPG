@@ -1,0 +1,72 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：医生 Doctor",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-doctor.png",
+  "system": {
+    "description": {
+      "value": "<p>急救与医疗针效果翻倍。</p>\n<p><strong>猎杀特性花费</strong> 5 点（普通）</p>\n<hr />\n<p>当你使用<strong>急救工具 / 医疗针剂</strong>（如 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntVital0001]{活力针}、@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntRegen0001]{再生针}，以及世界物品急救包等，GM 裁定）恢复生命值时，恢复量<strong>加倍</strong>。</p>\n<p>使用前打开动作栏开关「医生 — 下次医疗加倍」；系统会在治疗结算时自动 ×2，并关闭开关。</p>",
+      "gm": "<p>Hunt Doctor。5 点。开关 + applyDamage 补丁自动加倍。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-doctor-double-heal",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "医生 — 下次医疗加倍"
+      },
+      {
+        "key": "Note",
+        "selector": "healing-received",
+        "title": "医生",
+        "text": "医生：若来自急救/医疗针，将治疗量加倍（开关开启时执行）。",
+        "predicate": [
+          "hunt-doctor-double-heal"
+        ]
+      }
+    ],
+    "slug": "hunt-feat-doctor",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 5,
+      "huntTraitCategory": "defensive",
+      "wikiIcon": "Trait_Doctor_Small.png"
+    }
+  },
+  "_id": "whbHuntFtDoc0001"
+}

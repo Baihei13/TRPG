@@ -1,0 +1,97 @@
+{
+  "_id": "whbHuntHzConc001",
+  "folder": "whbfolderHntHz01",
+  "name": "铁丝网拌雷（危境）",
+  "type": "hazard",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png",
+  "items": [
+    {
+      "_id": "whbHzConcTrig001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "刀丝展开",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": null,
+        "description": {
+          "value": "<p><strong>触发</strong> 一个生物进入绊线所在格、越过绊线，或打开绊线横跨的门/窗。</p>\n<hr />\n<p><strong>效果</strong> 刀丝卷爆开，在绊线为中心的约 <strong>2×2 格</strong>（10 尺方形）区域布满刀丝网，持续 <strong>1 分钟</strong>：</p>\n<ul>\n<li>爆发瞬间：区内每个生物受到 @Damage[1d6[slashing]] 挥砍伤害，并尝试 @Check[reflex|basic|dc:19|traits:trap]{基础反射豁免 DC 19}。若豁免<strong>失败</strong>，额外获得 @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{迟缓 1} 1 轮。</li>\n<li>网区为<strong>困难地形</strong>。生物在网区内开始回合时再受 @Damage[1d6[slashing]]（可用一次 Interact「小心挪步」免去该次伤害）。</li>\n<li>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntWireFx001]</li>\n</ul>\n<p>此危境随即耗尽。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntConcTM001]{铁丝网拌雷}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 陷阱",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "rarity": "common", "value": [] }
+      },
+      "effects": []
+    }
+  ],
+  "effects": [],
+  "system": {
+    "attributes": {
+      "ac": { "value": 18 },
+      "emitsSound": false,
+      "hardness": 6,
+      "hasHealth": true,
+      "hp": { "details": "", "max": 24, "temp": 0, "tempmax": 0, "value": 24 },
+      "immunities": [
+        { "type": "critical-hits" },
+        { "type": "precision" },
+        { "type": "object-immunities" }
+      ],
+      "stealth": {
+        "details": "<p>默认 DC 19；若布置者 Crafting DC 更高则用之。</p>",
+        "value": 9
+      }
+    },
+    "details": {
+      "description": "<p>绊线连着一卷压缩刀丝。触发后刀丝向四面弹开，织成封锁门窗与窄道的荆棘网。</p>",
+      "disable": "<p>@Check[thievery|dc:19|name:拆除铁丝网拌雷|traits:action:disable-a-device]（受训）。成功可回收为消耗品「铁丝网拌雷」。</p>",
+      "isComplex": false,
+      "level": { "value": 4 },
+      "publication": {
+        "title": "猎杀对决 — 陷阱",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      },
+      "reset": "<p>无。触发后刀丝网仍留存 1 分钟，但拌雷本身不再触发。</p>",
+      "routine": ""
+    },
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 10 },
+      "reflex": { "saveDetail": "", "value": 8 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "statusEffects": [],
+    "traits": {
+      "rarity": "uncommon",
+      "size": { "value": "med" },
+      "value": ["mechanical", "trap"]
+    }
+  },
+  "prototypeToken": {
+    "name": "铁丝网拌雷",
+    "width": 1,
+    "height": 1,
+    "texture": { "src": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png", "scaleX": 1, "scaleY": 1 },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": false },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntConcTM001"
+    }
+  }
+}

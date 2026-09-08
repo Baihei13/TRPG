@@ -1,0 +1,64 @@
+{
+  "_id": "whbHuntSoulBn001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：灵魂燃尽 Soul Burn",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-necromancer.png",
+  "system": {
+    "description": {
+      "value": "<p>灵魂被灼蚀抽干。此效果带有层数徽章，可挂在任意生物上。</p>\n<ul>\n<li>每层使你的<strong>生命值上限减少 10</strong>（已自动化）。</li>\n<li>首次获得或层数上升时，当前生命值同步失去等量数值（不视为受到攻击伤害）。</li>\n<li>再次施加时自动<strong>+1 层</strong>（上限 6）。</li>\n</ul>\n<p><strong>移除</strong>：由 GM 裁定的净化、长休或特定剧情手段；层数不会随回合自动消退。</p>",
+      "gm": "<p>通用减上限状态。FlatModifier hp = -10×层数；LoseHitPoints 同步。叠层由 hunt-showdown-automation 的 preCreateItem 处理。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "hp",
+        "slug": "hunt-soul-burn",
+        "type": "untyped",
+        "value": "-10 * @item.badge.value",
+        "label": "灵魂燃尽"
+      },
+      {
+        "key": "LoseHitPoints",
+        "reevaluateOnUpdate": true,
+        "value": "10 * @item.badge.value"
+      }
+    ],
+    "slug": "effect-hunt-soul-burn",
+    "traits": {
+      "value": [],
+      "rarity": "rare",
+      "otherTags": ["hunt-showdown", "hunt-soul-burn"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 1 },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "min": 1,
+      "max": 6
+    },
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSoulBurn": true,
+      "maxHpPerStack": 10
+    }
+  }
+}

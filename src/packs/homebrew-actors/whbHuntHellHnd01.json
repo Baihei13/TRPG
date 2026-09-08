@@ -1,0 +1,298 @@
+{
+  "_id": "whbHuntHellHnd01",
+  "folder": "whbfolderHntMn01",
+  "name": "地狱犬 Hellhound",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hellhound.png",
+  "items": [
+    {
+      "_id": "whbHndBite000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "撕咬",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 9
+        },
+        "damageRolls": {
+          "whbHndDmgBite001": {
+            "damage": "1d8+3",
+            "damageType": "piercing"
+          },
+          "whbHndDmgExtra01": {
+            "damage": "1d4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>嗜血撕咬。命中时造成 @Damage[1d6[persistent,bleed]] 持续流血，并将该生物记为<strong>猎物</strong>（见「贴身狂袭」）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHndPounce0001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "扑咬",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stride，然后发动撕咬。若此次移动至少 10 尺，撕咬获得 +1 环境加值，且持续流血改为 @Damage[1d8[persistent,bleed]]。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHndPackAtk001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "群猎",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>通常 <strong>2～4</strong> 只成群出现。若目标相对你处于无防备，或 10 尺内另有一只己方地狱犬，你的撕咬额外造成 @Damage[1d4[precision]]。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbHndElusive001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "贴身狂袭",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>一旦开始攻击猎人，跳跃与窜动让箭矢与刀刺极难奏效。当你在本场遭遇中已对某个生物造成伤害，且你与其<strong>相邻</strong>时：</p>\n<ul>\n<li>对来自该生物的<strong>远程打击</strong>，你的 AC 获得 +2 环境加值；</li>\n<li>对该生物使用带有 @Trait[agile]{敏捷} 或 @Trait[finesse]{灵巧} 特质的近战武器（刀、刺剑、多数轻武器等）发动的打击，必须先通过 @Check[flat|dc:5]{DC 5 持平检定}，否则未击中（模拟乱窜难刺）。</li>\n</ul>\n<p>用沉重钝器、长柄或退开再射会轻松得多。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": -1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 16
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "成群 2～4；贴身后难箭/刀。钢头变体见「地狱犬（钢头）」",
+        "max": 20,
+        "temp": 0,
+        "value": 20
+      },
+      "speed": {
+        "value": 40,
+        "otherSpeeds": []
+      },
+      "immunities": [],
+      "weaknesses": [],
+      "resistances": []
+    },
+    "details": {
+      "blurb": "猎杀对决 · 成群嗜血犬",
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "<p>建议一波放 2～4 只。Creature 1。贴脸后远程/灵巧刀难打。需要钢头（正面挡子弹）时用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHndStl001]{地狱犬（钢头）}。</p>",
+      "publicNotes": "<p>嗜血腐犬，通常两三只或四只成群。极快，撕咬造成大量流血与额外伤害。一旦扑上猎人，跳跃窜动使箭矢与刀刺很难奏效。</p>\n<p>头戴厚重钢盔、正面几乎免疫枪弹/投掷物的个体见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHndStl001]{地狱犬（钢头）}。</p>\n<p><em>四人 2 级团 · Creature 1（成群出现）</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "黑暗视觉；血腥嗅觉",
+      "mod": 7,
+      "senses": [
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "scent",
+          "acuity": "imprecise",
+          "range": 30
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 9
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 5
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 8
+      },
+      "athletics": {
+        "base": 7
+      },
+      "stealth": {
+        "base": 8
+      },
+      "survival": {
+        "base": 6
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "sm"
+      },
+      "value": [
+        "animal",
+        "undead"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "地狱犬",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/hellhound.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "darkvision"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "hellhound"
+    }
+  }
+}

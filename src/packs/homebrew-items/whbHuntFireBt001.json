@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntFireBt001",
+  "folder": "whbfolderHunt001",
+  "name": "火焰甲虫 Fire Beetle",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fire-beetle.png",
+  "system": {
+    "description": {
+      "value": "<p>火焰甲虫被培育来寻踪猎物，能为猎人提供俯视视野。死亡或受令时，它们会爆成火焰，点燃触及的一切。</p>\n<blockquote><p><strong>兵器之书 · 火焰甲虫</strong>（另见昆虫、有机物）出自仅知名为哈莉特（Harriet）的昆虫学家之进一步文献表明，该物种下又出现了若干成员。分类仍极困难，但我们已有关键线索。</p>\n<p>最惊人的是：哈莉特自称靠亲自训练每一只甲虫得出结论。「心灵交融」大概指训练者与甲虫经数月培养出的紧密纽带。这些甲虫须有犬类般的智力——又或者哈莉特只是夸张成性。其自我膨胀毋庸置疑。</p>\n<p>他甚至声称即将培育出新的进化分支。我本想骂他愚蠢至极，但在这些研究里，我们见过更张狂的造物主情结。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（放出甲虫）</p>\n<p><strong>控制距离</strong> 150 尺。规则同「窒息甲虫」：Interact 移动甲虫；你可通过甲虫观察。</p>\n<p><strong>引爆</strong> <span class=\"action-glyph\">1</span>（操作）或甲虫被摧毁时：在其所在位置产生 @Template[type:burst|distance:5]{5 尺爆发} 的火焰（原设定约 2 尺半径，按网格取整）。爆发内生物受到 @Damage[2d6[fire]] 火焰伤害，并尝试 @Check[reflex|basic|traits:fire,consumable]{基础反射豁免}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。火焰在该区域再持续 <strong>1 轮</strong>：在其间进入或于其中开始回合的生物再受 @Damage[1d6[fire]]，并同样叠 1 层灼烬。此为普通火焰，可被扑灭。</p>",
+      "gm": "<p>Hunt Fire Beetle。遥控 + 小范围火焰爆发；豁免失败/留在余焰中叠猎杀灼烬。</p>"
+    },
+    "rules": [],
+    "slug": "fire-beetle",
+    "traits": {
+      "value": ["alchemical", "consumable", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-tactical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "温热甲虫匣",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>匣中甲虫外壳微微发烫。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "2d6", "kind": "damage", "type": "fire" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactical",
+      "controlRangeFeet": 150,
+      "wikiIcon": "Consumable_Fire_Beetle.png"
+    }
+  }
+}

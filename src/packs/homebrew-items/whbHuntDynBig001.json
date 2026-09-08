@@ -1,0 +1,68 @@
+{
+  "_id": "whbHuntDynBig001",
+  "folder": "whbfolderHunt001",
+  "name": "大型炸药捆 Big Dynamite Bundle",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/big-dynamite-bundle.png",
+  "system": {
+    "description": {
+      "value": "<p>大量炸药捆在一起，威力巨大。炸药可模块化：一根约 190 克、足够稳定便于运输，但附近有另一根引爆时会被诱爆。可用任意数量炸药、一根引信和一段胶带捆成更大破坏力的药捆。</p>\n<p><em>（另见：炸药捆）</em></p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷或放置）</p>\n<p><strong>效果</strong> 在目标点产生 @Template[type:burst|distance:10]{约 11 尺爆发（模板按 10 尺）}。区域内生物受到 @Damage[8d6[bludgeoning]] 钝击伤害，@Check[reflex|basic]{基础反射豁免}成功则减半。</p>",
+      "gm": "<p><strong>Big Dynamite Bundle</strong>（猎杀对决 · 爆炸物）。原设定 110$ / 2 格。8d6 钝击，11 尺爆发（Foundry 模板用 10 尺；若要更贴近可用 15 尺）。价格仅供参考。</p>"
+    },
+    "rules": [],
+    "slug": "big-dynamite-bundle",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 10 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.2 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "沉重药捆",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>用金属箍捆紧的多根褐色纸卷，带着粗引信。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": {
+      "formula": "8d6",
+      "kind": "damage",
+      "type": "bludgeoning"
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 2,
+      "huntCategory": "explosive",
+      "huntBurstFeet": 11,
+      "huntDamage": "8d6"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntStalkB001",
+  "folder": "whbfolderHunt001",
+  "name": "潜行者甲虫 Stalker Beetle",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/stalker-beetle.png",
+  "system": {
+    "description": {
+      "value": "<p>潜行者甲虫被培育来寻踪猎物，能为猎人提供俯视视野。作为最后手段，它们可自我牺牲，造成小范围爆炸，妨碍范围内的一切。</p>\n<blockquote><p><strong>兵器之书 · 潜行者甲虫</strong>（另见昆虫、有机物）资源与科研匮乏，使理解这一未命名甲虫对生态的意义变得异常困难。其起源尚不明朗，但一位佚名昆虫学家的记录对分类至关重要。</p>\n<p>俗称潜行者甲虫的昆虫，据信是 19 世纪最后十年发现的稀有物种。文献形容其强壮坚韧，并指向甲虫与饲主之间某种不稳定的统一行动——所谓「蜂巢心智」。记载甚至声称饲主可对其「直接控制」或在必要时「献祭」甲虫。研究晦涩不可靠，但也提到某些「受试者」获得了控制这些昆虫的能力，受试者本质仍不清楚。</p>\n<p>现有发现尚新，科学家们尚未结题；关于该物种及其起源，只能期待更多信息很快揭晓。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（放出甲虫）</p>\n<p><strong>控制距离</strong> 150 尺。Interact 移动甲虫；你可通过甲虫观察（侦察）。</p>\n<p><strong>自爆</strong> <span class=\"action-glyph\">1</span>（操作）或甲虫被摧毁时：在其所在位置产生 @Template[type:burst|distance:5]{5 尺爆发}。爆发内生物受到 @Damage[3d6[bludgeoning]] 钝击伤害，并尝试 @Check[reflex|basic|traits:consumable]{基础反射豁免}。</p>",
+      "gm": "<p>Hunt Stalker Beetle。原作伤害未在用户表写清，按「小范围妨碍爆炸」定为 3d6 钝击基础反射。可按战役调伤。</p>"
+    },
+    "rules": [],
+    "slug": "stalker-beetle",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-tactical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "甲虫匣",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>匣中关着一只粗壮甲虫。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "3d6", "kind": "damage", "type": "bludgeoning" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactical",
+      "controlRangeFeet": 150,
+      "wikiIcon": "Consumable_Stalker_Beetle.png"
+    }
+  }
+}

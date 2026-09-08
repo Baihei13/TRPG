@@ -1,0 +1,145 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "Vetterli 71 Karabiner 卡宾枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/vetterli-71.png",
+  "system": {
+    "description": {
+      "value": "<p>长枪管带来更高伤害和精度的卡宾枪。</p>\n<blockquote><p><strong>兵器之书 · VETTERLI 71 KARABINER</strong>（另见步枪）瑞士陆军于 1868 年采用 Vetterli。当时它是欧洲现役中最先进的步枪之一。设计者 Johann-Friedrich Vetterli 把 Winfield M1866 的管状弹仓与德莱赛撞针枪引入的枪机结合，射速惊人。数年后改进为 M1871 卡宾：原枪缩短版，供骑兵使用。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 100 尺；<strong>装填</strong> 1</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、fatal-d10</p>\n<p><strong>弹药</strong> 达姆弹、毒弹、穿甲弹（GM 提供）。</p>\n<hr />\n<p><strong>稳定架构</strong> 若你<strong>上一回合未移动</strong>（打开动作栏开关），则在本回合内：此武器的射程增量 <strong>+20 尺</strong>（变为 120），且本回合用此武器的<strong>第一次</strong>打击忽略目标的 @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{隐蔽}（不需因隐蔽做持平检定；对躲藏等更强隐蔽无效，GM 裁定）。</p>",
+      "gm": "<p>Hunt Vetterli 71 Karabiner。12 gp。稳定架构：开关「上回合未移动」后射程 +20、首击无视隐蔽（半自动）。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-vetterli-braced",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "Vetterli — 稳定架构（上回合未移动）"
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "range-increment",
+        "value": 20,
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "predicate": [
+          "hunt-vetterli-braced"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "稳定架构",
+        "text": "本回合第一次以此枪打击：忽略目标隐蔽（无需 DC 5 持平）。首击后可关闭开关。",
+        "predicate": [
+          "hunt-vetterli-braced",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "vetterli-71-karabiner",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d10"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "枪机卡宾",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>瑞士制短管枪机步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 100,
+    "expend": 1,
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "wikiIcon": "Weapon_Vetterli_71.png",
+      "uniqueTactic": "stable-frame"
+    }
+  },
+  "_id": "whbHuntVet71Kb01"
+}

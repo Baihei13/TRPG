@@ -1,0 +1,139 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "Caldwell Pax 帕克斯左轮",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-pax.png",
+  "system": {
+    "description": {
+      "value": "<p>大威力左轮手枪，适合副手主力输出。</p>\n<blockquote><p><strong>兵器之书 · CALDWELL PAX</strong>（另见左轮）亦称 Single Action Army，迅速成为史上最具代表性的火器之一。单动手动六发左轮，为耐用可靠而设计，在 1872 年美军左轮试验中一举成名。拉丁语「和平」之名，却伴随美西开拓与 Henry Samuel Caldwell 的传奇。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 1；<strong>单手</strong>；<strong>射程增量</strong> 50 尺；<strong>装填</strong> 1；<strong>弹巢</strong> 6</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-6</p>\n<p><strong>弹药</strong> 达姆弹、毒弹、穿甲弹（GM 提供）。</p>\n<hr />\n<p><strong>重击者枪柄</strong> 你可用此枪进行<strong>近战枪柄打击</strong>（使用同一熟练；伤害 <strong>1d8 钝击</strong>，特质：震荡）。该近战打击出现在动作栏（半自动）。</p>",
+      "gm": "<p>Hunt Caldwell Pax。8 gp。枪柄打击用 Strike 规则生成。</p>"
+    },
+    "rules": [
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "brawling",
+        "slug": "pax-pistol-whip",
+        "label": "Pax 枪柄打击",
+        "img": "systems/pf2e/icons/default-icons/melee.svg",
+        "damage": {
+          "base": {
+            "damageType": "bludgeoning",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive"
+        ],
+        "range": null
+      }
+    ],
+    "slug": "caldwell-pax",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-6"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 8
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "单动左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>六发单动左轮，枪柄沉甸甸的。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 50,
+    "expend": 1,
+    "ammo": {
+      "baseType": null,
+      "builtIn": false,
+      "capacity": 6
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "wikiIcon": "Weapon_Pax.png",
+      "uniqueTactic": "pistol-whip-1d8"
+    }
+  },
+  "_id": "whbHuntPax000001"
+}

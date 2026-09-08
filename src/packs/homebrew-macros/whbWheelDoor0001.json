@@ -1,0 +1,20 @@
+{
+  "_id": "whbWheelDoor0001",
+  "name": "转轮门控",
+  "type": "script",
+  "img": "icons/environment/settlement/wheel.webp",
+  "scope": "global",
+  "command": "/**\n * 转轮门控 — 供 Monk's Active Tiles「运行宏」调用，也可在热栏手动点。\n *\n * Active Tiles 参数（可选）：\n *   { doorIds: [\"墙ID1\", \"墙ID2\"] }\n *   { mode: \"ask\" | \"open\" | \"lock\" }   // ask=弹窗（默认）\n *\n * 默认门 ID 可在下方修改；第二扇门请换成你场景里的真实墙 ID。\n */\n(async () => {\n  const DEFAULT_DOOR_IDS = [\n    \"htggKllXKcbhsdnf\", // 已知密门之一（可改）\n    \"\", // ← 填入第二扇门的墙 ID；留空则只操作第一扇\n  ];\n\n  const tileArgs =\n    typeof args !== \"undefined\" && args && typeof args === \"object\" ? args : {};\n  const doorIds = (tileArgs.doorIds ?? DEFAULT_DOOR_IDS)\n    .map((id) => String(id || \"\").trim())\n    .filter(Boolean);\n  const mode = tileArgs.mode ?? \"ask\";\n\n  if (!doorIds.length) {\n    return ui.notifications.error(\"转轮门控：未配置 doorIds。请在宏里填写两扇门的墙 ID。\");\n  }\n\n  const scene = canvas.scene;\n  if (!scene) return ui.notifications.error(\"没有活动场景。\");\n\n  const walls = doorIds.map((id) => scene.walls.get(id)).filter(Boolean);\n  if (!walls.length) {\n    return ui.notifications.error(\n      `转轮门控：场景里找不到这些墙/门：${doorIds.join(\", \")}`\n    );\n  }\n  if (walls.length < doorIds.length) {\n    const missing = doorIds.filter((id) => !scene.walls.get(id));\n    ui.notifications.warn(`转轮门控：部分门未找到：${missing.join(\", \")}`);\n  }\n\n  const OPEN = CONST.WALL_DOOR_STATES?.OPEN ?? 1;\n  const LOCKED = CONST.WALL_DOOR_STATES?.LOCKED ?? 2;\n  const CLOSED = CONST.WALL_DOOR_STATES?.CLOSED ?? 0;\n\n  const speaker = () => {\n    const tok = canvas.tokens.controlled[0];\n    return ChatMessage.getSpeaker({\n      actor: tok?.actor ?? game.user.character,\n      token: tok?.document,\n    });\n  };\n\n  async function setDoors(state, label) {\n    const updates = walls.map((w) => ({ _id: w.id, ds: state }));\n    await scene.updateEmbeddedDocuments(\"Wall\", updates);\n    await ChatMessage.create({\n      speaker: speaker(),\n      content: `<div class=\"pf2e chat-card\">\n        <header class=\"card-header flexrow\">\n          <img src=\"icons/environment/settlement/wheel.webp\" width=\"36\" height=\"36\" alt=\"\"/>\n          <h3>转轮机关</h3>\n        </header>\n        <p><strong>${game.user.name}</strong> 转动了转轮：<em>${label}</em></p>\n        <p class=\"hint\">影响 ${walls.length} 扇密门。</p>\n      </div>`,\n    });\n    ui.notifications.info(`转轮：${label}（${walls.length} 扇门）`);\n  }\n\n  async function doOpen() {\n    // 解锁并打开\n    await setDoors(OPEN, \"打开密门\");\n  }\n\n  async function doLock() {\n    // 关闭并上锁\n    await setDoors(LOCKED, \"锁上密门\");\n  }\n\n  if (mode === \"open\") return doOpen();\n  if (mode === \"lock\") return doLock();\n\n  // 两个行动选项\n  new Dialog({\n    title: \"转轮机关\",\n    content: `\n      <p>你把手放上沉重的转轮。铁锈与石屑在轴上摩擦作响。</p>\n      <p><strong>选择一个行动：</strong></p>\n      <ul>\n        <li><strong>打开密门</strong> — 解锁并推开关联的门</li>\n        <li><strong>锁上密门</strong> — 关闭并锁住关联的门</li>\n      </ul>\n      <p class=\"notes\" style=\"opacity:.75\">当前绑定 ${walls.length} 扇门</p>\n    `,\n    buttons: {\n      open: {\n        icon: '<i class=\"fas fa-door-open\"></i>',\n        label: \"打开密门\",\n        callback: () => doOpen(),\n      },\n      lock: {\n        icon: '<i class=\"fas fa-lock\"></i>',\n        label: \"锁上密门\",\n        callback: () => doLock(),\n      },\n    },\n    default: \"open\",\n  }).render(true);\n})();\n",
+  "folder": "whbfolderRemMac1",
+  "sort": 100,
+  "ownership": {
+    "default": 1
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "wheel-door-control",
+      "source": "remnant-2",
+      "activeTiles": true
+    }
+  }
+}

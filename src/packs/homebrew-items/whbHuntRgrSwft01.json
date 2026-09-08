@@ -1,0 +1,129 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "Winfield M1873 Swift 速射型",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/ranger-73-swift.png",
+  "system": {
+    "description": {
+      "value": "<p>改进供弹系统的杠杆步枪，可在移动中快速射击。外形与经典 M1873 相同，但加装了装填管，可一推完成装填——正是「Swift」之名的由来。</p>\n<blockquote><p><strong>兵器之书 · WINFIELD M1873「RANGER 73」SWIFT</strong>（另见步枪、Winfield M1873）经典 Winfield M1873 设计，唯一差别是装有加快装填的装填管附件。一记利落推送即可完成装填，武器由此得名。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 80 尺；<strong>装填</strong> 1；<strong>弹匣容量</strong> 5</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、横扫、capacity-5</p>\n<p><strong>弹药</strong> 可选用达姆弹、毒弹、穿甲弹（由 GM 提供对应弹药物品/效果）。</p>\n<hr />\n<p><strong>快速循环</strong> 用此武器进行的打击<strong>不会</strong>引发借机攻击。每当你完成一次对此武器的装填（Interact）后，你可以立刻进行一次<strong>不消耗动作</strong>的快步（5 尺）；每轮以此法快步最多 1 次。</p>",
+      "gm": "<p>Hunt Ranger 73 / Winfield M1873 Swift。14 gp。军用火器，双手，capacity-5，reload 1。装填后免费 Step（每轮 1 次）。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "快速循环",
+        "text": "此武器的打击不引发借机攻击。完成本武器装填后，本轮可免费快步 5 尺一次。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "winfield-m1873-swift",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>保养良好的杠杆连发步枪，枪托旁有奇特装填管。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": null,
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "wikiIcon": "Weapon_Ranger_73_Swift.png"
+    }
+  },
+  "_id": "whbHuntRgrSwft01"
+}

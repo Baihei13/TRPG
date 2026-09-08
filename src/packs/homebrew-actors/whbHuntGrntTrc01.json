@@ -1,0 +1,253 @@
+{
+  "_id": "whbHuntGrntTrc01",
+  "folder": "whbfolderHntMn01",
+  "name": "杂兵（火把） Torch Grunt",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+  "items": [
+    {
+      "_id": "whbGrtTorch00001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "燃烧火把",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "whbGrtDmgTrcBl01": {
+            "damage": "1d4+2",
+            "damageType": "bludgeoning"
+          },
+          "whbGrtDmgTrcFr01": {
+            "damage": "1d4",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": "<p>命中后目标须尝试 @Check[reflex|dc:15|traits:fire]{反射 DC 15}；失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGrtDropTrc001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "火把落地",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>死亡或持械臂被非致命打中时，燃烧火把落在其空间。将该格及邻接易燃物视为可能点燃（油、火药桶、警报拌雷等，GM 裁定）。火把可持续燃烧 1 分钟或被 Interact 熄灭/踢开。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGrtHarassDoc1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "腐沼骚扰",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>最常见的腐化尸人，成群游荡。单只威胁低，职责是<strong>拖延、逼近、制造噪音</strong>。建议一波 3～6 只混编不同变体。</p><p>可被任意手段轻松击杀；有时会自己冲进火里烧死。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "易杀骚扰杂兵",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      }
+    },
+    "details": {
+      "blurb": "猎杀对决 · 点火骚扰",
+      "languages": {
+        "details": "无语言；嘶吼",
+        "value": []
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "<p>危险在点火与死后掉火把。死时邻接可能点燃油桶/拌雷。</p>",
+      "publicNotes": "<p>挥舞燃烧火把。命中造成灼伤；再被命中易被点燃。死亡或手臂被打中时火把落地，可能点燃附近油渍、桶或警报拌雷。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "火把杂兵",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "grunt-torch"
+    }
+  }
+}

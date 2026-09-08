@@ -1,0 +1,44 @@
+{
+  "_id": "whbHuntLiqFx0001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：液体燃烧弹火场 Liquid Fire Bomb",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/liquid-fire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>你正处在液体燃烧弹点燃的火场中。</p>\n<p>在你的回合开始时，若你仍在火场范围内，受到 @Damage[1d8[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。离开火场或火场熄灭后移除此火场标记（灼烬仍保留）。</p>\n<p>这些火焰能在水面上燃烧（汽油浮于水面）；仅用水浇淋通常不足以熄灭，但大量沙土掩埋、化学灭火或其他合适手段仍可由 GM 允许。</p>",
+      "gm": "<p>火场持续 5 轮 + 叠猎杀灼烬。普通浇水无效。</p>"
+    },
+    "rules": [],
+    "slug": "effect-liquid-fire-bomb-blaze",
+    "traits": {
+      "value": ["alchemical", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "duration": {
+      "value": 5,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntLiqFire01"
+    }
+  }
+}

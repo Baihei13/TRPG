@@ -1,0 +1,63 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：死灵法师 Necromancer",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-necromancer.png",
+  "system": {
+    "description": {
+      "value": "<p>借黑暗视域远距拉起倒地同伴；孤狼时可自救。</p>\n<p><strong>猎杀特性花费</strong> 4 点（燃烧特性）</p>\n<hr />\n<p><strong>暗视苏生</strong> <span class=\"action-glyph\">1</span>（操作）专注、操纵；<strong>频率</strong> 每日 1 次</p>\n<p><strong>距离</strong> 30 尺内一名处于濒死的盟友（你能感知到即可）。</p>\n<p>尝试 @Check[religion|dc:15]{宗教 DC 15} 或 @Check[arcana|dc:15]{奥秘 DC 15}（自选）。成功则该盟友停止濒死、HP 变为 1 并清除濒死值；大成功则额外恢复 @Damage[1d8[healing]]。失败则消耗频率且无效；大失败则你受到 @Damage[1d6[void]] 虚体伤害。</p>\n<p><strong>孤狼</strong>：若你是队伍中唯一的玩家角色（或 GM 裁定的孤狼状态），你可在自己濒死时以自由动作（仍每日 1 次）对自己使用本能力；检定 DC 改为 17。</p>",
+      "gm": "<p>Hunt Necromancer。4 点燃烧特性。每日 1 次救濒死→1 HP。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-necromancer-ready",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "死灵法师 — 今日仍可用"
+      }
+    ],
+    "slug": "hunt-feat-necr001",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 4,
+      "huntTraitCategory": "burn",
+      "wikiIcon": "Trait_Necromancer_Small.png"
+    }
+  },
+  "_id": "whbHuntFtNecr001"
+}

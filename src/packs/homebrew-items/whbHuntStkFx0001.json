@@ -1,0 +1,44 @@
+{
+  "_id": "whbHuntStkFx0001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：黏弹附着 Sticky Bomb",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/sticky-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>一枚带钩刺的黏性炸弹嵌在你身上，引信还在燃烧。</p>\n<p>在<strong>投掷者下一回合开始时</strong>，炸弹引爆：你受到 @Damage[6d6[bludgeoning]] 钝击伤害，并尝试一次 @Check[fortitude|traits:consumable]{强韧豁免}；失败则 @UUID[Compendium.pf2e.conditionitems.Item.j91X7xNIjSrFEatt]{倒地}。然后移除此效果。</p>",
+      "gm": "<p>由黏性炸弹命中后施加。持续至投掷者下一回合开始（约合原作 4 秒引信）。引爆后删除本效果。</p>"
+    },
+    "rules": [],
+    "slug": "effect-sticky-bomb",
+    "traits": {
+      "value": ["alchemical"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 8 },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntSticky001"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "whbHuntFireFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：燃烧弹火场 Fire Bomb",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>你正处在燃烧弹点燃的火场中（或刚被余焰波及）。</p>\n<p>在你的回合开始时，若你仍在火场范围内，受到 @Damage[1d6[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。离开火场或火场熄灭后移除此火场标记（灼烬仍保留，需灭火或活力针清除）。</p>",
+      "gm": "<p>火场标记 + 叠猎杀灼烬。火场本身持续 3 轮。</p>"
+    },
+    "rules": [],
+    "slug": "effect-fire-bomb-blaze",
+    "traits": {
+      "value": ["alchemical", "fire"],
+      "rarity": "common",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": 3,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntFireBm001"
+    }
+  }
+}

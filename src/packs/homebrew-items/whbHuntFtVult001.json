@@ -1,0 +1,54 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：秃鹫 Vulture",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-vulture.png",
+  "system": {
+    "description": {
+      "value": "<p>搜刮倒地猎人时总能摸到钱。</p>\n<p><strong>猎杀特性花费</strong> 2 点（普通）</p>\n<hr />\n<p>当你对一名<strong>玩家角色或其他猎人</strong>的尸体（或倒地无抵抗的猎人）成功进行搜索 / 搜刮时，你额外自动获得 <strong>1d6 gp</strong>（或由 GM 改成等价小额金钱）。此金钱不占用「搜到的装备」名额。</p>",
+      "gm": "<p>Hunt Vulture。2 点。叙事结算，无自动化。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-feat-vult001",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 2,
+      "huntTraitCategory": "supportive",
+      "wikiIcon": "Trait_Vulture_Small.png"
+    }
+  },
+  "_id": "whbHuntFtVult001"
+}

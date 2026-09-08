@@ -1,0 +1,68 @@
+{
+  "_id": "whbHuntDynBdl001",
+  "folder": "whbfolderHunt001",
+  "name": "炸药捆 Dynamite Bundle",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-bundle.png",
+  "system": {
+    "description": {
+      "value": "<p>多根炸药棒捆在一起，威力更大。铁路施工队常用此物开路；菲尼亚斯·盖奇曾在近距离爆炸中幸存，却余生带着嵌进头骨的铁捣棒。</p>\n<p><em>（另见：炸药棒）准备一根炸药棒是明智之举；若威力不足，可将更多炸药捆在一起——但爆炸半径会随数量变得难以预测，引爆前必须立刻离开。</em></p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷或放置）</p>\n<p><strong>效果</strong> 在目标点产生 @Template[type:burst|distance:10]{约 8 尺爆发（模板按 10 尺）}。区域内生物受到 @Damage[5d6[bludgeoning]] 钝击伤害，@Check[reflex|basic]{基础反射豁免}成功则减半。</p>",
+      "gm": "<p><strong>Dynamite Bundle</strong>（猎杀对决 · 爆炸物）。原设定 75$ / 2 格。5d6 钝击，8 尺爆发（Foundry 模板用 10 尺网格对齐）。价格仅供参考。</p>"
+    },
+    "rules": [],
+    "slug": "dynamite-bundle",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 7 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.2 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "绑带药捆",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>用红带捆住的两根褐色纸卷，带着引信。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": {
+      "formula": "5d6",
+      "kind": "damage",
+      "type": "bludgeoning"
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 2,
+      "huntCategory": "explosive",
+      "huntBurstFeet": 8,
+      "huntDamage": "5d6"
+    }
+  }
+}

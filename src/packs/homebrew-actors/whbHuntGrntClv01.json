@@ -1,0 +1,219 @@
+{
+  "_id": "whbHuntGrntClv01",
+  "folder": "whbfolderHntMn01",
+  "name": "杂兵（砍刀） Cleaver Grunt",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+  "items": [
+    {
+      "_id": "whbGrtCleaver001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "砍刀",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 8
+        },
+        "damageRolls": {
+          "whbGrtDmgClev001": {
+            "damage": "1d6+2",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>命中时造成 @Damage[1d4[persistent,bleed]] 持续流血。</p><p><em>可选：</em>非致命命中其持刀臂时，砍刀落地，本生物改用撕抓（+7，1d4+2 钝击，敏捷）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGrtHarassDoc1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "腐沼骚扰",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>最常见的腐化尸人，成群游荡。单只威胁低，职责是<strong>拖延、逼近、制造噪音</strong>。建议一波 3～6 只混编不同变体。</p><p>可被任意手段轻松击杀；有时会自己冲进火里烧死。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "易杀骚扰杂兵",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      }
+    },
+    "details": {
+      "blurb": "猎杀对决 · 流血骚扰",
+      "languages": {
+        "details": "无语言；嘶吼",
+        "value": []
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "<p>优先点杀。可选：非致命打中持械臂则掉刀，变为徒手杂兵。</p>",
+      "publicNotes": "<p>挥舞砍刀的杂兵。命中造成流血。手臂被非致命击中时可能丢掉砍刀，变成普通徒手杂兵。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "砍刀杂兵",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "grunt-cleaver"
+    }
+  }
+}

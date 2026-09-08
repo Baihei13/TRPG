@@ -1,0 +1,56 @@
+{
+  "_id": "whbHuntFrag00001",
+  "folder": "whbfolderHunt001",
+  "name": "碎片炸弹 Frag Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/frag-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>直径约 2.5 英寸、重约 2 磅的铁壳炸弹，内装火药与引信。早期版本常在战场上临时拼装：木制把手、球形金属外壳，外层裹着废金属与弹片；引爆后外壳碎裂，将破片撒向周围。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷）</p>\n<p><strong>射程</strong> 30 尺</p>\n<p><strong>效果</strong> 选择 30 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发}（原设定约 6 尺）。爆发内每个生物受到 @Damage[4d6[piercing]] 穿刺伤害，并尝试一次 @Check[reflex|basic|traits:consumable]{基础反射豁免}；成功则伤害减半，大成功则不受伤害，大失败则伤害加倍。</p>",
+      "gm": "<p>Hunt Frag Bomb。原 85$/1格。建议物品 DC 按等级 5（约 DC 20），或用投掷者职业/炼金 DC。</p>"
+    },
+    "rules": [],
+    "slug": "frag-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "铁壳手雷",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>带着短引信的粗糙铁球。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "4d6", "kind": "damage", "type": "piercing" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "explosive",
+      "wikiIcon": "Consumable_Frag_Bomb.png"
+    }
+  }
+}

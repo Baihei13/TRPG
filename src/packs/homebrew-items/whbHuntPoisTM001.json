@@ -1,0 +1,59 @@
+{
+  "_id": "whbHuntPoisTM001",
+  "folder": "whbfolderHunt001",
+  "name": "毒气拌雷 Poison Trip Mine",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>便携绊线雷，触发后在近距释放毒气云，使敌人迷失方向。毒气范围小于常规毒气弹，因触发时受害者已贴身。</p>\n<blockquote><p><strong>兵器之书 · 毒气拌雷</strong>（另见毒素）伏击用装置：触发后向目标释放危险毒雾。云团比常规爆炸式毒气装置更小，因其发射方式保证受害者已在近旁。设计偏重失能而非处决，好让布置者自行决定如何处置闯入者。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact（布置）</p>\n<p><strong>效果</strong> 在邻接的一格布置绊线。消耗本物品，并放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzPois001]{毒气拌雷}。</p>\n<ul>\n<li><strong>隐匿</strong> 默认 隐匿 DC 18（或布置者 Crafting DC，取较高）。</li>\n<li><strong>解除</strong> @Check[thievery|dc:18|traits:action:disable-a-device]（受训）；成功可回收本物品。</li>\n<li>触发后产生 @Template[type:burst|distance:5]{5 尺爆发} 毒气云，持续 <strong>3 轮</strong>：每轮 @Damage[1d4[poison]] + @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（见危境）。</li>\n</ul>",
+      "gm": "<p>Hunt Poison Trip Mine。5 尺毒云 3 轮：每轮 1d4 毒素 + 猎杀中毒 1 层。危境 whbHuntHzPois001。</p>"
+    },
+    "rules": [],
+    "slug": "poison-trip-mine",
+    "traits": {
+      "value": ["consumable", "mechanical", "poison", "snare", "trap"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-trap"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "毒气线轴",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>连着细线的金属筒，隐约有刺鼻气味。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d4", "kind": "damage", "type": "poison" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "trap",
+      "linkedHazard": "whbHuntHzPois001",
+      "linkedEffect": "whbHuntPoisFx001",
+      "appliesHuntPoison": "whbHuntPsnFx0001",
+      "wikiIcon": "Tool_Poison_Trip_Mines.png"
+    }
+  }
+}

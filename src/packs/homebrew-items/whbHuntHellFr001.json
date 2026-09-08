@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntHellFr001",
+  "folder": "whbfolderHunt001",
+  "name": "地狱火瓶 Hellfire Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hellfire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>19 世纪末石油精炼催生的高烈度燃烧武器。确切配方已不可考；落地后燃起的火焰极难扑灭，燃烧也更持久。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷）</p>\n<p><strong>射程</strong> 20 尺</p>\n<p><strong>效果</strong> 选择 20 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发} 的炼狱火场（原设定约 3 尺半径，按网格取整）。</p>\n<ul>\n<li>火场持续 <strong>1 分钟</strong>。</li>\n<li>生物<strong>进入</strong>火场或在火场内<strong>开始其回合</strong>时，受到 @Damage[2d6[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</li>\n<li><strong>不灭之火</strong>：此火焰<strong>无法</strong>被非魔法手段熄灭。只有魔法熄灭火焰的效果（或持续时间结束）才能消灭火场。</li>\n</ul>\n<p>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntHellFx001]</p>",
+      "gm": "<p>Hunt Hellfire Bomb。火场伤害 + 猎杀灼烬叠层。非魔法灭火无效。</p>"
+    },
+    "rules": [],
+    "slug": "hellfire-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 7 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "黑油瓶",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>散发刺鼻气味的深色液体瓶。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "2d6", "kind": "damage", "type": "fire" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "fire",
+      "linkedEffect": "whbHuntHellFx001",
+      "wikiIcon": "Consumable_Hellfire_Bomb.png"
+    }
+  }
+}

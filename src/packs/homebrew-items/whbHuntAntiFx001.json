@@ -1,0 +1,49 @@
+{
+  "_id": "whbHuntAntiFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：解毒针 Antidote Shot",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>绿色解毒剂在你的动脉中循环。你<strong>免疫毒素伤害</strong>，持续 1 分钟。</p>\n<p><em>赋予本效果时，应立刻移除 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒}（及同类毒素持续效果）。</em></p>",
+      "gm": "<p>配合「解毒针」。原作：立即移除中毒，并在 60 秒内免疫毒素伤害。请手动删掉猎杀中毒效果。</p>"
+    },
+    "rules": [
+      {
+        "key": "Immunity",
+        "type": "poison"
+      }
+    ],
+    "slug": "effect-antidote-shot",
+    "traits": {
+      "value": ["alchemical", "healing"],
+      "rarity": "common",
+      "otherTags": ["hunt-showdown", "hunt-medical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 3 },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntAnti00001"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntChokeB001",
+  "folder": "whbfolderHunt001",
+  "name": "窒息甲虫 Choke Beetle",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/choke-beetle.png",
+  "system": {
+    "description": {
+      "value": "<p>窒息甲虫被培育来寻踪猎物，能为猎人提供俯视视野；它们也会炸成令人窒息的毒气云，且自身对此免疫。</p>\n<blockquote><p><strong>兵器之书 · 窒息甲虫</strong>（另见昆虫、有机物）在方圆五十里找不到第二个够格的头脑，我遂于 1895 年将其定名为 <em>Goliathus Cetos Harriet</em>。只愿这一学名能在「潜行者甲虫」「窒息甲虫」等俗称传开之前进入通用语汇。</p>\n<p>旁人竟把它们当成两个物种，实在匪夷所思。即便粗看，这新发现的毒气变种也不过是初代爆炸型 <em>Goliathus Cetos</em> 的简单突变。这是一种古怪的防卫：意味着甲虫愿以自身为代价保护某物。我见过它们对幼虫表现出亲代行为，故推测其曾类似蜂群般的层级。</p>\n<p>此类突变体免疫烟尘，但幼虫期接触烟雾导致呼吸系统塌缩。翅鞘下鼓起的气囊代替萎缩口器供氧；气囊耗尽时氧气骤然膨胀，把积蓄毒气猛烈喷出。用枪很容易触发这一反应。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（放出甲虫）</p>\n<p><strong>控制距离</strong> 150 尺。在持续期间，你可用一次 Interact 让甲虫飞行至控制距离内你可见的一点（或沿路径移动，由 GM 裁定）。你通过甲虫观察，对该点及周围获得与你自身相同的视觉（轻度隐蔽中的细节由 GM 裁定）。</p>\n<p><strong>引爆</strong> <span class=\"action-glyph\">1</span>（操作）或甲虫生命值降为 0 时：甲虫在其所在位置爆炸，产生 @Template[type:burst|distance:5]{5 尺爆发} 的窒息毒气云（原设定约 3 尺，按网格取整），持续 <strong>1 分钟</strong>。</p>\n<ul>\n<li>毒气云造成<strong>重度隐蔽</strong>。</li>\n<li>生物进入毒气云或在其内开始回合时，须通过 @Check[fortitude|traits:poison,consumable]{强韧豁免}，失败则受到 @UUID[Compendium.pf2e.conditionitems.Item.fesdP3xhCz78cLuS]{反胃 1}，大失败则为反胃 2。成功则本轮免疫该云的反胃（仍受隐蔽影响）。</li>\n<li>普通风通常无法在 1 轮内吹散整片云；强风或魔法驱散由 GM 裁定。</li>\n</ul>",
+      "gm": "<p>Hunt Choke Beetle。遥控侦察 + 窒息云。反胃 = sickened。若世界无该状态 UUID，用手写「反胃」。</p>"
+    },
+    "rules": [],
+    "slug": "choke-beetle",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-tactical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "甲虫匣",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>匣中关着一只粗壮甲虫。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": null,
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactical",
+      "controlRangeFeet": 150,
+      "wikiIcon": "Consumable_Choke_Beetle.png"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntConcrt001",
+  "folder": "whbfolderHunt001",
+  "name": "铁丝网炸弹 Concertina Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>弹簧刀丝线圈，投出后猛烈展开，撕扯并缠住任何试图穿过之人。</p>\n<blockquote><p><strong>兵器之书 · 铁丝网炸弹</strong>（另见实验武器、爆炸物）内战尾声，塞缪尔·麦科林（Samuel McCollin）在彼得斯堡围城期间萌生构想。战壕经历令他创伤深重，开始设计意在让战壕过时的爆炸装置。内战结束时多数方案失败。1873 年，他在伊利诺伊州迪卡尔布的农展会上见到一种农用铁丝「炸弹」设计，与战争相去甚远，却重新点燃他的灵感。他回到原案，试验将「蛇腹」刀丝紧绕在装药上；引爆时刀丝向四面弹开，织成无法穿越的铁丝荆棘。</p>\n<p>麦科林于 1879 年取得专利，1880 年在美军协助下试验。提案因过于残忍且昂贵被拒——被缠者痛苦不堪，机构也太复杂难以量产。拒绝使他沉沦，其后下落不明。此后出现粗糙的自制仿品，可见设计仍在流传。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（投掷）</p>\n<p><strong>射程</strong> 20 尺</p>\n<p><strong>效果</strong> 选择 20 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发} 的刀丝网区，持续 <strong>1 分钟</strong>。</p>\n<ul>\n<li>爆发瞬间：区内生物受到 @Damage[1d6[slashing]] 挥砍伤害，并尝试 @Check[reflex|basic|traits:consumable]{基础反射豁免}。</li>\n<li>网区为<strong>困难地形</strong>。生物在网区内开始回合时再受 @Damage[1d6[slashing]] 挥砍伤害（可用一次 Interact「小心挪步」免去该次伤害，仍受困难地形）。</li>\n<li>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntWireFx001]</li>\n</ul>",
+      "gm": "<p>Hunt Concertina Bomb。区域封锁 + 轻伤。建议在地图上放困难地形标记 1 分钟。</p>"
+    },
+    "rules": [],
+    "slug": "concertina-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-tactical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "铁丝线圈",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>缠得死紧的金属丝卷，带着短引信。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d6", "kind": "damage", "type": "slashing" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactical",
+      "linkedEffect": "whbHuntWireFx001",
+      "wikiIcon": "Consumable_Concertina_Bomb.png"
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "_id": "whbHuntGrunt0001",
+  "folder": "whbfolderHntMn01",
+  "name": "杂兵（徒手） Grunt",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+  "items": [
+    {
+      "_id": "whbGrtFist000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "撕抓",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
+        "damageRolls": {
+          "whbGrtDmgFist001": {
+            "damage": "1d4+2",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": "<p>裸拳与腐爪。伤害不高，但连续命中很烦。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGrtLunge00001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "扑近",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stride，然后发动撕抓。若移动至少 10 尺，该次打击额外造成 @Damage[1] 伤害。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGrtHarassDoc1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "腐沼骚扰",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>最常见的腐化尸人，成群游荡。单只威胁低，职责是<strong>拖延、逼近、制造噪音</strong>。建议一波 3～6 只混编不同变体。</p><p>可被任意手段轻松击杀；有时会自己冲进火里烧死。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 怪物",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": -2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "易杀骚扰杂兵",
+        "max": 16,
+        "temp": 0,
+        "value": 16
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      }
+    },
+    "details": {
+      "blurb": "猎杀对决 · 基础杂兵",
+      "languages": {
+        "details": "无语言；嘶吼",
+        "value": []
+      },
+      "level": {
+        "value": 1
+      },
+      "privateNotes": "<p>最便宜的骚扰单位。两下近战就能刮掉一块血，逼玩家浪费动作。</p>",
+      "publicNotes": "<p>最常见的敌人。徒手扑打猎人，两下就能造成可观伤害。可用任何装备干掉，有时会自己冲进火里。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 怪物",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 5,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 6
+      },
+      "stealth": {
+        "base": 5
+      }
+    },
+    "traits": {
+      "rarity": "common",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "undead"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "杂兵",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 30,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "grunt"
+    }
+  }
+}

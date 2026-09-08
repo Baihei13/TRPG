@@ -1,0 +1,88 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：堡垒 Bulwark",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-bulwark.png",
+  "system": {
+    "description": {
+      "value": "<p>更能扛住爆炸与闪光。</p>\n<p><strong>猎杀特性花费</strong> 2 点（普通）</p>\n<hr />\n<p>你对来自<strong>爆发 / 锥形 / 直线等范围效果</strong>的伤害获得<strong>抗力 5</strong>（规则尽量自动化；边缘情况由 GM 裁定）。</p>\n<p>对抗会使你 @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{目眩} 的效果时，豁免获得 <strong>+2 环境加值</strong>。</p>",
+      "gm": "<p>Hunt Bulwark。2 点。范围伤害抗 5 + 抗致盲豁免 +2。</p>"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "physical",
+        "value": 5,
+        "predicate": [
+          "area-damage"
+        ],
+        "label": "堡垒（范围）"
+      },
+      {
+        "key": "Resistance",
+        "type": "fire",
+        "value": 5,
+        "predicate": [
+          "area-damage"
+        ],
+        "label": "堡垒（范围·火）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "circumstance",
+        "value": 2,
+        "predicate": [
+          {
+            "or": [
+              "inflicts:blinded",
+              "inflicts:dazzled"
+            ]
+          }
+        ],
+        "label": "堡垒"
+      }
+    ],
+    "slug": "hunt-feat-bulw001",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 2,
+      "huntTraitCategory": "defensive",
+      "wikiIcon": "Trait_Bulwark_Small.png"
+    }
+  },
+  "_id": "whbHuntFtBulw001"
+}

@@ -27,6 +27,20 @@
       "type": "Actor",
       "sorting": "a",
       "folder": null
+    },
+    {
+      "_id": "whbfolderHntHz01",
+      "name": "猎杀对决·陷阱",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbfolderHntMn01",
+      "name": "猎杀对决·怪物",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
     }
   ]
 }

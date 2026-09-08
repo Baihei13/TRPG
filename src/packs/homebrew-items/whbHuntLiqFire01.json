@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntLiqFire01",
+  "folder": "whbfolderHunt001",
+  "name": "液体火焰瓶 Liquid Fire Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/liquid-fire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>以汽油为推进剂的强化燃烧弹；瓶内钢珠保证撞击时即使落水也能击碎玻璃、洒出燃料。汽油浮于水面，沸点极低，火势更难扑灭。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact（点燃并投掷）</p>\n<p><strong>射程</strong> 20 尺</p>\n<p><strong>效果</strong> 选择 20 尺内一点。该点产生 @Template[type:burst|distance:5]{5 尺爆发} 的火场。</p>\n<ul>\n<li>火场持续 <strong>5 轮</strong>。</li>\n<li>生物<strong>进入</strong>火场或在火场内<strong>开始其回合</strong>时，受到 @Damage[1d8[fire]] 火焰伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</li>\n<li>火场可在水面上存在。普通浇水<strong>不能</strong>熄灭它；可用沙土彻底掩埋、合适的灭火剂，或魔法熄灭火焰的效果来提前结束（一次操作 Interact 或相应法术，由 GM 裁定）。</li>\n</ul>\n<p>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntLiqFx0001]</p>",
+      "gm": "<p>Hunt Liquid Fire Bomb。火场伤害 + 猎杀灼烬叠层。比火焰瓶更强、更久、更难灭。</p>"
+    },
+    "rules": [],
+    "slug": "liquid-fire-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable", "fire"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-fire"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 火焰",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 5 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "沉重油瓶",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>装着浑浊液体与金属珠的瓶子。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "1d8", "kind": "damage", "type": "fire" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "fire",
+      "linkedEffect": "whbHuntLiqFx0001",
+      "wikiIcon": "Consumable_Liquid_Fire_Bomb.png"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "Bornheim No.3 半自动手枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+  "system": {
+    "description": {
+      "value": "<p>小型半自动手枪，射速快、后坐力小。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO. 3</strong>（另见半自动手枪）外观超前的 Bornheim No. 3 是最早的半自动手枪之一，配五发弹匣。以设计地城镇命名，商业上成就有限。设计师 Louis Schmeisser 后来设计了更多成功火器。第三型针对瑞士、德国与比利时军试中暴露的缺陷，强化了结构。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> L；<strong>单手</strong>；<strong>射程增量</strong> 30 尺；<strong>装填</strong> 1；<strong>弹匣容量</strong> 5</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：震荡、横扫、capacity-5</p>\n<p><strong>弹药</strong> 可选用毒弹（由 GM 提供）。</p>\n<hr />\n<p><strong>速射扳机</strong> <span class=\"action-glyph\">1</span> 你以一次操作对同一目标或不同目标进行<strong>两次</strong>以此武器的打击。两次攻击检定各承受 <strong>−3 环境减值</strong>，且<strong>共享同一多重攻击减值</strong>（都按你当前 MAP 结算，不在两次之间加深）。装备时动作栏会出现「Bornheim · 速射扳机」自动结算。</p>",
+      "gm": "<p>Hunt Bornheim No.3。12 gp。速射扳机：1 动作打两次，各 −3，同 MAP。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "速射扳机",
+        "text": "可用 1 个动作打两次：各 −3 环境减值，共享同一 MAP。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "bornheim-no-3",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "半自动手枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>造型前卫的短管半自动手枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": null,
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "wikiIcon": "Weapon_Bornheim_No._3.png"
+    }
+  },
+  "_id": "whbHuntBornheim1"
+}

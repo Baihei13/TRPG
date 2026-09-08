@@ -14,8 +14,80 @@ import {
 import { openPartyTrapDialog, applyPartyTrap } from "./party-trap-macro.mjs";
 import { installCharredRingIwrPatch } from "./charred-ring-iwr.mjs";
 import { installNightweaverRewards } from "./nightweaver-rewards.mjs";
+import { installHuntShowdownAutomation } from "./hunt-showdown-automation.mjs";
 
 const MODULE_ID = "wang-pf2e-homebrew";
+
+/** 校友戒指：旧版误用 acid-damage 等无效 selector，启动时修补角色/世界副本 */
+const ALUMNI_RING_SLUG = "alumni-ring";
+const ALUMNI_RING_RULES = [
+  {
+    key: "RollOption",
+    domain: "all",
+    option: "alumni-ring-energy-ward",
+    toggleable: true,
+    placement: "actions",
+    label: "校友戒指 — 元素护盾（反应，每日1次）",
+    requiresInvestment: false,
+  },
+  ...["acid", "cold", "electricity", "fire", "sonic"].map((type) => ({
+    key: "Resistance",
+    type,
+    value: 5,
+    predicate: ["alumni-ring-energy-ward"],
+    label: "校友戒指 · 元素护盾",
+    requiresInvestment: false,
+  })),
+  ...["acid", "cold", "electricity", "fire", "sonic"].map((type) => ({
+    key: "FlatModifier",
+    slug: `alumni-ring-${type}`,
+    selector: "damage",
+    type: "status",
+    value: 1,
+    damageType: type,
+    label: "校友戒指",
+    requiresInvestment: false,
+  })),
+];
+
+function isAlumniRingItem(item) {
+  return (
+    item?.type === "equipment" &&
+    (item.system?.slug === ALUMNI_RING_SLUG || item.name === "校友戒指")
+  );
+}
+
+function alumniRingNeedsFix(item) {
+  const rules = item.system?.rules ?? [];
+  const badSelector = rules.some(
+    (r) =>
+      typeof r.selector === "string" &&
+      /^(acid|cold|electricity|fire|sonic)-damage$/.test(r.selector)
+  );
+  const hasTypedDamage = rules.some(
+    (r) => r.key === "FlatModifier" && r.selector === "damage" && r.damageType
+  );
+  return badSelector || !hasTypedDamage;
+}
+
+async function syncAlumniRingCopies() {
+  if (!game.user.isGM) return;
+  let fixed = 0;
+  const candidates = [
+    ...game.actors.contents.flatMap((a) => a.itemTypes.equipment),
+    ...game.items.filter((i) => i.type === "equipment"),
+  ];
+  for (const item of candidates) {
+    if (!isAlumniRingItem(item) || !alumniRingNeedsFix(item)) continue;
+    if (!item.isOwner && !game.user.isGM) continue;
+    await item.update({ "system.rules": foundry.utils.deepClone(ALUMNI_RING_RULES) });
+    fixed += 1;
+  }
+  if (fixed) {
+    console.log(`${MODULE_ID} | 已修补 ${fixed} 枚校友戒指规则（damageType）`);
+    ui.notifications?.info?.(`校友戒指：已自动修补 ${fixed} 份规则。`);
+  }
+}
 
 const RING_SLUG = "emperors-ring";
 const RING_NAME = "皇帝的戒指";
@@ -644,7 +716,9 @@ Hooks.once("ready", async () => {
   if (game.system.id !== "pf2e") return;
   if (!game.modules.get(MODULE_ID)?.active) return;
   installCharredRingIwrPatch();
+  installHuntShowdownAutomation();
   await foundry.utils.delay(100);
+  await syncAlumniRingCopies();
   await syncAllActors();
 });
 

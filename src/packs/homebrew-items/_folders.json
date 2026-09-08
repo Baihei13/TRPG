@@ -6,6 +6,13 @@
       "type": "Item",
       "sorting": "a",
       "folder": null
+    },
+    {
+      "_id": "whbfolderHunt001",
+      "name": "猎杀对决",
+      "type": "Item",
+      "sorting": "a",
+      "folder": null
     }
   ]
 }

@@ -1,0 +1,57 @@
+{
+  "_id": "whbHuntSticky001",
+  "folder": "whbfolderHunt001",
+  "name": "黏性炸弹 Sticky Bomb",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/sticky-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>残忍的改良爆炸物：内装药通常是一根炸药，外框带简易金属钩与尖刺，并配有投掷手柄。击中柔软目标时钩刺嵌入，使炸药在贴身距离释放最大威力。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span> 打击（投掷，射程增量 20 尺）</p>\n<p><strong>效果</strong></p>\n<ul>\n<li><strong>命中或重击</strong>：炸弹附着在目标上。将 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStkFx0001] 施加给目标。在<strong>你的下一回合开始时</strong>炸弹引爆，对该生物造成 @Damage[6d6[bludgeoning]] 钝击伤害；目标须通过 @Check[fortitude|traits:consumable]{强韧豁免}，失败则 @UUID[Compendium.pf2e.conditionitems.Item.j91X7xNIjSrFEatt]{倒地}。</li>\n<li><strong>失手</strong>：炸弹落在目标所在空间，立即以该格为中心产生 @Template[type:burst|distance:5]{5 尺爆发}，爆发内生物受到 @Damage[6d6[bludgeoning]] 钝击伤害并尝试 @Check[reflex|basic|traits:consumable]{基础反射豁免}。</li>\n<li><strong>大失败</strong>：炸弹落在你邻接的随机一格并同上引爆（由 GM 决定方向）。</li>\n</ul>",
+      "gm": "<p>Hunt Sticky Bomb。原 60$/1格。附着引爆对齐 PF2e「下一回合开始」而非实时 4 秒。建议攻击加值/DC 按等级 8。</p>"
+    },
+    "rules": [],
+    "slug": "sticky-bomb",
+    "traits": {
+      "value": ["alchemical", "consumable"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-explosive"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 8 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 1 } },
+    "equipped": { "carryType": "worn", "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "带刺药捆",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": { "description": { "value": "<p>带着钩刺与手柄的古怪药包。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": { "formula": "6d6", "kind": "damage", "type": "bludgeoning" },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "explosive",
+      "linkedEffect": "whbHuntStkFx0001",
+      "wikiIcon": "Consumable_Sticky_Bomb.png"
+    }
+  }
+}

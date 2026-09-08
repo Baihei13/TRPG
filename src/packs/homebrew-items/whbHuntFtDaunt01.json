@@ -1,0 +1,64 @@
+{
+  "folder": "whbfolderHunt001",
+  "name": "专长：无畏 Dauntless",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-dauntless.png",
+  "system": {
+    "description": {
+      "value": "<p>徒手拆掉还在燃烧的引信。</p>\n<p><strong>猎杀特性花费</strong> 2 点（普通）</p>\n<hr />\n<p><strong>拆引信</strong> <span class=\"action-glyph\">1</span>（操作）Interact</p>\n<p>选择 10 尺内（约原作 3 米）一件带<strong>引信 / 延时引爆</strong>的爆炸物或效果（碎片炸弹、黏性炸弹、炸药、陷阱起爆等，GM 裁定；可对空中或地面未爆物使用）。你自动将其<strong>拆除并失效</strong>（移出游戏，通常不可再拾取使用）。</p>\n<p>此能力不能拆除已瞬间引爆的效果，也不能解除非引信类危害（如拌索本身），除非 GM 允许。</p>",
+      "gm": "<p>Hunt Dauntless（无畏）。原作：交互拆除带引信的投掷爆炸物。点数 2。无规则自动化，靠描述执行。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "skill-check",
+        "title": "无畏 · 拆引信",
+        "text": "可用 1 动作 Interact 拆除 10 尺内带引信的未爆物。",
+        "predicate": [
+          "action:disable-a-device"
+        ]
+      }
+    ],
+    "slug": "hunt-feat-dauntless",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 2,
+      "huntTraitCategory": "defensive",
+      "wikiIcon": "Trait_Dauntless_Small.png"
+    }
+  },
+  "_id": "whbHuntFtDaunt01"
+}

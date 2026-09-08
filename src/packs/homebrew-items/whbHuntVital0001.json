@@ -1,0 +1,66 @@
+{
+  "_id": "whbHuntVital0001",
+  "folder": "whbfolderHunt001",
+  "name": "活力针 Vitality Shot",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/vitality-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>一种通过注射器给药的医疗手段，常用于医院和军队医务人员，以增强极度疲劳和其他伤病患者的活力。接受活力针注射的患者表示，他们在短时间内会感觉「完全无敌」。</p>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 你有一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 你将针剂注入体内，立刻恢复 @Damage[(4d8+4)[healing]] 点生命值。</p>",
+      "gm": "<p><strong>Vitality Shot</strong>（猎杀对决）。医疗消耗品，1 格。强力治疗：花费 1 个动作，恢复 4d8+4 生命值。</p>\n<p>PF2e：对标中等治疗药水量级（均值 22），定为 6 级消耗品；Hunt 原表未标价格，此处按治疗量暂定 40 gp（可随物价表调整）。</p>"
+    },
+    "rules": [],
+    "slug": "vitality-shot",
+    "traits": {
+      "value": ["alchemical", "consumable", "elixir", "healing"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-medical"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 6 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 0.1 },
+    "price": { "value": { "gp": 40 } },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "医用注射器",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一支装着粉紫色液体的旧式金属注射器。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "damage": {
+      "formula": "4d8+4",
+      "kind": "healing",
+      "type": "vitality"
+    },
+    "usage": { "value": "held-in-one-hand" },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "medical"
+    }
+  }
+}

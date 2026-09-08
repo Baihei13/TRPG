@@ -1,0 +1,46 @@
+{
+  "_id": "whbHuntHiveFx001",
+  "folder": "whbfolderHunt001",
+  "name": "效果：蜂巢蜂群（改用猎杀中毒）",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hive-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>本条目已弃用。请改用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒}（蜂巢炸弹默认施加 3 层）。</p>",
+      "gm": "<p>兼容旧链接；实际玩法统一用 whbHuntPsnFx0001。</p>"
+    },
+    "rules": [],
+    "slug": "effect-hive-bomb-swarm-deprecated",
+    "traits": {
+      "value": ["alchemical", "poison"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 投掷",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 4 },
+    "duration": {
+      "value": 0,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": false },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntHive00001",
+      "deprecated": true,
+      "useInstead": "whbHuntPsnFx0001"
+    }
+  }
+}
