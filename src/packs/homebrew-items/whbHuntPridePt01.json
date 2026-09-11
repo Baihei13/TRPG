@@ -1,0 +1,95 @@
+{
+  "_id": "whbHuntPridePt01",
+  "folder": "whbHntFldTact001",
+  "name": "骄傲之点 Pride Point",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/demon-mask.webp",
+  "system": {
+    "description": {
+      "value": "<p>飞翔者从一名猎人的尸体上取下了这件护符。那名猎人曾试图残忍地将他推入废喙鸟的巢穴，企图谋杀他。但他没有意识到，腐化扭曲了他的记忆——<strong>他才是那个挑衅者</strong>。</p>\n<blockquote><p><strong>武器护符 · PRIDE POINT</strong> 挂在枪上的骄傲残片；腐败会改写谁先动手的故事。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 附着于一件武器（投资）。</p>\n<p><strong>效果</strong> 该武器的打击在目标对你<strong>措手不及</strong>时额外造成 @Damage[1d4[precision]]{1d4 精密}。每场遭遇你第一次成功命中后，你须尝试 @Check[will|dc:18|traits:mental]{意志 DC 18}：失败则获得 @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1ToFIqO3]{困惑 1} 1 轮（记忆错乱的余波）。</p>",
+      "gm": "<p>Weapon charm「骄傲之点」。飞翔者。措手不及 +1d4 精密；本场首次命中后 Will DC18 或困惑 1。</p>"
+    },
+    "rules": [
+      {
+        "key": "DamageDice",
+        "selector": "strike-damage",
+        "label": "骄傲之点",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "precision",
+        "predicate": [
+          "target:condition:off-guard"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "骄傲之点",
+        "text": "对措手不及 +1d4 精密。本场首次命中后意志 DC18，失败困惑 1。"
+      }
+    ],
+    "slug": "pride-point",
+    "traits": {
+      "value": [
+        "invested",
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 20
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "骨制护符",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>从死人身上摘下的小护符。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Pride Point",
+      "theme": "scout-pair",
+      "wearer": "flymander"
+    }
+  }
+}

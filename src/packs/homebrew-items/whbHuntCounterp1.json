@@ -1,0 +1,163 @@
+{
+  "_id": "whbHuntCounterp1",
+  "folder": "whbHntFldWpn0001",
+  "name": "对应物 The Counterpart",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/the-counterpart.png",
+  "system": {
+    "description": {
+      "value": "<p>这把装饰性手枪曾被挂在当地法院的墙上，后来成为代表与第26团指挥官惠特洛之间<strong>协议</strong>的象征。它并非仅仅是一件装饰品，许多敌人都会倒在它华丽的枪口之下。</p>\n<blockquote><p><strong>兵器之书 · CONVERSION · THE COUNTERPART</strong> 法院墙上的展品；协议的另一半。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 1；单手；射程增量 <strong>50 尺</strong>；装填 1；弹巢 6</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-6</p>\n<hr />\n<p><strong>协议象征</strong> 每场遭遇 1 次：声明「协议条款」后，下一次此武器攻击 +2 环境，命中则目标意志 DC（14+等级×2）失败获得惊惧 1（违约的恐惧）。</p>",
+      "gm": "<p>Conversion skin「The Counterpart」。1d8、50ft、cap6。协议条款：+2 攻击与惊惧。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-counterpart-pact",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "对应物 — 协议条款（本场1次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "协议条款",
+        "predicate": [
+          "hunt-counterpart-pact",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "协议条款",
+        "text": "命中：意志失败则惊惧 1。",
+        "predicate": [
+          "hunt-counterpart-pact",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "the-counterpart",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-6"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "装饰左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>装饰左轮。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 50,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 6
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "The Counterpart",
+      "wikiIcon": "Weapon_Conversion.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "conversion"
+    }
+  }
+}

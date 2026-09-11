@@ -1,0 +1,147 @@
+{
+  "_id": "whbHuntDagger001",
+  "folder": "whbHntFldWpn0001",
+  "name": "匕首 Dagger",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/dagger.png",
+  "system": {
+    "description": {
+      "value": "<p>比工具小刀更锋利的战斗匕首。可刺可投，专为捅穿软肋而磨。</p>\n<blockquote><p><strong>兵器之书 · DAGGER</strong> 短刃长恨；近身一捅，或亮银一线飞过去。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 简易刀剑；负载 L；单手</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：敏捷、灵巧、多用 S、致命 d6、thrown-10</p>\n<hr />\n<p><strong>暗刺</strong> 若目标对你措手不及，此武器伤害额外 @Damage[1d4[precision]]（每目标每轮一次，打开开关）。</p>",
+      "gm": "<p>Hunt/PF2e 匕首。1d4 P、versatile-s、thrown-10。暗刺对措手不及 +1d4 精密。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-dagger-ambush",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "匕首 — 暗刺（目标措手不及）"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "暗刺",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "precision",
+        "predicate": [
+          "hunt-dagger-ambush",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "hunt-dagger",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "versatile-s",
+        "deadly-d6",
+        "thrown-10"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 0
+    },
+    "quantity": 1,
+    "baseItem": "dagger",
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 2
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "匕首",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>一把短匕。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "simple",
+    "group": "knife",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 10,
+    "reload": {
+      "value": "-"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Dagger",
+      "baseWeapon": "dagger"
+    }
+  }
+}

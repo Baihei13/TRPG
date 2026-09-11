@@ -1,0 +1,90 @@
+{
+  "_id": "whbHuntFightBk01",
+  "folder": "whbHntFldMed0001",
+  "name": "奋起反击 Fight Back",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/regeneration-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>有时候，生活会让你证明，为了你的信仰，你愿意付出多大的代价。铁甲战士使用这剂活力注射剂，是为了重温那种在接受自己为事业献身之后，再次<strong>浴火重生</strong>的快感。</p>\n<blockquote><p><strong>医疗 · REGENERATION SHOT · FIGHT BACK</strong> 同族再生针的特制皮肤——针尖一刺，像把母亲的眼泪与自己的血一起打回血管。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 立刻恢复 @Damage[(2d8+4)[healing]]，并获得持续 1 分钟的再生（见效果）。若你在使用时<strong>生命值不高于上限一半</strong>，额外获得 @Damage[10[temporary|healing]]{10 临时生命值}（持续 1 分钟或被打光）。</p>\n<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntRgnFx0001]{效果：再生针}</p>",
+      "gm": "<p>Hunt Regeneration Shot skin「Fight Back / 奋起反击」。即时 2d8+4 + 再生效果；≤半血时 +10 temp HP。价格同再生针 95 gp。</p>"
+    },
+    "rules": [],
+    "slug": "fight-back",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable",
+        "elixir",
+        "healing"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical",
+        "ironclad"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 95
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "医用注射器",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一支装着暗红色液体的旧式金属注射器。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "medical",
+      "huntPrice": 95,
+      "linkedEffect": "whbHuntRgnFx0001",
+      "enName": "Fight Back",
+      "theme": "ironclad",
+      "baseItem": "regeneration-shot"
+    }
+  }
+}

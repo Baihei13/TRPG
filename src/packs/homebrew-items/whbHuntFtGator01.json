@@ -1,0 +1,78 @@
+{
+  "_id": "whbHuntFtGator01",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：鳄鱼腿 Gator Legs",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-gator-legs.png",
+  "system": {
+    "description": {
+      "value": "<p>沼地与深水像自家门廊。</p>\n<p><strong>猎杀特性花费</strong> 3 点（普通）</p>\n<hr />\n<p>你在<strong>困难地形</strong>中移动时，速度<strong>不受减半影响</strong>（仍受更强困难地形等其它规则约束，GM）。</p>\n<p>你在<strong>水中</strong>进行的 @UUID[Compendium.pf2e.actionspf2e.Item.VMozDqMMuK5kpoX4]{隐秘} 检定获得 <strong>+2 环境加值</strong>（打开开关）。</p>",
+      "gm": "<p>Hunt Gator Legs。3 点。忽略困难地形减半；水中隐秘 +2（开关）。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "hunt-gator-water",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "鳄鱼腿 — 身处水中"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "stealth",
+        "type": "circumstance",
+        "value": 2,
+        "label": "鳄鱼腿",
+        "predicate": [
+          "hunt-gator-water"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "speed",
+        "title": "鳄鱼腿",
+        "text": "困难地形中移动速度不受减半影响。"
+      }
+    ],
+    "slug": "hunt-feat-gator-legs",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 3,
+      "huntTraitCategory": "exploration"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "_id": "whbHuntCavBlade1",
+  "folder": "whbHntFldWpn0001",
+  "name": "骑兵佩剑 Cavalry Sabre",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/cavalry-saber.png",
+  "system": {
+    "description": {
+      "value": "<p>这把骑兵佩剑来自博尔登堡城墙内发现的一个秘密收藏。曾经挥舞它的人或许永远无法理解他脚下的这片土地将会发生怎样的变化……也无法想象，即便死后，他仍将行走在这片土地上。</p>\n<blockquote><p><strong>兵器之书 · CAVALRY SABER</strong> 博尔登堡秘藏；亡者仍可能握着它走路。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用刀剑；负载 1；单手；伤害 1d8 挥砍；特质：灵巧、致命 d8</p>\n<hr />\n<p><strong>亡者仍行</strong> 对不死生物的打击额外 +1 状态伤害；若你本回合已用火器命中同一目标，此近战打击 +1 环境攻击（先审后斩）。</p>",
+      "gm": "<p>Cavalry Saber（惠特洛/博尔登堡风味）。1d8 灵巧致命d8。对不死 +1；火器后接刀 +1 攻击。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 1,
+        "damageType": "slashing",
+        "label": "亡者仍行",
+        "predicate": [
+          "item:id:{item|_id}",
+          "target:trait:undead"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-sabre-after-gun",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "骑兵佩剑 — 本回合已火器命中该目标"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "先审后斩",
+        "predicate": [
+          "hunt-sabre-after-gun",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "cavalry-sabre-whitlaw",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "deadly-d8"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": "shortsword",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 8
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "旧骑兵刀",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>来历不明的军官佩剑。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "sword",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Cavalry Sabre",
+      "wikiIcon": "Weapon_Cavalry_Saber.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "cavalry-saber"
+    }
+  }
+}

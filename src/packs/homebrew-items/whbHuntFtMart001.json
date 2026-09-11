@@ -1,0 +1,47 @@
+{
+  "_id": "whbHuntFtMart001",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：武术家 Martialist",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-martialist.png",
+  "system": {
+    "description": {
+      "value": "<p>允许居合斩，造成额外伤害。</p>\n<p><strong>猎杀特性花费</strong> 2 点（普通）</p>\n<hr />\n<p><strong>居合架势</strong> <span class=\"action-glyph\">1</span>（操作）</p>\n<p><strong>效果</strong> 选择一把你拥有的武器，进入居合架势（施加 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntIaiFx0001]{效果：居合架势}，添加时弹出武器选择）。你的下一次以<strong>该武器</strong>进行的打击额外造成 @Damage[1d6[precision]]{1d6 精准伤害}。若目标对你<strong>未察觉</strong>，该次攻击在命中时视为<strong>重击</strong>（打开效果上的开关提示 GM）。</p>",
+      "gm": "<p>Hunt Martialist。2 点。1 动作居合；添加效果时 ChoiceSet 选武器；该武器下一次打击 +1d6 精准。未察觉则命中即重击（开关）。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "武术家 · 居合",
+        "text": "可花 1 动作进入居合：选择一把武器，下一次以该武器打击 +1d6 精准。"
+      }
+    ],
+    "slug": "hunt-feat-martialist",
+    "traits": {
+      "value": ["general"],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-trait"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 1 },
+    "category": "general",
+    "actionType": { "value": "action" },
+    "actions": { "value": 1 },
+    "prerequisites": { "value": [] },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 2,
+      "huntTraitCategory": "offensive"
+    }
+  }
+}

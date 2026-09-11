@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntStalkB001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldTact001",
   "name": "潜行者甲虫 Stalker Beetle",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/stalker-beetle.png",
@@ -12,9 +12,15 @@
     "rules": [],
     "slug": "stalker-beetle",
     "traits": {
-      "value": ["alchemical", "consumable"],
+      "value": [
+        "alchemical",
+        "consumable"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-tactical"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tactical"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 战术",
@@ -22,12 +28,23 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 4 },
+    "level": {
+      "value": 4
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.1 },
-    "price": { "value": { "gp": 1 } },
-    "equipped": { "carryType": "worn", "invested": null },
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
     "containerId": null,
     "size": "med",
     "identification": {
@@ -35,14 +52,28 @@
       "unidentified": {
         "name": "甲虫匣",
         "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
-        "data": { "description": { "value": "<p>匣中关着一只粗壮甲虫。</p>" } }
+        "data": {
+          "description": {
+            "value": "<p>匣中关着一只粗壮甲虫。</p>"
+          }
+        }
       },
       "misidentified": {}
     },
     "category": "other",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
-    "damage": { "formula": "3d6", "kind": "damage", "type": "bludgeoning" },
-    "usage": { "value": "held-in-one-hand" },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": {
+      "formula": "3d6",
+      "kind": "damage",
+      "type": "bludgeoning"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

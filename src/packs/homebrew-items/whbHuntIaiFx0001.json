@@ -1,0 +1,90 @@
+{
+  "_id": "whbHuntIaiFx0001",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：居合架势",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-martialist.png",
+  "system": {
+    "description": {
+      "value": "<p>你处于居合架势。添加本效果时<strong>选择一把武器</strong>：下一次以该武器进行的打击额外造成 1d6 精准伤害；结算后本效果移除。</p>\n<p>若目标对你<strong>未察觉</strong>，打开开关：该次命中视为重击（GM）。</p>",
+      "gm": "<p>Martialist 居合。ChoiceSet 选武器；仅该武器 +1d6 precision。未察觉重击手裁。</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "prompt": "选择居合生效的武器",
+        "flag": "huntIaiWeapon",
+        "adjustName": true,
+        "choices": {
+          "ownedItems": true,
+          "types": ["weapon"]
+        }
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-iai-unnoticed",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "居合 — 目标未察觉（命中即重击）"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "strike-damage",
+        "label": "居合斩",
+        "diceNumber": 1,
+        "dieSize": "d6",
+        "damageType": "precision",
+        "predicate": ["item:id:{item|flags.pf2e.rulesSelections.huntIaiWeapon}"]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "居合斩",
+        "text": "目标未察觉时：命中视为重击。",
+        "predicate": [
+          "hunt-iai-unnoticed",
+          "item:id:{item|flags.pf2e.rulesSelections.huntIaiWeapon}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "居合斩",
+        "text": "额外 1d6 精准；打击后自动或请移除本效果。",
+        "predicate": ["item:id:{item|flags.pf2e.rulesSelections.huntIaiWeapon}"]
+      }
+    ],
+    "slug": "effect-hunt-iai",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 1 },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": { "value": 0, "initiative": null },
+    "tokenIcon": { "show": true },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedFeat": "whbHuntFtMart001",
+      "removeAfterStrike": true
+    }
+  }
+}

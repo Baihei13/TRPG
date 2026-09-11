@@ -16,7 +16,7 @@
         "actions": { "value": null },
         "category": null,
         "description": {
-          "value": "<p><strong>触发</strong> 一个生物进入绊线所在格、越过绊线，或打开绊线横跨的门/窗。</p>\n<hr />\n<p><strong>效果</strong> 释放毒气云，以触发点为中心产生 @Template[type:burst|distance:5]{5 尺爆发}，持续 <strong>3 轮</strong>：</p>\n<ul>\n<li>爆发瞬间：区内每个生物受到 @Damage[1d4[poison]] 毒素伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。</li>\n<li>生物<strong>进入</strong>毒云或在毒云内<strong>开始其回合</strong>时，再受 @Damage[1d4[poison]]，并再叠 1 层猎杀中毒。</li>\n<li>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisFx001]</li>\n</ul>\n<p>此危境随即耗尽。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisTM001]{毒气拌雷}。</p>"
+          "value": "<p><strong>触发</strong> 一个生物进入绊线所在格、越过绊线，或打开绊线横跨的门/窗。</p>\n<hr />\n<p><strong>效果</strong> 释放毒气云，以触发点为中心产生 @Template[type:burst|distance:5]{5 尺爆发}，持续 <strong>3 轮</strong>：</p>\n<ul>\n<li>爆发瞬间：区内每个生物受到 @Damage[1d6[poison]] 毒素伤害，并获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒} 1 层（已有则 +1）。</li>\n<li>生物<strong>进入</strong>毒云或在毒云内<strong>开始其回合</strong>时，再受 @Damage[1d6[poison]]，并再叠 1 层猎杀中毒。</li>\n<li>可选标记：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisFx001]</li>\n</ul>\n<p>此危境随即耗尽。布置物品见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisTM001]{毒气拌雷}。</p>"
         },
         "publication": {
           "title": "猎杀对决 — 陷阱",

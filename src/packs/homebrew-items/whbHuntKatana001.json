@@ -1,0 +1,126 @@
+{
+  "_id": "whbHuntKatana001",
+  "folder": "whbHntFldWpn0001",
+  "name": "武士刀 Katana",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/katana.png",
+  "system": {
+    "description": {
+      "value": "<p>来自东方的利刃：轻击挥砍、重击突刺。</p>\n<blockquote><p><strong>兵器之书 · KATANA</strong> 居合斩见武术家专长；妖刀按武士刀结算。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用剑；负载 1；单手（可双手）</p>\n<p><strong>伤害</strong> 1d8 挥砍；特质：灵巧、致命 d8、two-hand-d10、versatile-p</p>\n<p><strong>居合斩</strong> 需 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFtMart001]{武术家}：1 动作进入居合，下一次打击 +1d6 精准；对未察觉目标命中即重击。</p>",
+      "gm": "<p>Hunt Katana。1d8 S、finesse、deadly-d8。居合在 Martialist。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      }
+    ],
+    "slug": "hunt-katana",
+    "traits": {
+      "value": [
+        "finesse",
+        "deadly-d8",
+        "two-hand-d10",
+        "versatile-p"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "quantity": 1,
+    "baseItem": "katana",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 8
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "长刀",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>一柄弯长的单刃刀。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "sword",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": "-"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Katana",
+      "baseWeapon": "katana"
+    }
+  }
+}

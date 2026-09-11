@@ -1,0 +1,100 @@
+{
+  "folder": "whbHntFldAmmo001",
+  "type": "consumable",
+  "system": {
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "slug": "hunt-fmj-pen",
+        "type": "status",
+        "value": 1,
+        "damageType": "piercing",
+        "label": "穿甲弹"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "穿甲弹",
+        "text": "忽略硬度 2；对掩体/护甲后目标更有效。"
+      }
+    ],
+    "traits": {
+      "value": [
+        "consumable"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-ammo",
+        "hunt-special-ammo"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 弹药",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 5,
+    "baseItem": "rounds",
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      },
+      "per": 5
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "弹药",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一盒旧式金属枪弹。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "ammo",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": "rounds10",
+    "description": {
+      "value": "<p>全金属被甲弹，穿透力强，弹道更稳，但初速略降。</p>\n<blockquote><p>Full Metal Jacket (FMJ) bullets have a hardened casing that increases penetration power, though additional weight reduces muzzle speed.</p></blockquote>\n<hr />\n<p><strong>用法</strong> 弹药（特殊）；装入兼容火器后打击生效。</p>\n<p><strong>效果</strong> 此打击对目标额外 <strong>+1 穿刺</strong>（状态，已自动化），并忽略 <strong>硬度 2</strong>（结算时手裁）。</p>\n<p>兼容：Swift、Vetterli、Pax 等。</p>",
+      "gm": "<p>Hunt FMJ。穿透。PF2e：+1 piercing status；硬度 2 靠 Note。</p>"
+    },
+    "slug": "hunt-fmj-ammo"
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "ammo",
+      "wikiIcon": "Ammo_Long_Full_Metal_Jacket.png",
+      "huntSpecialAmmo": "fmj"
+    }
+  },
+  "name": "穿甲弹 FMJ Ammo",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/ammo-fmj.png",
+  "_id": "whbHuntAmmoFMJ01"
+}

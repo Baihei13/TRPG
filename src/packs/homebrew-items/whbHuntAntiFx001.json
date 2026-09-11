@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntAntiFx001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：解毒针 Antidote Shot",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
@@ -17,9 +17,15 @@
     ],
     "slug": "effect-antidote-shot",
     "traits": {
-      "value": ["alchemical", "healing"],
+      "value": [
+        "alchemical",
+        "healing"
+      ],
       "rarity": "common",
-      "otherTags": ["hunt-showdown", "hunt-medical"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 医疗",
@@ -27,15 +33,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 3 },
+    "level": {
+      "value": 3
+    },
     "duration": {
       "value": 1,
       "unit": "minutes",
       "expiry": "turn-start",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

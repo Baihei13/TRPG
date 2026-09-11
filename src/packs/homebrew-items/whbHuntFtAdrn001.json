@@ -1,0 +1,60 @@
+{
+  "_id": "whbHuntFtAdrn001",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：肾上腺素 Adrenaline",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-adrenaline.png",
+  "system": {
+    "description": {
+      "value": "<p>濒死时硬挤出最后一口气。</p>\n<p><strong>猎杀特性花费</strong> 1 点（普通）</p>\n<hr />\n<p><strong>肾上腺素</strong> <span class=\"action-glyph\">R</span>（反应）</p>\n<p><strong>触发</strong> 你获得 @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{濒死} 状态</p>\n<p><strong>效果</strong> 你立刻进行一次<strong>快步（Step）</strong>，并获得等同于你<strong>等级</strong>的临时生命值，持续 1 分钟。</p>",
+      "gm": "<p>Hunt Adrenaline。1 点。濒死时反应：快步 + 等级临时 HP（1 分钟）。自动化见 hunt-showdown-automation。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "all",
+        "title": "肾上腺素",
+        "text": "获得濒死时可反应：快步，并获得等于等级的临时生命值（1 分钟）。"
+      }
+    ],
+    "slug": "hunt-feat-adrenaline",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 1,
+      "huntTraitCategory": "defensive"
+    }
+  }
+}

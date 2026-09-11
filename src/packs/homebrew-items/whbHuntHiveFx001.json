@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntHiveFx001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：蜂巢蜂群（改用猎杀中毒）",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/hive-bomb.png",
@@ -12,9 +12,14 @@
     "rules": [],
     "slug": "effect-hive-bomb-swarm-deprecated",
     "traits": {
-      "value": ["alchemical", "poison"],
+      "value": [
+        "alchemical",
+        "poison"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown"]
+      "otherTags": [
+        "hunt-showdown"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 投掷",
@@ -22,15 +27,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 4 },
+    "level": {
+      "value": 4
+    },
     "duration": {
       "value": 0,
       "unit": "rounds",
       "expiry": "turn-end",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": false },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": false
+    },
     "badge": null,
     "context": null,
     "unidentified": false

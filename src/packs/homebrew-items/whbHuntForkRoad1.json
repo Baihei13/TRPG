@@ -1,0 +1,147 @@
+{
+  "_id": "whbHuntForkRoad1",
+  "folder": "whbHntFldWpn0001",
+  "name": "岔路口 Fork in the Road",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-axes.png",
+  "system": {
+    "description": {
+      "value": "<p>在厨师为受害者的肉调味准备食用之前，他会先用粗暴、冷酷的精准手法肢解尸体。他用这些<strong>锯齿状的投掷斧</strong>将四肢从躯干上砍下，将血肉从骨髓上剔除。</p>\n<blockquote><p><strong>兵器之书 · THROWING AXES · FORK IN THE ROAD</strong> 分尸的岔路：一斧定肢。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用斧；负载 L；单手；伤害 1d8 挥砍；特质：敏捷、横扫、thrown-20</p>\n<p>同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntThrAxe001]{投掷斧} 的破甲投掷。</p>\n<hr />\n<p><strong>肢解预备</strong> 投掷命中时，目标速度 −5 尺（1 轮，不叠），且你下次近战该目标 +1 环境（已分开的「部位」更好下刀）。</p>",
+      "gm": "<p>Throwing Axes skin「Fork in the Road / 岔路口」。肢解：减速 5 尺 + 下次近战 +1。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "破甲投掷",
+        "predicate": [
+          "item:id:{item|_id}",
+          "item:ranged"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "肢解预备",
+        "text": "投掷命中：目标速度 −5 尺（1 轮）；你下次近战该目标 +1。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "item:ranged"
+        ]
+      }
+    ],
+    "slug": "fork-in-the-road",
+    "traits": {
+      "value": [
+        "agile",
+        "sweep",
+        "thrown"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-cook"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 2,
+    "baseItem": "hatchet",
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 3
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "锯齿小斧",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>刃口开齿的投掷斧。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "axe",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 20,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "enName": "Fork in the Road",
+      "theme": "the-cook",
+      "baseWeapon": "throwing-axes"
+    }
+  }
+}

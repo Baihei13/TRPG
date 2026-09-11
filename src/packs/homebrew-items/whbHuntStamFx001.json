@@ -1,0 +1,74 @@
+{
+  "_id": "whbHuntStamFx001",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：耐力针 Stamina Shot",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/stamina-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>耐力针发挥作用：你获得 @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{迅捷}，持续 1 分钟。</p>\n<p><strong>限制</strong> 由此获得的额外动作<strong>只能</strong>用于<strong>行走（Stride）</strong>或<strong>打击（Strike）</strong>。</p>\n<p>使用耐力针时应已移除 @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{疲乏}（自动化会尝试清除）。</p>",
+      "gm": "<p>Quickened 1 分钟；额外动作限 Stride/Strike。疲乏在注射时清除。</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl",
+        "inMemoryOnly": true
+      },
+      {
+        "key": "Note",
+        "selector": "all",
+        "title": "耐力针",
+        "text": "额外动作只能用于行走或打击。"
+      }
+    ],
+    "slug": "effect-stamina-shot",
+    "traits": {
+      "value": [
+        "alchemical",
+        "healing"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntStamShot1",
+      "removeFatigued": true,
+      "quickenedOnly": [
+        "stride",
+        "strike"
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntWireFx001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：铁丝网封锁 Concertina Bomb",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-bomb.png",
@@ -12,9 +12,13 @@
     "rules": [],
     "slug": "effect-concertina-wire",
     "traits": {
-      "value": ["alchemical"],
+      "value": [
+        "alchemical"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown"]
+      "otherTags": [
+        "hunt-showdown"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 战术",
@@ -22,15 +26,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 5 },
+    "level": {
+      "value": 5
+    },
     "duration": {
       "value": 1,
       "unit": "minutes",
       "expiry": "turn-start",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

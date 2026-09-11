@@ -1,0 +1,75 @@
+{
+  "_id": "whbHuntFtVigil01",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：警戒 Vigilant",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-vigilant.png",
+  "system": {
+    "description": {
+      "value": "<p>暗视中高亮附近陷阱与甲虫。</p>\n<p><strong>猎杀特性花费</strong> 1 点（普通）</p>\n<hr />\n<p>你可以侦察到 <strong>30 尺</strong>内的陷阱与埋伏，即使它们处于隐蔽——对相关 @UUID[Compendium.pf2e.actionspf2e.Item.BlACk2YbfTKJFUBY]{寻求} / 察觉检定获得 <strong>+2 环境加值</strong>（对抗陷阱、拌索、埋伏，打开开关）。</p>",
+      "gm": "<p>Hunt Vigilant。1 点。30 尺感知陷阱/埋伏；Seek vs 陷阱 +2（开关）。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "hunt-vigilant-traps",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "警戒 — 侦测陷阱/埋伏"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "perception",
+          "skill-check"
+        ],
+        "type": "circumstance",
+        "value": 2,
+        "label": "警戒",
+        "predicate": [
+          "hunt-vigilant-traps"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "hunt-feat-vigilant",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 1,
+      "huntTraitCategory": "exploration"
+    }
+  }
+}

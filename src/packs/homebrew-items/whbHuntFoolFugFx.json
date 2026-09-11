@@ -1,0 +1,61 @@
+{
+  "_id": "whbHuntFoolFugFx",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：愚者·逃犯形态",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/the-fool-fugitive.png",
+  "system": {
+    "description": {
+      "value": "<p>愚者当前为<strong>逃犯 Fugitive</strong>（黑衣铁丝）。侧重利爪与复仇；亡命徒侧重迅捷逃脱与万能药。</p>\n<p>切换：使用「双相」动作，或开关「fool-form-fugitive」。Token 由 GM 自行更换。</p>",
+      "gm": "<p>自动化：与 RollOption fool-form-fugitive 同步。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "fool-form-fugitive",
+        "value": true
+      }
+    ],
+    "slug": "effect-fool-fugitive",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

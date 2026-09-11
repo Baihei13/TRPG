@@ -1,0 +1,165 @@
+{
+  "_id": "whbHuntNightRiv1",
+  "folder": "whbHntFldWpn0001",
+  "name": "弄臣茶会 Rival Nightmare",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/rival-78-shorty.png",
+  "system": {
+    "description": {
+      "value": "<p>美梦碎裂后，双管成了茶话会的「礼炮」。银饰机匣映着墓地雾气——多萝西用它驱散一切还想把故事讲回光明的人。</p>\n<blockquote><p><strong>兵器之书 · RIVAL 78 · NIGHTMARE TEA</strong> 爱丽丝围裙下的双管；童话结尾改成霰弹。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>30 尺</strong>；装填 1；双管容量 2</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、scatter、capacity-2</p>\n<p><strong>噩梦礼炮</strong> 命中惊惧或迷魂目标时额外 @Damage[1d6[mental]]。双管齐射：一次操作打空双管，伤害 +1d8，攻击 −2。</p>",
+      "gm": "<p>Rival 78（多萝西噩梦形态主武器）。30ft、cap2。对惊惧/迷魂 +心灵。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-night-rival-both",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "弄臣茶会 — 双管齐射"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": -2,
+        "label": "双管齐射",
+        "predicate": [
+          "hunt-night-rival-both",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "双管齐射",
+        "diceNumber": 1,
+        "dieSize": "d8",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-night-rival-both",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "rival-nightmare-tea",
+    "traits": {
+      "value": [
+        "concussive",
+        "scatter",
+        "capacity-2"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "alice-farm",
+        "nightmare"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "双管霰弹枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>银饰双管。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 2
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "enName": "Nightmare Tea Rival",
+      "theme": "alice-farm",
+      "baseWeapon": "rival-78"
+    }
+  }
+}

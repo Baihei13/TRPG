@@ -1,0 +1,87 @@
+{
+  "_id": "whbHuntFinalSip1",
+  "folder": "whbHntFldTact001",
+  "name": "最后一口 Final Sip",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/demon-mask.webp",
+  "system": {
+    "description": {
+      "value": "<p>每天，渗入厨师血管的腐败都会更深地渗入他的体内。他随身携带这件护符，以防万一他感觉到需要<strong>食物中毒</strong>——这是对他永无止境的死亡渴望的一种残酷的情感上的安全感。</p>\n<blockquote><p><strong>武器护符 · FINAL SIP</strong> 最后一口：中毒也是安全感。</p></blockquote>\n<hr />\n<p><strong>用法</strong> 附着武器（投资）。</p>\n<p><strong>效果</strong> 你对毒素伤害抗性 3。每场遭遇 1 次，当你造成猎杀中毒或持续流血时，可额外令目标尝试强韧 DC（14+等级×2）：失败则恶心 1（1 分钟）——「食物中毒」上桌。</p>",
+      "gm": "<p>Charm「Final Sip / 最后一口」。毒抗 3；本场1次附加恶心。</p>"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "poison",
+        "value": 3
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "最后一口",
+        "text": "本场 1 次：造成中毒/流血时可令目标强韧，失败恶心 1。"
+      }
+    ],
+    "slug": "final-sip",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "the-cook"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 18
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "油腻护符",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>挂着小勺的护符。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Final Sip",
+      "theme": "the-cook"
+    }
+  }
+}

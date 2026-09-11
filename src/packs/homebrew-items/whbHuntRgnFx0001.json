@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntRgnFx0001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：再生针 Regeneration Shot",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/regeneration-shot.png",
@@ -18,9 +18,15 @@
     ],
     "slug": "effect-regeneration-shot",
     "traits": {
-      "value": ["alchemical", "healing"],
+      "value": [
+        "alchemical",
+        "healing"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-medical"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 医疗",
@@ -28,15 +34,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 5 },
+    "level": {
+      "value": 5
+    },
     "duration": {
       "value": 1,
       "unit": "minutes",
       "expiry": "turn-start",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

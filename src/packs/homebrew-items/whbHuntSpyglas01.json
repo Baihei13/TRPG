@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntSpyglas01",
+  "folder": "whbHntFldTact001",
+  "name": "望远镜 Spyglass",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/spyglass.png",
+  "system": {
+    "description": {
+      "value": "<p>单筒光学仪器，用于远距离观察。</p>\n<blockquote><p><strong>战术 · SPYGLASS</strong> 远眺。</p></blockquote>\n<hr />\n<p><strong>远眺</strong> <span class=\"action-glyph\">1</span>（操作）Interact</p>\n<p>你透过镜筒观察：本次 @UUID[Compendium.pf2e.actionspf2e.Item.BlACk2YbfTKJFUBY]{寻求} 可将视觉侦察距离延伸至 <strong>300 尺</strong>（对极端天候/烟雾无效，GM）。对仅依赖视觉的隐蔽目标，本次寻求忽略超过 30 尺通常带来的额外难度一级（由 GM 裁定）。</p>",
+      "gm": "<p>Hunt Spyglass。1 动作寻求视野至 300 尺。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "option": "hunt-spyglass",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "望远镜 — 远眺寻求中"
+      },
+      {
+        "key": "Note",
+        "selector": "perception",
+        "title": "远眺",
+        "text": "寻求距离可延伸至 300 尺。",
+        "predicate": [
+          "hunt-spyglass"
+        ]
+      }
+    ],
+    "slug": "hunt-spyglass",
+    "traits": {
+      "value": [],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tool"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 0
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "铜筒",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring-gear.webp",
+        "data": {
+          "description": {
+            "value": "<p>一截可伸缩的铜管。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tool",
+      "huntSlots": 1,
+      "enName": "Spyglass"
+    }
+  }
+}

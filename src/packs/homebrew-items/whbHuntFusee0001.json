@@ -1,0 +1,87 @@
+{
+  "_id": "whbHuntFusee0001",
+  "folder": "whbHntFldTact001",
+  "name": "照明棒 Fusees",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fusee.png",
+  "system": {
+    "description": {
+      "value": "<p>化学照明棒（Fusees）。划燃后发出刺眼红光，既照路也能当信号——偶尔还能把东西点着。</p>\n<blockquote><p><strong>工具 · FUSEES</strong> 沼地里的人造月亮。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact：划燃一根。你或落点获得<strong>明亮光照 20 尺</strong>与微光再 20 尺，持续 <strong>10 分钟</strong>（或至熄灭）。</p>\n<p><strong>投掷</strong> 可投掷到 30 尺内一点（仍耗 Interact），光照以落点为中心。</p>\n<p><strong>引火</strong> 可点燃邻接易燃物/火场（GM）；对已有猎杀灼烬的目标不额外叠层。</p>\n<p>一包默认 3 根。</p>",
+      "gm": "<p>Hunt Fusees。1 动作点燃：亮光 20/微光 20，10 分钟。可投掷。quantity 3。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-fusees",
+    "traits": {
+      "value": [
+        "consumable",
+        "fire"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tool"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 0
+    },
+    "quantity": 3,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "红棒",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>几根红纸包着的棒。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": false
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tool",
+      "huntSlots": 1,
+      "enName": "Fusees",
+      "light": {
+        "bright": 20,
+        "dim": 40,
+        "durationMinutes": 10
+      }
+    }
+  }
+}

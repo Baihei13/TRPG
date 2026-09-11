@@ -1,0 +1,154 @@
+{
+  "_id": "whbHuntCorrEst01",
+  "folder": "whbHntFldWpn0001",
+  "name": "腐败庄园 Corruption's Estate",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+  "system": {
+    "description": {
+      "value": "<p>这位政治家曾被原始契约俘虏。如今，作为荒芜之地的代表，他佩戴着这把刻有定制植物图案的手枪，以此表明他的观点：自然并非法律，他才是。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO.3 · CORRUPTION'S ESTATE</strong> 植物纹样刻在枪上——嘲讽自然。</p></blockquote>\n<p>基底同 Bornheim（30 尺、1d4、速射）。</p>\n<hr />\n<p><strong>他才是法律</strong> 对抗野兽、植物、或「原始契约/自然律」主题效果时，豁免 +1；以此枪命中此类目标额外 @Damage[1d4[precision]]。</p>",
+      "gm": "<p>Bornheim skin「腐败庄园」。反自然主题。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-corrupt-estate",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "腐败庄园 — 目标为自然/野兽（GM）"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "他才是法律",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "precision",
+        "predicate": [
+          "hunt-corrupt-estate",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "corruptions-estate",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "雕花手枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>雕花手枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Corruption's Estate",
+      "wikiIcon": "Weapon_Bornheim_No._3.png",
+      "theme": "the-statesman",
+      "baseWeapon": "bornheim-no-3"
+    }
+  }
+}

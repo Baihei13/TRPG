@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntToxicFt01",
+  "folder": "whbHntFldTrap001",
+  "name": "剧毒脚步 Toxic Footfalls",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>红渡鸦很快就意识到，沼泽里的怪物和她携带的武器一样有用。例如，她喜欢在遍布肉头怪的区域使用这些毒绊雷，让敌人自取灭亡。</p>\n<blockquote><p><strong>毒气拌雷 · TOXIC FOOTFALLS</strong> 把怪物变成陷阱的一部分。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoisTM001]{毒气拌雷}：布置 2 动作，放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzPois001]{毒气拌雷}。</p>",
+      "gm": "<p>Poison Trip Mine skin「剧毒脚步」。红鸦；规则同毒气拌雷。</p>"
+    },
+    "rules": [],
+    "slug": "toxic-footfalls",
+    "traits": {
+      "value": [
+        "consumable",
+        "mechanical",
+        "snare",
+        "trap"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trap",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "绊线装置",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>缠线与木桩。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "trap",
+      "enName": "Toxic Footfalls",
+      "wikiIcon": "Tool_Poison_Trip_Mines.png",
+      "theme": "scout-pair",
+      "skinOf": "whbHuntPoisTM001"
+    }
+  }
+}

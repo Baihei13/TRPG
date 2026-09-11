@@ -1,0 +1,172 @@
+{
+  "_id": "whbHuntMarkDlgt1",
+  "folder": "whbHntFldWpn0001",
+  "name": "射手的乐趣 Marksman's Delight",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hand-crossbow.png",
+  "system": {
+    "description": {
+      "value": "<p>乡巴佬老爹用一罐<strong>沼泽之泪</strong>酒从威廉·卡特那里买了这把弩箭神射手。他常在十月的漫漫长夜里用它射猫头鹰，因为他认为猫头鹰是「魔鬼鸡」，一心想要诅咒他的家禽。但不管死了多少，总会有更多的猫头鹰飞来。</p>\n<blockquote><p><strong>兵器之书 · HAND CROSSBOW MARKSMAN · MARKSMAN'S DELIGHT</strong> 卡特手里买来的火弩：安静、恶毒，专治魔鬼鸡。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用弩；负载 1；单手；射程增量 <strong>60 尺</strong>；装填 1；容量 1</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：致命 d8</p>\n<p><strong>火弩 / 龙息矢</strong> 命中额外 @Damage[1d6[fire]]，并施加 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。落点可点燃易燃物（5 尺内小火场 1 轮，GM）。</p>\n<p><strong>魔鬼鸡</strong> 对飞行生物或空中目标打击 +1 环境；对「诅咒家禽/偷鸡贼」类目标（GM）额外 +1d4 火焰。</p>",
+      "gm": "<p>Hand Crossbow Marksman skin「射手的乐趣」。火弩：1d8+1d6火+灼烬。打飞禽 +1。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "龙息矢",
+        "diceNumber": 1,
+        "dieSize": "d6",
+        "damageType": "fire",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "火弩",
+        "text": "额外火焰；施加猎杀灼烬 1 层。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-devil-chicken",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "射手的乐趣 — 目标为飞行/魔鬼鸡（GM）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "魔鬼鸡",
+        "predicate": [
+          "hunt-devil-chicken",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "marksmans-delight",
+    "traits": {
+      "value": [
+        "deadly-d8"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "hillbilly",
+        "fire"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "手弩",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪托熏黑的手弩。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "bow",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 60,
+    "expend": 1,
+    "ammo": {
+      "baseType": "arrows",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "enName": "Marksman's Delight",
+      "theme": "hillbilly-daddy",
+      "baseWeapon": "hand-crossbow-marksman",
+      "fireCrossbow": true
+    }
+  }
+}

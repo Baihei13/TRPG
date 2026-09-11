@@ -1,0 +1,141 @@
+{
+  "_id": "whbHuntNitroEx01",
+  "folder": "whbHntFldWpn0001",
+  "name": "Nitro Express 步枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/nitro-express.png",
+  "system": {
+    "description": {
+      "value": "<p>大口径狩猎步枪，无视大部分护甲。</p>\n<blockquote><p><strong>兵器之书 · NITRO EXPRESS</strong> 一响撼沼；邻接亦遭气浪。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 进阶火器；负载 2；双手；射程增量 <strong>150 尺</strong>；装填 2；容量 1（5 格）</p>\n<p><strong>伤害</strong> 1d12 穿刺；特质：致命 d12、助力、后坐力、震荡</p>\n<hr />\n<p><strong>高爆冲击</strong> 命中时，目标及所有邻接生物须通过强韧豁免（<strong>DC = 本次攻击检定结果</strong>），失败则被推离 5 尺并 @UUID[Compendium.pf2e.conditionitems.Item.i3OJUmM1V6L8Lkbg]{倒地}。即使未命中，目标邻接方格仍受到 @Damage[1d4[bludgeoning]]{1d4 溅射钝击}（自动化）。</p>",
+      "gm": "<p>Nitro Express。进阶 1d12 fatal-d12、kickback、propulsive、concussive、150ft reload 2。命中：邻接+目标 Fort DC=攻击总值，失败推 5+倒地；未命中仍溅射邻接 1d4 B。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "高爆冲击",
+        "text": "命中：目标与邻接强韧（DC=攻击结果），失败推离 5 尺并倒地。未命中：邻接仍受 1d4 溅射钝击。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "nitro-express",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d12",
+        "kickback",
+        "propulsive"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 5
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 100
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "大口径步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪管粗得吓人的双管/单发猎枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "advanced",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d12",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 150,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "2"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 5,
+      "enName": "Nitro Express",
+      "highExplosiveImpact": true
+    }
+  }
+}

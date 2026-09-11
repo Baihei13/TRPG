@@ -1,0 +1,175 @@
+{
+  "_id": "whbHuntPoetJust1",
+  "folder": "whbHntFldWpn0001",
+  "name": "诗意的正义 Poetic Justice",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+  "system": {
+    "description": {
+      "value": "<p>他们不该死得这么惨。他们只想调查并提供帮助。但第26团根本无法与腐败抗衡，所以他们以前的军士锻造了这把霰弹枪，试图以此来<strong>平衡他们灵魂的重量</strong>。</p>\n<blockquote><p><strong>兵器之书 · RIVAL 78 SHORTY · POETIC JUSTICE</strong> 短双管并排霰弹：近距诗意，远距只剩回声。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 1；<strong>单手</strong>（短管）；<strong>射程增量</strong> 20 尺；<strong>装填</strong> 1；双管容量 2</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、scatter、capacity-2</p>\n<hr />\n<p><strong>灵魂天平</strong> 以此武器击杀或重击时，你获得 @Damage[5[temporary|healing]]{5 临时生命值}（不叠，取高），持续 1 分钟——把战友灵魂的重量暂时压回枪膛这一边。</p>\n<p><strong>双管齐射</strong>（开关）开启时，一次操作同时打空双管：一次打击，伤害骰 <strong>+1d8</strong>，攻击 −2 环境；之后须分别装填。</p>",
+      "gm": "<p>Hunt Rival 78 Shorty skin「Poetic Justice / 诗意的正义」。1d8 P、20ft、cap2。击杀/重击给 5 temp HP。双管齐射开关。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-poetic-both",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "诗意的正义 — 双管齐射"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": -2,
+        "label": "双管齐射",
+        "predicate": [
+          "hunt-poetic-both",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "双管齐射",
+        "diceNumber": 1,
+        "dieSize": "d8",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-poetic-both",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "灵魂天平",
+        "text": "击杀或重击：获得 5 临时生命值（不叠）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "poetic-justice",
+    "traits": {
+      "value": [
+        "concussive",
+        "scatter",
+        "capacity-2"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "短双管霰弹枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>锯短的并排双管，枪托刻着名字。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 20,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 2
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Poetic Justice",
+      "wikiIcon": "Weapon_Rival_78_Shorty.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "rival-78-shorty"
+    }
+  }
+}

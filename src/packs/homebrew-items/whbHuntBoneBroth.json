@@ -1,0 +1,87 @@
+{
+  "_id": "whbHuntBoneBroth",
+  "folder": "whbHntFldTact001",
+  "name": "骨汤 Bone Broth",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hive-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>这颗蜂巢炸弹里装满了堕落的肉蜂，它们对人肉中的蛋白质有着邪恶的渴望。它们特殊的毒液会渗入骨髓，为厨师特制的<strong>骨汤</strong>做好充分的准备。</p>\n<blockquote><p><strong>蜂巢炸弹 · BONE BROTH</strong> 肉蜂入髓，汤底自来。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntHive00001]{蜂巢炸弹}：30 尺投掷，5 尺爆发，非怪物获得猎杀中毒 <strong>3 层</strong>。</p>\n<p><strong>入髓</strong> 首次被此炸弹上毒的目标额外获得 @Damage[1d4[poison]]，且对你的「品味制造者」打击措手不及 1 轮（骨髓已入味）。</p>",
+      "gm": "<p>Hive Bomb skin「Bone Broth / 骨汤」。中毒3层 +1d4毒；对厨刀措手不及1轮。</p>"
+    },
+    "rules": [],
+    "slug": "bone-broth",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable",
+        "poison"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-throwable",
+        "the-cook"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 投掷",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "蜂巢罐",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>嗡鸣的铁罐。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "tactic",
+      "enName": "Bone Broth",
+      "theme": "the-cook",
+      "skinOf": "whbHuntHive00001"
+    }
+  }
+}

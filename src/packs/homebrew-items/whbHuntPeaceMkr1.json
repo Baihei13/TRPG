@@ -1,0 +1,202 @@
+{
+  "_id": "whbHuntPeaceMkr1",
+  "folder": "whbHntFldWpn0001",
+  "name": "和平缔造者 Peacemaker",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/pax-trueshot.png",
+  "system": {
+    "description": {
+      "value": "<p>哈丁警长自诩为执法者的典范——为了维护辖区秩序，他会不惜一切代价。这把<strong>「真射和平」</strong>让他能够牢牢掌控自己的职责。消除威胁是通往和平最可靠的途径。</p>\n<blockquote><p><strong>兵器之书 · CALDWELL PAX TRUESHOT · PEACEMAKER</strong> 枪柄徽章写着：Wayne Hardin — Peacemaker — From the Grateful People of New Orleans — APR 1888。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 1；单手；射程增量 <strong>60 尺</strong>（加长管）；装填 1；弹巢 6</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-6</p>\n<p><strong>弹药</strong> 同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPax000001]{Caldwell Pax}。</p>\n<hr />\n<p><strong>真射</strong>（开关）本场 1 次：下次此武器攻击检定 +2 环境。</p>\n<p><strong>消除威胁</strong> 对带有「威胁标记」、惊惧，或正在逃跑的目标：伤害额外 @Damage[1d4[precision]]，且忽略隐蔽持平。</p>\n<p><strong>重击者枪柄</strong> 可用枪柄近战打击（1d8 钝击，震荡）。</p>",
+      "gm": "<p>Pax Trueshot skin「和平缔造者」。60ft、真射+2、对威胁/惊惧/逃跑 +1d4 精密。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-peace-trueshot",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "和平缔造者 — 真射（本场1次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "真射",
+        "predicate": [
+          "hunt-peace-trueshot",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-peace-threat",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "和平缔造者 — 目标为威胁/惊惧/逃跑"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "消除威胁",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "precision",
+        "predicate": [
+          "hunt-peace-threat",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "brawling",
+        "slug": "peacemaker-whip",
+        "label": "和平缔造者 枪柄打击",
+        "img": "systems/pf2e/icons/default-icons/melee.svg",
+        "damage": {
+          "base": {
+            "damageType": "bludgeoning",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive"
+        ],
+        "range": null
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "消除威胁",
+        "text": "对威胁/惊惧/逃跑目标：+1d4 精密，忽略隐蔽持平。",
+        "predicate": [
+          "hunt-peace-threat",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "peacemaker",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-6"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "sheriff-hardin"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "加长左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪柄嵌着星徽。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 60,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 6
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Peacemaker",
+      "wikiIcon": "Weapon_Pax_Trueshot.png",
+      "theme": "sheriff-hardin",
+      "baseWeapon": "caldwell-pax-trueshot"
+    }
+  }
+}

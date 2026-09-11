@@ -1,0 +1,60 @@
+{
+  "_id": "whbHuntFtResil01",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：韧性 Resilience",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-resilience.png",
+  "system": {
+    "description": {
+      "value": "<p>被救起时恢复至一半生命，而非苟延残喘。</p>\n<p><strong>猎杀特性花费</strong> 3 点（普通）</p>\n<hr />\n<p>当你从 @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{濒死} 状态被救起（濒死被移除且你仍存活）时，你的生命值恢复至<strong>最大生命值的一半</strong>（向上取整），而非通常的 1 点（若治疗量更高则取高）。</p>",
+      "gm": "<p>Hunt Resilience。3 点。脱离濒死时 HP→一半上限。自动化见 hunt-showdown-automation。</p>"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "healing-received",
+        "title": "韧性",
+        "text": "从濒死被救起时，生命值至少恢复至上限一半。"
+      }
+    ],
+    "slug": "hunt-feat-resilience",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 3,
+      "huntTraitCategory": "defensive"
+    }
+  }
+}

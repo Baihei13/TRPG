@@ -1,0 +1,173 @@
+{
+  "_id": "whbHuntThatsLi01",
+  "folder": "whbHntFldWpn0001",
+  "name": "这就是人生 That's Life",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/mosin-avtomat.png",
+  "system": {
+    "description": {
+      "value": "<p>铁甲战士不在乎什么隐蔽或委婉。这支<strong>莫辛-纳甘自动步枪</strong>是他最爱用来展现残忍死亡的手段。这支步枪扫射出的子弹完全无视受害者的立场。</p>\n<blockquote><p><strong>兵器之书 · MOSIN-NAGANT AVTOMAT · THAT'S LIFE</strong> 俄制栓动步枪改装自动机与加大弹匣：昂贵、嘈杂、弹药饥渴——却是权力对峙时最直白的答案。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训（无需火器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 100 尺；<strong>装填</strong> 1；弹匣容量 15</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、volley、capacity-15</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：达姆/毒/穿甲等同族长弹。</p>\n<hr />\n<p><strong>无视立场</strong> 以此武器发动的打击<strong>忽略</strong>目标因<strong>掩蔽</strong>与<strong>举盾</strong>获得的 AC 环境加值，并忽略目标的 @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{隐蔽}（无需持平检定；对躲藏等更强隐蔽无效，GM 裁定）。</p>\n<p><strong>扫射连发</strong>（开关）开启时，你可用一次操作发动<strong>两次</strong>此武器打击，各附加 −3 环境罚值，共享同一 MAP（弹药各耗 1）。每回合限用 1 次成功结算后建议关闭开关。</p>",
+      "gm": "<p>Hunt Mosin-Nagant Avtomat skin「That's Life / 这就是人生」。铁甲战士主题。1d10 P、capacity-15、无视掩蔽/举盾 circ 与隐蔽。扫射开关双击 −3。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-thats-life-spray",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "这就是人生 — 扫射连发（本回合）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": -3,
+        "label": "扫射连发",
+        "predicate": [
+          "hunt-thats-life-spray",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "无视立场",
+        "text": "忽略掩蔽与举盾的 AC 环境加值；忽略隐蔽持平。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "扫射连发",
+        "text": "开启时：一次操作两次打击，各 −3 环境，共享 MAP。",
+        "predicate": [
+          "hunt-thats-life-spray",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "thats-life",
+    "traits": {
+      "value": [
+        "concussive",
+        "volley",
+        "capacity-15"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "ironclad"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 50
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "改装自动步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>沉甸甸的俄制长枪，机匣被粗暴加长。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 100,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 15
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 5,
+      "enName": "That's Life",
+      "wikiIcon": "Weapon_Mosin-Nagant_Avtomat.png",
+      "theme": "ironclad",
+      "baseWeapon": "mosin-nagant-avtomat"
+    }
+  }
+}

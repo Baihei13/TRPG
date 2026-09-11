@@ -1,0 +1,65 @@
+{
+  "_id": "whbHuntConfuse01",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：万能药抽搐",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/the-fool-outlaw.png",
+  "system": {
+    "description": {
+      "value": "<p>神奇万能药：嘴角抽搐，对恐吓检定 −2；并应另有困惑状态。</p>",
+      "gm": "<p>fool-panacea 附加。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "intimidation",
+        "type": "status",
+        "value": -2,
+        "label": "嘴角抽搐"
+      }
+    ],
+    "slug": "effect-panacea-twitch",
+    "traits": {
+      "value": [
+        "mental",
+        "poison"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

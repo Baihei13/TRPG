@@ -1,0 +1,163 @@
+{
+  "_id": "whbHuntDueProc01",
+  "folder": "whbHntFldWpn0001",
+  "name": "正当程序 Due Process",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/due-process.png",
+  "system": {
+    "description": {
+      "value": "<p>在入侵区，骇人听闻的罪行猖獗，腐败掩盖了这一切。惠特洛用这支步枪对那些妄图逃脱惩罚的人——或者犯下比之前罪行更加恶劣罪行的人——施以<strong>公正的审判</strong>。</p>\n<blockquote><p><strong>兵器之书 · 1890 CAVALRY · DUE PROCESS</strong> 弹簧田后门卡宾：一发一审，中距高伤。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>80 尺</strong>；装填 1；容量 1</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、fatal-d10</p>\n<hr />\n<p><strong>正当程序</strong> 以此武器命中「试图逃脱/遁入隐蔽/躲藏」的目标时，额外造成 @Damage[1d6[precision]]{1d6 精密}，并忽略其隐蔽持平（躲藏仍由 GM 裁定）。</p>\n<p><strong>更恶劣的罪</strong>（开关）若 GM 认定目标刚犯下暴行或背叛，本回合下次伤害 +2 状态。</p>",
+      "gm": "<p>1890 Cavalry skin「Due Process」。单发 1d10 fatal-d10、80ft。对逃脱/隐蔽目标 +精密。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-due-worse",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "正当程序 — 更恶劣的罪（GM）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "piercing",
+        "label": "更恶劣的罪",
+        "predicate": [
+          "hunt-due-worse",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "正当程序",
+        "text": "对逃脱/隐蔽目标：+1d6 精密，忽略隐蔽持平。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "due-process",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d10"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 20
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "后门卡宾枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>后门卡宾枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Due Process",
+      "wikiIcon": "Weapon_1890_Cavalry.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "1890-cavalry"
+    }
+  }
+}

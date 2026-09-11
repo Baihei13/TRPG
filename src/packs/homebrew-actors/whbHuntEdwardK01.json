@@ -1,0 +1,524 @@
+{
+  "_id": "whbHuntEdwardK01",
+  "folder": "whbfolderHntHt01",
+  "name": "爱德华·凯利 Edward Kelly",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/edward-kelly.png",
+  "items": [
+    {
+      "_id": "whbEkAvtoStrike1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/mosin-avtomat.png",
+      "name": "这就是人生",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEkDmgAvto001": {
+            "damage": "2d10+6",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntThatsLi01]{这就是人生}（莫辛-纳甘自动）。射程增量 <strong>100 尺</strong>。</p>\n<p><strong>无视立场</strong>：忽略掩蔽与举盾的 AC 环境加值；忽略隐蔽持平。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 100,
+        "rules": [],
+        "slug": "edward-thats-life",
+        "traits": {
+          "value": [
+            "concussive",
+            "volley"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEkBurstFire01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "无情连射",
+      "sort": 110000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以一次操作发动<strong>两次</strong>「这就是人生」打击，各 −3 环境，共享同一 MAP。子弹不在乎你躲在哪——只在乎你还站不站得住。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-burst",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEkWidowShot01",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/pax-trueshot.png",
+      "name": "寡妇之子",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbEkDmgWid001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>副手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntWidowSo01]{寡妇之子}。射程增量 <strong>50 尺</strong>。</p>\n<p>命中：@Check[will|dc:22|traits:emotion,fear,mental]{意志 DC 22}，失败则 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（同目标本场首次）。真射（每场 1）：+2 环境攻击。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 50,
+        "rules": [],
+        "slug": "edward-widow-son",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEkMeleeBash01",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "铁桶枪托",
+      "sort": 250000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEkDmgBash001": {
+            "damage": "2d8+6",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": "<p>用盔甲与枪托近身砸人。命中时目标对本回合内他的恐吓检定 −2 环境。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "edward-buttstock",
+        "traits": {
+          "value": [
+            "shove"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEkFightBack01",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/regeneration-shot.png",
+      "name": "奋起反击",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场遭遇 1 次（他通常携带 1 支）</p>\n<p>注射 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFightBk01]{奋起反击}：恢复 @Damage[(2d8+4)[healing]]，获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntRgnFx0001]{再生}（1 分钟）。若当前 HP ≤ 上限一半，另得 10 临时生命值。</p>\n<p>浴火重生——为信念再站起来。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-fight-back",
+        "traits": {
+          "value": [
+            "healing",
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEkIronclad001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "铁甲战士",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>触发</strong> 他受到物理伤害</p>\n<p>钢板与头盔吃掉冲击：该次伤害减少 <strong>5</strong>（在抗性之后结算）。每轮限 1 次。</p>\n<p>他们称他为铁甲战士是有原因的。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-ironclad",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEkNameFear001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "丛林强盗之名",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "interaction",
+        "description": {
+          "value": "<p>铁桶盔下传来低沉警告，恐吓 30 尺内目标：@Check[will|dc:22|traits:emotion,fear,mental,auditory]{意志 DC 22}。</p>\n<p>失败：@UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟）。大失败：惊惧 2，且对他下一次「这就是人生」打击措手不及。</p>\n<p>他希望在找到他们之前，他们就知道他的名字。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-name",
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "auditory"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEkJustice0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "由我定义正义",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>爱德华或许铁石心肠，但那是被鞭子与权力打出来的。对 GM 认定为<strong>滥用权力</strong>的目标（警长、将军、暴吏、欺压者等），他的所有打击伤害获得 <strong>+2 状态加值</strong>，且「丛林强盗之名」的 DC 视为 24。</p>\n<p>在这样的地方，正义究竟是什么样子？——他觉得得由他来定义。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-justice",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEkBushranger1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "沼泽地的丛林法则",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>祖国教会他如何智胜「时刻准备置你于死地的复杂因素」。在沼泽、密林、困难地形中，他的移动速度不因<strong>非魔法困难地形</strong>降低；生存与自然相关检定 +2 状态。</p>\n<p>抵达之后他便明白：仅凭此地之力就能吞噬多数猎人——而他不会成为其中之一。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-bush",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEkTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "铁甲侠战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：前线坦克火力手。不玩隐蔽，用铁甲扛伤，用自动步枪撕开阵地。</p>\n<ol>\n<li><strong>丛林强盗之名</strong>先立规矩（尤其对警长/将军型 NPC）</li>\n<li>中远距 <strong>无情连射</strong> 无视掩蔽压制</li>\n<li>近身换 <strong>寡妇之子</strong> 真射+惊惧，或枪托砸开</li>\n<li>半血以下立刻 <strong>奋起反击</strong> 再战</li>\n<li>反应 <strong>铁甲战士</strong> 吃关键一击</li>\n</ol>\n<p>他不仅知道如何挑起战斗，更知道如何结束战斗。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "edward-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 2
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "铁桶盔 + 胸甲 + 风衣",
+        "value": 24
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "铁甲战士：厚甲与顽固",
+        "max": 96,
+        "temp": 0,
+        "value": 96
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      },
+      "resistances": [
+        {
+          "type": "physical",
+          "value": 3,
+          "exceptions": []
+        }
+      ],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "铁甲战士 · 丛林强盗",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>爱德华·凯利「铁甲战士 / 铁甲侠」。澳大利亚丛林强盗：铁桶盔、胸甲、弹带。主：这就是人生（莫辛自动）；副：寡妇之子（Pax）；医疗：奋起反击（再生针皮）。</p>\n<p>主题：惩罚滥用权力、沼泽适应、正面碾压。Creature 4 坦克偏强；对 4×2 级团为严厉前线遭遇。</p>",
+      "publicNotes": "<p>铁桶盔的窄缝里是一双不肯退让的眼睛。沼泽地很快会明白，人们为何称他为「铁甲战士」——他不躲、不绕，只把滥用权力的人钉在自己的正义定义里。</p>\n<p><em>四人 2 级团 · Creature 4（坦克偏强）· 丛林强盗</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "盔缝视野受限，但对杀意极敏",
+      "mod": 13,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 15
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐吓/胁迫若来自权威者",
+        "value": 13
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 15
+      },
+      "intimidation": {
+        "base": 14
+      },
+      "nature": {
+        "base": 12
+      },
+      "stealth": {
+        "base": 8
+      },
+      "survival": {
+        "base": 14
+      },
+      "thievery": {
+        "base": 10
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "爱德华·凯利",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/edward-kelly.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 45,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "edward-kelly",
+      "theme": "ironclad",
+      "preferredLoadout": [
+        "thats-life",
+        "widows-son",
+        "fight-back"
+      ]
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "_id": "whbHuntSlugEye01",
+  "folder": "whbHntFldWpn0001",
+  "name": "击球手之眼 Batter's Eye",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/baseball-bat.png",
+  "system": {
+    "description": {
+      "value": "<p>当腐败势力逼近她挚爱的马戏团家族时，据说<strong>命运夫人</strong>将她特殊的视力赋予了这根棒球棒。在一位技艺精湛的猎人手中，它能轻易击碎骨骼，那令人作呕的碎裂声证明了命中注定。</p>\n<blockquote><p><strong>兵器之书 · BASEBALL BAT · BATTER'S EYE</strong> 手工球棒本为击球而生，这一根却只为打碎头骨——被命运浸透过的木质，挥动时像能看见下一记落点。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用钝器；<strong>负载</strong> 1；<strong>单手</strong></p>\n<p><strong>伤害</strong> 1d8 钝击；特质：横扫、后坐力（近战重挥感）</p>\n<hr />\n<p><strong>碎骨注定</strong> 此武器造成的重击额外造成 @Damage[1d8[bludgeoning]]，且目标须尝试 @Check[fortitude|dc:resolve(@actor.level*2+14)|basic]{强韧}（DC = 14+等级×2，物品持有者）。失败则获得 @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{迟缓 1}，持续 1 轮。</p>\n<p><strong>命运视界</strong>（开关）开启时，你下一次以此武器的攻击检定获得 <strong>+1 环境加值</strong>（命运夫人的「看见落点」）；每场遭遇限用 1 次成功加值后自动关闭（手关开关）。</p>",
+      "gm": "<p>Hunt Baseball Bat skin「Batter's Eye / 击球手之眼」。谋杀马戏团主题。1d8 B、碎骨重击、命运视界开关。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-batters-eye",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "击球手之眼 — 命运视界（本场1次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "命运视界",
+        "predicate": [
+          "hunt-batters-eye",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "碎骨注定",
+        "text": "重击：额外 1d8 钝击；目标强韧失败则迟缓 1（1 轮）。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "check:outcome:critical-success"
+        ]
+      }
+    ],
+    "slug": "batters-eye",
+    "traits": {
+      "value": [
+        "sweep",
+        "shove"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "murder-circus"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": "club",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "棒球棒",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>缠着旧布的粗木棒。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "club",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "bludgeoning",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Batter's Eye",
+      "wikiIcon": "Weapon_Baseball_Bat.png",
+      "theme": "murder-circus"
+    }
+  }
+}

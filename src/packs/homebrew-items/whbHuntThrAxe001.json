@@ -1,14 +1,24 @@
 {
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldWpn0001",
   "name": "投掷斧 Throwing Axes",
   "type": "weapon",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-axes.png",
   "system": {
     "description": {
-      "value": "<p>可投掷的小型战斧。成对携带。</p>\n<blockquote><p><strong>兵器之书 · THROWING AXE</strong>（另见战斧、工具）投掷斧可追溯至远古，至今仍可靠有效。过肩投出形成旋转，撞击时保留强大动能；需精确判断距离才能让斧刃朝向目标。美式棒球的流行或许让部分猎人更熟悉这种出手。</p>\n<p>沼地中多数投掷斧都经过仔细调校平衡——哪怕只是野地里临时加减配重。因其简单、有力且相对安静，善用者视之为命脉伴侣。</p></blockquote>\n<hr />\n<p><strong>类别</strong> 军用斧；<strong>负载</strong> L；<strong>单手</strong></p>\n<p><strong>伤害</strong> 1d8 挥砍；特质：敏捷、横扫、thrown-20</p>\n<hr />\n<p><strong>破甲投掷</strong> 当你以<strong>投掷</strong>方式用此武器打击时：若目标穿戴<strong>轻甲</strong>（或未着甲），你忽略其护甲提供的物品 AC 加值（通常使 AC 降低 1–2，由 GM 按护甲结算）。近战挥击不适用本效果。</p>",
+      "value": "<p>可投掷的小型战斧。成对携带。</p>\n<blockquote><p><strong>兵器之书 · THROWING AXE</strong>（另见战斧、工具）投掷斧可追溯至远古，至今仍可靠有效。过肩投出形成旋转，撞击时保留强大动能；需精确判断距离才能让斧刃朝向目标。美式棒球的流行或许让部分猎人更熟悉这种出手。</p>\n<p>沼地中多数投掷斧都经过仔细调校平衡——哪怕只是野地里临时加减配重。因其简单、有力且相对安静，善用者视之为命脉伴侣。</p></blockquote>\n<p><strong>熟练</strong> 持用此武器期间视为对其拥有<strong>受训</strong>熟练（无需火器或其他武器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用斧；<strong>负载</strong> L；<strong>单手</strong></p>\n<p><strong>伤害</strong> 1d8 挥砍；特质：敏捷、横扫、thrown-20</p>\n<hr />\n<p><strong>破甲投掷</strong> 当你以<strong>投掷</strong>方式用此武器打击时：若目标穿戴<strong>轻甲</strong>（或未着甲），你忽略其护甲提供的物品 AC 加值（通常使 AC 降低 1–2，由 GM 按护甲结算）。近战挥击不适用本效果。</p>",
       "gm": "<p>Hunt Throwing Axes。原 30$/2格。数量默认 2。投掷时忽略轻甲物品 AC。</p>"
     },
     "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
       {
         "key": "FlatModifier",
         "selector": "strike-attack-roll",
@@ -126,9 +136,11 @@
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",
-      "huntCategory": "tool",
-      "huntSlots": 2,
-      "wikiIcon": "Tool_Throwing_Axes.png"
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "wikiIcon": "Tool_Throwing_Axes.png",
+      "enName": "Throwing Axes",
+      "baseWeapon": "throwing-axes"
     }
   },
   "_id": "whbHuntThrAxe001"

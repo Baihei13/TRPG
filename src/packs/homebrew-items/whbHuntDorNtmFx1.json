@@ -1,0 +1,69 @@
+{
+  "_id": "whbHuntDorNtmFx1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：多萝西·噩梦形态",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/dorothy-nightmare.png",
+  "system": {
+    "description": {
+      "value": "<p>多萝西当前为<strong>噩梦形态</strong>。美梦能力不可用；改用弄臣霰弹、终梦弹、人偶与追捕驱魔人。</p>\n<p>切换：使用「形态切换」动作，或开关「dorothy-form-nightmare」。Token 立绘由 GM 自行更换。</p>",
+      "gm": "<p>自动化：与 RollOption dorothy-form-nightmare 同步。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "dorothy-form-nightmare",
+        "value": true
+      },
+      {
+        "key": "Note",
+        "selector": "all",
+        "title": "噩梦",
+        "text": "当前为噩梦形态。"
+      }
+    ],
+    "slug": "effect-dorothy-nightmare",
+    "traits": {
+      "value": [
+        "mental"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

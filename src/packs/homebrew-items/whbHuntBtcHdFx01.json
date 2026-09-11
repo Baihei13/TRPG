@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntBtcHdFx01",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：屠夫断头 Butcher Headless",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/butcher.png",
@@ -10,9 +10,21 @@
       "gm": "<p>约 1/4 HP 时激活。抗性与速度/命中已自动化；光环范围需口述。</p>"
     },
     "rules": [
-      { "key": "Resistance", "type": "bludgeoning", "value": 12 },
-      { "key": "Resistance", "type": "piercing", "value": 12 },
-      { "key": "Resistance", "type": "slashing", "value": 12 },
+      {
+        "key": "Resistance",
+        "type": "bludgeoning",
+        "value": 12
+      },
+      {
+        "key": "Resistance",
+        "type": "piercing",
+        "value": 12
+      },
+      {
+        "key": "Resistance",
+        "type": "slashing",
+        "value": 12
+      },
       {
         "key": "FlatModifier",
         "selector": "land-speed",
@@ -32,7 +44,9 @@
     "traits": {
       "value": [],
       "rarity": "unique",
-      "otherTags": ["hunt-showdown"]
+      "otherTags": [
+        "hunt-showdown"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — Boss",
@@ -40,15 +54,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 5 },
+    "level": {
+      "value": 5
+    },
     "duration": {
       "value": -1,
       "unit": "unlimited",
       "expiry": null,
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

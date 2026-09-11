@@ -1,0 +1,370 @@
+{
+  "_id": "whbHuntLauraGot1",
+  "folder": "whbfolderHntHt01",
+  "name": "劳拉·戈特沙尔克 Laura Gottschalk",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/laura-gottschalk.png",
+  "items": [
+    {
+      "_id": "whbLrSilentShot1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/maynard-silencer.png",
+      "name": "消音狙击（梅纳德·亚音速）",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 14 },
+        "damageRolls": {
+          "whbLrDmgMayn001": {
+            "damage": "2d10+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>使用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntMaynSil01]{梅纳德消音狙击} 装填 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoSub01]{亚音速弹}。射程增量 <strong>120 尺</strong>（本角色校准：亚音速只保留消音伏击，不砍射程）。</p>\n<p>特质：震荡、fatal-d10、装填 2。枪声沉闷，难以靠声音定位。</p>\n<p>若目标<strong>未察觉她</strong>（她对其隐蔽 / 躲藏 / 未被发现），目标对此次打击处于 @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{措手不及}，并触发<strong>偷袭</strong>。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 120,
+        "rules": [],
+        "slug": "laura-silenced-shot",
+        "traits": {
+          "value": ["concussive", "fatal-d10", "propulsive"]
+        }
+      }
+    },
+    {
+      "_id": "whbLrBayonet0001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "枪托砸击",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 12 },
+        "damageRolls": {
+          "whbLrDmgButt001": {
+            "damage": "1d6+2",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": "<p>贴身时用枪托砸开。她会尽量不让战斗落到这一步。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "laura-buttstroke",
+        "traits": { "value": ["agile"] }
+      }
+    },
+    {
+      "_id": "whbLrSneakAtk001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "偷袭",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": {
+          "value": "<p>当目标对她措手不及时，她的<strong>消音狙击</strong>额外造成 @Damage[1d6[precision]]{1d6 精密}伤害。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-sneak-attack",
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbLrAmbushShot1",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "无声伏击",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>需求</strong> 她相对目标处于隐蔽、躲藏或未被发现</p>\n<p>发动一次<strong>消音狙击</strong>。目标对此次打击措手不及（并触发偷袭）。若命中，她可立刻尝试一次 Hide（不另耗动作），用射击后的硝烟与枝叶掩护。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-silent-ambush",
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbLrKiteAway001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "抽身远遁",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每轮 1 次；<strong>需求</strong> 本回合她已用远程打击命中，或回合开始时相对至少一个敌人处于隐蔽/躲藏</p>\n<p>Stride。此次移动<strong>不引发</strong>来自她已命中之目标的借机攻击。若结束移动时有掩体或植被，可立刻尝试 Hide。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-kite",
+        "traits": { "value": ["move"] }
+      }
+    },
+    {
+      "_id": "whbLrFadeBrush01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "枝影隐没",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "defensive",
+        "description": {
+          "value": "<p>Step 或 Stride 至多 15 尺，然后 Hide。若处于自然地形（林木、灌丛、雾沼、碎石堆等），Hide 检定获得 <strong>+2 环境加值</strong>（与「枯枝伪装」叠加时由 GM 取高，不叠）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-fade",
+        "traits": { "value": ["move"] }
+      }
+    },
+    {
+      "_id": "whbLrReloadFast1",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "冷静装填",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>完成梅纳德的两段式装填（等同 reload 2）。若她处于隐蔽或躲藏，装填不会自动暴露位置（仍可能被看见动作，GM 裁定）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-reload",
+        "traits": { "value": ["manipulate"] }
+      }
+    },
+    {
+      "_id": "whbLrGhillie0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "枯枝伪装",
+      "sort": 800000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p>肩头枯枝与粗麻兜帽打散轮廓。在自然地形中，Stealth 与 Hide 相关检定获得 <strong>+2 环境加值</strong>；若她未移动且有部分掩体，察觉她的 Perception DC 视为提高 2。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-ghillie",
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbLrCultSeed001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "猎人之夜 · 虚无傲慢",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>艾萨克·鲍威尔「猎人之夜」邪教的放逐者。目睹雕塑家扭曲杰作后，她对末日与超自然不再恐惧，只剩冷硬的虚无。</p>\n<p>对抗恐惧、情绪与 demoralize 的意志豁免获得 <strong>+2 状态加值</strong>。她可用 Intimidation 恐吓：口中低语末日预言，失败的敌人获得 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 轮）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-cult-nihilism",
+        "traits": { "value": ["emotion", "fear", "mental", "auditory"] }
+      }
+    },
+    {
+      "_id": "whbLrTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "风筝教义（GM）",
+      "sort": 950000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>典型回合</strong></p>\n<ol>\n<li>隐蔽处 <strong>无声伏击</strong>（2）→ 偷袭爆头</li>\n<li><strong>抽身远遁</strong>（1）拉开 30～50 尺并再 Hide</li>\n<li>下一轮若需装填：先 <strong>枝影隐没</strong> / Hide，再 <strong>冷静装填</strong>；绝不贴脸硬刚</li>\n</ol>\n<p>理想交战距离 <strong>80～120 尺</strong>。被近身后优先 Step+Stride 拉开，用枪托仅作最后手段。她会放弃击杀也要保持「打一枪就消失」。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "laura-tactics",
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 1 },
+      "dex": { "mod": 4 },
+      "con": { "mod": 2 },
+      "int": { "mod": 1 },
+      "wis": { "mod": 3 },
+      "cha": { "mod": 2 }
+    },
+    "attributes": {
+      "ac": { "details": "皮衣 + 闪避", "value": 21 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "玻璃大炮狙击手；被围速逃",
+        "max": 55,
+        "temp": 0,
+        "value": 55
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "猎人之夜放逐者 · 消音狙",
+      "languages": {
+        "details": "",
+        "value": ["common"]
+      },
+      "level": { "value": 4 },
+      "privateNotes": "<p>接种疫苗前的领导者，现为艾萨克·鲍威尔「猎人之夜」放逐信徒。雕塑家的扭曲作品让她改信虚无；因争权被逐，却仍怀着邪教种下的暴力。末日来临时，她要看旧同伴跪地求饶。</p>\n<p>武器：梅纳德消音 + 亚音速。Creature 4，对 4×2 级团为严厉单挑/侧翼狙杀位。</p>",
+      "publicNotes": "<p>兜帽遮脸，肩头插着枯枝，像会走路的稻草人。她曾是领袖，在目睹不可名状的雕塑后投入「猎人之夜」；被逐出教门后仍带着冷酷的虚无主义傲慢。</p>\n<p>她几乎从不开口，只在枪响之后消失在树影里。</p>\n<p><em>四人 2 级团 · Creature 4 · 风筝狙</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": {
+      "details": "",
+      "mod": 13,
+      "senses": [
+        { "type": "low-light-vision" }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 10 },
+      "reflex": { "saveDetail": "", "value": 14 },
+      "will": { "saveDetail": "+2 vs 恐惧/情绪", "value": 12 }
+    },
+    "skills": {
+      "acrobatics": { "base": 12 },
+      "deception": { "base": 10 },
+      "intimidation": { "base": 11 },
+      "religion": { "base": 10 },
+      "stealth": { "base": 15 },
+      "survival": { "base": 12 }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": { "value": "med" },
+      "value": ["human", "humanoid"]
+    }
+  },
+  "prototypeToken": {
+    "name": "劳拉·戈特沙尔克",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/laura-gottschalk.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "laura-gottschalk",
+      "lore": "hunter-night-cult",
+      "preferredLoadout": ["maynard-sniper-silencer", "hunt-subsonic-ammo"]
+    }
+  }
+}

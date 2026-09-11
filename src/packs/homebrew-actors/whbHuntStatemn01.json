@@ -1,0 +1,603 @@
+{
+  "_id": "whbHuntStatemn01",
+  "folder": "whbfolderHntHt01",
+  "name": "政治家 / 荒芜代表 The Statesman",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/the-statesman.png",
+  "items": [
+    {
+      "_id": "whbStDebate00001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+      "name": "辩论结束",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbStDmgDebate1": {
+            "damage": "2d12+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主火力 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDebateEd1]{辩论结束}（Mako 1895）。射程 <strong>110 尺</strong>；单发。目标已发言/被点名时 +1d6 精密。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 110,
+        "rules": [],
+        "slug": "statesman-debate",
+        "traits": {
+          "value": [
+            "concussive",
+            "fatal-d12"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStHeirloom001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+      "name": "新传家宝",
+      "sort": 110000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbStDmgHeir001": {
+            "damage": "2d12+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntNewHeir01]{新传家宝}（Mako Aperture）。120 尺；光圈 +1；60 尺外 +2 伤。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 120,
+        "rules": [],
+        "slug": "statesman-heirloom",
+        "traits": {
+          "value": [
+            "concussive",
+            "fatal-d12"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStFilibust001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/frontier-73c-silencer.png",
+      "name": "冗长辩论",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbStDmgFili001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFilibust1]{冗长辩论}（Frontier 消音）。70 尺。未察觉→措手不及；命中可打断语言动作。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 70,
+        "rules": [],
+        "slug": "statesman-filibuster",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStBirthrgt001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+      "name": "天赋权利",
+      "sort": 210000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbStDmgBirth01": {
+            "damage": "2d4+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBirthrgt1]{天赋权利}（Bornheim）。30 尺；可速射。挡路目标 +1。另携 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntCorrEst01]{腐败庄园}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 30,
+        "rules": [],
+        "slug": "statesman-birthright",
+        "traits": {
+          "value": [
+            "concussive",
+            "agile"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStMarathon001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-marathon.png",
+      "name": "高尚的处决",
+      "sort": 220000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbStDmgNoble01": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntNobleEx01]{高尚的处决}（Marathon Swift）。账本平衡时升档。备用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntHubris001]{妄自尊大} / @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFalseInh1]{虚假的继承}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 80,
+        "rules": [],
+        "slug": "statesman-noble",
+        "traits": {
+          "value": [
+            "concussive",
+            "sweep"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStSpear000001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-spear.png",
+      "name": "死刑判决",
+      "sort": 300000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbStDmgSpear01": {
+            "damage": "2d8+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDeathSen1]{死刑判决}。近战或投掷 20 尺。宣判后 +2 攻与 +1d6。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 20,
+        "rules": [],
+        "slug": "statesman-spear",
+        "traits": {
+          "value": [
+            "thrown"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStPatronage01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "点名发言 / 赞助人意志",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>匿名有用，野心需要强硬。点名 60 尺内一个生物：其语言动作触发「辩论结束」条件；你对其恐吓/交涉 +2。同时向 30 尺内盟友传播「主人意志」：盟友下次攻击该目标 +1 环境（代币与意志）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "statesman-patron",
+        "traits": {
+          "value": [
+            "auditory",
+            "linguistic",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStSilent00001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "石墙谈判",
+      "sort": 410000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>佩戴 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStonewl01]{石墙者}：本场首次恐吓或交涉 +2。此动作可改为「沉默施压」——目标意志 DC 21，失败惊惧 1 且本回合不能对你提要求（语言）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "statesman-stonewall",
+        "traits": {
+          "value": [
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStAntiShot001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
+      "name": "最终宪法",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>注射 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFinlCon01]{最终宪法}：清除猎杀中毒，毒素抗性 5（1 分钟）。佩戴 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntGoldLust1]{荣耀的光泽}（惠特洛的教训）与 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBefrFire1]{烟火之前}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "statesman-constitution",
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbStStonewall01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "荒芜之地的代表",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>上次交锋以「政治家」之名幸存，捐助者源源不断。对抗毒素 +1；社交检定可用交涉代替部分恐吓（GM）。半血以下辩论结束射程内攻击 +1（名单很长，时间紧迫）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "statesman-delegate",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbStTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "政治家战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：远距单发终结者 + 社交控场。与惠特洛有旧识（荣耀的光泽）。</p>\n<ol>\n<li>点名发言 → 辩论结束/新传家宝收头</li>\n<li>喋喋不休者用冗长辩论消音</li>\n<li>贴身天赋权利速射或死刑判决</li>\n<li>账本关键时高尚处决</li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "statesman-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "礼服下的软甲",
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "捐助者买来的命",
+        "max": 84,
+        "temp": 0,
+        "value": 84
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      },
+      "resistances": [
+        {
+          "type": "poison",
+          "value": 3,
+          "exceptions": []
+        }
+      ],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "政治家 · 荒芜之地的代表",
+      "languages": {
+        "details": "只在必要时开口",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>The Statesman / Desolation's Delegate。主：辩论结束；辅：新传家宝、冗长辩论、天赋权利、高尚处决、死刑判决。护符：荣耀的光泽、石墙者、烟火之前。Creature 4 政治控场/远距单发。与惠特洛旧识。</p>",
+      "publicNotes": "<p>匿名有用，野心需要强硬。他从权术迷雾中现身，为效忠的主人攫取代币，把意志传给四面八方的猎人——并以「政治家」之名在上次交锋中幸存。</p>\n<p><em>四人 2 级团 · Creature 4 · 政治/单发终结</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "谁在浪费他的时间",
+      "mod": 14,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "+1 vs 毒素",
+        "value": 12
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "will": {
+        "saveDetail": "石墙",
+        "value": 15
+      }
+    },
+    "skills": {
+      "deception": {
+        "base": 14
+      },
+      "diplomacy": {
+        "base": 15
+      },
+      "intimidation": {
+        "base": 15
+      },
+      "society": {
+        "base": 14
+      },
+      "stealth": {
+        "base": 12
+      },
+      "survival": {
+        "base": 11
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "政治家",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/the-statesman.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "the-statesman",
+      "theme": "the-statesman",
+      "preferredLoadout": [
+        "debates-end",
+        "new-heirloom",
+        "filibuster",
+        "birthright",
+        "noble-execution",
+        "death-sentence",
+        "final-constitution",
+        "golden-signet",
+        "stonewaller"
+      ],
+      "loreLinks": [
+        "commander-whitlaw",
+        "pale-judge"
+      ]
+    }
+  }
+}

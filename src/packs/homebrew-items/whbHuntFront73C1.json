@@ -1,0 +1,161 @@
+{
+  "folder": "whbHntFldWpn0001",
+  "name": "Frontier 73C 荒原步枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/frontier-73c.png",
+  "system": {
+    "description": {
+      "value": "<p>经典杠杆步枪（Frontier 73C / Winfield M1873C），平衡伤害与射速，是沼地开拓者的老伙计。</p>\n<blockquote><p><strong>兵器之书 · FRONTIER 73C</strong>（又名 Winfield M1873C）可靠的杠杆供弹步枪，没有 Swift 的装填管花活，胜在朴实耐用。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训（无需火器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 80 尺；<strong>装填</strong> 1；弹匣容量 7</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-7</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoDum01]{达姆弹}、@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoPsn01]{毒弹}、@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoFMJ01]{穿甲弹}。</p>\n<hr />\n<p><strong>杠杆虚招</strong> 当你对此武器进行装填（Interact）时，可尝试 @Check[deception|traits:weapon]{欺骗} 对抗目标的察觉 DC。若成功，同一回合内你用此武器对该目标的下一次打击伤害获得 <strong>+2 状态加值</strong>（打开开关「杠杆虚招已成功」以自动加伤）。</p>",
+      "gm": "<p>Hunt Frontier 73C / Winfield M1873C「荒原步枪」。10 gp。军用，capacity-7。杠杆虚招靠欺骗检定 + 开关 FlatModifier。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-frontier-feint",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "杠杆虚招已成功（本回合下一次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "piercing",
+        "label": "杠杆虚招",
+        "predicate": [
+          "hunt-frontier-feint",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "杠杆虚招",
+        "text": "装填时可欺骗对抗察觉 DC；成功则开开关，本回合下次伤害 +2 状态。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "frontier-73c",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-7"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 10
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>保养尚可的旧式杠杆步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "wikiIcon": "Weapon_Frontier_73C.png",
+      "enName": "Frontier 73C",
+      "aka": "Winfield M1873C / 荒原步枪"
+    }
+  },
+  "_id": "whbHuntFront73C1"
+}

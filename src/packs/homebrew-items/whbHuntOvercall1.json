@@ -1,0 +1,90 @@
+{
+  "_id": "whbHuntOvercall1",
+  "folder": "whbHntFldExpl001",
+  "name": "超额召唤 Overcall",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-stick.png",
+  "system": {
+    "description": {
+      "value": "<p>约翰逊·雷德希尔特打赌的消息传遍沼泽地后，他发现自己成了敌对猎人的目标，他们想借此扬名立万，击败他。他喜欢用这根炸药棒<strong>戳穿他们的虚张声势</strong>，让他们在过于自信的进攻中碰壁。</p>\n<blockquote><p><strong>炸药棒 · THE OVERCALL</strong> 超额加注：你推得太凶，他就炸你的路。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDynStk001]{炸药棒}：1 动作点燃投掷，@Template[type:burst|distance:5]{5 尺爆发}，@Damage[3d6[bludgeoning]]，基础反射减半。</p>\n<p><strong>戳穿虚张</strong> 若目标本回合已向你 Stride 靠近或对你发动打击，则爆发伤害改为 @Damage[4d6[bludgeoning]]，且失败时额外倒地。</p>",
+      "gm": "<p>Dynamite Stick skin「Overcall / 超额召唤」。对正在强推的敌人加伤。乔纳森·雷德希尔。</p>"
+    },
+    "rules": [],
+    "slug": "overcall",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-explosive",
+        "living-target"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 爆炸物",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "纸裹药棍",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一根短引信炸药。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": {
+      "formula": "3d6",
+      "kind": "damage",
+      "type": "bludgeoning"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "explosive",
+      "enName": "Overcall",
+      "theme": "living-target",
+      "skinOf": "whbHuntDynStk001"
+    }
+  }
+}

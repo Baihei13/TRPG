@@ -1,0 +1,136 @@
+{
+  "_id": "whbHuntThrKniv01",
+  "folder": "whbHntFldWpn0001",
+  "name": "投掷小刀 Throwing Knives",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-knives.png",
+  "system": {
+    "description": {
+      "value": "<p>可投掷的无声匕首。成组携带，专为闷声了结而磨。</p>\n<blockquote><p><strong>工具 · THROWING KNIVES</strong> 无声投掷，射程增量 20 尺。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 简易刀剑；负载 L；单手；数量默认 3</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：敏捷、灵巧、致命 d8、thrown-20</p>\n<hr />\n<p><strong>无声投掷</strong> 以投掷方式打击时，该次攻击<strong>不产生听觉特质</strong>（仍可被看见）。近战捅刺不适用。</p>",
+      "gm": "<p>Hunt Throwing Knives。1d4 P、thrown-20、silent when thrown。quantity 3。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "无声投掷",
+        "text": "投掷时不产生听觉信号。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "item:ranged"
+        ]
+      }
+    ],
+    "slug": "hunt-throwing-knives",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "deadly-d8",
+        "thrown-20"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tool",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 0
+    },
+    "quantity": 3,
+    "baseItem": "dagger",
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 8
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "一捆短刃",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>几把磨得发亮的短刀。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "simple",
+    "group": "knife",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 20,
+    "reload": {
+      "value": "-"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tool",
+      "huntSlots": 2,
+      "enName": "Throwing Knives"
+    }
+  }
+}

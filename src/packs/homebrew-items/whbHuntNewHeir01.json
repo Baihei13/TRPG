@@ -1,0 +1,174 @@
+{
+  "_id": "whbHuntNewHeir01",
+  "folder": "whbHntFldWpn0001",
+  "name": "新传家宝 New Heirloom",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+  "system": {
+    "description": {
+      "value": "<p>这支 1895 年产的 Mako Aperture 步枪曾传给一位石油继承人，他在一场土地纠纷中过于激进。他万万没想到自己会被河对岸的同名枪支击毙，而这支枪也成了《政治家报》的新传家宝。</p>\n<blockquote><p><strong>兵器之书 · MAKO 1895 APERTURE · NEW HEIRLOOM</strong> 河对岸夺来的遗产。</p></blockquote>\n<p>1d12、fatal-d12、射程 <strong>120 尺</strong>、容量 1。</p>\n<hr />\n<p><strong>光圈传家</strong>（开关）瞄准：攻击 +1，忽略隐蔽持平。</p>\n<p><strong>土地纠纷</strong> 对 60 尺外目标伤害 +2。</p>",
+      "gm": "<p>Mako Aperture skin「新传家宝」。120ft、瞄准+1、远距+2。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-new-heirloom-sight",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "新传家宝 — 光圈瞄准"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "光圈传家",
+        "predicate": [
+          "hunt-new-heirloom-sight",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-new-heirloom-far",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "新传家宝 — 目标在 60 尺外"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "piercing",
+        "label": "土地纠纷",
+        "predicate": [
+          "hunt-new-heirloom-far",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "new-heirloom",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d12"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 20
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "带光圈的卡宾",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>带光圈的卡宾。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d12",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 120,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "New Heirloom",
+      "wikiIcon": "Weapon_Mako_1895_Aperture.png",
+      "theme": "the-statesman",
+      "baseWeapon": "mako-1895-aperture"
+    }
+  }
+}

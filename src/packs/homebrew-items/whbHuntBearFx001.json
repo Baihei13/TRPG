@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntBearFx001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：熊陷阱咬合 Bear Trap",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png",
@@ -17,9 +17,13 @@
     ],
     "slug": "effect-bear-trap",
     "traits": {
-      "value": ["mechanical"],
+      "value": [
+        "mechanical"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown"]
+      "otherTags": [
+        "hunt-showdown"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 陷阱",
@@ -27,15 +31,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 5 },
+    "level": {
+      "value": 5
+    },
     "duration": {
       "value": -1,
       "unit": "unlimited",
       "expiry": null,
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

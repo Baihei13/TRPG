@@ -1,0 +1,154 @@
+{
+  "_id": "whbHuntBirthrgt1",
+  "folder": "whbHntFldWpn0001",
+  "name": "天赋权利 Birthright",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+  "system": {
+    "description": {
+      "value": "<p>政治家从一个愚蠢之人的尸体上夺走了这把博恩海姆 3 号手枪，那人根本不知道如何正确使用它。现在它以正义的精准度执行任务，就像某人的天赋权利一样自然，击倒任何阻碍它实现目标的人。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO.3 · BIRTHRIGHT</strong> 从死人手里拿走的「天赋」。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p>同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}：30 尺、1d4、capacity-5、速射扳机（1 动作两次各 −3 同 MAP）。</p>\n<hr />\n<p><strong>天赋权利</strong> 对「挡路/阻挠你目标」的生物（GM 或已标记）攻击 +1 环境。速射时该加值仍适用。</p>",
+      "gm": "<p>Bornheim skin「天赋权利」。速射 + 挡路目标 +1。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-birthright-block",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "天赋权利 — 目标挡路（GM）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "天赋权利",
+        "predicate": [
+          "hunt-birthright-block",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "birthright",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "半自动手枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>半自动手枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d4",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Birthright",
+      "wikiIcon": "Weapon_Bornheim_No._3.png",
+      "theme": "the-statesman",
+      "baseWeapon": "bornheim-no-3"
+    }
+  }
+}

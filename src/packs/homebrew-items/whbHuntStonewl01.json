@@ -1,0 +1,98 @@
+{
+  "_id": "whbHuntStonewl01",
+  "folder": "whbHntFldTact001",
+  "name": "石墙者 Stonewaller",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/brooch-of-avoidance.webp",
+  "system": {
+    "description": {
+      "value": "<p>荒芜之地的代表认为，最有效的谈判策略就是省口舌。把话语当作珍贵的礼物，并且要精准地把握时机，确保别人在你开口时会认真倾听。</p>\n<hr />\n<p><strong>用法</strong> 佩戴（投资）。</p>\n<p><strong>效果</strong> 你在遭遇中第一次使用交涉或恐吓前，对该技能的检定 +2 环境（「开口即礼物」）。此后该加值消失，直到下次遭遇。被动：对抗语言/听觉威压类效果豁免 +1。</p>",
+      "gm": "<p>Charm「石墙者」。首句社交 +2；抗语言威压 +1。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "skill-check",
+        "option": "hunt-stonewall-first-word",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "石墙者 — 本场首次发言（交涉/恐吓）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "diplomacy",
+          "intimidation"
+        ],
+        "type": "circumstance",
+        "value": 2,
+        "label": "开口即礼物",
+        "predicate": [
+          "hunt-stonewall-first-word"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "stonewaller",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "袖扣",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>沉默的饰物。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Stonewaller",
+      "theme": "the-statesman"
+    }
+  }
+}

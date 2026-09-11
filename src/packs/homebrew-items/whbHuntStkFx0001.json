@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntStkFx0001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：黏弹附着 Sticky Bomb",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/sticky-bomb.png",
@@ -12,9 +12,14 @@
     "rules": [],
     "slug": "effect-sticky-bomb",
     "traits": {
-      "value": ["alchemical"],
+      "value": [
+        "alchemical"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-explosive"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-explosive"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 爆炸物",
@@ -22,15 +27,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 8 },
+    "level": {
+      "value": 8
+    },
     "duration": {
       "value": 1,
       "unit": "rounds",
       "expiry": "turn-start",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

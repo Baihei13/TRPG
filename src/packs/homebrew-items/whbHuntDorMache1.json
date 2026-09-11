@@ -1,0 +1,147 @@
+{
+  "_id": "whbHuntDorMache1",
+  "folder": "whbHntFldWpn0001",
+  "name": "爱丽丝农庄砍刀",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/machete.png",
+  "system": {
+    "description": {
+      "value": "<p>爱丽丝农场的农用砍刀，刀柄缠着褪色蓝丝带。多萝西用它劈开沼泽藤蔓——也劈开试图破坏茶话会的人。</p>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用刀剑；负载 1；单手；伤害 1d6 挥砍；特质：灵巧、强力</p>\n<p><strong>茶话会礼仪</strong> 若目标本回合接受过你的「邀请」或处于迷魂，此刀伤害 +2 状态。</p>",
+      "gm": "<p>多萝西砍刀。1d6 S 灵巧强力。对受邀/迷魂目标 +2。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-tea-guest",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "砍刀 — 目标已受茶话会邀请/迷魂"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "slashing",
+        "label": "茶话会礼仪",
+        "predicate": [
+          "hunt-tea-guest",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "alice-farm-machete",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "forceful"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "alice-farm"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": "shortsword",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 2
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "农用砍刀",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>缠蓝丝带的砍刀。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "sword",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d6",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Alice Farm Machete",
+      "theme": "alice-farm"
+    }
+  }
+}

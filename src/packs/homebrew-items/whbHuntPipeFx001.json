@@ -1,0 +1,67 @@
+{
+  "_id": "whbHuntPipeFx001",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：烟斗硬扛",
+  "type": "effect",
+  "img": "systems/pf2e/icons/spells/endure-elements.webp",
+  "system": {
+    "description": {
+      "value": "<p>弗农抽了一口烟斗：火焰抗性 5；下次豁免 +1 状态。</p>",
+      "gm": "<p>vernon-pipe。</p>"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "fire",
+        "value": 5
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "status",
+        "value": 1,
+        "label": "烟斗硬扛"
+      }
+    ],
+    "slug": "effect-vernon-pipe",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

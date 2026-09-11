@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntFirstAid1",
+  "folder": "whbHntFldMed0001",
+  "name": "医疗包 First Aid Kit",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/first-aid-kit.png",
+  "system": {
+    "description": {
+      "value": "<p>可治疗各类创伤的医疗用品。</p>\n<blockquote><p><strong>医疗 · FIRST AID KIT</strong> 战场急救。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact；Manipulate</p>\n<p><strong>效果</strong> 你或邻接盟友恢复 @Damage[(2d8+4)[healing]]，并结束目标身上的 @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{持续伤害（流血）}（若有）。本包可使用 <strong>3</strong> 次。</p>",
+      "gm": "<p>Hunt First Aid Kit。2 动作，2d8+4，清流血，uses 3。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-first-aid-kit",
+    "traits": {
+      "value": [
+        "consumable",
+        "healing",
+        "manipulate"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.2
+    },
+    "price": {
+      "value": {
+        "gp": 10
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "药箱",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>塞满绷带的小箱子。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 3,
+      "max": 3,
+      "autoDestroy": true
+    },
+    "damage": {
+      "formula": "2d8+4",
+      "kind": "healing",
+      "type": "vitality"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "medical",
+      "huntSlots": 2,
+      "enName": "First Aid Kit",
+      "clearBleed": true
+    }
+  }
+}

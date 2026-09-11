@@ -1,0 +1,570 @@
+{
+  "_id": "whbHuntEmiliaMo1",
+  "folder": "whbfolderHntHt01",
+  "name": "艾米莉亚·蒙哥马利 Emilia Montgomery",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/emilia-montgomery.png",
+  "items": [
+    {
+      "_id": "whbEmRifle000001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/frontier-73c.png",
+      "name": "荒原步枪射击",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEmDmgRifle01": {
+            "damage": "2d10+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>使用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFront73C1]{Frontier 73C 荒原步枪}。射程增量 <strong>80 尺</strong>；装填 1。</p>\n<p>若目标是她的<strong>猎物印记</strong>，命中时额外造成 @Damage[1d6[precision]]{1d6 精密}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 80,
+        "rules": [],
+        "slug": "emilia-frontier-shot",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmDualPax0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-pax.png",
+      "name": "双持帕克斯",
+      "sort": 150000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEmDmgPax0001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>副手成对 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPax000001]{Caldwell Pax}。射程增量 <strong>50 尺</strong>；单发打击。</p>\n<p>近身周旋的主力副武器：步枪收起或装填时，她改掏双枪压制。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 50,
+        "rules": [],
+        "slug": "emilia-dual-pax",
+        "traits": {
+          "value": [
+            "concussive",
+            "agile"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmTwinFang001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "双牙齐射",
+      "sort": 160000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以一次操作发动<strong>两次</strong>「双持帕克斯」打击，各承受 <strong>−2 环境减值</strong>，且<strong>共享同一 MAP</strong>（都按当前 MAP 结算）。</p>\n<p>若两次都命中同一猎物印记目标，第二次额外造成 @Damage[1d6[precision]]{1d6 精密}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-twin-fang",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEmAxeThrow001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-axes.png",
+      "name": "投掷斧",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEmDmgAxeT001": {
+            "damage": "1d8+5",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntThrAxe001]{投掷斧}，射程增量 20 尺。投掷时 +2 命中（破甲投掷，已计入叙述；对轻甲目标视为忽略其物品 AC）。</p>\n<p>她常在逼近前先甩出一柄，逼人散开。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 20,
+        "rules": [],
+        "slug": "emilia-throwing-axe",
+        "traits": {
+          "value": [
+            "agile",
+            "thrown",
+            "sweep"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmWolfKnife01",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "剥皮短刃",
+      "sort": 300000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbEmDmgKnife01": {
+            "damage": "1d6+5",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>用来剥狼、也用来惩罚「恶人」的短刃。重击时额外造成 @Damage[1d6[persistent,bleed]]{1d6 持续流血}。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "emilia-skinning-knife",
+        "traits": {
+          "value": [
+            "agile",
+            "finesse"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmMarkPrey001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "猎物印记",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>指定 60 尺内一个她能看见的生物为<strong>猎物</strong>（同时仅 1 个）。持续至战斗结束或她标记新目标。</p>\n<p>对被标记目标：她的打击额外造成 <strong>1d6 精密</strong>；她为追随/寻找该目标所做的 Perception 与 Survival 获得 <strong>+2 环境加值</strong>。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-mark-prey",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEmWolfChase01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "狼途追猎",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每轮 1 次；<strong>需求</strong> 目标是猎物印记，或处于惊惧 / 流血</p>\n<p>朝该目标 Stride。此次移动<strong>不引发</strong>来自该目标的借机攻击。若结束时与目标相邻，可立刻发动一次<strong>剥皮短刃</strong>或<strong>投掷斧</strong>（近战），该次打击 MAP 正常累计。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-wolf-chase",
+        "traits": {
+          "value": [
+            "move"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmSpringTrap1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/bear-trap.png",
+      "name": "林间陷阱",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>在 5 尺内空地布置 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBearTrp01]{熊陷阱}（或等效猎索）。察觉 DC <strong>22</strong>（她的 Stealth DC）。</p>\n<p>生物进入该格：腿部被夹，受到 @Damage[2d8[piercing]]，并尝试 @Check[reflex|dc:22]{反射 DC 20}。失败则 @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{定身}，直至以 Interact 挣脱（运动 DC 22）或破坏陷阱。</p>\n<p>她喜欢把陷阱布在撤退路线上，再开枪把人赶进去。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-trap",
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmRedHood0001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "宿敌颅骨",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "interaction",
+        "description": {
+          "value": "<p>亮出狼颅（或宿敌头骨）恐吓 30 尺内一个能看见她的生物：@Check[will|dc:22|traits:emotion,fear,mental,visual]{意志 DC 22}。</p>\n<p>失败：@UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟，每轮结束可再豁免除）。大失败：惊惧 2。成功则本场对她的此能力免疫。</p>\n<p>这是对所有猎手的警告。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-wolf-skull",
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "visual"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbEmBushcraft01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "红帽猎人",
+      "sort": 800000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>在森林、灌丛、雾沼等自然地形：Stealth 与 Survival 获得 <strong>+2 环境加值</strong>；她为 Hide / Sneak 视自然掩体为可用遮挡（GM 裁定）。</p>\n<p>冰冷的血：对抗恐惧效果时意志豁免 <strong>+1 状态</strong>。她不救「无辜旁观者」——只猎她认定的恶。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-red-hunter",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbEmTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "狩猎教义（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>与劳拉对比</strong>：劳拉远距消音风筝；艾米莉亚是<strong>中距双枪猎人</strong>——步枪开场，双枪贴身齐射，斧与陷阱收尾。</p>\n<ol>\n<li>开场 <strong>猎物印记</strong> + 步枪点射</li>\n<li>逼近后 <strong>双牙齐射</strong> 压制；空枪时甩 <strong>投掷斧</strong></li>\n<li>预布 <strong>林间陷阱</strong>，把人赶进夹口</li>\n<li>猎物惊惧/流血后 <strong>狼途追猎</strong> + 剥皮短刃收割</li>\n</ol>\n<p>理想交战：30～80 尺；进入 50 尺内优先双枪。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "emilia-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "皮甲 + 闪避",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "偏壮的猎人；仍怕被集火控场",
+        "max": 78,
+        "temp": 0,
+        "value": 78
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "小红帽猎人 · 追猎与陷阱",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>遇狼前是天真女孩；杀狼剥皮后血液冰冷，以惩罚邪恶为使命。红帽、狼皮、颅骨警告——诡计与狼性并重的猎人。</p>\n<p>Creature 4（偏强）。主：荒原步枪；副：双持 Pax；辅：投斧、熊陷阱、剥皮刃。对 4×2 级团为严厉+ 中距遭遇。</p>",
+      "publicNotes": "<p>红斗篷下是狼皮与牙骨项链，腰间挂着一对帕克斯左轮。她曾是森林里的孩子，如今只猎她眼中的恶——用狡诈、双枪与陷阱把猎物逼入绝境。</p>\n<p>猎人们：当心。</p>\n<p><em>四人 2 级团 · Creature 4（偏强）· 红帽双枪猎人</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 14,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        },
+        {
+          "type": "scent",
+          "range": 30
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+1 vs 恐惧",
+        "value": 12
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 12
+      },
+      "crafting": {
+        "base": 8
+      },
+      "intimidation": {
+        "base": 13
+      },
+      "nature": {
+        "base": 11
+      },
+      "stealth": {
+        "base": 14
+      },
+      "survival": {
+        "base": 15
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "艾米莉亚·蒙哥马利",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/emilia-montgomery.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "emilia-montgomery",
+      "theme": "little-red-riding-hood",
+      "preferredLoadout": [
+        "frontier-73c",
+        "caldwell-pax",
+        "caldwell-pax",
+        "hunt-throwing-axes",
+        "bear-trap"
+      ]
+    }
+  }
+}

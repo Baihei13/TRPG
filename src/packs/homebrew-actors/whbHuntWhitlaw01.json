@@ -1,0 +1,610 @@
+{
+  "_id": "whbHuntWhitlaw01",
+  "folder": "whbfolderHntHt01",
+  "name": "惠特洛指挥官 Commander Whitlaw",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/commander-whitlaw.png",
+  "items": [
+    {
+      "_id": "whbWlDueProc0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/due-process.png",
+      "name": "正当程序",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 18
+        },
+        "damageRolls": {
+          "whbWlDmgDue0001": {
+            "damage": "2d10+6",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主火力 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDueProc01]{正当程序}（1890 Cavalry）。射程 <strong>80 尺</strong>；单发高伤。对逃脱/隐蔽目标 +1d6 精密。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 80,
+        "rules": [],
+        "slug": "whitlaw-due-process",
+        "traits": {
+          "value": [
+            "concussive",
+            "fatal-d10"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlPatrShad001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/patriots-shadow.png",
+      "name": "爱国者的阴影",
+      "sort": 110000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbWlDmgPatr001": {
+            "damage": "2d8+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>备用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPatrShad1]{爱国者的阴影}（Infantry 73L）。射程 <strong>90 尺</strong>。纪念战友——也提醒他不知荣誉为何物。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 90,
+        "rules": [],
+        "slug": "whitlaw-patriot",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlFreeSong001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/officer.png",
+      "name": "让自由之歌",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbWlDmgFree001": {
+            "damage": "2d6+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFreeSong1]{让自由之歌}（Officer）。射程 <strong>40 尺</strong>。可 1 动作双击。持枪稳住颤抖的手。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 40,
+        "rules": [],
+        "slug": "whitlaw-freedom",
+        "traits": {
+          "value": [
+            "concussive",
+            "agile"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlCounterp001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/the-counterpart.png",
+      "name": "对应物",
+      "sort": 210000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbWlDmgCnt0001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntCounterp1]{对应物}。射程 <strong>50 尺</strong>。与「荒芜之地代表」协议的象征；协议条款每场 1 次。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 50,
+        "rules": [],
+        "slug": "whitlaw-counterpart",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlCavBlade001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/cavalry-saber.png",
+      "name": "骑兵佩剑",
+      "sort": 250000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbWlDmgSab0001": {
+            "damage": "2d8+5",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntCavBlade1]{骑兵佩剑}。博尔登堡秘藏。火器命中后接刀 +1 攻击。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "whitlaw-sabre",
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "deadly-d8"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlDoubleTap01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "自由连射",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以「让自由之歌」发动两次打击，共享 MAP，第二次 −2 环境。子弹呼啸如自由之歌。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-double",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbWlParanoia001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "只有枪能稳住手",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>疑神疑鬼：若未握持火器，对抗恐惧/情绪效应意志 −2，且手颤抖（灵巧攻击 −1）。握持火器时意志豁免 +2 状态对抗恐惧——也可对<strong>盟友</strong>发动打击而不受队友攻击惩罚的良心压力（他已分不清敌友）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-paranoia",
+        "traits": {
+          "value": [
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlCourtMart01",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "战场军法",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场遭遇 1 次</p>\n<p>点名 30 尺内一个生物为「逃兵/罪犯」：@Check[will|dc:24|traits:emotion,fear,mental,auditory]{意志 DC 24}。失败惊惧 2；然后你可 Stride 并对该目标发动一次正当程序或对应物打击。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-court",
+        "traits": {
+          "value": [
+            "auditory",
+            "emotion",
+            "fear",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlFirstAid001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/first-aid-kit.png",
+      "name": "强大的宪法",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>使用 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStrConst1]{强大的宪法}：恢复 @Damage[(3d8+6)[healing]]；半血时可清惊惧/笨拙 1。为国体而包扎。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-aid",
+        "traits": {
+          "value": [
+            "healing",
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWlCharms00001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "荣耀之梦 / 光泽",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>佩戴 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDreamGl01]{荣耀之梦}（先攻 +1；首个重击后可能敌视盟友）与 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntGoldLust1]{荣耀的光泽}（社交货币）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-charms",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbWlPair26th001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "第26团残影",
+      "sort": 800000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>若场上有 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntSgtRigg01]{里金斯中士}：两人共享「军令」——里金斯 30 尺内时，惠特洛恐吓 DC +1；惠特洛点名逃兵后，里金斯可免费 Step。若有红鸦/飞翔者，他可能认定他们是失踪侦察兵的「证据」而优先交涉或优先开火（GM）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-26th",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbWlTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "惠特洛战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：第26团指挥官，偏执中距火力。比里金斯更强、更不稳。</p>\n<ol>\n<li><strong>战场军法</strong>点名「逃兵」再正当程序审判</li>\n<li>近距用自由之歌连射或对应物协议条款</li>\n<li>贴身骑兵佩剑收尾</li>\n<li>半血打强大的宪法；重击后注意荣耀之梦敌视盟友</li>\n</ol>\n<p>他组建叛军来救侦察兵——如今枪口对准一切让他手抖的人。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "whitlaw-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "军官制服 + 皮质装具",
+        "value": 23
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "指挥官体质；偏执消耗他",
+        "max": 105,
+        "temp": 0,
+        "value": 105
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "第26团指挥官 · 偏执军法",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 5
+      },
+      "privateNotes": "<p>惠特洛指挥官 Commander Whitlaw。被拒救援侦察兵后组建叛军第26团。主：正当程序；备：爱国者的阴影；副：让自由之歌/对应物；近战：骑兵佩剑；医疗：强大的宪法；护符：荣耀之梦、荣耀的光泽。</p>\n<p>Creature 5。可与里金斯同场（严厉+）；对 4×2 级团为首领级遭遇。</p>",
+      "publicNotes": "<p>战役帽檐下，鹰徽已褪色。他拒绝等待许可，把第26团拖进入侵区——如今只有枪还能按住颤抖的手，对准敌人，或对准盟友。</p>\n<p><em>四人 2 级团 · Creature 5 · 第26团指挥官</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "疑神疑鬼；总在找逃兵",
+      "mod": 14,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "will": {
+        "saveDetail": "持枪时 +2 vs 恐惧；空手 −2",
+        "value": 13
+      }
+    },
+    "skills": {
+      "diplomacy": {
+        "base": 14
+      },
+      "intimidation": {
+        "base": 16
+      },
+      "society": {
+        "base": 12
+      },
+      "stealth": {
+        "base": 11
+      },
+      "warfare": {
+        "base": 16
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "惠特洛指挥官",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/commander-whitlaw.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "commander-whitlaw",
+      "theme": "26th-regiment",
+      "pairWith": "whbHuntSgtRigg01",
+      "preferredLoadout": [
+        "due-process",
+        "patriots-shadow",
+        "let-freedom-sing",
+        "the-counterpart",
+        "cavalry-sabre-whitlaw",
+        "a-strong-constitution",
+        "dream-of-glory",
+        "golden-signet"
+      ]
+    }
+  }
+}

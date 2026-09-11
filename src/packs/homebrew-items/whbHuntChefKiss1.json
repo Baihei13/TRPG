@@ -1,0 +1,175 @@
+{
+  "_id": "whbHuntChefKiss1",
+  "folder": "whbHntFldWpn0001",
+  "name": "主厨之吻 Chef's Kiss",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/vandal-73c.png",
+  "system": {
+    "description": {
+      "value": "<p>这把步枪能用子弹将活肉打得血肉模糊，让恐惧的咸汗渗入伤口，如同大自然的调味料。这是厨师的招牌堕落食谱之一……他做不出其他任何方法烹制他的<strong>胆汁炖猎人腿肉</strong>！</p>\n<blockquote><p><strong>兵器之书 · VANDAL 73C · CHEF'S KISS</strong> 杠杆卡宾当嫩肉锤：先打松，再入锅。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>70 尺</strong>；装填 1；容量 7</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-7</p>\n<hr />\n<p><strong>嫩肉处理</strong> 命中时目标获得 @Damage[1d4[persistent,bleed]]，且须尝试 @Check[will|dc:resolve(@actor.level*2+14)|traits:emotion,fear,mental]{意志}（DC=14+等级×2）。失败则惊惧 1（1 分钟；同目标本场首次）。恐惧的咸汗就是调味。</p>\n<p><strong>胆汁炖腿</strong>（开关）若目标已流血或惊惧，本武器伤害 +2 状态。</p>",
+      "gm": "<p>Vandal 73C skin「Chef's Kiss / 主厨之吻」。1d8、70ft、cap7。命中流血+惊惧；对流血/惊惧目标 +2。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "slug": "hunt-chef-tenderize",
+        "label": "嫩肉处理",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "bleed",
+        "category": "persistent",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-chef-braise",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "主厨之吻 — 目标已流血/惊惧（胆汁炖腿）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "piercing",
+        "label": "胆汁炖腿",
+        "predicate": [
+          "hunt-chef-braise",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "嫩肉处理",
+        "text": "1d4 持续流血；意志失败则惊惧 1（同目标本场首次）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "chefs-kiss",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-7"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-cook"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "油污杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪管沾着可疑的油脂。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 70,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "enName": "Chef's Kiss",
+      "wikiIcon": "Weapon_Vandal_73C.png",
+      "theme": "the-cook",
+      "baseWeapon": "vandal-73c"
+    }
+  }
+}

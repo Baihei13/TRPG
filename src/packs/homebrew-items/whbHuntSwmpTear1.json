@@ -1,0 +1,91 @@
+{
+  "_id": "whbHuntSwmpTear1",
+  "folder": "whbHntFldFire001",
+  "name": "沼泽之泪火瓶 Swamp Tears",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fire-bomb.png",
+  "system": {
+    "description": {
+      "value": "<p>弗农用来换弩的同款私酿——灌进瓶子就是燃烧弹。酒香混着沼气，一点就着。</p>\n<blockquote><p><strong>火焰瓶 · SWAMP TEARS</strong> 买弩的酒，现在烧人。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFireBm001]{火焰瓶}：20 尺投掷，5 尺火场 3 轮，@Damage[1d6[fire]] + 猎杀灼烬。他管这叫「给魔鬼鸡加料」。</p>",
+      "gm": "<p>Fire Bomb skin「沼泽之泪」。弗农燃烧套件。</p>"
+    },
+    "rules": [],
+    "slug": "swamp-tears-firebomb",
+    "traits": {
+      "value": [
+        "alchemical",
+        "bomb",
+        "consumable",
+        "fire"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-fire",
+        "hillbilly"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 燃烧",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 3
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "私酿瓶",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>臭烘烘的酒瓶子。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": {
+      "formula": "1d6",
+      "kind": "damage",
+      "type": "fire"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "fire",
+      "enName": "Swamp Tears",
+      "theme": "hillbilly-daddy",
+      "skinOf": "whbHuntFireBm001"
+    }
+  }
+}

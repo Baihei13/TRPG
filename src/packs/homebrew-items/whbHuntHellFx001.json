@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntHellFx001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：地狱火场 Hellfire Bomb",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/hellfire-bomb.png",
@@ -12,9 +12,15 @@
     "rules": [],
     "slug": "effect-hellfire-bomb-blaze",
     "traits": {
-      "value": ["alchemical", "fire"],
+      "value": [
+        "alchemical",
+        "fire"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-fire"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-fire"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 火焰",
@@ -22,15 +28,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 7 },
+    "level": {
+      "value": 7
+    },
     "duration": {
       "value": 1,
       "unit": "minutes",
       "expiry": "turn-start",
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": null,
     "context": null,
     "unidentified": false

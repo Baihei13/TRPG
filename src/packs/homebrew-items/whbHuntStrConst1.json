@@ -1,0 +1,87 @@
+{
+  "_id": "whbHuntStrConst1",
+  "folder": "whbHntFldMed0001",
+  "name": "强大的宪法 A Strong Constitution",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/first-aid-kit.png",
+  "system": {
+    "description": {
+      "value": "<p>这个急救箱上的数字可能被认为是不吉利的，但对于一位叛逆的军事指挥官来说，它提醒着他为何要与腐败作斗争：为了他应征入伍所服务的<strong>国家的健康</strong>。</p>\n<blockquote><p><strong>急救箱 · A STRONG CONSTITUTION</strong> 不吉利的数字；为国体而包扎。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact；Manipulate</p>\n<p><strong>效果</strong> 你或邻接盟友恢复 @Damage[(3d8+6)[healing]]。若目标当前 HP ≤ 一半，额外移除一个非魔法的惊惧或笨拙状态（等级 1）。使用后消耗。</p>",
+      "gm": "<p>First Aid Kit skin「A Strong Constitution」。2 动作治疗 3d8+6；半血清惊惧/笨拙 1。</p>"
+    },
+    "rules": [],
+    "slug": "a-strong-constitution",
+    "traits": {
+      "value": [
+        "consumable",
+        "healing",
+        "manipulate"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 25
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "军用急救箱",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>印着不详编号的急救箱。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "medical",
+      "enName": "A Strong Constitution",
+      "theme": "26th-regiment",
+      "baseItem": "first-aid-kit"
+    }
+  }
+}

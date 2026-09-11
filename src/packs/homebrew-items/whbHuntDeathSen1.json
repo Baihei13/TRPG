@@ -1,0 +1,162 @@
+{
+  "_id": "whbHuntDeathSen1",
+  "folder": "whbHntFldWpn0001",
+  "name": "死刑判决 Death Sentence",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/throwing-spear.png",
+  "system": {
+    "description": {
+      "value": "<p>偷猎者跪在他们在《政治家报》花园里猎杀的一头大象前，象牙被锯断后摆放在他们面前。苍白的法官被请来宣判。他掂了掂象牙，刺向每个偷猎者，然后用象牙打造了这支投掷长矛。</p>\n<blockquote><p><strong>兵器之书 · THROWING SPEAR · DEATH SENTENCE</strong> 苍白法官的象牙判决。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>近战</strong> 1d8 穿刺；投掷射程增量 <strong>20 尺</strong>。</p>\n<hr />\n<p><strong>宣判</strong>（1 动作）点名邻接或 20 尺内目标为「死刑犯」：下次此矛对其攻击 +2；命中则额外 @Damage[1d6[piercing]] 且目标惊惧 1（意志 DC 14+等级×2 免惊惧）。每场每目标 1 次。</p>",
+      "gm": "<p>Throwing Spear「死刑判决」。宣判 +2 与额外伤害/惊惧。与苍白法官 lore 相连。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-death-sentence",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "死刑判决 — 已宣判目标"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "宣判",
+        "predicate": [
+          "hunt-death-sentence",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "象牙判决",
+        "diceNumber": 1,
+        "dieSize": "d6",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-death-sentence",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "death-sentence",
+    "traits": {
+      "value": [
+        "thrown-20",
+        "versatile-s"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 10
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "象牙长矛",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>象牙削成的矛。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "spear",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 20,
+    "expend": null,
+    "reload": {
+      "value": "-"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Death Sentence",
+      "theme": "the-statesman",
+      "baseWeapon": "throwing-spear",
+      "loreLinks": [
+        "pale-judge"
+      ]
+    }
+  }
+}

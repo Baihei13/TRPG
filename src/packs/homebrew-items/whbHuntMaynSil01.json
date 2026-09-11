@@ -1,0 +1,159 @@
+{
+  "folder": "whbHntFldWpn0001",
+  "name": "Maynard Sniper Silencer 梅纳德消音狙击",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/maynard-silencer.png",
+  "system": {
+    "description": {
+      "value": "<p>梅纳德狙击步枪的消音型号，牺牲部分射程换取隐蔽性；两段式装填，配长瞄具。</p>\n<blockquote><p><strong>兵器之书 · MAYNARD SNIPER SILENCER</strong> 火帽击发的单发狙击步枪消音版，枪声被压得发闷，适合在沼地里先下手。</p></blockquote>\n<p><strong>熟练</strong> 持用此武器期间视为对其拥有<strong>受训</strong>熟练（无需火器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 进阶火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 100 尺；<strong>装填</strong> 2；弹容量 1</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、fatal-d10、kickback</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoDum01]{达姆弹}、@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoSub01]{亚音速弹}、@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoHvel1]{高速弹}。</p>\n<hr />\n<p><strong>无声伏击</strong> 此武器射击噪音极小。若目标<strong>未察觉你</strong>，打开开关「消音狙击 · 目标未察觉」：目标对此次打击处于 @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{措手不及}（可触发偷袭）；同时忽略其敏捷对 AC 的加值（措手不及已涵盖大多数情况）。</p>",
+      "gm": "<p>Hunt Maynard Sniper Silencer。35 gp。进阶，reload 2，fatal-d10，kickback。静音→措手不及开关。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-maynard-ambush",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "消音狙击 · 目标未察觉你"
+      },
+      {
+        "key": "EphemeralEffect",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+        "selectors": [
+          "strike-attack-roll",
+          "strike-damage"
+        ],
+        "predicate": [
+          "hunt-maynard-ambush",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "无声伏击",
+        "text": "目标未察觉你时可开开关：措手不及（可偷袭）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "maynard-sniper-silencer",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d10",
+        "kickback"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 35
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "消音步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>带粗大消音筒的单发步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "advanced",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 100,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "2"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 4,
+      "wikiIcon": "Weapon_Maynard_Sniper_Silencer.png"
+    }
+  },
+  "_id": "whbHuntMaynSil01"
+}

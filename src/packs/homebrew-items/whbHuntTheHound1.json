@@ -1,0 +1,156 @@
+{
+  "_id": "whbHuntTheHound1",
+  "folder": "whbHntFldWpn0001",
+  "name": "猎犬 The Hound",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/the-hound.png",
+  "system": {
+    "description": {
+      "value": "<p>红渡鸦和飞翔者以前侦察时从不留下任何痕迹。然而，一旦受污染的疫苗扭曲了他们的心智，他们就无法控制自己，开始猎杀追踪他们的猎人。这支步枪就是他们被疾病蒙蔽心智的证据。</p>\n<blockquote><p><strong>兵器之书 · CENTENNIAL · THE HOUND</strong> Winfield M1876 Centennial 的污秽皮肤：泥与血糊住机匣，像猎犬在沼泽里拖出的尸痕。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 90 尺；<strong>装填</strong> 1；弹匣容量 10</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、capacity-10</p>\n<p><strong>弹药</strong> 标准中弹；本皮肤默认配 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoDum01]{达姆弹}（命中额外 1d4 持续流血）。</p>\n<hr />\n<p><strong>污秽猎径</strong> 以此武器命中时，若使用达姆弹（或本皮肤默认达姆），额外造成 @Damage[1d4[persistent,bleed]]。目标在你下一次对其打击前，对你 Stealth 的察觉 DC −2（血迹与惨叫会暴露他，却也掩盖你的脚步——侦察员的反讽）。</p>",
+      "gm": "<p>Hunt Centennial skin「The Hound / 猎犬」。1d10 P、90 尺、capacity-10。默认达姆弹流血。侦察双人组主题。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "slug": "hunt-hound-dumdum",
+        "label": "猎犬·达姆",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "bleed",
+        "category": "persistent",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "污秽猎径",
+        "text": "达姆：1d4 持续流血。命中后目标对你察觉 DC −2（直至你下次打他）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "the-hound",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-10"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 18
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "泥污杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>糊满泥浆的长杠杆步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 90,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 10
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "The Hound",
+      "wikiIcon": "Weapon_Centennial.png",
+      "theme": "scout-pair",
+      "baseWeapon": "centennial",
+      "defaultAmmo": "whbHuntAmmoDum01"
+    }
+  }
+}

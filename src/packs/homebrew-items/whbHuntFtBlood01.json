@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntFtBlood01",
+  "folder": "whbHntFldFeat001",
+  "name": "专长：无血 Bloodless",
+  "type": "feat",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-bloodless.png",
+  "system": {
+    "description": {
+      "value": "<p>流血不会从轻度升级为中度或重度。</p>\n<p><strong>猎杀特性花费</strong> 3 点（普通）</p>\n<hr />\n<p>你免疫<strong>持续流血伤害的升级</strong>（流血骰不会从 1d4 升为 1d6 或更高；若被施加更高骰，自动化会压回 d4）。</p>\n<p>你为结束 @UUID[Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60]{持续流血} 所做的强韧豁免获得 <strong>+2 环境加值</strong>。</p>",
+      "gm": "<p>Hunt Bloodless。3 点。压流血骰≤d4；结束流血强韧 +2。自动化见 hunt-showdown-automation。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "circumstance",
+        "value": 2,
+        "label": "无血",
+        "predicate": [
+          "check:flat:recover-from-persistent-bleed",
+          "damage:type:bleed"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "fortitude",
+        "type": "circumstance",
+        "value": 2,
+        "label": "无血（结束流血）",
+        "predicate": [
+          "hunt-bloodless-bleed-save"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "option": "hunt-bloodless-bleed-save",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "无血 — 结束流血豁免"
+      },
+      {
+        "key": "Note",
+        "selector": "saving-throw",
+        "title": "无血",
+        "text": "结束流血时强韧 +2；流血骰不会升级超过 d4。"
+      }
+    ],
+    "slug": "hunt-feat-bloodless",
+    "traits": {
+      "value": [
+        "general"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trait"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 专长",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "category": "general",
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "location": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntTrait": true,
+      "huntTraitCost": 3,
+      "huntTraitCategory": "defensive"
+    }
+  }
+}

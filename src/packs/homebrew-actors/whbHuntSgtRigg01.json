@@ -1,0 +1,441 @@
+{
+  "_id": "whbHuntSgtRigg01",
+  "folder": "whbfolderHntHt01",
+  "name": "里金斯中士 Sergeant Riggins",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/sergeant-liggins.png",
+  "items": [
+    {
+      "_id": "whbSgPoetJust001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+      "name": "诗意的正义",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbSgDmgPoet001": {
+            "damage": "2d8+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPoetJust1]{诗意的正义}（Rival 78 Shorty）。射程增量 <strong>20 尺</strong>。击杀/重击：5 临时生命。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 20,
+        "rules": [],
+        "slug": "riggins-poetic",
+        "traits": {
+          "value": [
+            "concussive",
+            "scatter"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbSgDoubleBar01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "双管齐射",
+      "sort": 110000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>一次操作打空双管：一次「诗意的正义」打击，伤害 +1d8，攻击 −2 环境。用诗意去平衡灵魂。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-both",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbSgBetrLoy0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/cavalry-saber.png",
+      "name": "背叛的忠诚",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbSgDmgBetr001": {
+            "damage": "2d8+5",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>副手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBetrLoy01]{背叛的忠诚}。灵巧、致命 d8。命中可点名：@Check[will|dc:22|traits:emotion,mental,auditory]{意志 DC 22}，失败惊惧 1。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "riggins-betrayed",
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "deadly-d8"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbSgQuestion001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "扪心自问",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场遭遇 1 次</p>\n<p>Stride，然后发动一次「背叛的忠诚」打击（+1 环境）。若目标是指挥官、军官或强迫他人盲从者，该次伤害 +2 状态，且点名册 DC 视为 24。</p>\n<p>他亲眼见过指挥官在压力下崩溃——刃上的名字都在问同一个问题。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-question",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbSgOrderMyst01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "秩序仪式",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>迷信式整顿：调整防毒面具、红绶与勋章，低声背诵军规。你获得 +2 状态加值于下一次豁免，或移除自己身上一个情绪/恐惧状态等级 1。每轮限 1 次。</p>\n<p>他对秩序的渴望已变成仪式。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-ritual",
+        "traits": {
+          "value": [
+            "concentrate",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbSgStillLearn1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "军队仍须学习",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>他相信：若军队足够渴望学习，他们还有很多要学。对抗恐吓与「命令式」心灵效应时意志 +2 状态；但对魅惑与幻术 −1（神秘主义的裂缝）。</p>\n<p>先攻可用战争学或察觉。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-learn",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbSgSoulScales1",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "灵魂天平",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>触发</strong> 30 尺内一个盟友降至 0 生命值或死亡</p>\n<p>他低吼第26团的名字：立刻获得 5 临时生命，并对触发来源的下一次打击 +2 环境。每场遭遇 1 次。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-scales",
+        "traits": {
+          "value": [
+            "emotion"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbSgTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "里金斯战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：近距军士——霰弹开路，弯刀点名。</p>\n<ol>\n<li>贴脸 <strong>双管齐射</strong> 撕开阵型</li>\n<li>弯刀 <strong>点名册</strong> 制造惊惧</li>\n<li>对军官/盲忠压迫者打出 <strong>扪心自问</strong></li>\n<li>压力大时用 <strong>秩序仪式</strong> 稳住豁免</li>\n</ol>\n<p>忠诚崩坏后的神秘主义：纪律还在，信仰已经歪了。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "riggins-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "军装 + 防毒面具",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "第26团幸存者；靠仪式硬撑",
+        "max": 82,
+        "temp": 0,
+        "value": 82
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "第26团军士 · 秩序变迷信",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>里金斯中士（Sgt. Riggins）。目睹指挥官崩溃后，忠诚→迷信→神秘主义。主：诗意的正义（Rival Shorty）；副：背叛的忠诚（骑兵弯刀）。</p>\n<p>Creature 4 近距军士。对 4×2 级团为严厉贴脸遭遇。</p>",
+      "publicNotes": "<p>防毒面具后是一双不肯松懈的眼睛。红绶、勋章与刻名弯刀证明：第26团死过一次，而他还在用霰弹与仪式给灵魂称重。</p>\n<p><em>四人 2 级团 · Creature 4 · 近距军士/神秘主义</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "面具滤镜；对腐败气味敏感",
+      "mod": 12,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐吓/命令式心灵；−1 vs 魅惑/幻术",
+        "value": 12
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 14
+      },
+      "intimidation": {
+        "base": 14
+      },
+      "religion": {
+        "base": 11
+      },
+      "stealth": {
+        "base": 10
+      },
+      "warfare": {
+        "base": 14
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "里金斯中士",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/sergeant-liggins.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 45,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "sergeant-riggins",
+      "theme": "26th-regiment",
+      "preferredLoadout": [
+        "poetic-justice",
+        "betrayed-loyalty"
+      ]
+    }
+  }
+}

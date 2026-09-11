@@ -1,0 +1,174 @@
+{
+  "_id": "whbHuntRmTalon01",
+  "folder": "whbHntFldWpn0001",
+  "name": "红马丁：利爪 The Redmartin: Talon",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/ranger-73-swift.png",
+  "system": {
+    "description": {
+      "value": "<p>埃迪·戴维斯把游骑兵 73 型步枪挂在壁炉架上，不再想起他背叛的那个朋友——直到有一天他回家，发现那个傻瓜正等着他，脸上带着一丝诡异的笑容。他回来是为了拿回他的旧步枪，并查明是谁出卖了他。</p>\n<blockquote><p><strong>兵器之书 · RANGER 73 TALON · THE REDMARTIN</strong> 枪托利爪：讨债、讨命、讨答案。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>80 尺</strong>；装填 1；容量 7</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-7</p>\n<p>枪机铭牌：Since 1884 — Doc Redmartin’s Fine Remedies — Effective, Natural, & Absolutely Safe。</p>\n<hr />\n<p><strong>利爪</strong> 动作栏另有近战打击（枪托刃）：1d8 挥砍，敏捷。命中可尝试 Interact 威吓（同目标本场首次 +1）。</p>\n<p><strong>讨回旧枪</strong> 若目标本场曾对你造成伤害或「背叛」标记（GM），此武器伤害 +1d4。</p>",
+      "gm": "<p>Ranger 73 Talon skin。射击 + 枪托刃近战。讨回旧枪 +1d4。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "knife",
+        "slug": "redmartin-talon-blade",
+        "label": "红马丁利爪 · 枪托刃",
+        "img": "modules/wang-pf2e-homebrew/assets/hunt/ranger-73-swift.png",
+        "damage": {
+          "base": {
+            "damageType": "slashing",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "agile",
+          "finesse"
+        ],
+        "range": null
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-rm-reclaim",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "红马丁利爪 — 讨回旧枪/被背叛"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "讨回旧枪",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-rm-reclaim",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "redmartin-talon",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-7"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-fool",
+        "redmartin"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 15
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "带刃枪托的步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>带刃枪托的步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "The Redmartin: Talon",
+      "wikiIcon": "Weapon_Ranger_73_Talon.png",
+      "theme": "the-fool",
+      "baseWeapon": "ranger-73-talon"
+    }
+  }
+}

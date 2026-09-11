@@ -13,6 +13,69 @@
       "type": "Item",
       "sorting": "a",
       "folder": null
+    },
+    {
+      "_id": "whbHntFldWpn0001",
+      "name": "猎杀·武器",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldAmmo001",
+      "name": "猎杀·弹药",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldExpl001",
+      "name": "猎杀·爆炸物",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldFire001",
+      "name": "猎杀·火焰",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldTrap001",
+      "name": "猎杀·陷阱",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldTact001",
+      "name": "猎杀·战术",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldMed0001",
+      "name": "猎杀·医疗",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldFeat001",
+      "name": "猎杀·专长",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldFx00001",
+      "name": "猎杀·效果",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
     }
   ]
 }

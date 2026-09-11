@@ -1,0 +1,172 @@
+{
+  "_id": "whbHuntTheNoose1",
+  "folder": "whbHntFldWpn0001",
+  "name": "绞索 The Noose",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/vetterli-71.png",
+  "system": {
+    "description": {
+      "value": "<p>作为法律和秩序的最后遗迹，哈丁警长人手不足，却依然能从那些欣赏他出色工作的人那里获得奢侈品。哈丁就是这样讲述这把维特利 71 的故事的，尽管街头巷尾的传闻却讲述了一个更加骇人听闻的版本。</p>\n<blockquote><p><strong>兵器之书 · VETTERLI 71 KARABINER · THE NOOSE</strong> 他口中的「礼物」；巷子里叫它绞索。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>100 尺</strong>；装填 1</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、fatal-d10</p>\n<p><strong>弹药</strong> 同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntVet71Kb01]{Vetterli 71 Karabiner}。</p>\n<hr />\n<p><strong>稳定架构</strong> 同 Vetterli：上回合未移动则本回合射程 +20、首次打击忽略隐蔽持平。</p>\n<p><strong>绞索</strong> 命中时目标速度 −10 尺（1 轮，不叠加）。重击时额外：目标须 @Check[fortitude|dc:resolve(@actor.level*2+14)|traits:incapacitation]{强韧}，失败则无法 Step（1 轮），且获得 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（巷谣版「套索」）。</p>",
+      "gm": "<p>Vetterli 71 skin「绞索」。稳定架构 + 命中减速；重击套索惊惧/禁 Step。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-noose-braced",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "绞索 — 稳定架构（上回合未移动）"
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "range-increment",
+        "value": 20,
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "predicate": [
+          "hunt-noose-braced"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "稳定架构",
+        "text": "本回合第一次打击：忽略隐蔽持平。",
+        "predicate": [
+          "hunt-noose-braced",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "绞索",
+        "text": "命中：速度 −10 尺（1 轮）。重击：强韧失败则无法 Step + 惊惧 1。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "the-noose",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d10"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "sheriff-hardin"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "卡宾枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪托磨得发亮的卡宾。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 100,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "The Noose",
+      "wikiIcon": "Weapon_Vetterli_71.png",
+      "theme": "sheriff-hardin",
+      "baseWeapon": "vetterli-71-karabiner"
+    }
+  }
+}

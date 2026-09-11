@@ -1,0 +1,61 @@
+{
+  "_id": "whbHuntDebateMk1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：点名发言",
+  "type": "effect",
+  "img": "systems/pf2e/icons/conditions/observed.webp",
+  "system": {
+    "description": {
+      "value": "<p>政治家已点名你发言。对他的「辩论结束」视为已发言；盟友对你下次攻击 +1。</p>",
+      "gm": "<p>statesman-patron。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-debate-named",
+        "value": true
+      }
+    ],
+    "slug": "effect-debate-named",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

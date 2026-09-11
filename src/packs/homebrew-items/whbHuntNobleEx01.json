@@ -1,0 +1,161 @@
+{
+  "_id": "whbHuntNobleEx01",
+  "folder": "whbHntFldWpn0001",
+  "name": "高尚的处决 Noble Execution",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-marathon.png",
+  "system": {
+    "description": {
+      "value": "<p>有些击杀比其他击杀更重要。政治家深谙此道，他将这招马拉松式迅捷留到必须以高尚的死亡来维持平衡之时——或者需要快速装弹以应对之后可能发生的任何情况时。</p>\n<blockquote><p><strong>兵器之书 · CALDWELL MARATHON SWIFT · NOBLE EXECUTION</strong> 重要的死亡，要留到账本需要平衡时。</p></blockquote>\n<p><strong>类别</strong> 军用；双手；80 尺；装填 1；容量 5；1d8 穿刺；震荡、横扫、capacity-5</p>\n<p><strong>马拉松迅捷</strong> 打击不引发借机；装填后免费快步 5 尺（每轮 1）。</p>\n<hr />\n<p><strong>高尚处决</strong>（本场 1 次开关）声明「平衡账本」：下次命中升一档判定（失败→成功，成功→重击），或改为装填后本回合可再免费打击一次（−5 MAP）。</p>",
+      "gm": "<p>Marathon Swift skin「高尚的处决」。Swift 循环 + 本场一次升档/追加。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "马拉松迅捷",
+        "text": "不引发借机；装填后本轮可免费快步一次。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-noble-execution",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "高尚的处决 — 平衡账本（本场1次）"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "高尚的处决",
+        "text": "本场一次：升档或装填后追加打击。",
+        "predicate": [
+          "hunt-noble-execution",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "noble-execution",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Noble Execution",
+      "wikiIcon": "Weapon_Caldwell_Marathon_Swift.png",
+      "theme": "the-statesman",
+      "baseWeapon": "caldwell-marathon-swift"
+    }
+  }
+}

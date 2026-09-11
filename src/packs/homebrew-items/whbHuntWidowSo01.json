@@ -1,0 +1,192 @@
+{
+  "_id": "whbHuntWidowSo01",
+  "folder": "whbHntFldWpn0001",
+  "name": "寡妇之子 Widow's Son",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/pax-trueshot.png",
+  "system": {
+    "description": {
+      "value": "<p>当当局像履行职责一样将他的父亲殴打致死时，铁甲战士眼睁睁地看着母亲被悲痛吞噬，却无能为力。他将母亲的痛苦通过这把<strong>「真射和平」</strong>传播出去——这把枪是母亲在他假死前送给他的。</p>\n<blockquote><p><strong>兵器之书 · CALDWELL PAX · WIDOW'S SON / TRUESHOT</strong> 拉丁语「和平」之名；这一把却只为让滥用权力的人听见寡妇的哭声。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 1；<strong>单手</strong>；<strong>射程增量</strong> 50 尺；<strong>装填</strong> 1；弹巢 6</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-6</p>\n<p><strong>弹药</strong> 同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPax000001]{Caldwell Pax}。</p>\n<hr />\n<p><strong>真射</strong>（开关）开启时，下一次以此武器的攻击检定获得 <strong>+2 环境加值</strong>；每场遭遇限用 1 次成功加值后关闭。</p>\n<p><strong>寡妇之恸</strong> 命中时，目标须尝试 @Check[will|dc:resolve(@actor.level*2+14)|traits:emotion,fear,mental]{意志}（DC = 14+等级×2）。失败则获得 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟）；大失败惊惧 2。同一目标每场遭遇仅首次需豁免。</p>\n<p><strong>重击者枪柄</strong> 可用枪柄近战打击（1d8 钝击，震荡）。</p>",
+      "gm": "<p>Hunt Pax Trueshot skin「Widow's Son / 寡妇之子」。真射 +2/场；寡妇之恸 Will 惊惧。枪柄同 Pax。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-widow-trueshot",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "寡妇之子 — 真射（本场1次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 2,
+        "label": "真射",
+        "predicate": [
+          "hunt-widow-trueshot",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "寡妇之恸",
+        "text": "命中：意志失败则惊惧 1（同目标本场首次）。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "check:outcome:success"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "寡妇之恸",
+        "text": "命中：意志失败则惊惧 1（同目标本场首次）。",
+        "predicate": [
+          "item:id:{item|_id}",
+          "check:outcome:critical-success"
+        ]
+      },
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "brawling",
+        "slug": "widow-son-whip",
+        "label": "寡妇之子 枪柄打击",
+        "img": "systems/pf2e/icons/default-icons/melee.svg",
+        "damage": {
+          "base": {
+            "damageType": "bludgeoning",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive"
+        ],
+        "range": null
+      }
+    ],
+    "slug": "widows-son",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-6"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "ironclad"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "旧左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪柄缠着褪色丝带的单动左轮。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 50,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 6
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Widow's Son",
+      "wikiIcon": "Weapon_Pax_Trueshot.png",
+      "theme": "ironclad",
+      "baseWeapon": "caldwell-pax"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "_id": "whbHuntFuseeFx01",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：照明棒光照",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fusee.png",
+  "system": {
+    "description": {
+      "value": "<p>照明棒燃烧中：明亮光照 20 尺，微光再 20 尺（共 40 尺微光边缘）。</p>",
+      "gm": "<p>Token 光照请 GM 开灯或用 Light 工具；此效果作标记。</p>"
+    },
+    "rules": [
+      {
+        "key": "TokenLight",
+        "value": {
+          "bright": 20,
+          "dim": 40,
+          "color": "#ff6633",
+          "alpha": 0.4,
+          "animation": {
+            "type": "torch",
+            "speed": 2,
+            "intensity": 3
+          }
+        }
+      }
+    ],
+    "slug": "effect-fusee-light",
+    "traits": {
+      "value": [
+        "fire"
+      ],
+      "rarity": "common",
+      "otherTags": [
+        "hunt-showdown"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 0
+    },
+    "duration": {
+      "value": 10,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "pairedItem": "whbHuntFusee0001"
+    }
+  }
+}

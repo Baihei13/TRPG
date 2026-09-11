@@ -1,0 +1,489 @@
+{
+  "_id": "whbHuntWayneHar1",
+  "folder": "whbfolderHntHt01",
+  "name": "韦恩·哈丁警长 Sheriff Wayne Hardin",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/wayne-hardin.png",
+  "items": [
+    {
+      "_id": "whbWhNooseStrik1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/vetterli-71.png",
+      "name": "绞索",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbWhDmgNoose01": {
+            "damage": "2d10+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主火力 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntTheNoose1]{绞索}（Vetterli 71）。射程 <strong>100 尺</strong>。命中速度 −10；重击「套索」强韧失败则无法 Step + 惊惧 1。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 100,
+        "rules": [],
+        "slug": "hardin-noose",
+        "traits": {
+          "value": [
+            "concussive",
+            "fatal-d10"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhPeaceStrik1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/pax-trueshot.png",
+      "name": "和平缔造者",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbWhDmgPeace01": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPeaceMkr1]{和平缔造者}（Pax Trueshot）。射程 <strong>60 尺</strong>。真射本场 1 次 +2；对威胁/惊惧/逃跑 +1d4 精密。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 60,
+        "rules": [],
+        "slug": "hardin-peacemaker",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhBrassStrik1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+      "name": "黄铜花",
+      "sort": 210000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbWhDmgBrass01": {
+            "damage": "2d8+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>最爱的配枪 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBrassFlw1]{黄铜花}（LeMat）。射程 <strong>40 尺</strong>；弹巢 9。半血/危急时伤害 +1d6。另有霰弹重拳 20 尺。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 40,
+        "rules": [],
+        "slug": "hardin-brass-flower",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhThreatMark1",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "点名威胁",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>点名 60 尺内一个生物为「威胁」（听觉、心智）。目标获得威胁标记至遭遇结束（同时仅 1 个）。你对其恐吓检定 +2；和平缔造者对其视为消除威胁目标。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-mark-threat",
+        "traits": {
+          "value": [
+            "auditory",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhReArrest001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "重新逮捕",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>他招过的「猎人」囚犯不可靠——失控时他把他们再铐回去。</p>\n<p>对邻接生物：运动或杂技对抗其反射 DC，或对方 @Check[will|dc:21|traits:mental,auditory]{意志 DC 21}（徽章威压，二选一）。成功则目标 @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{擒抱}；若目标已是你的「前囚犯/不可靠猎人」（GM）或已有惊惧，改为 @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{束缚}（至你下回合结束，或挣脱）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-rearrest",
+        "traits": {
+          "value": [
+            "attack"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhQuarant0001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "疫情封锁令",
+      "sort": 410000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场遭遇 1 次</p>\n<p>疫情初期他拦过蔓延——现在仍会喊封锁。15 尺爆发（听觉）：区域内敌人 @Check[will|dc:20|traits:auditory,fear,mental]{意志 DC 20}。失败惊惧 1 且本回合速度减半；大失败惊惧 2。盟友可选择不豁免并获得下次对「感染/疫病」类效果豁免 +1（1 分钟）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-quarantine",
+        "traits": {
+          "value": [
+            "auditory",
+            "fear",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbWhHandcuff001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "不可靠则铐回",
+      "sort": 420000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>触发</strong> 30 尺内一个你曾视为「囚犯猎人/不可靠」的生物对你造成伤害，或试图逃跑/遁入隐蔽</p>\n<p>立刻对其发动一次黄铜花或和平缔造者打击，或 Stride 至邻接后尝试重新逮捕（仍耗反应，该次逮捕视为 1 动作版：仅擒抱，不升束缚）。每场遭遇 1 次。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-unreliable",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbWhLastLaw0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "法律与秩序的遗迹",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>人手不足仍撑着辖区。对抗恐惧/魅惑 +1 状态；对「逃跑、躲藏、违约」目标先攻与察觉 +2 环境。半血时黄铜花自动视为危急时刻开启。</p>\n<p>他会不惜一切维持秩序——包括把当初招来的猎人重新逮捕。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-last-law",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbWhTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "哈丁战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：执法警长，远距卡宾 + 双左轮控场。疫情老手，囚犯猎人克星。</p>\n<ol>\n<li>绞索远点减速，点名威胁</li>\n<li>和平缔造者真射收威胁</li>\n<li>贴身黄铜花 / 重拳；半血叠危急</li>\n<li>不可靠则铐回 + 重新逮捕</li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "hardin-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "皮风衣 + 星徽",
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "秩序撑着的老骨头",
+        "max": 82,
+        "temp": 0,
+        "value": 82
+      },
+      "speed": {
+        "value": 25,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "警长 · 疫情初期的法律遗迹",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>韦恩·哈丁警长 Sheriff Wayne Hardin。主：绞索；副：和平缔造者、黄铜花。招过不可靠猎人囚犯，失控则再逮捕。Creature 4 执法控场。</p>",
+      "publicNotes": "<p>疫情初期，他拦过蔓延；招来的猎人囚犯却不可靠，失控后他亲手铐回许多人。星徽、真射和平、巷谣里的绞索——秩序的最后遗迹。</p>\n<p><em>四人 2 级团 · Creature 4 · 执法/控场</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "盯着谁在逃跑",
+      "mod": 15,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "will": {
+        "saveDetail": "+1 vs 恐惧/魅惑",
+        "value": 15
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 12
+      },
+      "intimidation": {
+        "base": 14
+      },
+      "medicine": {
+        "base": 11
+      },
+      "society": {
+        "base": 13
+      },
+      "stealth": {
+        "base": 11
+      },
+      "survival": {
+        "base": 13
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "哈丁警长",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/wayne-hardin.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "wayne-hardin",
+      "theme": "sheriff-hardin",
+      "preferredLoadout": [
+        "the-noose",
+        "peacemaker",
+        "brass-flower"
+      ]
+    }
+  }
+}

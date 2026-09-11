@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntDynBdl001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldExpl001",
   "name": "炸药捆 Dynamite Bundle",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-bundle.png",
@@ -12,9 +12,15 @@
     "rules": [],
     "slug": "dynamite-bundle",
     "traits": {
-      "value": ["alchemical", "consumable"],
+      "value": [
+        "alchemical",
+        "consumable"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-explosive"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-explosive"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 爆炸物",
@@ -22,11 +28,19 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 7 },
+    "level": {
+      "value": 7
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.2 },
-    "price": { "value": { "gp": 1 } },
+    "bulk": {
+      "value": 0.2
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
     "equipped": {
       "carryType": "worn",
       "invested": null
@@ -47,13 +61,19 @@
       "misidentified": {}
     },
     "category": "other",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
     "damage": {
       "formula": "5d6",
       "kind": "damage",
       "type": "bludgeoning"
     },
-    "usage": { "value": "held-in-one-hand" },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

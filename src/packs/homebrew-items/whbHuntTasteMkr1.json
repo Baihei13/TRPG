@@ -1,0 +1,167 @@
+{
+  "_id": "whbHuntTasteMkr1",
+  "folder": "whbHntFldWpn0001",
+  "name": "品味制造者 Tastemaker",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/heavy-knife.png",
+  "system": {
+    "description": {
+      "value": "<p>起初，这把重刀的刀刃只知晓适合精致佳肴的食材。后来，它在生死搏斗中尝到了血肉的滋味。如今，它渴望一种病态的混合体，因为在沼泽地带，<strong>敌人和食物</strong>之间的界限已经变得模糊不清。</p>\n<blockquote><p><strong>兵器之书 · HEAVY KNIFE · TASTEMAKER</strong> 厨刀进修杀手课。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用刀剑；负载 L；单手；伤害 1d6 挥砍；特质：灵巧、致命 d8</p>\n<hr />\n<p><strong>尝味</strong> 若目标本回合已被你的火器或投掷斧命中，此刀打击 +1 环境且额外 @Damage[1d4[precision]]。</p>\n<p><strong>敌即食</strong> 击杀或重击时，你恢复 @Damage[(1d6)[healing]]（每轮最多一次）——食欲得到片刻满足。</p>",
+      "gm": "<p>Heavy Knife skin「Tastemaker」。1d6 灵巧致命d8。火器/斧后接刀精密；击杀/重击回 1d6。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-taste-prepped",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "品味制造者 — 本回合已火器/斧命中该目标"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "尝味",
+        "predicate": [
+          "hunt-taste-prepped",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "尝味",
+        "diceNumber": 1,
+        "dieSize": "d4",
+        "damageType": "precision",
+        "predicate": [
+          "hunt-taste-prepped",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "敌即食",
+        "text": "击杀或重击：恢复 1d6（每轮一次）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "tastemaker",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "deadly-d8"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-cook"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": "dagger",
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 4
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "厚背厨刀",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>沾着暗红的重刀。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "knife",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d6",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "enName": "Tastemaker",
+      "theme": "the-cook",
+      "baseWeapon": "heavy-knife"
+    }
+  }
+}

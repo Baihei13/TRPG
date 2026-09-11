@@ -1,0 +1,160 @@
+{
+  "_id": "whbHuntFreeSong1",
+  "folder": "whbHntFldWpn0001",
+  "name": "让自由之歌 Let Freedom Sing",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/officer.png",
+  "system": {
+    "description": {
+      "value": "<p>这把左轮手枪被惠特洛指挥官发现后，经过重新改装，恢复了最佳状态，得以继续它最初的用途：让子弹划破夜空，发出呼啸的声响，为每一个勇敢扣动扳机的人带来<strong>自由</strong>。</p>\n<blockquote><p><strong>兵器之书 · OFFICER · LET FREEDOM SING</strong> 纳甘军官双动：射速高，枪声像自由的歌。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 7</p>\n<p><strong>伤害</strong> 1d6 穿刺；特质：震荡、agile、capacity-7</p>\n<hr />\n<p><strong>自由之歌</strong> 你可以一次操作发动两次此武器打击，共享 MAP，第二次 −2 环境（双动射速）。</p>\n<p><strong>稳住手</strong> 持用此武器期间，对抗恐惧与颤抖类效应的豁免 +1 环境（枪稳住手——也对准盟友）。</p>",
+      "gm": "<p>Officer skin「Let Freedom Sing / 让自由之歌」。1d6 agile、40ft、cap7。双动双击；持枪抗恐惧 +1。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "will",
+        "type": "circumstance",
+        "value": 1,
+        "label": "稳住手",
+        "predicate": [
+          "item:id:{item|_id}",
+          {
+            "or": [
+              "fear",
+              "emotion"
+            ]
+          }
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "自由之歌",
+        "text": "可 1 动作两次打击，共享 MAP，第二次 −2。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "let-freedom-sing",
+    "traits": {
+      "value": [
+        "concussive",
+        "agile",
+        "capacity-7"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "军官左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>军官左轮。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d6",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 40,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Let Freedom Sing",
+      "wikiIcon": "Weapon_Officer.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "officer"
+    }
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "_id": "whbHuntGiggles01",
+  "folder": "whbfolderHntHt01",
+  "name": "吉格尔斯 Giggles",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/giggles.png",
+  "items": [
+    {
+      "_id": "whbGgBornheim001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+      "name": "Bornheim 半自动",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbGgDmgBor001": {
+            "damage": "2d4+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}。射程增量 30 尺。外表像玩笑，子弹不讲笑话。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 30,
+        "rules": [],
+        "slug": "giggles-bornheim",
+        "traits": {
+          "value": [
+            "concussive",
+            "agile"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgRapidFire01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "速射玩笑",
+      "sort": 110000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以一次操作发动两次 Bornheim 打击，各 −3 环境，共享同一 MAP（同武器「速射扳机」）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-rapid",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGgSlugBat0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/baseball-bat.png",
+      "name": "击球手之眼",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbGgDmgBat001": {
+            "damage": "2d8+5",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": "<p>副手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntSlugEye01]{击球手之眼}。碎骨重击：额外 @Damage[1d8[bludgeoning]]，强韧 DC 22 失败则 @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{迟缓 1}（1 轮）。</p>\n<p>她笑着走到近前，下一记就是「命中注定」。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "giggles-batters-eye",
+        "traits": {
+          "value": [
+            "sweep",
+            "shove"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgKnife000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "袖藏飞刀",
+      "sort": 250000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbGgDmgKnf001": {
+            "damage": "1d4+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>领口别着的小刀，可近战或投掷（射程增量 10 尺）。命中时目标对本回合内她的下一次恐吓检定 −2 环境。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 10,
+        "rules": [],
+        "slug": "giggles-knife",
+        "traits": {
+          "value": [
+            "agile",
+            "finesse",
+            "thrown"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgMisdirect01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "马戏障眼",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对 30 尺内一个能看见她的生物尝试 @Check[deception|defense:perception]{欺骗} 对抗察觉 DC（马戏团式假动作/声东击西）。</p>\n<p>成功：目标对她措手不及，直至她下个回合结束；她对本回合下一次打击该目标获得 <strong>+2 环境加值</strong>。</p>\n<p>这是阴谋的起手——先让你看错方向。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-misdirect",
+        "traits": {
+          "value": [
+            "mental",
+            "visual"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgCurtain0001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "落幕恐吓",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "interaction",
+        "description": {
+          "value": "<p>以马戏团报幕的腔调恐吓 30 尺内目标：@Check[will|dc:22|traits:emotion,fear,mental,auditory]{意志 DC 22}。</p>\n<p>失败：@UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟）。大失败：惊惧 2，并对其「马戏障眼」的察觉 DC 视为降低 2（更易被骗）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-curtain",
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "auditory"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgFatedHit001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "命中注定",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场遭遇 1 次</p>\n<p>Stride，然后发动一次<strong>击球手之眼</strong>打击，该次攻击检定获得命运视界（+1 环境）。若命中，视为重击判定时骰面结果提高一档（失败→成功，成功→重击；大失败不变），且碎骨效果 DC 视为 24。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-fated",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGgPatient0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "狡猾而耐心",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>谋杀马戏团的幕后主使：外表疯癫，实则算计。对抗侦测谎言、读心与「看穿伪装」类效果时，欺骗检定与意志豁免获得 <strong>+2 状态加值</strong>。</p>\n<p>先攻检定可用欺骗替代察觉（报幕后的伏笔）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-patient",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGgTroupe00001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "指挥班子",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>需求</strong> 30 尺内有至少一名盟友（或 GM 允许的马戏团杂兵/召唤物）</p>\n<p>一声尖笑下令：该盟友立刻获得一次反应，可 Step、Interact 或一次 MAP 打击。每轮限 1 次。</p>\n<p>独处时改为：在空格制造「幻影乐手」干扰（持续至她下回合结束）——该格及相邻视为困难地形，且对敌人 Hide 的察觉 DC +2。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-direct",
+        "traits": {
+          "value": [
+            "auditory",
+            "concentrate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbGgSticky00001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/sticky-bomb.png",
+      "name": "马戏彩蛋（黏弹）",
+      "sort": 800000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>投掷 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntSticky001]{黏性炸弹}（或等效）。命中后依物品结算；她称之为开场彩蛋。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-sticky",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbGgTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "马戏团阴谋（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：阴谋家近战收割。Bornheim 风筝试探 → 障眼/落幕控场 → 贴脸棒球棒「命中注定」砸碎。</p>\n<ol>\n<li>远距用手枪与黏弹搅局，绝不先亮棒球棒</li>\n<li><strong>马戏障眼</strong>或<strong>落幕恐吓</strong>让目标措手不及/惊惧</li>\n<li>进身 <strong>命中注定</strong> 或普通球棒重击收尸</li>\n<li>有杂兵时 <strong>指挥班子</strong> 让别人挡刀</li>\n</ol>\n<p>比外表致命：玩家以为小丑杂耍，其实全程在排剧本。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "giggles-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 4
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "戏服下的护衬",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "笑着挨打，也笑着还手",
+        "max": 80,
+        "temp": 0,
+        "value": 80
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "谋杀马戏团主使 · 阴谋与碎骨",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>「谋杀马戏团」幕后主使。指挥班子穿越亡灵之地。狡猾耐心，远比小丑外表致命。副手：击球手之眼；主手 Bornheim。</p>\n<p>Creature 4 偏强。主题：阴谋、马戏障眼、命运碎骨。</p>",
+      "publicNotes": "<p>白面红唇，双髻戏服——「谋杀马戏团」的笑声从她喉咙里漏出来。她带着班子穿过亡灵之地，每一步都像排演好的节目；等你听懂笑点，棒球棒已经到了。</p>\n<p><em>四人 2 级团 · Creature 4（偏强）· 马戏阴谋家</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "deception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 12,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+2 vs 看穿伪装/读心",
+        "value": 13
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 13
+      },
+      "deception": {
+        "base": 16
+      },
+      "intimidation": {
+        "base": 14
+      },
+      "performance": {
+        "base": 15
+      },
+      "stealth": {
+        "base": 13
+      },
+      "thievery": {
+        "base": 12
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "吉格尔斯",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/giggles.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "giggles",
+      "theme": "murder-circus",
+      "preferredLoadout": [
+        "bornheim-no-3",
+        "batters-eye",
+        "sticky-bomb"
+      ]
+    }
+  }
+}

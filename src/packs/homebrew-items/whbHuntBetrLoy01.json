@@ -1,0 +1,179 @@
+{
+  "_id": "whbHuntBetrLoy01",
+  "folder": "whbHntFldWpn0001",
+  "name": "背叛的忠诚 Betrayed Loyalty",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/cavalry-saber.png",
+  "system": {
+    "description": {
+      "value": "<p>他们满怀热情地来到这里，准备发现伟大的秘密，凯旋而归。然而，腐败却另有打算。这把弯刀上刻着那些最终不得不扪心自问的人的名字——他们不得不问：<strong>盲目忠诚的代价是否值得</strong>。</p>\n<blockquote><p><strong>兵器之书 · CAVALRY SABER · BETRAYED LOYALTY</strong> 刃上刻名，像点名册；每一刀都是自问。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用刀剑；<strong>负载</strong> 1；<strong>单手</strong></p>\n<p><strong>伤害</strong> 1d8 挥砍；特质：灵巧、致命 d8</p>\n<hr />\n<p><strong>点名册</strong> 命中时，你可低声念出一个刻名：目标须尝试 @Check[will|dc:resolve(@actor.level*2+14)|traits:emotion,mental,auditory]{意志}（DC = 14+等级×2）。失败则 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟）。同一目标每场遭遇仅首次。</p>\n<p><strong>扪心自问</strong>（开关）开启时，你下一次以此武器的攻击检定 +1 环境，且若目标是「权威/指挥官/要求盲目服从者」（GM），伤害额外 +2 状态。每场遭遇限用 1 次成功后关闭。</p>",
+      "gm": "<p>Hunt Cavalry Saber skin「Betrayed Loyalty / 背叛的忠诚」。1d8 S、灵巧、致命d8。点名册惊惧；扪心自问开关。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-betrayed-question",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "背叛的忠诚 — 扪心自问（本场1次）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "扪心自问",
+        "predicate": [
+          "hunt-betrayed-question",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 2,
+        "damageType": "slashing",
+        "label": "盲目忠诚的代价",
+        "predicate": [
+          "hunt-betrayed-question",
+          "item:id:{item|_id}",
+          "hunt-target-authority"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-target-authority",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "目标为权威/盲忠压迫者（GM）"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "点名册",
+        "text": "命中可令目标意志豁免，失败惊惧 1（同目标本场首次）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "betrayed-loyalty",
+    "traits": {
+      "value": [
+        "agile",
+        "finesse",
+        "deadly-d8"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": "shortsword",
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 8
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "旧军刀",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>刃上密密麻麻刻着人名。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "sword",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Betrayed Loyalty",
+      "wikiIcon": "Weapon_Cavalry_Saber.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "cavalry-saber"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_id": "whbHuntDreamGl01",
+  "folder": "whbHntFldTact001",
+  "name": "荣耀之梦 Dream of Glory",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/demon-mask.webp",
+  "system": {
+    "description": {
+      "value": "<p>惠特洛指挥官小时候就玩弄着这件护身符，梦想着有一天自己也能自由奔跑。后来，当他深陷腐化的恐怖之中时，它有了新的、更加阴暗的意义，象征着他<strong>从未寻得的荣耀</strong>。</p>\n<hr />\n<p><strong>用法</strong> 附着武器（投资）。</p>\n<p><strong>效果</strong> 持用附着武器时，先攻 +1 环境。每场遭遇第一次重击后，你须尝试意志 DC 18：失败则对最近盟友产生敌意一轮（疑神疑鬼——GM 可令其对盟友一次打击或恐吓），成功则获得 5 临时生命。</p>",
+      "gm": "<p>Charm「Dream of Glory」。先攻 +1；本场首个重击后 Will DC18 或敌视盟友。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "initiative",
+        "type": "circumstance",
+        "value": 1,
+        "label": "荣耀之梦"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "荣耀之梦",
+        "text": "本场首次重击后：意志 DC18，失败则敌视最近盟友一轮。",
+        "predicate": [
+          "check:outcome:critical-success"
+        ]
+      }
+    ],
+    "slug": "dream-of-glory",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 18
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "旧护符",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>童年玩物般的护符。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Dream of Glory",
+      "theme": "26th-regiment"
+    }
+  }
+}

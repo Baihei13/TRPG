@@ -1,0 +1,151 @@
+{
+  "_id": "whbHuntFilibust1",
+  "folder": "whbHntFldWpn0001",
+  "name": "冗长辩论 Filibuster",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/frontier-73c-silencer.png",
+  "system": {
+    "description": {
+      "value": "<p>有时候，人们会不合时宜地发言，却不知道这位政治家的脾气有多暴躁。他用这把 Frontier 73C 消音器悄无声息地消除这些喋喋不休的人，因为他没时间听那些自以为比他懂得多的人胡言乱语。</p>\n<blockquote><p><strong>兵器之书 · FRONTIER 73C SILENCER · FILIBUSTER</strong> 消音结束冗长发言。</p></blockquote>\n<p>基底近 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFront73C1]{Frontier 73C}：1d8、70 尺（消音略短）、capacity-7。</p>\n<hr />\n<p><strong>无声打断</strong> 枪声沉闷。目标未察觉你时，打开开关：目标对此次打击措手不及。</p>\n<p><strong>闭嘴</strong> 命中后目标 1 轮内语言动作需意志 DC（14+等级×2），失败则浪费该动作。</p>",
+      "gm": "<p>Frontier 73C Silencer「冗长辩论」。静音措手不及 + 闭嘴。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-filibuster-silent",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "冗长辩论 — 目标未察觉你"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "无声打断",
+        "text": "未察觉：目标措手不及。命中后语言动作可能被打断。",
+        "predicate": [
+          "hunt-filibuster-silent",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "filibuster",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-7"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "消音杠杆枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>消音杠杆枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 70,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Filibuster",
+      "wikiIcon": "Weapon_Frontier_73C_Silencer.png",
+      "theme": "the-statesman",
+      "baseWeapon": "frontier-73c-silencer"
+    }
+  }
+}

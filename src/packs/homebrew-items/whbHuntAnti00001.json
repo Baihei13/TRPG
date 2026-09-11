@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntAnti00001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldMed0001",
   "name": "解毒针 Antidote Shot",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
@@ -12,9 +12,17 @@
     "rules": [],
     "slug": "antidote-shot",
     "traits": {
-      "value": ["alchemical", "consumable", "elixir", "healing"],
+      "value": [
+        "alchemical",
+        "consumable",
+        "elixir",
+        "healing"
+      ],
       "rarity": "common",
-      "otherTags": ["hunt-showdown", "hunt-medical"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 医疗",
@@ -22,11 +30,19 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 3 },
+    "level": {
+      "value": 3
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.1 },
-    "price": { "value": { "gp": 25 } },
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 25
+      }
+    },
     "equipped": {
       "carryType": "worn",
       "invested": null
@@ -47,9 +63,15 @@
       "misidentified": {}
     },
     "category": "other",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
     "damage": null,
-    "usage": { "value": "held-in-one-hand" },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

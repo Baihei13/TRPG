@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntDamnFt001",
+  "folder": "whbHntFldTrap001",
+  "name": "该死的脚步声 Damn Footsteps",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>红鸦曾是一位技艺精湛、受人尊敬的捕兽人，如今她却发现自己享受着手风琴的残酷，尽管它会毁坏兽皮。她设置这些手风琴绊雷，让猎物猝不及防地被利刃般的死亡之握所击倒。</p>\n<blockquote><p><strong>铁丝网拌雷 · DAMN FOOTSTEPS</strong> 刀丝展开的脆响，像该死的脚步落下。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntConcTM001]{铁丝网拌雷}：布置 2 动作，放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzConc001]{铁丝网拌雷}。</p>",
+      "gm": "<p>Concertina Trip Mine skin「该死的脚步声」。红鸦；规则同铁丝网拌雷。</p>"
+    },
+    "rules": [],
+    "slug": "damn-footsteps",
+    "traits": {
+      "value": [
+        "consumable",
+        "mechanical",
+        "snare",
+        "trap"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trap",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "绊线装置",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>缠线与木桩。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "trap",
+      "enName": "Damn Footsteps",
+      "wikiIcon": "Tool_Concertina_Trip_Mines.png",
+      "theme": "scout-pair",
+      "skinOf": "whbHuntConcTM001"
+    }
+  }
+}

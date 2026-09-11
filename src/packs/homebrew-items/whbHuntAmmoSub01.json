@@ -1,0 +1,116 @@
+{
+  "folder": "whbHntFldAmmo001",
+  "name": "亚音速弹 Subsonic Ammo",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/ammo-subsonic.png",
+  "system": {
+    "description": {
+      "value": "<p>装药更少、弹头更重的亚音速弹药，枪声沉闷短促，便于伏击；代价是射程大幅缩短。</p>\n<hr />\n<p><strong>用法</strong> 弹药（特殊）；装入兼容火器后打击生效。</p>\n<ul>\n<li><strong>短射程</strong>：该次打击的射程增量视为<strong>减半</strong>（向下取整至 5 尺；已自动化近似为 −50%）。</li>\n<li><strong>无声伏击</strong>：若目标<strong>未察觉你</strong>（你对其隐蔽 / 躲藏 / 未被发现），打开动作栏开关「亚音速 · 目标未察觉」——目标对此次打击处于 @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{措手不及}；若你拥有<strong>偷袭</strong>，可正常计入。</li>\n</ul>\n<p>兼容：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntMaynSil01]{梅纳德消音狙击} 等使用中型/长弹的猎杀步枪。</p>",
+      "gm": "<p>Hunt Subsonic。原「无法听声定位」改为措手不及/偷袭。射程减半用 AdjustStrike；伏击靠开关 + EphemeralEffect。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-subsonic-ambush",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "亚音速 · 目标未察觉你"
+      },
+      {
+        "key": "EphemeralEffect",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+        "selectors": [
+          "strike-attack-roll",
+          "strike-damage"
+        ],
+        "predicate": [
+          "hunt-subsonic-ambush"
+        ]
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "multiply",
+        "property": "range-increment",
+        "value": 0.5
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "亚音速弹",
+        "text": "射程增量减半。目标未察觉你时可开开关：措手不及（可偷袭）。"
+      }
+    ],
+    "slug": "hunt-subsonic-ammo",
+    "traits": {
+      "value": [
+        "consumable"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-ammo",
+        "hunt-special-ammo"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 弹药",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 5,
+    "baseItem": "rounds",
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      },
+      "per": 5
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "弹药",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一盒沉甸甸的枪弹。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "ammo",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": "rounds10"
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "ammo",
+      "huntSpecialAmmo": "subsonic",
+      "wikiIcon": "Ammo_Long_Subsonic.png"
+    }
+  },
+  "_id": "whbHuntAmmoSub01"
+}

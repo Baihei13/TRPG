@@ -1,0 +1,415 @@
+{
+  "_id": "whbHuntRedhill01",
+  "folder": "whbfolderHntHt01",
+  "name": "乔纳森·雷德希尔 Jonathan Redhill",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/jonathan-redhill.png",
+  "items": [
+    {
+      "_id": "whbJrPaxStrike01",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-pax.png",
+      "name": "赌徒左轮",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbJrDmgPax0001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>随身 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPax000001]{Pax}。射程 <strong>50 尺</strong>。赌约用的家伙——活着出来才有地契。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 50,
+        "rules": [],
+        "slug": "redhill-pax",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbJrOvercall001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-stick.png",
+      "name": "超额召唤",
+      "sort": 200000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>投掷 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntOvercall1]{超额召唤}（炸药棒皮）。5 尺爆发 @Damage[3d6[bludgeoning]]，基础反射减半。若目标本回合正在向你强推（Stride 靠近或已打你），改为 @Damage[4d6[bludgeoning]]，失败额外倒地。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "redhill-overcall",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbJrLiveTarg001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "活靶子",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>胸前绑着草靶：AC <strong>不因</strong>躲藏/掩蔽获得通常好处（他故意当靶），但所有攻击他的生物视为对他有「挑衅」——对他打击 +1 环境，对他以外目标打击 −1 环境（30 尺内，每轮每个敌人第一次）。</p>\n<p>草靶吸收冲击：物理伤害抗性 2；重击他时攻击者须反射 DC 20，失败自己倒地（靶绳反弹的狼狈）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "redhill-target",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbJrCallBluff01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "叫破虚张",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "interaction",
+        "description": {
+          "value": "<p>对 30 尺内一个本回合向你靠近或攻击你的生物恐吓：@Check[will|dc:21|traits:emotion,fear,mental,auditory]{意志 DC 21}。失败惊惧 1，且对你下一次打击 −2 环境。他笑着问：地契值这条命吗？</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "redhill-bluff",
+        "traits": {
+          "value": [
+            "auditory",
+            "emotion",
+            "fear",
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbJrFistFight01",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "醉拳砸脸",
+      "sort": 500000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbJrDmgFist001": {
+            "damage": "2d6+4",
+            "damageType": "bludgeoning"
+          }
+        },
+        "description": {
+          "value": "<p>草帽下的醉汉近战。命中可尝试推撞（运动对抗）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "redhill-fist",
+        "traits": {
+          "value": [
+            "agile",
+            "nonlethal"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbJrDeedBet0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "地契赌约",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>胆大还是傻瓜？只有墓碑知道。半血以下：所有打击 +1 状态（越危险越兴奋）；若被击倒，场上敌人为争夺「击败活靶」声望互相 −2 攻击（1 轮，GM）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "redhill-deed",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbJrTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "雷德希尔战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：故意吸引火力的赌徒。站在开阔地，让敌人冲过来，再用超额召唤砸脸。</p>\n<ol>\n<li>亮靶挑衅，逼人推过来</li>\n<li><strong>超额召唤</strong>炸强推路线</li>\n<li>左轮收残兵；近身砸脸</li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "redhill-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 3
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "草靶 + 闪避（故意当靶）",
+        "value": 20
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "醉汉命硬",
+        "max": 85,
+        "temp": 0,
+        "value": 85
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [
+        {
+          "type": "physical",
+          "value": 2,
+          "exceptions": []
+        }
+      ],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "活靶子赌徒 · 超额加注",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>乔纳森·雷德希尔（Johnathan Redshirt / Living Target）。醉酒赌约进沼泽，胸绑草靶。招牌：超额召唤炸药。Creature 4 嘲讽型。</p>",
+      "publicNotes": "<p>草帽、蓝巾、胸前草靶——谁打死活靶谁扬名。他赌的是西部地契；沼泽赌的是他的墓碑。</p>\n<p><em>四人 2 级团 · Creature 4 · 嘲讽/爆破</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "醉眼仍尖",
+      "mod": 12,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐惧（赌徒神经）",
+        "value": 11
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 13
+      },
+      "deception": {
+        "base": 12
+      },
+      "intimidation": {
+        "base": 13
+      },
+      "stealth": {
+        "base": 10
+      },
+      "thievery": {
+        "base": 12
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "乔纳森·雷德希尔",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/jonathan-redhill.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "jonathan-redhill",
+      "theme": "living-target",
+      "preferredLoadout": [
+        "overcall",
+        "caldwell-pax"
+      ]
+    }
+  }
+}

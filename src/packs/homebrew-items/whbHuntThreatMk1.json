@@ -1,0 +1,63 @@
+{
+  "_id": "whbHuntThreatMk1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：威胁标记",
+  "type": "effect",
+  "img": "systems/pf2e/icons/conditions/hunted.webp",
+  "system": {
+    "description": {
+      "value": "<p>你被点名为<strong>威胁</strong>。哈丁/政治家对你恐吓 +2；和平缔造者/辩论结束等视为消除威胁目标。</p>",
+      "gm": "<p>hardin-mark-threat / statesman-patron。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-marked-threat",
+        "value": true
+      }
+    ],
+    "slug": "effect-hunt-threat-mark",
+    "traits": {
+      "value": [
+        "mental"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "encounters",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

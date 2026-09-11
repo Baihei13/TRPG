@@ -1,0 +1,86 @@
+{
+  "_id": "whbHuntFinlCon01",
+  "folder": "whbHntFldMed0001",
+  "name": "最终宪法 Final Constitution",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>这位政治家深知毒药的危害；许多人因他所掌握的权力而感到威胁。这支弱效解毒剂可以作为保险，抵御那些企图以如此卑鄙手段谋害他的人。</p>\n<blockquote><p><strong>医疗 · ANTIDOTE SHOT (WEAK) · FINAL CONSTITUTION</strong></p></blockquote>\n<p>规则同弱效版 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAnti00001]{解毒针}：1 动作注射，清除猎杀中毒；毒素伤害抗性 5（1 分钟）而非全免疫——「弱效」保险，够用但不夸张。</p>",
+      "gm": "<p>Weak Antidote skin。清中毒 + 毒抗 5 / 1 分钟。</p>"
+    },
+    "rules": [],
+    "slug": "final-constitution",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable",
+        "elixir",
+        "healing"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "绿色针剂",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>保险用的针。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "medical",
+      "enName": "Final Constitution",
+      "theme": "the-statesman",
+      "skinOf": "whbHuntAnti00001"
+    }
+  }
+}

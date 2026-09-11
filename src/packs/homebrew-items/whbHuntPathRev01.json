@@ -1,0 +1,184 @@
+{
+  "_id": "whbHuntPathRev01",
+  "folder": "whbHntFldWpn0001",
+  "name": "启示之路 Path of Revelation",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+  "system": {
+    "description": {
+      "value": "<p>当红鸦和飞翔者最初登上侦察塔时，他们对即将发生的一切一无所知。几乎立刻，他们就被迫用这支<strong>勒马特</strong>杀死了一名感染者——这是在他们获得疫苗之前众多不祥之兆中的第一个。</p>\n<p>被卷入狩猎场后，他们又用这把枪的<strong>重拳</strong>（霰弹筒）锁住侦察塔周围。不幸的是，再多的准备也无法保护他们的心智免受最终吞噬他们的腐化。</p>\n<blockquote><p><strong>兵器之书 · LEMAT MARK II · PATH OF REVELATION</strong> 九连发左轮 + 底下一根霰弹筒；启示来得又快又近。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>左轮模式</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 9；伤害 1d8 穿刺；震荡、capacity-9</p>\n<p><strong>重拳（霰弹）</strong> 另见动作栏打击：射程增量 <strong>20 尺</strong>；伤害 1d8 穿刺（散射感）；每场遭遇建议限 1–2 发（容量 1）。命中时目标对该次豁免失败则 @UUID[Compendium.pf2e.conditionitems.Item.i3OJUmM1V6L8Lkbg]{击倒}（或 GM 改为退 5 尺）。</p>\n<hr />\n<p><strong>不祥之兆</strong> 每当你以此武器造成一次击杀（或重击），本回合内你的下一次打击获得 <strong>+1 环境加值</strong>（打开开关）。</p>",
+      "gm": "<p>Hunt LeMat Mark II skin「Path of Revelation / 启示之路」。左轮 1d8/40ft/cap9 + Strike「重拳」霰弹。侦察双人组。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-path-omen",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "启示之路 — 不祥之兆（本回合）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1,
+        "label": "不祥之兆",
+        "predicate": [
+          "hunt-path-omen",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "firearm",
+        "slug": "path-revelation-punch",
+        "label": "启示之路 · 重拳（霰弹）",
+        "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+        "damage": {
+          "base": {
+            "damageType": "piercing",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive",
+          "scatter"
+        ],
+        "range": {
+          "increment": 20
+        }
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "重拳",
+        "text": "霰弹命中：失败则击倒（或退 5 尺）。每场弹药紧张。",
+        "predicate": [
+          "item:slug:path-revelation-punch"
+        ]
+      }
+    ],
+    "slug": "path-of-revelation",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-9"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 12
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "双管左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>枪管下另有一根粗短的筒。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 40,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 9
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "Path of Revelation",
+      "wikiIcon": "Weapon_LeMat.png",
+      "theme": "scout-pair",
+      "baseWeapon": "lemat-mark-ii"
+    }
+  }
+}

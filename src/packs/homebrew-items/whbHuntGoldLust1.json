@@ -1,0 +1,86 @@
+{
+  "_id": "whbHuntGoldLust1",
+  "folder": "whbHntFldTact001",
+  "name": "荣耀的光泽 Golden Signet",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/demon-mask.webp",
+  "system": {
+    "description": {
+      "value": "<p>荒芜之地的代表多年前在一次政治活动中结识了惠特洛指挥官。惠特洛告诉他，荣誉是一种货币。虽然这并非这位代表最乐于拥有的货币，但这个教训在与理想主义者和空想家打交道时却非常有用。</p>\n<hr />\n<p><strong>用法</strong> 佩戴（投资）。</p>\n<p><strong>效果</strong> 交涉与恐吓检定 +1 环境（荣誉当货币）。对「理想主义者/空想家」（GM）的社交 DC 视为降低 2。若你在遭遇中欺骗过盟友，此加值改为对察觉检定 −1（光泽剥落）。</p>",
+      "gm": "<p>Charm「Golden Signet / 荣耀的光泽」。社交 +1；对理想主义者更易压；骗盟友则察觉 −1。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "diplomacy",
+          "intimidation"
+        ],
+        "type": "circumstance",
+        "value": 1,
+        "label": "荣耀的光泽"
+      }
+    ],
+    "slug": "golden-signet",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 18
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "旧护符",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>童年玩物般的护符。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Golden Signet",
+      "theme": "26th-regiment"
+    }
+  }
+}

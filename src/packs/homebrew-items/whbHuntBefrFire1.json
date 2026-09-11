@@ -1,0 +1,83 @@
+{
+  "_id": "whbHuntBefrFire1",
+  "folder": "whbHntFldTact001",
+  "name": "烟火之前 Before the Fireworks",
+  "type": "equipment",
+  "img": "systems/pf2e/icons/equipment/worn-items/other-worn-items/ring-of-lies.webp",
+  "system": {
+    "description": {
+      "value": "<p>荒凉之地的代表在一场扑克牌局中，于一处偏僻小屋的深处赢得了这件纪念品。男士戒指内侧刻着「玛丽」的字样，女士戒指内侧刻着「彼得」。他觉得这太甜腻了。</p>\n<hr />\n<p><strong>用法</strong> 佩戴（投资）。</p>\n<p><strong>效果</strong> 欺骗检定 +1 环境。每场遭遇 1 次：当你即将成为打击目标时，可宣称「还不到烟火」——该次攻击对你有 −1 环境（分心想起甜腻情话）。</p>",
+      "gm": "<p>Charm「烟火之前」。欺骗 +1；本场 1 次被打 −1。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "deception",
+        "type": "circumstance",
+        "value": 1,
+        "label": "烟火之前"
+      }
+    ],
+    "slug": "before-the-fireworks",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 2
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 10
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "对戒",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>一对刻名戒指。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Before the Fireworks",
+      "theme": "the-statesman"
+    }
+  }
+}

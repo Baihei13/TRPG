@@ -1,0 +1,498 @@
+{
+  "folder": "whbfolderHntHt01",
+  "type": "npc",
+  "effects": [],
+  "ownership": {
+    "default": 0
+  },
+  "_id": "whbHuntRedRaven1",
+  "name": "红鸦 Red Raven",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/red-raven.png",
+  "items": [
+    {
+      "_id": "whbRrHound000001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/the-hound.png",
+      "name": "猎犬",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbRrDmgHound01": {
+            "damage": "2d10+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntTheHound1]{猎犬}（Centennial）。射程 <strong>90 尺</strong>。达姆：额外 @Damage[1d4[persistent,bleed]]。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 90,
+        "rules": [],
+        "slug": "red-raven-hound",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrPathRev0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+      "name": "启示之路",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbRrDmgPath001": {
+            "damage": "2d8+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>副手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPathRev01]{启示之路}（勒马特）。射程 <strong>40 尺</strong>。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 40,
+        "rules": [],
+        "slug": "red-raven-path",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrHeavyPunch1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+      "name": "重拳（霰弹）",
+      "sort": 210000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": [
+            "knockout"
+          ]
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbRrDmgPunch01": {
+            "damage": "2d8+5",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>勒马特底筒「重拳」。射程增量 <strong>20 尺</strong>。命中：@Check[fortitude|dc:20]{强韧 DC 20} 失败则 @UUID[Compendium.pf2e.conditionitems.Item.i3OJUmM1V6L8Lkbg]{击倒}（或退 5 尺）。封锁塔区用的那一击。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 20,
+        "rules": [],
+        "slug": "red-raven-punch",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrEyeKnife001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "剜眼短刃",
+      "sort": 250000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbRrDmgKnife01": {
+            "damage": "2d6+4",
+            "damageType": "slashing"
+          }
+        },
+        "description": {
+          "value": "<p>她以前总是挖掉不肯正视她的敌人眼睛。疫苗让刀子刺得更深，速度也更慢：此打击<strong>无敏捷</strong>，但命中额外 @Damage[1d6[precision]]；重击时目标 @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{目盲} 1 轮（一眼已瞎的叙事可改为隐蔽）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": "red-raven-knife",
+        "traits": {
+          "value": [
+            "finesse"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrDamnFt00001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png",
+      "name": "该死的脚步声",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>布置 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntDamnFt001]{该死的脚步声}（铁丝网拌雷皮）。隐匿 DC <strong>22</strong>。她享受刀丝毁坏兽皮的残酷。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "red-raven-damn",
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrToxicFt0001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/poison-trip-mine.png",
+      "name": "剧毒脚步",
+      "sort": 310000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>布置 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntToxicFt01]{剧毒脚步}。她喜欢把它布在肉头怪出没区，让敌人自取灭亡。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "red-raven-toxic",
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrBloodySky01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "血染天空",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>实验性疫苗扭曲汇报：她的话语常变成血染天空的胡言。对抗读心、侦测谎言与魅惑时意志 +2 状态；但社交检定 −2。先攻可用察觉或生存。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "red-raven-sky",
+        "traits": {
+          "value": [
+            "mental"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbRrScoutPair01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "表亲侦察线",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>若 30 尺内有 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntFlymandr1]{飞翔者}：两人共享猎物印记——对同一目标的打击 +1 环境；任一方布置陷阱时另一方可免费 Step。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "red-raven-pair",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbRrTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "红鸦战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：腐化捕兽侦察兵。先布雷再猎杀。</p>\n<ol>\n<li>战前布<strong>该死的脚步</strong>/<strong>剧毒脚步</strong></li>\n<li>猎犬达姆点射逼人进陷阱</li>\n<li>近身启示之路或重拳清场</li>\n<li>贴脸剜眼短刃收割不肯正视者</li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "red-raven-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "军装 + 闪避",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "侦察兵偏脆，靠陷阱与风筝",
+        "max": 72,
+        "temp": 0,
+        "value": 72
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "红渡鸦 · 腐化捕兽侦察",
+      "languages": {
+        "details": "常语无伦次提及血染天空",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>红鸦 Red Raven。与表兄飞翔者参军侦察。实验疫苗令刀更深更慢、汇报变成血天呓语。主猎犬+达姆；副启示之路；陷阱：该死的脚步、剧毒脚步。</p>\n<p>Creature 4 侦察偏脆。宜与飞翔者成对遭遇。</p>",
+      "publicNotes": "<p>军装肩章上挂着兽骨与羽毛，红战纹封住双眼。她曾是受人尊敬的捕兽人；疫苗之后，她把刀丝与毒雾当成新的「陷阱艺术」，并猎杀那些追踪她的猎人。</p>\n<p><em>四人 2 级团 · Creature 4 · 侦察/陷阱 · 建议与飞翔者同场</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "",
+      "mod": 14,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+2 vs 魅惑/读心",
+        "value": 12
+      }
+    },
+    "skills": {
+      "crafting": {
+        "base": 12
+      },
+      "nature": {
+        "base": 12
+      },
+      "stealth": {
+        "base": 15
+      },
+      "survival": {
+        "base": 15
+      },
+      "thievery": {
+        "base": 13
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "红鸦",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/red-raven.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "red-raven",
+      "theme": "scout-pair",
+      "pairWith": "whbHuntFlymandr1",
+      "preferredLoadout": [
+        "the-hound",
+        "path-of-revelation",
+        "damn-footsteps",
+        "toxic-footfalls"
+      ]
+    }
+  }
+}

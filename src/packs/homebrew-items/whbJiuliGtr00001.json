@@ -5,15 +5,24 @@
   "img": "icons/weapons/swords/greatsword-crossguard-red.webp",
   "system": {
     "description": {
-      "value": "<p><em>刀已彻底苏醒，刃身如活物般搏动。它记得每一个被它饮尽的名字，也记得你的。</em></p>\n<hr />\n<p><strong>鬼血之楔（诅咒 · 稀有）</strong></p>\n<p>首次握持并以此刀造成伤害后，诅咒与你<strong>融合</strong>：在你死亡、或有人以 <em>净化祸害（cleanse affliction）</em> 等效果对你成功施放前，你无法自愿丢弃、交出或收起此刀。</p>\n<p><strong>血渴</strong>：此刀每 12 小时须饮血一次。若未满足，你获得 <strong>毁灭 2（Doomed 2，大失败时 3）</strong>；毁灭上限为 3，且在再次饮血前无法通过休息降低。</p>\n<p><strong>满足</strong>：饮血后 12 小时内为「满足」状态（由控制台宏自动附加）。</p>\n<p><strong>创血（Wounding）</strong>：命中时，目标额外受到 <strong>1d6 持续流血</strong>（由符文原生处理）。</p>\n<p><strong>敏锐（Keen）</strong>：以此刀攻击时，攻击骰为自然 19 且命中即视为重击（由符文原生处理）。</p>\n<p><strong>拔刀之血</strong> <span class=\"action-glyph\">F</span>（自由动作，每 10 分钟一次）：抽出此刀时你受到 @Damage[(2d6)[persistent,bleed]]{2d6 持续流血}。</p>\n<p><strong>诱人诅咒</strong> <span class=\"action-glyph\">F</span>（自由动作，需满足）：装备此刀时，动作栏自动出现<strong>「诱人诅咒」自由动作</strong>（点击该动作发送到聊天即自动施加效果、并自动到期）；本回合内你以此刀进行的攻击与伤害获得 <strong>+3 状态加值</strong>（回合结束自动失效）。</p>\n<p><strong>隐里遗恨</strong>：当你以此刀将一个活物降至 0 生命值时，妖刀将其残命反哺于你——你恢复 @Damage[(2d8)[vitality]]{2d8 生命值}（诅咒之力，不受负能量/正能量治疗规则限制）。</p>\n<hr />\n<p><strong>格挡（Parry）</strong>（单动作）：装备此刀时，动作栏自动出现<strong>「格挡」单动作</strong>（点击该动作发送到聊天即自动施加效果、并自动到期）；直到你的下一回合开始获得 +1 环境 AC（自动失效）。</p>\n<p><strong>不灭刃笼</strong>：融合期间，此刀硬度 14、生命值 56（破损阈值 28），无法被永久摧毁。</p>",
+      "value": "<p><em>刀已彻底苏醒，刃身如活物般搏动。它记得每一个被它饮尽的名字，也记得你的。</em></p>\n<hr />\n<p><strong>鬼血之楔（诅咒 · 稀有）</strong></p>\n<p>首次握持并以此刀造成伤害后，诅咒与你<strong>融合</strong>：在你死亡、或有人以 <em>净化祸害（cleanse affliction）</em> 等效果对你成功施放前，你无法自愿丢弃、交出或收起此刀。</p>\n<p><strong>血渴</strong>：此刀每 12 小时须饮血一次。若未满足，你获得 <strong>毁灭 2（Doomed 2，大失败时 3）</strong>；毁灭上限为 3，且在再次饮血前无法通过休息降低。</p>\n<p><strong>满足</strong>：饮血后 12 小时内为「满足」状态（由控制台宏自动附加）。</p>\n<p><strong>创血（Wounding）</strong>：命中时，目标额外受到 <strong>1d6 持续流血</strong>（由符文原生处理）。</p>\n<p><strong>敏锐（Keen）</strong>：以此刀攻击时，攻击骰为自然 19 且命中即视为重击（由符文原生处理）。</p>\n<p><strong>拔刀之血</strong> <span class=\"action-glyph\">F</span>（自由动作，每 10 分钟一次）：抽出此刀时你受到 @Damage[(2d6)[persistent,bleed]]{2d6 持续流血}。</p>\n<p><strong>诱人诅咒</strong> <span class=\"action-glyph\">F</span>（自由动作，需满足）：装备此刀时，动作栏自动出现<strong>「诱人诅咒」自由动作</strong>（点击该动作发送到聊天即自动施加效果、并自动到期）；本回合内你以此刀进行的攻击与伤害获得 <strong>+3 状态加值</strong>（回合结束自动失效）。</p>\n<p><strong>隐里遗恨</strong>：当你以此刀将一个活物降至 0 生命值时，妖刀将其残命反哺于你——你恢复 @Damage[(2d8)[vitality]]{2d8 生命值}（诅咒之力，不受负能量/正能量治疗规则限制）。</p>\n<hr />\n<p><strong>格挡（Parry）</strong>（单动作）：装备此刀时，动作栏自动出现<strong>「格挡」单动作</strong>（点击该动作发送到聊天即自动施加效果、并自动到期）；直到你的下一回合开始获得 +1 环境 AC（自动失效）。</p>\n<p><strong>不灭刃笼</strong>：融合期间，此刀硬度 14、生命值 56（破损阈值 28），无法被永久摧毁。</p>\n<hr />\n<p><strong>猎杀·武术家</strong> 此刀 <code>baseItem: katana</code>，对 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntFtMart001]{武术家} 的<strong>居合架势</strong>视为武士刀。</p>",
       "gm": "<p><strong>自动化（wang-pf2e-homebrew）</strong></p>\n<ul>\n<li>+3 命中 / 强击（major striking）/ 创血（wounding）/ 敏锐（keen，自然 19 重击）：武器符文原生处理。</li>\n<li>诱人诅咒 +3 状态加值：武器 Rule Elements 开关（角色卡「动作」栏）。</li>\n<li>拔刀流血 / 饮血满足 / 血渴毁灭：运行宏「妖刀·隐里切 控制台」。</li>\n<li>隐里遗恨的 2d8 治疗由 GM 手动结算（描述内含可点击伤害/治疗）。</li>\n</ul>"
     },
     "rules": [],
     "slug": "jiuli-katana-greater",
     "traits": {
-      "value": ["cursed", "deadly-d8", "magical", "parry", "two-hand-d10", "versatile-p"],
+      "value": [
+        "cursed",
+        "deadly-d8",
+        "magical",
+        "parry",
+        "two-hand-d10",
+        "versatile-p"
+      ],
       "rarity": "rare",
-      "otherTags": ["jiuli-katana"]
+      "otherTags": [
+        "jiuli-katana"
+      ]
     },
     "publication": {
       "title": "PF2e 自制合集 (Wang Homebrew)",
@@ -21,41 +30,86 @@
       "license": "OGL",
       "remaster": true
     },
-    "level": { "value": 19 },
+    "level": {
+      "value": 19
+    },
     "quantity": 1,
     "baseItem": "katana",
-    "bulk": { "value": 1 },
-    "hp": { "value": 56, "max": 56 },
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 56,
+      "max": 56
+    },
     "hardness": 14,
-    "price": { "value": { "gp": 40000 } },
-    "equipped": { "carryType": "worn", "handsHeld": 0 },
+    "price": {
+      "value": {
+        "gp": 40000
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
     "containerId": null,
     "size": "med",
-    "material": { "type": null, "grade": null },
+    "material": {
+      "type": null,
+      "grade": null
+    },
     "identification": {
       "status": "identified",
       "unidentified": {
         "name": "太刀",
         "img": "icons/weapons/swords/greatsword-crossguard-red.webp",
-        "data": { "description": { "value": "<p>一柄外形普通、保养良好的太刀。</p>" } }
+        "data": {
+          "description": {
+            "value": "<p>一柄外形普通、保养良好的太刀。</p>"
+          }
+        }
       }
     },
-    "usage": { "value": "held-in-one-hand" },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "category": "martial",
     "group": "sword",
-    "bonus": { "value": 0 },
-    "damage": { "dice": 1, "die": "d6", "damageType": "slashing", "persistent": null },
-    "splashDamage": { "value": 0 },
+    "bonus": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d6",
+      "damageType": "slashing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
     "range": null,
     "expend": null,
     "ammo": null,
-    "reload": { "value": null },
+    "reload": {
+      "value": null
+    },
     "grade": null,
-    "runes": { "potency": 3, "striking": 3, "property": ["wounding", "keen"] },
+    "runes": {
+      "potency": 3,
+      "striking": 3,
+      "property": [
+        "wounding",
+        "keen"
+      ]
+    },
     "specific": null,
     "subitems": []
   },
   "flags": {
-    "wang-pf2e-homebrew": { "source": "jiuli-katana", "tier": "greater" }
+    "wang-pf2e-homebrew": {
+      "source": "jiuli-katana",
+      "tier": "greater",
+      "countsAsKatanaForMartialist": true
+    }
   }
 }

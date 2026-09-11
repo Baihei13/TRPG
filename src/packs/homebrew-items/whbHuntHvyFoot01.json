@@ -1,0 +1,89 @@
+{
+  "_id": "whbHuntHvyFoot01",
+  "folder": "whbHntFldTrap001",
+  "name": "沉重的脚步声 Heavy Footfalls",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/alert-trip-mine.png",
+  "system": {
+    "description": {
+      "value": "<p>「飞翔者」过去一直偏爱速战速决、悄无声息的杀戮——但那是在他来到沼泽地之前。如今，他沉溺于腐化之中，用这些警示绊雷让未来的猎物们预感到死神即将降临，并从中获得一种被腐化力量侵蚀的快感。</p>\n<blockquote><p><strong>警报拌雷 · HEAVY FOOTFALLS</strong> 故意弄响的警告：死神喜欢先敲门。</p></blockquote>\n<hr />\n<p>规则同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAlrtTM001]{警报拌雷}：布置 2 动作，放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzAlert01]{警报拌雷}。</p>",
+      "gm": "<p>Alert Trip Mine skin「沉重的脚步声」。飞翔者专用风味；规则同警报拌雷。</p>"
+    },
+    "rules": [],
+    "slug": "heavy-footfalls",
+    "traits": {
+      "value": [
+        "consumable",
+        "mechanical",
+        "snare",
+        "trap"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trap",
+        "scout-pair"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 陷阱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "绊线装置",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>缠线与木桩。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "snare",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": null,
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntSlot": 1,
+      "huntCategory": "trap",
+      "enName": "Heavy Footfalls",
+      "wikiIcon": "Tool_Alert_Trip_Mines.png",
+      "theme": "scout-pair",
+      "skinOf": "whbHuntAlrtTM001"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "_id": "whbHuntRmSwift01",
+  "folder": "whbHntFldWpn0001",
+  "name": "红马丁：迅捷 The Redmartin: Swift",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/ranger-73-swift.png",
+  "system": {
+    "description": {
+      "value": "<p>愚者将这把「红燕」迅捷视为他一路走来的象征。从医生到逃犯，再到被通缉者。他以此庆祝自己终于摆脱了惩罚，摆脱了伪装成审判和正义的残酷暴力循环。</p>\n<blockquote><p><strong>兵器之书 · RANGER 73 SWIFT · THE REDMARTIN</strong> 一推即填；没人能抓住他。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>80 尺</strong>；装填 1；容量 5</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、横扫、capacity-5</p>\n<p>规则基底同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntRgrSwft01]{Winfield M1873 Swift}：打击不引发借机；装填后免费快步 5 尺（每轮 1 次）。</p>\n<p>枪机铭牌：Since 1884 — Doc Redmartin’s Fine Remedies — Effective, Natural, & Absolutely Safe。</p>\n<hr />\n<p><strong>没人能抓住他</strong> 本回合若你已因装填获得免费快步，则下次此武器打击对反应类攻击视为隐蔽（对方需持平，或 GM 直接 −2）。</p>",
+      "gm": "<p>Ranger 73 Swift skin「红燕/迅捷」。Swift 循环 + 逃脱隐蔽。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "快速循环",
+        "text": "打击不引发借机。装填后本轮可免费快步 5 尺一次。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "defense",
+        "option": "hunt-rm-uncatchable",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "红马丁迅捷 — 本回合已免费快步（没人能抓住他）"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "没人能抓住他",
+        "text": "已免费快步后：对反应攻击视为隐蔽。",
+        "predicate": [
+          "hunt-rm-uncatchable",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "redmartin-swift",
+    "traits": {
+      "value": [
+        "concussive",
+        "sweep",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-fool",
+        "redmartin"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "速射杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>速射杠杆步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "The Redmartin: Swift",
+      "wikiIcon": "Weapon_Ranger_73_Swift.png",
+      "theme": "the-fool",
+      "baseWeapon": "ranger-73-swift"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "_id": "whbHuntWeakAnti1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：最终宪法（弱效抗毒）",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/antidote-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>弱效解毒保险：毒素抗性 5（1 分钟）。猎杀中毒应已被清除。</p>",
+      "gm": "<p>final-constitution / statesman-constitution。</p>"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "poison",
+        "value": 5
+      }
+    ],
+    "slug": "effect-final-constitution",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "whbHuntPreyMark1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：猎物印记",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/emilia-montgomery.png",
+  "system": {
+    "description": {
+      "value": "<p>艾米莉亚的<strong>猎物印记</strong>。她对你的荒原步枪命中额外精密。</p>",
+      "gm": "<p>emilia-mark-prey。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "hunt-emilia-prey",
+        "value": true
+      }
+    ],
+    "slug": "effect-emilia-prey",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "encounters",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

@@ -1,20 +1,31 @@
 {
   "_id": "whbHuntAlrtTM001",
-  "folder": "whbfolderHunt001",
-  "name": "警报拌雷 Alert Trip Mine",
+  "folder": "whbHntFldTrap001",
+  "name": "警示拌雷 / 警报拌雷 Alert Trip Mine",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/alert-trip-mine.png",
   "system": {
     "description": {
-      "value": "<p>便携绊线雷，触发后放出爆竹与小型信号焰，把位置暴露给所有人。通常成对携带。</p>\n<blockquote><p><strong>兵器之书 · 警报拌雷</strong>（另见战术装置）这是一种用途明确的进阶装置，偏重防御。两根木桩之间绷紧绊线，桩内另藏爆竹与信号焰；一旦绊线被扯动，便点燃闪光与巨响，惊吓触发者，并把其位置暴露给周遭所有人。信号焰落下后还会短暂照亮拌雷所在，使人难以继续蹲守。材料常见，多为自制或临时拼凑；可靠的图纸会流传开来。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact（布置）</p>\n<p><strong>效果</strong> 在邻接的一格（或横跨门框/通道的一格绊线，由 GM 裁定）布置拌雷。消耗本物品，并在该处放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzAlert01]{警报拌雷}（从合集拖到场景，或复制到世界 Actors）。</p>\n<ul>\n<li><strong>隐匿</strong> 默认 隐匿 DC 18（或布置者 Crafting DC，取较高）。</li>\n<li><strong>解除</strong> @Check[thievery|dc:18|traits:action:disable-a-device]（受训）切断绊线；成功可回收本物品（数量 +1，GM 裁定）。</li>\n<li>触发后危境消耗，不再重置。</li>\n</ul>",
+      "value": "<p>（亦称<strong>警示绊雷</strong>）便携绊线雷，触发后放出爆竹与小型信号焰，把位置暴露给所有人。通常成对携带。</p>\n<blockquote><p><strong>兵器之书 · 警报拌雷</strong>（另见战术装置）这是一种用途明确的进阶装置，偏重防御。两根木桩之间绷紧绊线，桩内另藏爆竹与信号焰；一旦绊线被扯动，便点燃闪光与巨响，惊吓触发者，并把其位置暴露给周遭所有人。信号焰落下后还会短暂照亮拌雷所在，使人难以继续蹲守。材料常见，多为自制或临时拼凑；可靠的图纸会流传开来。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">2</span>（操作）Interact（布置）</p>\n<p><strong>效果</strong> 在邻接的一格（或横跨门框/通道的一格绊线，由 GM 裁定）布置拌雷。消耗本物品，并在该处放置危境 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntHzAlert01]{警报拌雷}（从合集拖到场景，或复制到世界 Actors）。</p>\n<ul>\n<li><strong>隐匿</strong> 默认 隐匿 DC 18（或布置者 Crafting DC，取较高）。</li>\n<li><strong>解除</strong> @Check[thievery|dc:18|traits:action:disable-a-device]（受训）切断绊线；成功可回收本物品（数量 +1，GM 裁定）。</li>\n<li>触发后危境消耗，不再重置。</li>\n</ul>",
       "gm": "<p>Hunt Alert Trip Mine。非致命警报。布置 2 动作。危境 UUID：whbHuntHzAlert01。</p>"
     },
     "rules": [],
     "slug": "alert-trip-mine",
     "traits": {
-      "value": ["auditory", "consumable", "fire", "mechanical", "snare", "trap", "visual"],
+      "value": [
+        "auditory",
+        "consumable",
+        "fire",
+        "mechanical",
+        "snare",
+        "trap",
+        "visual"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-trap"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trap"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 陷阱",
@@ -22,12 +33,23 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 3 },
+    "level": {
+      "value": 3
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.1 },
-    "price": { "value": { "gp": 1 } },
-    "equipped": { "carryType": "worn", "invested": null },
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
     "containerId": null,
     "size": "med",
     "identification": {
@@ -35,14 +57,24 @@
       "unidentified": {
         "name": "缠线木桩",
         "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
-        "data": { "description": { "value": "<p>两根短桩和一卷细线，还夹着几支纸卷。</p>" } }
+        "data": {
+          "description": {
+            "value": "<p>两根短桩和一卷细线，还夹着几支纸卷。</p>"
+          }
+        }
       },
       "misidentified": {}
     },
     "category": "snare",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
     "damage": null,
-    "usage": { "value": "held-in-one-hand" },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

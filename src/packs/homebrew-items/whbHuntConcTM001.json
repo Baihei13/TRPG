@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntConcTM001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldTrap001",
   "name": "铁丝网拌雷 Concertina Trip Mine",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/concertina-trip-mine.png",
@@ -12,9 +12,17 @@
     "rules": [],
     "slug": "concertina-trip-mine",
     "traits": {
-      "value": ["consumable", "mechanical", "snare", "trap"],
+      "value": [
+        "consumable",
+        "mechanical",
+        "snare",
+        "trap"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-trap"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-trap"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 陷阱",
@@ -22,12 +30,23 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 4 },
+    "level": {
+      "value": 4
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.1 },
-    "price": { "value": { "gp": 1 } },
-    "equipped": { "carryType": "worn", "invested": null },
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 1
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
     "containerId": null,
     "size": "med",
     "identification": {
@@ -35,14 +54,28 @@
       "unidentified": {
         "name": "带刺线圈",
         "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
-        "data": { "description": { "value": "<p>缠得死紧的金属丝卷，连着细线。</p>" } }
+        "data": {
+          "description": {
+            "value": "<p>缠得死紧的金属丝卷，连着细线。</p>"
+          }
+        }
       },
       "misidentified": {}
     },
     "category": "snare",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
-    "damage": { "formula": "1d6", "kind": "damage", "type": "slashing" },
-    "usage": { "value": "held-in-one-hand" },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "damage": {
+      "formula": "1d6",
+      "kind": "damage",
+      "type": "slashing"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

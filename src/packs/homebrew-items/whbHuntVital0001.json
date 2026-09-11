@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntVital0001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldMed0001",
   "name": "活力针 Vitality Shot",
   "type": "consumable",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/vitality-shot.png",
@@ -12,9 +12,17 @@
     "rules": [],
     "slug": "vitality-shot",
     "traits": {
-      "value": ["alchemical", "consumable", "elixir", "healing"],
+      "value": [
+        "alchemical",
+        "consumable",
+        "elixir",
+        "healing"
+      ],
       "rarity": "uncommon",
-      "otherTags": ["hunt-showdown", "hunt-medical"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 医疗",
@@ -22,11 +30,19 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 6 },
+    "level": {
+      "value": 6
+    },
     "quantity": 1,
     "baseItem": null,
-    "bulk": { "value": 0.1 },
-    "price": { "value": { "gp": 40 } },
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 40
+      }
+    },
     "equipped": {
       "carryType": "worn",
       "invested": null
@@ -47,13 +63,19 @@
       "misidentified": {}
     },
     "category": "other",
-    "uses": { "value": 1, "max": 1, "autoDestroy": true },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
     "damage": {
       "formula": "4d8+4",
       "kind": "healing",
       "type": "vitality"
     },
-    "usage": { "value": "held-in-one-hand" },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
     "stackGroup": null
   },
   "flags": {

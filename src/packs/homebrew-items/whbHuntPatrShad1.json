@@ -1,0 +1,162 @@
+{
+  "_id": "whbHuntPatrShad1",
+  "folder": "whbHntFldWpn0001",
+  "name": "爱国者的阴影 Patriot's Shadow",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/patriots-shadow.png",
+  "system": {
+    "description": {
+      "value": "<p>注定覆灭的第26团指挥官，在抵达猎场之初，恐怕无法预料到即将面临的惨败。其他战友阵亡后，他重铸了这支步枪，以纪念他牺牲的战友——此时的他已不知何为真正的荣誉。</p>\n<blockquote><p><strong>兵器之书 · INFANTRY 73L · PATRIOT'S SHADOW</strong> 步兵长枪的影：荣誉熔进枪管，却不再认得自己。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>90 尺</strong>；装填 1；容量 7</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、capacity-7</p>\n<hr />\n<p><strong>战友之名</strong> 每场遭遇第一次以此武器造成伤害时，你获得 5 临时生命值，且 30 尺内盟友下次豁免 +1 环境（荣誉的残影）。</p>\n<p><strong>不知荣誉</strong> 若你本回合曾攻击盟友或对盟友使用恐吓，此武器伤害额外 +1d8（自毁的阴影）。</p>",
+      "gm": "<p>Infantry 73L skin「Patriot's Shadow」。1d8、90ft、cap7。首伤给 temp HP；攻击盟友时加伤。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-patriot-ally",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "爱国者的阴影 — 本回合已对盟友出手"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "不知荣誉",
+        "diceNumber": 1,
+        "dieSize": "d8",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-patriot-ally",
+          "item:id:{item|_id}"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "战友之名",
+        "text": "本场首次伤害：5 临时生命；30 尺内盟友下次豁免 +1。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "patriots-shadow",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-7"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "26th-regiment"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 16
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "步兵步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>步兵步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 90,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 7
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Patriot's Shadow",
+      "wikiIcon": "Weapon_Infantry_73L.png",
+      "theme": "26th-regiment",
+      "baseWeapon": "infantry-73l"
+    }
+  }
+}

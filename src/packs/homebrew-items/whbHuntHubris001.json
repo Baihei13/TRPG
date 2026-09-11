@@ -1,0 +1,153 @@
+{
+  "_id": "whbHuntHubris001",
+  "folder": "whbHntFldWpn0001",
+  "name": "妄自尊大 Hubris",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/caldwell-marathon.png",
+  "system": {
+    "description": {
+      "value": "<p>荒芜的使者深知许多人想要他所拥有的，却不愿付出努力。这场由他自身努力铸就的马拉松，将迅速粉碎对手微不足道的野心。</p>\n<blockquote><p><strong>兵器之书 · CALDWELL MARATHON · HUBRIS</strong> 用努力砸碎别人的野心。</p></blockquote>\n<p>1d8、80 尺、capacity 6（标准马拉松弹仓）。</p>\n<hr />\n<p><strong>粉碎野心</strong> 对有临时生命、或本场曾对你示威/恐吓的目标，伤害 +1d6。</p>",
+      "gm": "<p>Marathon skin「妄自尊大」。对虚张声势目标 +1d6。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-hubris",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "妄自尊大 — 目标虚张/有临时生命"
+      },
+      {
+        "key": "DamageDice",
+        "selector": "damage",
+        "label": "粉碎野心",
+        "diceNumber": 1,
+        "dieSize": "d6",
+        "damageType": "piercing",
+        "predicate": [
+          "hunt-hubris",
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "hubris-marathon",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-6"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "the-statesman"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 14
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 6
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Hubris",
+      "wikiIcon": "Weapon_Caldwell_Marathon.png",
+      "theme": "the-statesman",
+      "baseWeapon": "caldwell-marathon"
+    }
+  }
+}

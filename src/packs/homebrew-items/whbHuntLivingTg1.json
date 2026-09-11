@@ -1,0 +1,62 @@
+{
+  "_id": "whbHuntLivingTg1",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：活靶子",
+  "type": "effect",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/jonathan-redhill.png",
+  "system": {
+    "description": {
+      "value": "<p>乔纳森成为<strong>活靶</strong>：敌人优先攻击他时获得环境加值（GM）；他可对攻击者报复。</p>",
+      "gm": "<p>redhill-target。</p>"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": -1,
+        "label": "活靶子"
+      }
+    ],
+    "slug": "effect-living-target",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-auto"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 状态",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntAuto": true
+    }
+  }
+}

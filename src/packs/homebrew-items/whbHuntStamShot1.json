@@ -1,0 +1,85 @@
+{
+  "_id": "whbHuntStamShot1",
+  "folder": "whbHntFldMed0001",
+  "name": "耐力针 Stamina Shot",
+  "type": "consumable",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/stamina-shot.png",
+  "system": {
+    "description": {
+      "value": "<p>提神针剂。注入后疲劳一扫而空，脚步与扳机都变得轻快——但那股劲只能用在跑路或开枪上。</p>\n<blockquote><p><strong>医疗 · STAMINA SHOT</strong> 清疲乏，换一分钟的迅捷冲刺/打击。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 立即移除 @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{疲乏}。在接下来的 <strong>1 分钟</strong>内，你获得 @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{迅捷}，但由此获得的额外动作<strong>只能</strong>用于「行走（Stride）」或「打击（Strike）」。</p>\n<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStamFx001]{效果：耐力针}</p>",
+      "gm": "<p>Stamina Shot。1 动作。清 Fatigued + Quickened 1 分钟（额外动作限 Stride/Strike）。自动化见 hunt-showdown-automation。</p>"
+    },
+    "rules": [],
+    "slug": "stamina-shot",
+    "traits": {
+      "value": [
+        "alchemical",
+        "consumable",
+        "elixir",
+        "healing"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-medical"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 医疗",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "price": {
+      "value": {
+        "gp": 25
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "提神针剂",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>装着琥珀色液体的注射器。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "category": "other",
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "stackGroup": null
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "medical",
+      "huntSlot": 1,
+      "enName": "Stamina Shot",
+      "grantsEffect": "whbHuntStamFx001"
+    }
+  }
+}

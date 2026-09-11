@@ -1,0 +1,151 @@
+{
+  "folder": "whbHntFldWpn0001",
+  "name": "Bomb Lance 炸弹鱼叉",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/bomb-lance.png",
+  "system": {
+    "description": {
+      "value": "<p>近战长柄鱼叉，亦可发射爆炸鱼叉头；命中后嵌入血肉，拔除费事。</p>\n<blockquote><p><strong>兵器之书 · BOMB LANCE</strong> 近战可捅，远程可射——沼地里最野蛮的「两用」兵器之一。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训（无需进阶武器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 进阶；<strong>负载</strong> 2；<strong>双手</strong></p>\n<p><strong>近战</strong> 伤害 1d10 穿刺；特质：reach、两手</p>\n<p><strong>远程发射</strong> 使用动作栏「炸弹鱼叉 · 发射」（射程增量 20 尺）。</p>\n<hr />\n<p><strong>鱼叉爆炸</strong> 远程<strong>命中</strong>后：目标及周围 @Template[type:burst|distance:5]{5 尺爆发}内的每个生物尝试 @Check[reflex|dc:resolve(@actor.attributes.classOrSpellDC.value)|traits:fire,weapon]{反射}（DC = 你的职业 DC，无职业 DC 则用 10+等级+关键健/敏捷较高者，GM 裁定）。失败额外受到 @Damage[2d6[fire]]{2d6 火焰}；成功则伤害减半（GM 可改为仅失败受伤）。</p>\n<p>鱼叉嵌入目标：目标获得效果提示，拔除需 <span class=\"action-glyph\">1</span> Interact。</p>",
+      "gm": "<p>Hunt Bomb Lance。30 gp。近战 spear+reach；Strike RE 远程。爆炸用 Check/Damage 嵌入说明。嵌入效果可拖 sticky 类手办。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Strike",
+        "category": "advanced",
+        "group": "firearm",
+        "slug": "bomb-lance-launch",
+        "label": "炸弹鱼叉 · 发射",
+        "img": "modules/wang-pf2e-homebrew/assets/hunt/bomb-lance.png",
+        "damage": {
+          "base": {
+            "damageType": "piercing",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive",
+          "range-increment-20"
+        ],
+        "range": 20
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "鱼叉爆炸",
+        "text": "远程发射命中后：5 尺爆发内反射豁免（职业 DC），失败 2d6 火焰。鱼叉嵌入，拔除 1 动作。",
+        "predicate": [
+          "item:slug:bomb-lance-launch"
+        ]
+      }
+    ],
+    "slug": "bomb-lance",
+    "traits": {
+      "value": [
+        "reach"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 30
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "铁矛",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>粗重的长柄，矛头像可拆卸的铁匣。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "advanced",
+    "group": "spear",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": null,
+    "reload": {
+      "value": null
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "wikiIcon": "Weapon_Bomb_Lance.png"
+    }
+  },
+  "_id": "whbHuntBombLn001"
+}

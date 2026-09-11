@@ -1,0 +1,143 @@
+{
+  "_id": "whbHuntLastHeir1",
+  "folder": "whbHntFldWpn0001",
+  "name": "最后的传家宝 Last Heirloom",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/quad-derringer.png",
+  "system": {
+    "description": {
+      "value": "<p>多萝西的美梦被弄臣打破，她天马行空的想象力被扭曲成黑暗。如今，她像个恶魔追捕驱魔人一般在沼泽地里游荡。她最后的传家宝？一把袖珍手枪，里面装着<strong>一颗子弹</strong>，用来终结这场噩梦。</p>\n<blockquote><p><strong>兵器之书 · QUAD DERRINGER · LAST HEIRLOOM</strong> 茶话会结束后，只剩一发。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 L；单手；射程增量 <strong>20 尺</strong>；装填 2；容量 1（她只装一发「终梦弹」）</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：震荡、致命 d10、concealable</p>\n<hr />\n<p><strong>终梦弹</strong> 每场遭遇限用 1 次成功射击：若目标处于惊惧、困惑，或 GM 认定为「噩梦/弄臣关联」，此打击判定升一档（失败→成功，成功→重击），且额外 @Damage[2d8[mental]]。打空后此枪本场无法再射（除非她花 2 动作装填普通弹，伤害降为 1d6 且无终梦）。</p>",
+      "gm": "<p>Quad Derringer skin「最后的传家宝」。容量叙事为 1。终梦弹升档+心灵。多萝西·爱丽丝·噩梦。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "终梦弹",
+        "text": "本场 1 次：对惊惧/困惑/噩梦关联目标升档，并 +2d8 心灵。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "last-heirloom",
+    "traits": {
+      "value": [
+        "concussive",
+        "fatal-d10",
+        "concealable"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon",
+        "alice-farm"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 4
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0.1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 15
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "袖珍手枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>镶着小宝石的掌心枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 20,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 1
+    },
+    "reload": {
+      "value": "2"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 1,
+      "enName": "Last Heirloom",
+      "wikiIcon": "Tool_Quad_Derringer.png",
+      "theme": "alice-farm",
+      "baseWeapon": "quad-derringer"
+    }
+  }
+}

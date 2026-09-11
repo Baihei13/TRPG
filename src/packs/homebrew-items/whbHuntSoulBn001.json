@@ -1,6 +1,6 @@
 {
   "_id": "whbHuntSoulBn001",
-  "folder": "whbfolderHunt001",
+  "folder": "whbHntFldFx00001",
   "name": "效果：灵魂燃尽 Soul Burn",
   "type": "effect",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/trait-necromancer.png",
@@ -28,7 +28,10 @@
     "traits": {
       "value": [],
       "rarity": "rare",
-      "otherTags": ["hunt-showdown", "hunt-soul-burn"]
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-soul-burn"
+      ]
     },
     "publication": {
       "title": "猎杀对决 — 状态",
@@ -36,15 +39,22 @@
       "license": "ORC",
       "remaster": true
     },
-    "level": { "value": 1 },
+    "level": {
+      "value": 1
+    },
     "duration": {
       "value": -1,
       "unit": "unlimited",
       "expiry": null,
       "sustained": false
     },
-    "start": { "value": 0, "initiative": null },
-    "tokenIcon": { "show": true },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
     "badge": {
       "type": "counter",
       "value": 1,
