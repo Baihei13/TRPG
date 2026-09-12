@@ -3,7 +3,7 @@
   "folder": "whbHntFldCargo01",
   "name": "磨损货箱 Worn Cargo Crate",
   "type": "equipment",
-  "img": "modules/wang-pf2e-homebrew/assets/hunt/dynamite-bundle.png",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/cargo-crate.png",
   "system": {
     "description": {
       "value": "<p>要塞货箱（磨损档）。扛到货气球吊舱里装上即可；<strong>不做领取标记</strong>，奖励在气球成功放飞后由 GM <strong>事后发放</strong>。</p>\n<blockquote><p><strong>货箱 · WORN</strong> Bulk 2 · 事后结算参考</p></blockquote>\n<hr />\n<p><strong>携带</strong> 双手/背负。邻接吊舱时拖入气球 Actor 物品栏（或交给操作气球的人）。</p>\n<p><strong>事后结算参考</strong>（放飞清单出现后，GM 发奖时用）— 1d6：</p>\n<ol>\n<li>猎金约 100（约 10 gp）</li>\n<li>猎金约 100</li>\n<li>稀缺弹药 ×1</li>\n<li>稀缺弹药 ×1</li>\n<li>随机小消耗品 1 件</li>\n<li>猎金约 100 + 杂物</li>\n</ol>",

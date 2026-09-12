@@ -1,7 +1,7 @@
 {
   "_id": "whbHuntGrunt0001",
   "folder": "whbfolderHntMn01",
-  "name": "杂兵（徒手） Grunt",
+  "name": "僵尸（徒手） Grunt",
   "type": "npc",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
   "items": [
@@ -139,7 +139,7 @@
         "value": ""
       },
       "hp": {
-        "details": "易杀骚扰杂兵",
+        "details": "易杀骚扰僵尸",
         "max": 16,
         "temp": 0,
         "value": 16
@@ -150,7 +150,7 @@
       }
     },
     "details": {
-      "blurb": "猎杀对决 · 基础杂兵",
+      "blurb": "猎杀对决 · 基础僵尸",
       "languages": {
         "details": "无语言；嘶吼",
         "value": []
@@ -159,7 +159,7 @@
         "value": 1
       },
       "privateNotes": "<p>最便宜的骚扰单位。两下近战就能刮掉一块血，逼玩家浪费动作。</p>",
-      "publicNotes": "<p>最常见的敌人。徒手扑打猎人，两下就能造成可观伤害。可用任何装备干掉，有时会自己冲进火里。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publicNotes": "<p>最常见的敌人。徒手扑打猎人，两下就能造成可观伤害。可用任何装备干掉，有时会自己冲进火里。</p><p><em>四人 2 级团 · Creature 1 · 骚扰僵尸</em></p>",
       "publication": {
         "title": "猎杀对决 — 怪物",
         "authors": "Wang Homebrew / Hunt: Showdown",
@@ -213,7 +213,7 @@
     }
   },
   "prototypeToken": {
-    "name": "杂兵",
+    "name": "僵尸",
     "width": 1,
     "height": 1,
     "texture": {

@@ -13,14 +13,14 @@ import {
 } from "./ephemera-journal-util.mjs";
 
 export const BODY =
-  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;";
+  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.42rem;line-height:1.95;color:#1a120c;text-align:justify;";
 export const HEAD =
-  "margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;";
+  "margin:0 0 0.8rem;font-size:1.55rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.28rem;";
 export const META =
-  "margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;";
-export const PARA = "margin:0 0 0.75rem;line-height:1.82;text-align:justify;";
+  "margin:0 0 0.8rem;font-size:1.18rem;line-height:1.6;color:#5a4030;font-style:italic;";
+export const PARA = "margin:0 0 0.9rem;line-height:1.95;text-align:justify;";
 export const ORNAMENT =
-  "margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
+  "margin:0 0 0.9rem;text-align:center;font-size:1.1rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
 export const PAGE_CHARS = 330;
 
 export function parasHtml(list) {

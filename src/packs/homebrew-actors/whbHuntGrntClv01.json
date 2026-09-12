@@ -1,7 +1,7 @@
 {
   "_id": "whbHuntGrntClv01",
   "folder": "whbfolderHntMn01",
-  "name": "杂兵（砍刀） Cleaver Grunt",
+  "name": "僵尸（砍刀） Cleaver Grunt",
   "type": "npc",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
   "items": [
@@ -107,7 +107,7 @@
         "value": ""
       },
       "hp": {
-        "details": "易杀骚扰杂兵",
+        "details": "易杀骚扰僵尸",
         "max": 16,
         "temp": 0,
         "value": 16
@@ -126,8 +126,8 @@
       "level": {
         "value": 1
       },
-      "privateNotes": "<p>优先点杀。可选：非致命打中持械臂则掉刀，变为徒手杂兵。</p>",
-      "publicNotes": "<p>挥舞砍刀的杂兵。命中造成流血。手臂被非致命击中时可能丢掉砍刀，变成普通徒手杂兵。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "privateNotes": "<p>优先点杀。可选：非致命打中持械臂则掉刀，变为徒手僵尸。</p>",
+      "publicNotes": "<p>挥舞砍刀的僵尸。命中造成流血。手臂被非致命击中时可能丢掉砍刀，变成普通徒手僵尸。</p><p><em>四人 2 级团 · Creature 1 · 骚扰僵尸</em></p>",
       "publication": {
         "title": "猎杀对决 — 怪物",
         "authors": "Wang Homebrew / Hunt: Showdown",
@@ -181,7 +181,7 @@
     }
   },
   "prototypeToken": {
-    "name": "砍刀杂兵",
+    "name": "砍刀僵尸",
     "width": 1,
     "height": 1,
     "texture": {

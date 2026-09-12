@@ -318,7 +318,7 @@ const giggles = {
         category: "offensive",
         description: {
           value:
-            "<p><strong>需求</strong> 30 尺内有至少一名盟友（或 GM 允许的马戏团杂兵/召唤物）</p>\n<p>一声尖笑下令：该盟友立刻获得一次反应，可 Step、Interact 或一次 MAP 打击。每轮限 1 次。</p>\n<p>独处时改为：在空格制造「幻影乐手」干扰（持续至她下回合结束）——该格及相邻视为困难地形，且对敌人 Hide 的察觉 DC +2。</p>",
+            "<p><strong>需求</strong> 30 尺内有至少一名盟友（或 GM 允许的马戏团僵尸/召唤物）</p>\n<p>一声尖笑下令：该盟友立刻获得一次反应，可 Step、Interact 或一次 MAP 打击。每轮限 1 次。</p>\n<p>独处时改为：在空格制造「幻影乐手」干扰（持续至她下回合结束）——该格及相邻视为困难地形，且对敌人 Hide 的察觉 DC +2。</p>",
         },
         publication: pubH,
         rules: [],
@@ -358,7 +358,7 @@ const giggles = {
         category: "offensive",
         description: {
           value:
-            "<p><strong>定位</strong>：阴谋家近战收割。Bornheim 风筝试探 → 障眼/落幕控场 → 贴脸棒球棒「命中注定」砸碎。</p>\n<ol>\n<li>远距用手枪与黏弹搅局，绝不先亮棒球棒</li>\n<li><strong>马戏障眼</strong>或<strong>落幕恐吓</strong>让目标措手不及/惊惧</li>\n<li>进身 <strong>命中注定</strong> 或普通球棒重击收尸</li>\n<li>有杂兵时 <strong>指挥班子</strong> 让别人挡刀</li>\n</ol>\n<p>比外表致命：玩家以为小丑杂耍，其实全程在排剧本。</p>",
+            "<p><strong>定位</strong>：阴谋家近战收割。Bornheim 风筝试探 → 障眼/落幕控场 → 贴脸棒球棒「命中注定」砸碎。</p>\n<ol>\n<li>远距用手枪与黏弹搅局，绝不先亮棒球棒</li>\n<li><strong>马戏障眼</strong>或<strong>落幕恐吓</strong>让目标措手不及/惊惧</li>\n<li>进身 <strong>命中注定</strong> 或普通球棒重击收尸</li>\n<li>有僵尸时 <strong>指挥班子</strong> 让别人挡刀</li>\n</ol>\n<p>比外表致命：玩家以为小丑杂耍，其实全程在排剧本。</p>",
         },
         publication: pubH,
         rules: [],

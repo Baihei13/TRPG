@@ -20,12 +20,12 @@ import {
 const SOURCE = "Hunt: Showdown — Whitlaw / John Victor Lore";
 
 const BODY =
-  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.08rem;line-height:1.85;color:#1a120c;text-align:justify;";
+  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.42rem;line-height:1.95;color:#1a120c;text-align:justify;";
 const HEAD =
-  "margin:0 0 0.75rem;font-size:1.22rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.28rem;";
+  "margin:0 0 0.8rem;font-size:1.55rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.28rem;";
 const META =
-  "margin:0 0 0.75rem;font-size:0.9rem;line-height:1.5;color:#5a4030;font-style:italic;";
-const PARA = "margin:0 0 0.8rem;line-height:1.85;text-align:justify;";
+  "margin:0 0 0.8rem;font-size:1.18rem;line-height:1.6;color:#5a4030;font-style:italic;";
+const PARA = "margin:0 0 0.9rem;line-height:1.95;text-align:justify;";
 const ORNAMENT =
   "margin:0 0 0.85rem;text-align:center;font-size:0.88rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
 const PAGE_CHARS = 340;
@@ -238,7 +238,7 @@ export async function buildOtisLettersDocument() {
   const pages = [
     bookPage(
       "扉页",
-      `<p style="${HEAD}">致奥蒂斯的信</p><p style="${META}">折叠信纸　约 8×8 英寸　署名 A / A.H.</p><p style="${PARA}">与惠特劳第26团溃败相关的私人通信。与正式侦察报告分册保存。</p>`
+      `<p style="${HEAD}">致奥蒂斯的信</p><p style="${META}">折叠信纸　约 8×8 英寸　署名 A / A.H.</p><p style="${PARA}">与惠特劳第26团溃败相关的私人通信。</p>`
     ),
     ...OTIS_LETTERS.flatMap((r) => sectionPages(r)),
   ];
@@ -377,7 +377,7 @@ export async function buildJohnVictorHandbookDocument() {
   const pages = [
     bookPage(
       "扉页",
-      `<p style="${HEAD}">约翰·维克多的手册</p><p style="${META}">约 5×8 英寸　猎人入门笔记</p><p style="${PARA}">与「约翰·维克多写给你的信」配套；信为引荐，手册为经验。</p>`
+      `<p style="${HEAD}">约翰·维克多的手册</p><p style="${META}">约 5×8 英寸　猎人入门笔记</p><p style="${PARA}">猎人入门：声望、装备与组队。</p>`
     ),
     ...JV_HANDBOOK.flatMap((r) => sectionPages({ ...r, maxChars: 320 })),
   ];

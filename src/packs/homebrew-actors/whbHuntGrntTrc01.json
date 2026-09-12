@@ -1,7 +1,7 @@
 {
   "_id": "whbHuntGrntTrc01",
   "folder": "whbfolderHntMn01",
-  "name": "杂兵（火把） Torch Grunt",
+  "name": "僵尸（火把） Torch Grunt",
   "type": "npc",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt.png",
   "items": [
@@ -141,7 +141,7 @@
         "value": ""
       },
       "hp": {
-        "details": "易杀骚扰杂兵",
+        "details": "易杀骚扰僵尸",
         "max": 16,
         "temp": 0,
         "value": 16
@@ -161,7 +161,7 @@
         "value": 1
       },
       "privateNotes": "<p>危险在点火与死后掉火把。死时邻接可能点燃油桶/拌雷。</p>",
-      "publicNotes": "<p>挥舞燃烧火把。命中造成灼伤；再被命中易被点燃。死亡或手臂被打中时火把落地，可能点燃附近油渍、桶或警报拌雷。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publicNotes": "<p>挥舞燃烧火把。命中造成灼伤；再被命中易被点燃。死亡或手臂被打中时火把落地，可能点燃附近油渍、桶或警报拌雷。</p><p><em>四人 2 级团 · Creature 1 · 骚扰僵尸</em></p>",
       "publication": {
         "title": "猎杀对决 — 怪物",
         "authors": "Wang Homebrew / Hunt: Showdown",
@@ -215,7 +215,7 @@
     }
   },
   "prototypeToken": {
-    "name": "火把杂兵",
+    "name": "火把僵尸",
     "width": 1,
     "height": 1,
     "texture": {

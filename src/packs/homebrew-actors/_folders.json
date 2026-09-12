@@ -41,6 +41,20 @@
       "type": "Actor",
       "sorting": "a",
       "folder": null
+    },
+    {
+      "_id": "whbfolderHntMn01",
+      "name": "猎杀对决·怪物",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbfolderHntSc01",
+      "name": "猎杀对决·场景",
+      "type": "Actor",
+      "sorting": "a",
+      "folder": null
     }
   ]
 }

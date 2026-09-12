@@ -38,6 +38,7 @@ const PACKS = [
     name: "homebrew-journals",
     docType: "journal",
     src: path.join(MODULE_ROOT, "src", "packs", "homebrew-journals"),
+    foldersFile: "_folders.json",
   },
 ];
 

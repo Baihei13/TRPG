@@ -1,7 +1,7 @@
 {
   "_id": "whbHuntGrntDoc01",
   "folder": "whbfolderHntMn01",
-  "name": "杂兵（医生） Doctor Grunt",
+  "name": "僵尸（医生） Doctor Grunt",
   "type": "npc",
   "img": "modules/wang-pf2e-homebrew/assets/hunt/grunt-doctor.png",
   "items": [
@@ -137,7 +137,7 @@
         "value": ""
       },
       "hp": {
-        "details": "易杀骚扰杂兵",
+        "details": "易杀骚扰僵尸",
         "max": 18,
         "temp": 0,
         "value": 18
@@ -157,7 +157,7 @@
         "value": 1
       },
       "privateNotes": "<p>稍肉一点。死后掉简易药包（治疗 2d8 一次，或给活力针式 Interact）。</p>",
-      "publicNotes": "<p>外形特殊，背着药包，挥舞带毒手术锯。命中造成毒素。被杀死时药包掉落，可当世界物品使用（回复生命）。</p><p><em>四人 2 级团 · Creature 1 · 骚扰杂兵</em></p>",
+      "publicNotes": "<p>外形特殊，背着药包，挥舞带毒手术锯。命中造成毒素。被杀死时药包掉落，可当世界物品使用（回复生命）。</p><p><em>四人 2 级团 · Creature 1 · 骚扰僵尸</em></p>",
       "publication": {
         "title": "猎杀对决 — 怪物",
         "authors": "Wang Homebrew / Hunt: Showdown",
@@ -211,7 +211,7 @@
     }
   },
   "prototypeToken": {
-    "name": "医生杂兵",
+    "name": "医生僵尸",
     "width": 1,
     "height": 1,
     "texture": {

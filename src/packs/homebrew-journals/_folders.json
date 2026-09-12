@@ -1,0 +1,95 @@
+{
+  "folders": [
+    {
+      "_id": "whbfolderHuntJ01",
+      "name": "猎杀对决",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": null
+    },
+    {
+      "_id": "whbHntJrIntro001",
+      "name": "猎杀·猎人入门",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrWhitw001",
+      "name": "猎杀·惠特劳战役",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrRules001",
+      "name": "猎杀·规则备忘",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrButch001",
+      "name": "猎杀·屠夫",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrHellH001",
+      "name": "猎杀·地狱犬",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrMeatH001",
+      "name": "猎杀·肉头怪",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrGrunt001",
+      "name": "猎杀·僵尸",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrArmor001",
+      "name": "猎杀·装甲兵",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrHive0001",
+      "name": "猎杀·蜂巢怪",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrImmol001",
+      "name": "猎杀·喷火怪",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrBrute001",
+      "name": "猎杀·蛮兽",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    },
+    {
+      "_id": "whbHntJrHborn001",
+      "name": "猎杀·地狱之子",
+      "type": "JournalEntry",
+      "sorting": "a",
+      "folder": "whbfolderHuntJ01"
+    }
+  ]
+}

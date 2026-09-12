@@ -1759,7 +1759,24 @@ function installBanishingHooks() {
     else if (st.active) label = `放逐中 · ${st.bossName || "Boss"} ${progress}/${max}`;
     for (const t of actor.getActiveTokens?.(true) ?? []) {
       const doc = t.document ?? t;
-      if (doc?.name !== label) await doc.update({ name: label }).catch(() => {});
+      if (doc?.name !== label) {
+        await doc.update({ name: label, displayName: 50 }).catch(() => {});
+      }
+    }
+    // 同步地图便签文字（大地图可见）
+    const scene = st.sceneId ? game.scenes.get(st.sceneId) : canvas.scene;
+    if (scene && st.noteId) {
+      const note = scene.notes.get(st.noteId);
+      if (note && note.text !== label) {
+        await note.update({ text: label }).catch(() => {});
+      }
+    } else if (scene) {
+      const note = scene.notes.find(
+        (n) => n.flags?.[MODULE_ID]?.banishActorId === actor.id
+      );
+      if (note && note.text !== label) {
+        await note.update({ text: label }).catch(() => {});
+      }
     }
   };
 

@@ -20,16 +20,16 @@ import {
 const SOURCE = "Hunt: Showdown — Butcher Lore";
 
 const BODY =
-  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.1rem;line-height:1.88;color:#1a120c;text-align:justify;";
+  "font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.44rem;line-height:1.95;color:#1a120c;text-align:justify;";
 const HEAD =
-  "margin:0 0 0.85rem;font-size:1.28rem;font-weight:700;letter-spacing:0.08em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.3rem;";
+  "margin:0 0 0.85rem;font-size:1.56rem;font-weight:700;letter-spacing:0.08em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.3rem;";
 const META =
-  "margin:0 0 0.85rem;font-size:0.92rem;line-height:1.55;color:#5a4030;font-style:italic;";
-const PARA = "margin:0 0 0.85rem;line-height:1.88;text-align:justify;";
+  "margin:0 0 0.85rem;font-size:1.18rem;line-height:1.6;color:#5a4030;font-style:italic;";
+const PARA = "margin:0 0 0.9rem;line-height:1.95;text-align:justify;";
 const ORNAMENT =
-  "margin:0 0 0.9rem;text-align:center;font-size:0.9rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
+  "margin:0 0 0.9rem;text-align:center;font-size:1.1rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;";
 const CLIP_DATE =
-  "margin:0 0 0.4rem;font-size:0.95rem;letter-spacing:0.12em;color:#3a2818;font-weight:700;";
+  "margin:0 0 0.4rem;font-size:1.18rem;letter-spacing:0.12em;color:#3a2818;font-weight:700;";
 const CLIP_HEAD =
   "margin:0 0 0.75rem;font-size:1.2rem;font-weight:800;letter-spacing:0.04em;color:#1a1008;line-height:1.35;";
 
