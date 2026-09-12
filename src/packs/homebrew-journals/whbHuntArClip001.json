@@ -1,0 +1,159 @@
+{
+  "_id": "whbHuntArClip001",
+  "name": "新奥尔良真新月报 · 石化与燃烧剪报",
+  "img": "icons/sundries/documents/document-newspaper.webp",
+  "pages": [
+    {
+      "_id": "whbHuntArClipH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1858年8月24日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">一个令人毛骨悚然的故事。弗雷德里克·利希滕从育空地区回来，讲述了他不幸的朋友欧内斯特·斯普莱格：勘探时发现晶洞，开玩笑地喝下结晶水，不久后胃肠剧痛而死，身体瞬间僵硬，数小时内石化——血肉、心脏、肝脏皆成固体。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1893年4月16日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">肆意燃烧。一位乡村锯木厂工人用动物油脂清理锯末时出了意外，之后和朋友们寻欢作乐，为自己怪异的容貌感到高兴。然而他不小心碰到了油灯的火花，瞬间被火焰吞噬。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1895年3月27日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">人工石化。拉斐特的查尔斯·D·博伊德和弗兰克·T·博伊德兄弟认为他们发现了一种将人体变成石头并永久保存的方法。在他们位于科蒂奇格罗夫大街的店铺地下室里，存放着一位于去年7月18日去世的年轻男子的遗体……抽干血液并注入液体后，两周无腐烂，血肉开始硬化。一些类似纸质黄蜂巢的奇怪增生物仍然令他们困惑不已。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "新奥尔良真新月报 · 石化与燃烧剪报",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764166,
+        "updatedAt": 1789183764166,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "新奥尔良真新月报 · 石化与燃烧剪报",
+          "spine": "新奥尔良真新月报 · 石化与燃烧剪报",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#585040",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 858
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1858年8月24日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">一个令人毛骨悚然的故事。弗雷德里克·利希滕从育空地区回来，讲述了他不幸的朋友欧内斯特·斯普莱格：勘探时发现晶洞，开玩笑地喝下结晶水，不久后胃肠剧痛而死，身体瞬间僵硬，数小时内石化——血肉、心脏、肝脏皆成固体。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "1858年8月24日",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1858年8月24日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">一个令人毛骨悚然的故事。弗雷德里克·利希滕从育空地区回来，讲述了他不幸的朋友欧内斯特·斯普莱格：勘探时发现晶洞，开玩笑地喝下结晶水，不久后胃肠剧痛而死，身体瞬间僵硬，数小时内石化——血肉、心脏、肝脏皆成固体。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "1893年4月16日",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1893年4月16日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">肆意燃烧。一位乡村锯木厂工人用动物油脂清理锯末时出了意外，之后和朋友们寻欢作乐，为自己怪异的容貌感到高兴。然而他不小心碰到了油灯的火花，瞬间被火焰吞噬。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-3",
+            "title": "1895年3月27日",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">1895年3月27日</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">《新奥尔良真新月报》</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">人工石化。拉斐特的查尔斯·D·博伊德和弗兰克·T·博伊德兄弟认为他们发现了一种将人体变成石头并永久保存的方法。在他们位于科蒂奇格罗夫大街的店铺地下室里，存放着一位于去年7月18日去世的年轻男子的遗体……抽干血液并注入液体后，两周无腐烂，血肉开始硬化。一些类似纸质黄蜂巢的奇怪增生物仍然令他们困惑不已。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-4",
+            "title": "",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Armored Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

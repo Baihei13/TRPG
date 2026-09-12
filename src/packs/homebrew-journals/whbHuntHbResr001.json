@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntHbResr001",
+  "name": "研究者对地狱之子的见解",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hellborn.png",
+  "pages": [
+    {
+      "_id": "whbHuntHbResrH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对地狱之子的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　写于一张手部素描背面　Hellborn</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">就像风助火势一样，故事也会传播开来。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在廉价小说作家贾斯珀·普里斯特的档案中，我发现了一份手稿，其故事与关于地狱之子出现的亲身经历不谋而合。他是否有直接的资料来源？还是作者的想象力随着科罗拉多州流传的谣言而驰骋？谢天谢地，这东西最终没有出版。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">试想一下，如果这个故事是真的。那么，我们或许可以从中推断出新的证据，证明腐化之力能够扭曲、摧残和变形。然而，即便它使灵魂变形，我们也看到它剥离灵魂的表象，直抵其本质。仿佛剥去外衣，露出其下的真相。如果我们相信达蒙的故事，那么他的转变与难以言喻的悲痛、出于贪婪对无辜者犯下的毫无悔意的暴行，以及最终为了救赎和复仇而做出的牺牲紧密相连。这的确是一个奇特的故事。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对地狱之子的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我曾多次重返玛门峡谷，进一步观察地狱之子，它的行为可以用「反复无常」来形容。峡谷内的熔岩与科罗拉多地壳下的熔岩完全相同。它的攻击性与速度相匹配，能够轻松躲避速度较慢的投射物。如果这生物确实曾经是人类，我不禁想知道它的性格是否与其本性相符。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">乍看之下，地狱之子与焚化者（喷火怪）颇为相似，但它体型更大，且体内会喷涌熔岩，这使其独具特色。熔岩以及它身上散发的刺鼻硫磺味，都是地狱的标志，也正是因此得名。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">测量数据显示，地狱之子出现后的余震至今仍在持续。每当这怪物受到挑衅，地震仪便会疯狂地记录下它的嘶吼声。每当它靠近，温度计都会爆裂。震动和高温都丝毫没有消散的迹象。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "研究者对地狱之子的见解",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764169,
+        "updatedAt": 1789183764169,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "研究者对地狱之子的见解",
+          "spine": "研究者对地狱之子的见解",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#4a1808",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 777
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对地狱之子的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　写于一张手部素描背面　Hellborn</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">就像风助火势一样，故事也会传播开来。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在廉价小说作家贾斯珀·普里斯特的档案中，我发现了一份手稿，其故事与关于地狱之子出现的亲身经历不谋而合。他是否有直接的资料来源？还是作者的想象力随着科罗拉多州流传的谣言而驰骋？谢天谢地，这东西最终没有出版。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">试想一下，如果这个故事是真的。那么，我们或许可以从中推断出新的证据，证明腐化之力能够扭曲、摧残和变形。然而，即便它使灵魂变形，我们也看到它剥离灵魂的表象，直抵其本质。仿佛剥去外衣，露出其下的真相。如果我们相信达蒙的故事，那么他的转变与难以言喻的悲痛、出于贪婪对无辜者犯下的毫无悔意的暴行，以及最终为了救赎和复仇而做出的牺牲紧密相连。这的确是一个奇特的故事。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "研究者对地狱之子的见解",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对地狱之子的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　写于一张手部素描背面　Hellborn</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">就像风助火势一样，故事也会传播开来。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在廉价小说作家贾斯珀·普里斯特的档案中，我发现了一份手稿，其故事与关于地狱之子出现的亲身经历不谋而合。他是否有直接的资料来源？还是作者的想象力随着科罗拉多州流传的谣言而驰骋？谢天谢地，这东西最终没有出版。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">试想一下，如果这个故事是真的。那么，我们或许可以从中推断出新的证据，证明腐化之力能够扭曲、摧残和变形。然而，即便它使灵魂变形，我们也看到它剥离灵魂的表象，直抵其本质。仿佛剥去外衣，露出其下的真相。如果我们相信达蒙的故事，那么他的转变与难以言喻的悲痛、出于贪婪对无辜者犯下的毫无悔意的暴行，以及最终为了救赎和复仇而做出的牺牲紧密相连。这的确是一个奇特的故事。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "研究者对地狱之子的见解（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对地狱之子的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我曾多次重返玛门峡谷，进一步观察地狱之子，它的行为可以用「反复无常」来形容。峡谷内的熔岩与科罗拉多地壳下的熔岩完全相同。它的攻击性与速度相匹配，能够轻松躲避速度较慢的投射物。如果这生物确实曾经是人类，我不禁想知道它的性格是否与其本性相符。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">乍看之下，地狱之子与焚化者（喷火怪）颇为相似，但它体型更大，且体内会喷涌熔岩，这使其独具特色。熔岩以及它身上散发的刺鼻硫磺味，都是地狱的标志，也正是因此得名。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">测量数据显示，地狱之子出现后的余震至今仍在持续。每当这怪物受到挑衅，地震仪便会疯狂地记录下它的嘶吼声。每当它靠近，温度计都会爆裂。震动和高温都丝毫没有消散的迹象。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Hellborn Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

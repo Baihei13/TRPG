@@ -1,0 +1,62 @@
+{
+  "_id": "whbHuntIrVisFx01",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：红外线视觉（黑视）",
+  "type": "effect",
+  "img": "systems/pf2e/icons/features/classes/precise-strike.webp",
+  "system": {
+    "description": {
+      "value": "<p>你获得 <strong>红外线视觉</strong>（精准感官），可借体温轮廓感知生物位置——对应猎杀中的「黑视」。</p>\n<p>持续至本回合结束。此效果<strong>不会</strong>因击杀而补充；补充仅适用于 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBountyTk1]{赏金令牌} 的充能。</p>",
+      "gm": "<p>Sense infrared-vision（precise，无限距离）。1 回合，expiry turn-end。</p>"
+    },
+    "rules": [
+      {
+        "key": "Sense",
+        "selector": "infrared-vision",
+        "acuity": "precise"
+      }
+    ],
+    "slug": "effect-hunt-infrared-vision",
+    "traits": {
+      "value": [
+        "magical"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-dark-sight"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 黑视",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "purpose": "dark-sight-infrared"
+    }
+  }
+}

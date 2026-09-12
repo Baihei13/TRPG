@@ -1,0 +1,159 @@
+{
+  "_id": "whbHuntHhScog001",
+  "name": "魔鬼的仆人 · 地狱犬篇",
+  "img": "icons/sundries/books/book-symbol-skull-grey.webp",
+  "pages": [
+    {
+      "_id": "whbHuntHhScogH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">魔鬼的仆人 · 地狱犬篇</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">作者：Tamrat Scognamiglio　译稿摘录</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">论美洲之犬、纳奇兹屠杀传说，以及阿尔比恩诸岛的地狱犬神话。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">狼与家犬</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">De Servus Diaboli</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">狼是美洲的本土物种，因此家犬也是如此。安托万-西蒙·勒帕热·杜普拉茨在其著作《路易斯安那史》中提到，纳奇兹土著居民大量使用家犬，通常将其作为驮畜来运输贸易货物。然而，凡事皆有其黑暗的过去。勒帕热·杜普拉茨记录了他听到纳奇兹哨所大屠杀的那一天。在与纳奇兹人和平共处十余年后，法国指挥官向他们索要土地。作为报复，「纳奇兹的法国人被野蛮人的狗杀死了」。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">虽然我的法语不如从前，翻译能力也可能因岁月而有所欠缺，但很明显，这些被放任不管的恶犬残忍地屠杀了殖民者。我只能想象地狱恶犬嘶吼着向定居者扑来的情景。想必在沼泽地带，这些恶犬的祖先仍然生活在那里，他们回来时总会讲述地狱恶犬成群结队在树林中游荡的故事。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">刻耳柏洛斯与死亡预兆</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">脑海中浮现出刻耳柏洛斯的形象，它是神话中冥界的典型猎犬。我粗略地翻阅了一下藏书，列出了一份清单，长到无法在此一一列举。总的来说，世界各地的大多数神话都将狗描绘成人类忠诚的朋友和助手，尤其是在美洲原住民的神话中，狗总是我们寻求帮助的首选。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">因此，必须将这些故事与地狱犬的传说区分开来。地狱犬是死亡的预兆，在整个阿尔比恩岛上都有流传。从英格兰北部，有可怕的巴格斯特和吉特拉什；从东部海岸，有红眼黑沙克；南部有耶斯猎犬；马恩岛有莫迪杜；威尔士有格威尔吉和库恩安温。这样的例子不胜枚举。为什么英国有这么多这样的传说？或许，在殖民者的思维中，潜藏着一种对仆人反抗主人的潜在恐惧，而美国无疑也继承了这种恐惧。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "魔鬼的仆人 · 地狱犬篇",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764160,
+        "updatedAt": 1789183764160,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "魔鬼的仆人 · 地狱犬篇",
+          "spine": "魔鬼的仆人 · 地狱犬篇",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#4a3020",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 711
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">魔鬼的仆人 · 地狱犬篇</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">作者：Tamrat Scognamiglio　译稿摘录</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">论美洲之犬、纳奇兹屠杀传说，以及阿尔比恩诸岛的地狱犬神话。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "扉页",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">魔鬼的仆人 · 地狱犬篇</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">作者：Tamrat Scognamiglio　译稿摘录</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">论美洲之犬、纳奇兹屠杀传说，以及阿尔比恩诸岛的地狱犬神话。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "狼与家犬",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">狼与家犬</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">De Servus Diaboli</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">狼是美洲的本土物种，因此家犬也是如此。安托万-西蒙·勒帕热·杜普拉茨在其著作《路易斯安那史》中提到，纳奇兹土著居民大量使用家犬，通常将其作为驮畜来运输贸易货物。然而，凡事皆有其黑暗的过去。勒帕热·杜普拉茨记录了他听到纳奇兹哨所大屠杀的那一天。在与纳奇兹人和平共处十余年后，法国指挥官向他们索要土地。作为报复，「纳奇兹的法国人被野蛮人的狗杀死了」。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">虽然我的法语不如从前，翻译能力也可能因岁月而有所欠缺，但很明显，这些被放任不管的恶犬残忍地屠杀了殖民者。我只能想象地狱恶犬嘶吼着向定居者扑来的情景。想必在沼泽地带，这些恶犬的祖先仍然生活在那里，他们回来时总会讲述地狱恶犬成群结队在树林中游荡的故事。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-3",
+            "title": "刻耳柏洛斯与死亡预兆",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">刻耳柏洛斯与死亡预兆</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">脑海中浮现出刻耳柏洛斯的形象，它是神话中冥界的典型猎犬。我粗略地翻阅了一下藏书，列出了一份清单，长到无法在此一一列举。总的来说，世界各地的大多数神话都将狗描绘成人类忠诚的朋友和助手，尤其是在美洲原住民的神话中，狗总是我们寻求帮助的首选。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">因此，必须将这些故事与地狱犬的传说区分开来。地狱犬是死亡的预兆，在整个阿尔比恩岛上都有流传。从英格兰北部，有可怕的巴格斯特和吉特拉什；从东部海岸，有红眼黑沙克；南部有耶斯猎犬；马恩岛有莫迪杜；威尔士有格威尔吉和库恩安温。这样的例子不胜枚举。为什么英国有这么多这样的传说？或许，在殖民者的思维中，潜藏着一种对仆人反抗主人的潜在恐惧，而美国无疑也继承了这种恐惧。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-4",
+            "title": "",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Hellhound Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

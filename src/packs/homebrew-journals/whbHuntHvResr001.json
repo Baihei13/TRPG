@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntHvResr001",
+  "name": "研究者对蜂巢怪的见解",
+  "img": "icons/sundries/books/book-symbol-tree-brown.webp",
+  "pages": [
+    {
+      "_id": "whbHuntHvResrH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对蜂巢怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在我目前研究过的十种生物中，最令我魂牵梦萦的莫过于蜂巢。尽管她似乎被归类为其他杂兵，但她却危险得多。她会驱使一群昆虫攻击任何进入攻击范围的人类，直到他们的身体被刺穿、肿胀，并被剧毒的液体所淹没。只有她自身的死亡——也就是宿主蜂巢母体的死亡——才能阻止她们持续不断的攻击。虽然远距离爆头可以安全地杀死她，但她身体的姿势使得即使是最好的射手也难以击中目标。钝器伤或许能对她造成一些伤害，但其他方式几乎无效。而且，在你尝试攻击她之前，她那群凶猛的昆虫早已将猎物蜇得落荒而逃或屈服。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对蜂巢怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">从更宏观的角度来看，我试图理解每种形态在其创造者眼中的作用。我收集的文献——尤其是对艾达·谢尔的访谈——使我推测，蜂巢的功能既是容纳疾病，也是传播疾病。远距离转化或杀戮；延续「种族」。这让我想起了当时活跃的特拉斯克的著作，他坚信女性的神圣使命是通过不断繁衍来「延续种族」。正如你将看到的，这种想法的种子——尽管后来扭曲变形——在有记录的第一个蜂巢中得到了人格化体现。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "研究者对蜂巢怪的见解",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764167,
+        "updatedAt": 1789183764167,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "研究者对蜂巢怪的见解",
+          "spine": "研究者对蜂巢怪的见解",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#3a4028",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 404
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对蜂巢怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在我目前研究过的十种生物中，最令我魂牵梦萦的莫过于蜂巢。尽管她似乎被归类为其他杂兵，但她却危险得多。她会驱使一群昆虫攻击任何进入攻击范围的人类，直到他们的身体被刺穿、肿胀，并被剧毒的液体所淹没。只有她自身的死亡——也就是宿主蜂巢母体的死亡——才能阻止她们持续不断的攻击。虽然远距离爆头可以安全地杀死她，但她身体的姿势使得即使是最好的射手也难以击中目标。钝器伤或许能对她造成一些伤害，但其他方式几乎无效。而且，在你尝试攻击她之前，她那群凶猛的昆虫早已将猎物蜇得落荒而逃或屈服。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "研究者对蜂巢怪的见解",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对蜂巢怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">在我目前研究过的十种生物中，最令我魂牵梦萦的莫过于蜂巢。尽管她似乎被归类为其他杂兵，但她却危险得多。她会驱使一群昆虫攻击任何进入攻击范围的人类，直到他们的身体被刺穿、肿胀，并被剧毒的液体所淹没。只有她自身的死亡——也就是宿主蜂巢母体的死亡——才能阻止她们持续不断的攻击。虽然远距离爆头可以安全地杀死她，但她身体的姿势使得即使是最好的射手也难以击中目标。钝器伤或许能对她造成一些伤害，但其他方式几乎无效。而且，在你尝试攻击她之前，她那群凶猛的昆虫早已将猎物蜇得落荒而逃或屈服。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "研究者对蜂巢怪的见解（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对蜂巢怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">从更宏观的角度来看，我试图理解每种形态在其创造者眼中的作用。我收集的文献——尤其是对艾达·谢尔的访谈——使我推测，蜂巢的功能既是容纳疾病，也是传播疾病。远距离转化或杀戮；延续「种族」。这让我想起了当时活跃的特拉斯克的著作，他坚信女性的神圣使命是通过不断繁衍来「延续种族」。正如你将看到的，这种想法的种子——尽管后来扭曲变形——在有记录的第一个蜂巢中得到了人格化体现。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Hive Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

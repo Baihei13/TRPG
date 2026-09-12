@@ -1,0 +1,116 @@
+{
+  "_id": "whbHuntBanish001",
+  "folder": "whbfolderHntMn01",
+  "name": "放逐标记 Banishing",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+  "items": [
+    {
+      "_id": "whbBanNote000001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "用法",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>拖到 Boss 尸体旁，运行宏 @UUID[Compendium.wang-pf2e-homebrew.homebrew-macros.Macro.whbHuntBanishM01]{放逐仪式}。</p>\n<ul>\n<li><strong>开始放逐</strong>：Token 改名为「放逐中 · Boss x/y」，全图可知此地正在放逐。</li>\n<li><strong>进度</strong>：战斗每轮自动 +1；也可宏「推进」。</li>\n<li><strong>完成</strong>：进度满后结算，提示放置赏金令牌。</li>\n</ul>\n<p>默认 10 格 ≈ 探索约 3 分钟（贴近原作约 3 分 20 秒）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 放逐",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 0 },
+      "dex": { "mod": 0 },
+      "con": { "mod": 0 },
+      "int": { "mod": 0 },
+      "wis": { "mod": 0 },
+      "cha": { "mod": 0 }
+    },
+    "attributes": {
+      "ac": { "details": "场景标记", "value": 5 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "不可攻击；仅作放逐进度标记",
+        "max": 1,
+        "temp": 0,
+        "value": 1
+      },
+      "speed": { "value": 0, "otherSpeeds": [] },
+      "immunities": [],
+      "weaknesses": [],
+      "resistances": []
+    },
+    "details": {
+      "blurb": "猎杀对决 · 放逐进度标记",
+      "languages": { "details": "", "value": [] },
+      "level": { "value": -1 },
+      "privateNotes": "<p>flags.wang-pf2e-homebrew.banishing 存进度。宏 whbHuntBanishM01；战斗 combatRound 自动推进。</p>",
+      "publicNotes": "<p>Boss 死后放于此地：标记<strong>正在放逐</strong>并显示进度条。用宏「放逐仪式」操作。</p>",
+      "publication": {
+        "title": "猎杀对决 — 放逐",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": { "details": "标记", "mod": 0, "senses": [] },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 0 },
+      "reflex": { "saveDetail": "", "value": 0 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "skills": {},
+    "traits": {
+      "rarity": "unique",
+      "size": { "value": "med" },
+      "value": []
+    }
+  },
+  "prototypeToken": {
+    "name": "放逐点",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+      "scaleX": 1.2,
+      "scaleY": 1.2
+    },
+    "disposition": 0,
+    "displayName": 30,
+    "displayBars": 0,
+    "bar1": { "attribute": null },
+    "sight": { "enabled": false },
+    "light": {
+      "bright": 0,
+      "dim": 15,
+      "color": "#4a7cff",
+      "alpha": 0.35,
+      "animation": { "type": "pulse", "speed": 2, "intensity": 3 }
+    },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntProp": "banishing-site"
+    }
+  }
+}

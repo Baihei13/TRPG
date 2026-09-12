@@ -76,6 +76,13 @@
       "folder": "whbfolderHunt001",
       "type": "Item",
       "sorting": "a"
+    },
+    {
+      "_id": "whbHntFldCargo01",
+      "name": "猎杀·货箱",
+      "folder": "whbfolderHunt001",
+      "type": "Item",
+      "sorting": "a"
     }
   ]
 }

@@ -11,6 +11,22 @@ import {
   createMorrowEphemeraBook,
   buildMorrowJournalDoc
 } from "./morrow-journal.mjs";
+import {
+  createAllButcherLoreBooks,
+  createButcherResearcherBook,
+  createButcherClippingsBook,
+  createButcherInterviewLetter,
+  createButcherDiaryBook,
+} from "./butcher-lore-journals.mjs";
+import {
+  createAllWhitlawVictorLoreBooks,
+  createScoutReportsBook,
+  createOtisLettersBook,
+  createJohnVictorLetter,
+  createJohnVictorHandbook,
+} from "./whitlaw-victor-lore-journals.mjs";
+import { createAhaWelcomeLetter } from "./aha-welcome-letter.mjs";
+import { createAllAiMonsterLoreBooks } from "./hunt-ai-monster-lores.mjs";
 import { openPartyTrapDialog, applyPartyTrap } from "./party-trap-macro.mjs";
 import { installCharredRingIwrPatch } from "./charred-ring-iwr.mjs";
 import { installNightweaverRewards } from "./nightweaver-rewards.mjs";
@@ -705,6 +721,18 @@ Hooks.once("init", () => {
       buildGroundskeeperJournalDoc,
       createMorrowEphemeraBook,
       buildMorrowJournalDoc,
+      createAllButcherLoreBooks,
+      createButcherResearcherBook,
+      createButcherClippingsBook,
+      createButcherInterviewLetter,
+      createButcherDiaryBook,
+      createAllWhitlawVictorLoreBooks,
+      createScoutReportsBook,
+      createOtisLettersBook,
+      createJohnVictorLetter,
+      createJohnVictorHandbook,
+      createAhaWelcomeLetter,
+      createAllAiMonsterLoreBooks,
       openPartyTrapDialog,
       applyPartyTrap,
     };

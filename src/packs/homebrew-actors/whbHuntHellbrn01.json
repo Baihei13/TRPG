@@ -1,0 +1,339 @@
+{
+  "_id": "whbHuntHellbrn01",
+  "folder": "whbfolderHntMn01",
+  "name": "地狱之子 Hellborn",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/hellborn.png",
+  "items": [
+    {
+      "_id": "whbHlbClaw000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "熔岩爪",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 14 },
+        "damageRolls": {
+          "whbHlbDmgClawS01": {
+            "damage": "2d8+6",
+            "damageType": "slashing"
+          },
+          "whbHlbDmgClawF01": {
+            "damage": "1d8",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": "<p>白骨巨爪自胸腔熔岩中探出。触及 10 尺。命中时目标须尝试 @Check[reflex|dc:21|traits:fire]{反射 DC 21}；失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>\n<p>近战贴脸极危险——它更常先掷火球再冲上来熔溅。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": null,
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["reach-10", "fire"] }
+      }
+    },
+    {
+      "_id": "whbHlbBall000001",
+      "img": "systems/pf2e/icons/default-icons/melee.svg",
+      "name": "熔岩火球（单发）",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": { "value": "" },
+        "attackEffects": { "custom": "", "value": [] },
+        "bonus": { "value": 14 },
+        "damageRolls": {
+          "whbHlbDmgBall001": {
+            "damage": "2d8+4",
+            "damageType": "fire"
+          }
+        },
+        "description": {
+          "value": "<p>投出一枚炸裂的熔岩球。射程 <strong>60 尺</strong>。命中时目标获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1），并点燃落点 5 尺内短暂火场（进入或在其中开始回合受 @Damage[1d6[fire]]，持续 1 分钟或被扑灭）。</p>\n<p><strong>引燃弹药：</strong>若火球轨迹或落点触及已点燃引线的爆炸物（投掷中、手中或地上），该爆炸物立刻引爆（GM 裁定伤害归属）。</p>\n<p>侧移躲避比硬挡更安全；更完整的连射见「熔岩连射」。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 60,
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire", "propulsive"] }
+      }
+    },
+    {
+      "_id": "whbHlbVolley0001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "熔岩连射",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对 60 尺内可见生物（可分摊目标）连续投出熔岩火球。</p>\n<ul>\n<li><strong>常态：</strong>投出 <strong>3</strong> 枚；</li>\n<li><strong>半血以下</strong>（当前 HP ≤ 一半）：改为 <strong>4</strong> 枚。</li>\n</ul>\n<p>每枚火球：目标受到 @Damage[2d8[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:21|traits:fire]{基础反射豁免 DC 21}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）；大失败再额外 +1 层。每枚火球落点点燃 5 尺短暂火场（同「熔岩火球」）。</p>\n<p>这是它的招牌：快速啃掉生命块，让猎人更容易死于后续怪物与敌方猎人。</p>\n<p><em>GM：</em>可用「熔岩火球（单发）」打击代替逐枚结算攻击加值；豁免版更贴近原作「侧移躲开」。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    },
+    {
+      "_id": "whbHlbSplash0001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "近身熔溅",
+      "sort": 610000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>要求</strong> 至少一名敌人与你相邻或处于触及内</p>\n<p>胸腔与口腔喷溅熔岩，覆盖 @Template[type:cone|distance:15]{15 尺锥形}（或以自身为中心的 @Template[type:burst|distance:5]{5 尺爆发}，择一）。区内每个生物受到 @Damage[3d8[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:21|traits:fire]{基础反射豁免 DC 21}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层（已有则 +1）。</p>\n<p>近战几乎不可能：贴脸就会被熔溅烤穿。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire"] }
+      }
+    },
+    {
+      "_id": "whbHlbBarrage001",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "地狱火齐射",
+      "sort": 620000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": {
+          "value": "<p>Stride（至少移动 10 尺冲向猎物），然后向空中甩出六枚火球，砸落在自身周围中距环带。</p>\n<p>以你为中心产生 @Template[type:burst|distance:20]{20 尺爆发}（可选：排除你所占空间与邻接 5 尺，形成「脚下安全、外圈落地」）。区内每个生物受到 @Damage[2d8[fire]] 火焰伤害，并尝试 @Check[reflex|basic|dc:21|traits:fire]{基础反射豁免 DC 21}。失败则获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层并点燃所在格短暂火场。</p>\n<p>典型节奏：连射 → 冲锋齐射 → 再连射。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["fire", "move"] }
+      }
+    },
+    {
+      "_id": "whbHlbDodge00001",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "焦壳侧闪",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p><strong>触发</strong> 你成为一次远程打击的目标，且攻击者距你至少 15 尺</p>\n<p><strong>效果</strong> 对这次打击的 AC 获得 +2 环境加值。若攻击因此未击中，你可 Step 5 尺。</p>\n<p>研究者笔记：它能轻松躲开较慢的投射物；步枪与速射更稳。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbHlbRoar000001",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "name": "余震嘶吼",
+      "sort": 520000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "free" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p><strong>触发</strong> 你首次在本场遭遇中受到伤害，或开始使用「熔岩连射」</p>\n<p><strong>效果</strong> 发出可传遍峡谷的嘶吼。地震仪狂跳：30 尺内未聋的生物须尝试 @Check[fortitude|dc:20]{强韧 DC 20}，失败则耳鸣 1 轮（听觉检定 −2）。</p>\n<p><em>GM：</em>此吼声会吸引其他猎人与游荡怪物（把下一波遭遇提前 1d4 轮，或让远处队伍感知到交战）。拖得越久，第三方介入风险越高。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["auditory", "sonic"] }
+      }
+    },
+    {
+      "_id": "whbHlbHeatAura01",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "硫磺炽体",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": {
+          "value": "<p>巨型焚化者：体型更大，胸腔喷涌熔岩，周身硫磺刺鼻。对火焰伤害<strong>免疫</strong>；对寒冷具有弱点。</p>\n<p>10 尺内温度计会爆裂：在你 10 尺内开始回合的生物若未获得火焰抗性，受到 @Damage[1d4[fire]]（可忽略，用于营造氛围）。黑暗中它自身就是火光。</p>\n<p>枪弹与爆炸物有效；已点燃的炸药触及火球会提前引爆——勿在它面前点着引线硬丢。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": ["aura", "fire"] }
+      }
+    },
+    {
+      "_id": "whbHlbBanis00001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "跪地驱逐",
+      "sort": 510000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>降至 0 HP 时双膝跪地，随即被<strong>立刻驱逐</strong>（无需额外驱逐仪式）。击杀队伍可拾取赏金令牌（建议授予 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBountyTk1]{赏金令牌} 或恢复生命块，由 GM 按局规则）。</p>\n<p>它总会留下一道随机「燃烧系」特性残渣（除死里逃生/死而复生类外，GM 自表抽取）。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — Wild Target",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 4 },
+      "dex": { "mod": 4 },
+      "con": { "mod": 3 },
+      "int": { "mod": -3 },
+      "wis": { "mod": 2 },
+      "cha": { "mod": 0 }
+    },
+    "attributes": {
+      "ac": { "details": "焦壳与侧闪", "value": 21 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "Wild Target；半血以下连射 4 发；死后立刻驱逐",
+        "max": 100,
+        "temp": 0,
+        "value": 100
+      },
+      "speed": { "value": 30, "otherSpeeds": [] },
+      "immunities": [{ "type": "fire" }],
+      "weaknesses": [{ "type": "cold", "value": 5 }],
+      "resistances": []
+    },
+    "details": {
+      "blurb": "猎杀对决 · Wild Target（玛门峡谷）",
+      "languages": { "details": "无语言；余震嘶吼", "value": [] },
+      "level": { "value": 4 },
+      "privateNotes": "<p>四人 2 级团 Wild Target（Creature 4，约 +2）。火球叠灼烬是核心威胁；近战几乎不可能。半血改 4 连射。拖久了用「余震嘶吼」引第三方。枪弹/爆炸有效；火球会引爆已燃炸药。死后立刻驱逐+赏金令牌。</p>\n<p>可配 1～2 只 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntImmolat01]{喷火怪} 作跟班，对应插图中的焚化者群。</p>",
+      "publicNotes": "<p>巨大的焚化者——熔岩与血肉的聚合体，自玛门峡谷深处涌出。它向猎人连掷火球，迅速啃掉生命块，使他们更容易死于怪物与敌方猎人。</p>\n<p>近战几乎不可行；枪械有效，爆炸物亦然——但火球会引爆途中或手中已点燃的炸药。被激怒时嘶吼传遍峡谷，交战越久越危险。</p>\n<p><em>四人 2 级团 · Creature 4（Wild Target · 约 +2）</em></p>",
+      "publication": {
+        "title": "猎杀对决 — Wild Target",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": {
+      "details": "黑暗视觉；硫磺热浪；黑视中可闻其嘶吼追踪",
+      "mod": 12,
+      "senses": [
+        { "type": "darkvision" },
+        { "type": "scent", "acuity": "imprecise", "range": 30 }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 13 },
+      "reflex": { "saveDetail": "焦壳侧闪", "value": 14 },
+      "will": { "saveDetail": "", "value": 10 }
+    },
+    "skills": {
+      "acrobatics": { "base": 14 },
+      "athletics": { "base": 13 },
+      "intimidation": { "base": 11 },
+      "stealth": { "base": 10 }
+    },
+    "traits": {
+      "rarity": "rare",
+      "size": { "value": "lg" },
+      "value": ["fiend", "undead", "fire"]
+    }
+  },
+  "prototypeToken": {
+    "name": "地狱之子",
+    "width": 2,
+    "height": 2,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/hellborn.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": true, "range": 60, "visionMode": "darkvision" },
+    "light": {
+      "bright": 10,
+      "dim": 25,
+      "color": "#ff4a12",
+      "alpha": 0.45,
+      "animation": { "type": "torch", "speed": 5, "intensity": 5 }
+    },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": false
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntMonster": "hellborn",
+      "huntWildTarget": true,
+      "linkedLore": ["whbHuntHbResr001", "whbHuntHbPrst001"]
+    }
+  }
+}

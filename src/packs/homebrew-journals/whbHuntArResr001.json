@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntArResr001",
+  "name": "研究者对装甲兵的见解",
+  "img": "icons/sundries/books/book-symbol-leaf-brown.webp",
+  "pages": [
+    {
+      "_id": "whbHuntArResrH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对装甲兵的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我引用了斯科尼亚米利奥本人的著作来阐释对装甲兵的全面分析，这实属难得，因为存世的资料实在太少了。哈罗德·布莱克则提供了更为具体的分析。以下是他的分析：</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「装甲兽」这个名字的含义颇为暧昧。有人认为它是一种防御型生物，随时准备缩回壳里。然而，事实恰恰相反，许多记载表明它拥有强大的防御能力，能够发起危险的进攻。它是一支突击部队，比巨型「肉头」更加灵活机动。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">套用乔治·华盛顿的话来说，「进攻才是最可靠的防御手段」。因此，这只生物似乎具备持续追击目标的能力，并且能够抵御敌人的反击。有说法称它足够聪明，能够撞破门而入，但这无法证实。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对装甲兵的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">那么，它的盔甲究竟在保护什么呢？傻瓜会这样想。不。这些敌人一次又一次地出现在裂隙附近，这些地方对这头野兽来说显然是脆弱的或至关重要的。它们潜伏在门后，徘徊在门挡上：所有这些潜在的咽喉要道，所有这些需要控制的关键地点。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">猎人们给它起的名字很务实；他们并没有涉足神秘学来解释它。有些人认为它不过是装甲杂兵，某种变异使其皮肤增厚并进化出几丁质外骨骼。我对此持不同意见——人们经常指出装甲兵的外壳特别易燃，很容易被各种燃烧装置烧毁。另一些人，或许与我的观点更为接近，则认为它本身就是一种独特的现象，这种突变必然有更重要的意义。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "研究者对装甲兵的见解",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764165,
+        "updatedAt": 1789183764165,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "研究者对装甲兵的见解",
+          "spine": "研究者对装甲兵的见解",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#3a3830",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 880
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对装甲兵的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我引用了斯科尼亚米利奥本人的著作来阐释对装甲兵的全面分析，这实属难得，因为存世的资料实在太少了。哈罗德·布莱克则提供了更为具体的分析。以下是他的分析：</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「装甲兽」这个名字的含义颇为暧昧。有人认为它是一种防御型生物，随时准备缩回壳里。然而，事实恰恰相反，许多记载表明它拥有强大的防御能力，能够发起危险的进攻。它是一支突击部队，比巨型「肉头」更加灵活机动。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">套用乔治·华盛顿的话来说，「进攻才是最可靠的防御手段」。因此，这只生物似乎具备持续追击目标的能力，并且能够抵御敌人的反击。有说法称它足够聪明，能够撞破门而入，但这无法证实。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "研究者对装甲兵的见解",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对装甲兵的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我引用了斯科尼亚米利奥本人的著作来阐释对装甲兵的全面分析，这实属难得，因为存世的资料实在太少了。哈罗德·布莱克则提供了更为具体的分析。以下是他的分析：</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「装甲兽」这个名字的含义颇为暧昧。有人认为它是一种防御型生物，随时准备缩回壳里。然而，事实恰恰相反，许多记载表明它拥有强大的防御能力，能够发起危险的进攻。它是一支突击部队，比巨型「肉头」更加灵活机动。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">套用乔治·华盛顿的话来说，「进攻才是最可靠的防御手段」。因此，这只生物似乎具备持续追击目标的能力，并且能够抵御敌人的反击。有说法称它足够聪明，能够撞破门而入，但这无法证实。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "研究者对装甲兵的见解（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对装甲兵的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">那么，它的盔甲究竟在保护什么呢？傻瓜会这样想。不。这些敌人一次又一次地出现在裂隙附近，这些地方对这头野兽来说显然是脆弱的或至关重要的。它们潜伏在门后，徘徊在门挡上：所有这些潜在的咽喉要道，所有这些需要控制的关键地点。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">猎人们给它起的名字很务实；他们并没有涉足神秘学来解释它。有些人认为它不过是装甲杂兵，某种变异使其皮肤增厚并进化出几丁质外骨骼。我对此持不同意见——人们经常指出装甲兵的外壳特别易燃，很容易被各种燃烧装置烧毁。另一些人，或许与我的观点更为接近，则认为它本身就是一种独特的现象，这种突变必然有更重要的意义。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Armored Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

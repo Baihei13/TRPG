@@ -1,0 +1,205 @@
+{
+  "_id": "whbHuntJVicLt001",
+  "name": "约翰·维克多写给你的信",
+  "img": "icons/sundries/documents/document-letter-open-tan.webp",
+  "pages": [
+    {
+      "_id": "whbHuntJVicLtH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>——</p><p>猎人</p><p>我至今仍不知道你为何来到这里。你的理由可以永远保留。但我不能让你死在我找到你的地方，即使那样或许更仁慈。是我把你带到这里来的。</p><p>所以，我有一些亲身经历可以分享给大家。既然是我带你入会的，你就是我的血脉传承的一部分了。在这里，这已经算是最接近家人的关系了。我们需要你活下去。如果你能活下去，你就能和其他猎人一起建立自己的血脉。</p><p>生命短暂，有时唯有经历磨难才能真正学到东西。现在你眼界开阔，双手稳健。让我们看看在你积累起自己的经验之前，这些优势能带你走多远。在此之前，我希望我的建议能对你有所帮助。</p><p>——约翰·维克多</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "letter",
+        "template": "classic-letter",
+        "composition": "blocks",
+        "title": "约翰·维克多写给你的信",
+        "theme": "aged-letter",
+        "createdAt": 1789181396793,
+        "updatedAt": 1789181396793,
+        "data": {},
+        "paper": {
+          "width": 720,
+          "height": 980
+        },
+        "textBlocks": [
+          {
+            "id": "classic-letter-date",
+            "text": "——",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-to",
+            "text": "猎人",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-body",
+            "text": "我至今仍不知道你为何来到这里。你的理由可以永远保留。但我不能让你死在我找到你的地方，即使那样或许更仁慈。是我把你带到这里来的。\n\n所以，我有一些亲身经历可以分享给大家。既然是我带你入会的，你就是我的血脉传承的一部分了。在这里，这已经算是最接近家人的关系了。我们需要你活下去。如果你能活下去，你就能和其他猎人一起建立自己的血脉。\n\n生命短暂，有时唯有经历磨难才能真正学到东西。现在你眼界开阔，双手稳健。让我们看看在你积累起自己的经验之前，这些优势能带你走多远。在此之前，我希望我的建议能对你有所帮助。\n\n——约翰·维克多",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-signature",
+            "text": "",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-ps",
+            "text": "",
+            "html": ""
+          }
+        ],
+        "ruleBlocks": [
+          {
+            "id": "classic-letter-top",
+            "style": "single"
+          },
+          {
+            "id": "classic-letter-bottom",
+            "style": "single"
+          }
+        ],
+        "imageBlocks": [],
+        "styles": {
+          "textBlocks.classic-letter-date": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "right"
+          },
+          "textBlocks.classic-letter-to": {
+            "fontSize": 22,
+            "fontWeight": 500,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-body": {
+            "fontSize": 16,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-signature": {
+            "fontSize": 20,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "center"
+          },
+          "textBlocks.classic-letter-ps": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          }
+        },
+        "layout": {
+          "customText-classic-letter-date": {
+            "width": 240,
+            "height": 32,
+            "x": 400,
+            "y": 96
+          },
+          "customText-classic-letter-to": {
+            "width": 540,
+            "height": 32,
+            "x": 80,
+            "y": 150
+          },
+          "customText-classic-letter-body": {
+            "width": 560,
+            "height": 662,
+            "x": 80,
+            "y": 198
+          },
+          "customText-classic-letter-signature": {
+            "width": 260,
+            "height": 70,
+            "x": 360,
+            "y": 880
+          },
+          "customText-classic-letter-ps": {
+            "width": 560,
+            "height": 50,
+            "x": 80,
+            "y": 900
+          },
+          "customRule-classic-letter-top": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 70
+          },
+          "customRule-classic-letter-bottom": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 910
+          }
+        },
+        "hiddenBlocks": [
+          "classic-letter-signature",
+          "classic-letter-ps"
+        ],
+        "elementLayer": {
+          "strokes": []
+        },
+        "effects": {
+          "yellowing": 38,
+          "aging": 36,
+          "grain": 16,
+          "ink": 34,
+          "agingSeed": 447
+        }
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Whitlaw / John Victor Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-letter"
+    }
+  }
+}

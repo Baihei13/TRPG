@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntMhResr001",
+  "name": "研究者对肉头怪的见解",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "pages": [
+    {
+      "_id": "whbHuntMhResrH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对肉头怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">说实话，我真不明白他们为什么把这玩意儿叫做「肉头」。这怪物根本没有头。它更像是一个臃肿的、无头的类人怪物。与其说是枪击，不如说是刀砍；它攻击力很强，但身体防御力极强，拳头或钝器很难伤到它。它似乎与水蛭有着共生关系，不过这些水蛭也不是你通常所见的那种。水蛭似乎是这怪物的感官器官，帮助它观察、寻找猎物，并用它们自身的毒液削弱猎物。它们是这怪物的巧妙延伸，某种程度上来说，就像是它的先锋部队。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对肉头怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">斯科尼亚米利奥，那个傻瓜。他称它们为「灵魂农夫」，但我实在不明白为什么。他认为它们本质上是吸血鬼，以灵魂而非血液为食。他想象它们在夜里潜入城镇，收割人们的「灵魂」。但只要读过一篇关于这种生物的描述，你就会明白，它不可能悄无声息地走进城镇。它没有眼睛，没有嘴巴进食，而且几乎无法穿过任何门。它一点也不隐蔽，所到之处都会留下一串水蛭。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">然而，我相信我找到了斯科尼亚米利奥由于一心专注于神秘学而遗漏的文件，并且我在威廉·索尔特的文稿中发现了一封我们自己的赫夫博士的信——差点因为同事的粗心而丢失——这封信或许能揭示它的起源。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "研究者对肉头怪的见解",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764162,
+        "updatedAt": 1789183764162,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "研究者对肉头怪的见解",
+          "spine": "研究者对肉头怪的见解",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#3a2820",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 512
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对肉头怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">说实话，我真不明白他们为什么把这玩意儿叫做「肉头」。这怪物根本没有头。它更像是一个臃肿的、无头的类人怪物。与其说是枪击，不如说是刀砍；它攻击力很强，但身体防御力极强，拳头或钝器很难伤到它。它似乎与水蛭有着共生关系，不过这些水蛭也不是你通常所见的那种。水蛭似乎是这怪物的感官器官，帮助它观察、寻找猎物，并用它们自身的毒液削弱猎物。它们是这怪物的巧妙延伸，某种程度上来说，就像是它的先锋部队。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "研究者对肉头怪的见解",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对肉头怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">说实话，我真不明白他们为什么把这玩意儿叫做「肉头」。这怪物根本没有头。它更像是一个臃肿的、无头的类人怪物。与其说是枪击，不如说是刀砍；它攻击力很强，但身体防御力极强，拳头或钝器很难伤到它。它似乎与水蛭有着共生关系，不过这些水蛭也不是你通常所见的那种。水蛭似乎是这怪物的感官器官，帮助它观察、寻找猎物，并用它们自身的毒液削弱猎物。它们是这怪物的巧妙延伸，某种程度上来说，就像是它的先锋部队。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "研究者对肉头怪的见解（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对肉头怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">斯科尼亚米利奥，那个傻瓜。他称它们为「灵魂农夫」，但我实在不明白为什么。他认为它们本质上是吸血鬼，以灵魂而非血液为食。他想象它们在夜里潜入城镇，收割人们的「灵魂」。但只要读过一篇关于这种生物的描述，你就会明白，它不可能悄无声息地走进城镇。它没有眼睛，没有嘴巴进食，而且几乎无法穿过任何门。它一点也不隐蔽，所到之处都会留下一串水蛭。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">然而，我相信我找到了斯科尼亚米利奥由于一心专注于神秘学而遗漏的文件，并且我在威廉·索尔特的文稿中发现了一封我们自己的赫夫博士的信——差点因为同事的粗心而丢失——这封信或许能揭示它的起源。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Meathead Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "whbHuntBountyTk1",
+  "folder": "whbHntFldTact001",
+  "name": "赏金令牌 Bounty Token",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+  "system": {
+    "description": {
+      "value": "<p>击败 Boss 后掉落的赏金信物。捏碎令牌的瞬间，视野被体温轮廓点亮——黑视只维持一瞬。</p>\n<blockquote><p><strong>战术 · BOUNTY TOKEN</strong> 自由动作开启 1 回合红外线视觉；5 充能，击杀回充。</p></blockquote>\n<hr />\n<p><strong>启用黑视</strong> <span class=\"action-glyph\">F</span>（自由动作）Interact</p>\n<p><strong>频率</strong> 消耗 1 点充能（令牌最多 <strong>5</strong> 点；获得时通常为满充）</p>\n<p><strong>效果</strong> 你获得 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntIrVisFx01]{红外线视觉（黑视）}，持续 <strong>1 回合</strong>。</p>\n<p><strong>回充</strong> 每当你将一名生物击杀至 0 HP（或使其进入濒死），恢复 <strong>1</strong> 点充能（不超过上限 5）。</p>",
+      "gm": "<p>Boss 掉落。装备后动作栏出现「赏金令牌 · 启用黑视」。uses 存在 flags；击杀回充见 hunt-showdown-automation。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-bounty-token",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-tool",
+        "hunt-dark-sight"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 0
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": null
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "金属令牌",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring-gear.webp",
+        "data": {
+          "description": {
+            "value": "<p>一块刻着模糊印记的令牌。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tool",
+      "huntSlots": 0,
+      "enName": "Bounty Token",
+      "bountyCharges": 5,
+      "bountyChargesMax": 5,
+      "grantsEffect": "whbHuntIrVisFx01"
+    }
+  }
+}

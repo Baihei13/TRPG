@@ -1,0 +1,180 @@
+{
+  "_id": "whbHuntBalloon01",
+  "folder": "whbfolderHntMn01",
+  "name": "????? Cargo Balloon",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fusee.png",
+  "items": [
+    {
+      "_id": "whbBlnCap0000001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "????",
+      "sort": 100000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>?? <strong>4</strong> ?? + <strong>1</strong> ???????????? Actor ???????</p>\n<p>??<strong>?</strong>????????????<strong>???</strong>?</p>\n<p>?????????????</p>"
+        },
+        "publication": {
+          "title": "???? — ???",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbBlnValve00001",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "???",
+      "sort": 200000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "interaction",
+        "description": {
+          "value": "<p>??? @UUID[Compendium.wang-pf2e-homebrew.homebrew-macros.Macro.whbHuntBalloonM1]{?????}??? <code>valve</code>????????????</p>\n<p>?? 3 ???????????????? 12 ??????????? <code>ready</code> ?????</p>\n<p>?? Tile ?? Active Tiles ? ???????? <code>valve</code> / <code>close</code>?</p>"
+        },
+        "publication": {
+          "title": "???? — ???",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbBlnLaunch0001",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "????",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "interaction",
+        "description": {
+          "value": "<p>??????????????? <code>launch</code>?</p>\n<p>????<strong>??????</strong>?????????/?????????????</p>"
+        },
+        "publication": {
+          "title": "???? — ???",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_id": "whbBlnNote000001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "????",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": {
+          "value": "<p>? @UUID[Compendium.wang-pf2e-homebrew.homebrew-journals.JournalEntry.whbHuntBlnGm0001]{????? · ????}?</p>\n<ol>\n<li>?? Actor ?????? Link??</li>\n<li>3 ??? Tile/Token????? <code>valve</code>?</li>\n<li>????????????????</li>\n<li>?? ???????? / ready?? ????? ? GM ?????</li>\n</ol>"
+        },
+        "publication": {
+          "title": "???? — ???",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": null,
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": { "mod": 0 },
+      "dex": { "mod": 0 },
+      "con": { "mod": 0 },
+      "int": { "mod": 0 },
+      "wis": { "mod": 0 },
+      "cha": { "mod": 0 }
+    },
+    "attributes": {
+      "ac": { "details": "?????????", "value": 10 },
+      "allSaves": { "value": "" },
+      "hp": {
+        "details": "??????????????? close?",
+        "max": 40,
+        "temp": 0,
+        "value": 40
+      },
+      "speed": { "value": 0, "otherSpeeds": [] },
+      "immunities": [],
+      "weaknesses": [],
+      "resistances": []
+    },
+    "details": {
+      "blurb": "???? · ?????",
+      "languages": { "details": "", "value": [] },
+      "level": { "value": -1 },
+      "privateNotes": "<p>????? whbHuntBalloonM1 + ??????????????????????</p>",
+      "publicNotes": "<p>?????????????????????????????????</p>\n<p><em>???????????</em></p>",
+      "publication": {
+        "title": "???? — ???",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": { "statistic": "perception" },
+    "perception": { "details": "??", "mod": 0, "senses": [] },
+    "resources": {},
+    "saves": {
+      "fortitude": { "saveDetail": "", "value": 0 },
+      "reflex": { "saveDetail": "", "value": 0 },
+      "will": { "saveDetail": "", "value": 0 }
+    },
+    "skills": {},
+    "traits": {
+      "rarity": "unique",
+      "size": { "value": "lg" },
+      "value": []
+    }
+  },
+  "prototypeToken": {
+    "name": "???",
+    "width": 2,
+    "height": 2,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/fusee.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": 0,
+    "displayBars": 0,
+    "bar1": { "attribute": "attributes.hp" },
+    "sight": { "enabled": false },
+    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "actorLink": true
+  },
+  "ownership": { "default": 0 },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntProp": "cargo-balloon"
+    }
+  }
+}

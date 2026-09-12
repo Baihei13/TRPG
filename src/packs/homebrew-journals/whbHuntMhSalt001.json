@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntMhSalt001",
+  "name": "威廉·索尔特 · 日记撕页",
+  "img": "icons/sundries/documents/document-torn-white.webp",
+  "pages": [
+    {
+      "_id": "whbHuntMhSaltH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">日记撕页 · ws</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">据信为威廉·索尔特　手写　约 8.3×11 英寸　1995年夏季</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">逃跑时，我尽可能多地从精神病院带走了文件。当时我没想太多，只想离开。我无法忍受再次被关在那里，无论第一次的经历对我有多大帮助。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">好几天我都刻意避开那些文件。它们总是让我想起不愉快的事情，想起那些阴暗的想法，想起我被囚禁的痛苦，想起那些虐待狂般的医生……然而，今天早上我感觉身体渐渐恢复，一边啜饮着菊苣，一边开始翻阅那叠文件。我打算弄清楚这座城市究竟发生了什么，希望能从中找到关于瘟疫的线索。但我没想到会发现这些。</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">日记撕页 · ws（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我不知该相信什么了。这不是瘟疫。沼泽里游荡着奇异的生物。而人类，或许更奇怪，却在猎杀它们。那生物的诞生……我的天哪。我不知道该怎么想。这想法本身就很荒诞。或者说，它本该如此。但我亲眼见过他们所说的生物，见过它那巨大的、布满水蛭的身躯在岸边踱步。那个……我实在写不出来……汉娜·金尼，就像信里说的那样。难道是同一个人？我一想到就不寒而栗。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我必须全身心投入工作，继续练习和训练。如果我能找到工作，那也一定是和那些致力于对抗这种疾病的人一起工作。我必须做好最坏的打算。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "威廉·索尔特 · 日记撕页",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764162,
+        "updatedAt": 1789183764162,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "威廉·索尔特 · 日记撕页",
+          "spine": "威廉·索尔特 · 日记撕页",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#4a4038",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 995
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">日记撕页 · ws</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">据信为威廉·索尔特　手写　约 8.3×11 英寸　1995年夏季</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">逃跑时，我尽可能多地从精神病院带走了文件。当时我没想太多，只想离开。我无法忍受再次被关在那里，无论第一次的经历对我有多大帮助。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">好几天我都刻意避开那些文件。它们总是让我想起不愉快的事情，想起那些阴暗的想法，想起我被囚禁的痛苦，想起那些虐待狂般的医生……然而，今天早上我感觉身体渐渐恢复，一边啜饮着菊苣，一边开始翻阅那叠文件。我打算弄清楚这座城市究竟发生了什么，希望能从中找到关于瘟疫的线索。但我没想到会发现这些。</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "日记撕页 · ws",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">日记撕页 · ws</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">据信为威廉·索尔特　手写　约 8.3×11 英寸　1995年夏季</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">逃跑时，我尽可能多地从精神病院带走了文件。当时我没想太多，只想离开。我无法忍受再次被关在那里，无论第一次的经历对我有多大帮助。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">好几天我都刻意避开那些文件。它们总是让我想起不愉快的事情，想起那些阴暗的想法，想起我被囚禁的痛苦，想起那些虐待狂般的医生……然而，今天早上我感觉身体渐渐恢复，一边啜饮着菊苣，一边开始翻阅那叠文件。我打算弄清楚这座城市究竟发生了什么，希望能从中找到关于瘟疫的线索。但我没想到会发现这些。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "日记撕页 · ws（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">日记撕页 · ws（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我不知该相信什么了。这不是瘟疫。沼泽里游荡着奇异的生物。而人类，或许更奇怪，却在猎杀它们。那生物的诞生……我的天哪。我不知道该怎么想。这想法本身就很荒诞。或者说，它本该如此。但我亲眼见过他们所说的生物，见过它那巨大的、布满水蛭的身躯在岸边踱步。那个……我实在写不出来……汉娜·金尼，就像信里说的那样。难道是同一个人？我一想到就不寒而栗。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我必须全身心投入工作，继续练习和训练。如果我能找到工作，那也一定是和那些致力于对抗这种疾病的人一起工作。我必须做好最坏的打算。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Meathead Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "_id": "whbHuntAhaWelc01",
+  "name": "猎人入门 · 美国猎人协会欢迎信",
+  "img": "icons/sundries/documents/document-letter-sealed-burgundy.webp",
+  "pages": [
+    {
+      "_id": "whbHuntAhaWelcH1",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>——</p><p>新晋猎人</p><p>我非常高兴有机会给您写信，并欢迎您加入美国猎人协会。即使是为了如此正义的事业，您也将承担远超常人想象的风险，但如果您成功了，获得的奖励将不仅仅让您的钱包鼓起来。</p><p>协会以各种形式存在了数百年，但它留下的遗产却是沉默——以及一个摆脱了残暴、无脑、食人怪物的世界；摆脱了那些曾经是人、如今却空洞腐朽、只想用你的血肉填满那腐烂躯壳的生物。你或许听说过荒野中等待着你的是什么。千万不要低估它邪恶的力量。</p><p>恐怕我的誓言不允许我将更多细节诉诸笔端。总之，我们在这项事业上并肩作战——但我必须提醒你们：并非所有猎人都会这么说，而且你们务必记住，背叛的形式多种多样。</p><p>高度评价，</p><p>菲利普·赫夫·琼斯，医学博士</p><p>美国猎人协会主任兼</p><p>杰克逊路易斯安那州精神病院院长</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "letter",
+        "template": "classic-letter",
+        "composition": "blocks",
+        "title": "猎人入门 · 美国猎人协会欢迎信",
+        "theme": "aged-letter",
+        "createdAt": 1789182425970,
+        "updatedAt": 1789182425970,
+        "data": {},
+        "paper": {
+          "width": 720,
+          "height": 980
+        },
+        "textBlocks": [
+          {
+            "id": "classic-letter-date",
+            "text": "——",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-to",
+            "text": "新晋猎人",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-body",
+            "text": "我非常高兴有机会给您写信，并欢迎您加入美国猎人协会。即使是为了如此正义的事业，您也将承担远超常人想象的风险，但如果您成功了，获得的奖励将不仅仅让您的钱包鼓起来。\n\n协会以各种形式存在了数百年，但它留下的遗产却是沉默——以及一个摆脱了残暴、无脑、食人怪物的世界；摆脱了那些曾经是人、如今却空洞腐朽、只想用你的血肉填满那腐烂躯壳的生物。你或许听说过荒野中等待着你的是什么。千万不要低估它邪恶的力量。\n\n恐怕我的誓言不允许我将更多细节诉诸笔端。总之，我们在这项事业上并肩作战——但我必须提醒你们：并非所有猎人都会这么说，而且你们务必记住，背叛的形式多种多样。\n\n高度评价，\n\n菲利普·赫夫·琼斯，医学博士\n美国猎人协会主任兼\n杰克逊路易斯安那州精神病院院长",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-signature",
+            "text": "",
+            "html": ""
+          },
+          {
+            "id": "classic-letter-ps",
+            "text": "",
+            "html": ""
+          }
+        ],
+        "ruleBlocks": [
+          {
+            "id": "classic-letter-top",
+            "style": "single"
+          },
+          {
+            "id": "classic-letter-bottom",
+            "style": "single"
+          }
+        ],
+        "imageBlocks": [],
+        "styles": {
+          "textBlocks.classic-letter-date": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "right"
+          },
+          "textBlocks.classic-letter-to": {
+            "fontSize": 22,
+            "fontWeight": 500,
+            "fontFamily": "",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-body": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          },
+          "textBlocks.classic-letter-signature": {
+            "fontSize": 20,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "center"
+          },
+          "textBlocks.classic-letter-ps": {
+            "fontSize": 15,
+            "fontWeight": 400,
+            "fontFamily": "EB Garamond",
+            "italic": false,
+            "color": "",
+            "textAlign": "left"
+          }
+        },
+        "layout": {
+          "customText-classic-letter-date": {
+            "width": 240,
+            "height": 32,
+            "x": 400,
+            "y": 96
+          },
+          "customText-classic-letter-to": {
+            "width": 540,
+            "height": 32,
+            "x": 80,
+            "y": 150
+          },
+          "customText-classic-letter-body": {
+            "width": 560,
+            "height": 662,
+            "x": 80,
+            "y": 198
+          },
+          "customText-classic-letter-signature": {
+            "width": 260,
+            "height": 70,
+            "x": 360,
+            "y": 880
+          },
+          "customText-classic-letter-ps": {
+            "width": 560,
+            "height": 50,
+            "x": 80,
+            "y": 900
+          },
+          "customRule-classic-letter-top": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 70
+          },
+          "customRule-classic-letter-bottom": {
+            "width": 570,
+            "height": 8,
+            "x": 75,
+            "y": 910
+          }
+        },
+        "hiddenBlocks": [
+          "classic-letter-signature",
+          "classic-letter-ps"
+        ],
+        "elementLayer": {
+          "strokes": []
+        },
+        "effects": {
+          "yellowing": 36,
+          "aging": 32,
+          "grain": 14,
+          "ink": 30,
+          "agingSeed": 1885
+        }
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — AHA Welcome / Hunter Primer",
+      "translated": "zh-CN",
+      "style": "ephemera-letter"
+    }
+  }
+}

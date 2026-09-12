@@ -1,0 +1,131 @@
+{
+  "_id": "whbHuntImResr001",
+  "name": "研究者对喷火怪的见解",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "pages": [
+    {
+      "_id": "whbHuntImResrH01",
+      "name": "讲义",
+      "type": "text",
+      "title": {
+        "show": false,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对喷火怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　猎人亦称焚化者 / 焚身者　Immolator</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「焚身者」似乎是所有怪物中最饱受折磨的一个。哪怕最轻微的动静都会激怒他，让他陷入混乱的攻击；被击中后，他会燃烧得更加旺盛，像一头愤怒的公牛般冲锋。当然，他会被水浇灭（而且他自身燃烧的火焰也会致命），但除此之外，他是我见过的最聪明的怪物。这头野兽竟然还能开门！</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我注意到这个故事——我认为——描述了最初的事件，其中与某些圣经故事有相似之处。难道宗教派别的解释最终是对的？我很好奇。我们都以为这些民间传说仅仅是传说，是吓人的睡前故事而已。不过是又一个作者徒劳地试图用线性的、可理解的人类意义来解释一个无法解释的事件。如果这一次，他们的解释是对的呢？</p></div><hr><div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对喷火怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">导致杰里米性格转变的殴打事件必定发生在一个动荡不安的地方，但施暴者们不太可能意识到这一点。一名目击者幸存下来，据记载他被送进了精神病院，被诊断患有宗教狂热症，并且极度恐惧地狱之火。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我找到了克莱门斯的日记和其中引用的部分连载内容，并将它们都添加到了档案中：这是一个相当暴力的故事。</p></div>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {
+        "ephemera": {
+          "renderedPage": true
+        }
+      }
+    }
+  ],
+  "folder": null,
+  "sort": 100,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "ephemera": {
+      "document": {
+        "version": 1,
+        "type": "book",
+        "template": "old-book",
+        "composition": "blocks",
+        "title": "研究者对喷火怪的见解",
+        "theme": "oldpage-newsprint",
+        "createdAt": 1789183764167,
+        "updatedAt": 1789183764167,
+        "data": {},
+        "paper": {
+          "width": 760,
+          "height": 980
+        },
+        "textBlocks": [],
+        "ruleBlocks": [],
+        "imageBlocks": [],
+        "styles": {},
+        "layout": {},
+        "hiddenBlocks": [],
+        "elementLayer": {
+          "strokes": []
+        },
+        "bookLabels": {
+          "cover": "研究者对喷火怪的见解",
+          "spine": "研究者对喷火怪的见解",
+          "backCover": "",
+          "backSpine": "",
+          "appearance": {
+            "coverColor": "#4a2018",
+            "colorStrength": 46,
+            "gloss": 28,
+            "leather": 54,
+            "aging": 50
+          },
+          "appearances": {},
+          "areas": []
+        },
+        "effects": {
+          "yellowing": 46,
+          "aging": 44,
+          "grain": 20,
+          "ink": 36,
+          "agingSeed": 666
+        },
+        "layoutMode": "flow",
+        "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对喷火怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　猎人亦称焚化者 / 焚身者　Immolator</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「焚身者」似乎是所有怪物中最饱受折磨的一个。哪怕最轻微的动静都会激怒他，让他陷入混乱的攻击；被击中后，他会燃烧得更加旺盛，像一头愤怒的公牛般冲锋。当然，他会被水浇灭（而且他自身燃烧的火焰也会致命），但除此之外，他是我见过的最聪明的怪物。这头野兽竟然还能开门！</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我注意到这个故事——我认为——描述了最初的事件，其中与某些圣经故事有相似之处。难道宗教派别的解释最终是对的？我很好奇。我们都以为这些民间传说仅仅是传说，是吓人的睡前故事而已。不过是又一个作者徒劳地试图用线性的、可理解的人类意义来解释一个无法解释的事件。如果这一次，他们的解释是对的呢？</p></div>",
+        "currentPageIndex": 0,
+        "pages": [
+          {
+            "id": "page-1",
+            "title": "研究者对喷火怪的见解",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:1.18rem;font-weight:700;letter-spacing:0.06em;color:#2a1408;border-bottom:1px solid rgba(60,35,20,0.35);padding-bottom:0.25rem;\">研究者对喷火怪的见解</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">（日期不详）　猎人亦称焚化者 / 焚身者　Immolator</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">「焚身者」似乎是所有怪物中最饱受折磨的一个。哪怕最轻微的动静都会激怒他，让他陷入混乱的攻击；被击中后，他会燃烧得更加旺盛，像一头愤怒的公牛般冲锋。当然，他会被水浇灭（而且他自身燃烧的火焰也会致命），但除此之外，他是我见过的最聪明的怪物。这头野兽竟然还能开门！</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我注意到这个故事——我认为——描述了最初的事件，其中与某些圣经故事有相似之处。难道宗教派别的解释最终是对的？我很好奇。我们都以为这些民间传说仅仅是传说，是吓人的睡前故事而已。不过是又一个作者徒劳地试图用线性的、可理解的人类意义来解释一个无法解释的事件。如果这一次，他们的解释是对的呢？</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          },
+          {
+            "id": "page-2",
+            "title": "研究者对喷火怪的见解（续）",
+            "flowContent": "<div style=\"font-family:Georgia,'Songti SC',SimSun,serif;font-size:1.06rem;line-height:1.82;color:#1a120c;text-align:justify;\"><p style=\"margin:0 0 0.8rem;text-align:center;font-size:0.85rem;letter-spacing:0.35em;color:#6a4a30;opacity:0.85;\">✦ &nbsp;—&nbsp; ✦</p><p style=\"margin:0 0 0.7rem;font-size:0.88rem;line-height:1.5;color:#5a4030;font-style:italic;\">研究者对喷火怪的见解（续）</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">导致杰里米性格转变的殴打事件必定发生在一个动荡不安的地方，但施暴者们不太可能意识到这一点。一名目击者幸存下来，据记载他被送进了精神病院，被诊断患有宗教狂热症，并且极度恐惧地狱之火。</p><p style=\"margin:0 0 0.75rem;line-height:1.82;text-align:justify;\">我找到了克莱门斯的日记和其中引用的部分连载内容，并将它们都添加到了档案中：这是一个相当暴力的故事。</p></div>",
+            "textBlocks": [],
+            "ruleBlocks": [],
+            "imageBlocks": [],
+            "styles": {},
+            "layout": {},
+            "hiddenBlocks": [],
+            "elementLayer": {
+              "strokes": []
+            }
+          }
+        ]
+      }
+    },
+    "wang-pf2e-homebrew": {
+      "source": "Hunt: Showdown — Immolator Lore",
+      "translated": "zh-CN",
+      "style": "ephemera-book"
+    }
+  }
+}

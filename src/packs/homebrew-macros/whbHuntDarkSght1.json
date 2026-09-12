@@ -1,0 +1,19 @@
+{
+  "_id": "whbHuntDarkSght1",
+  "name": "获取黑视强化",
+  "type": "script",
+  "img": "systems/pf2e/icons/features/classes/precise-strike.webp",
+  "scope": "global",
+  "command": "/**\n * 获取黑视强化\n * 对选中令牌 / 绑定角色施加 1 回合红外线视觉。\n * 与赏金令牌效果相同，但不消耗令牌、也不能靠击杀回充。\n */\nconst MODULE_ID = \"wang-pf2e-homebrew\";\nconst PACK = `${MODULE_ID}.homebrew-items`;\nconst EFFECT_ID = \"whbHuntIrVisFx01\";\nconst EFFECT_SLUG = \"effect-hunt-infrared-vision\";\n\nconst actorDoc =\n  canvas.tokens?.controlled?.[0]?.actor ??\n  game.user.character ??\n  null;\n\nif (!actorDoc) {\n  return ui.notifications.warn(\"黑视强化：请先选中令牌，或绑定角色。\");\n}\nif (!actorDoc.isOwner && !game.user.isGM) {\n  return ui.notifications.warn(\"黑视强化：你只能对自己的角色使用。\");\n}\n\nconst pack = game.packs.get(PACK);\nconst src = pack ? await pack.getDocument(EFFECT_ID) : null;\nif (!src) {\n  return ui.notifications.error(\"缺少效果「红外线视觉（黑视）」，请确认合集已加载。\");\n}\n\nconst existing = actorDoc.itemTypes.effect.filter(\n  (e) => (e.system?.slug ?? e.slug) === EFFECT_SLUG\n);\nif (existing.length) {\n  await actorDoc.deleteEmbeddedDocuments(\n    \"Item\",\n    existing.map((e) => e.id)\n  );\n}\n\nconst data = src.toObject();\ndelete data._id;\ndata.name = \"效果：黑视强化（红外线视觉）\";\nawait Item.createDocuments([data], { parent: actorDoc, render: false });\n\nawait ChatMessage.create({\n  speaker: ChatMessage.getSpeaker({ actor: actorDoc }),\n  content: `<div class=\"pf2e chat-card\">\n    <header class=\"card-header flexrow\">\n      <img src=\"systems/pf2e/icons/features/classes/precise-strike.webp\" width=\"36\" height=\"36\" alt=\"\"/>\n      <h3>黑视强化</h3>\n    </header>\n    <p><strong>${actorDoc.name}</strong> 获得 <strong>红外线视觉</strong>（1 回合）。此强化<strong>不能</strong>靠击杀回充。</p>\n  </div>`,\n});\nui.notifications.info(`${actorDoc.name}：黑视强化已生效（1 回合红外线视觉）。`);\n",
+  "folder": "whbHntFldMac0001",
+  "sort": 110,
+  "ownership": {
+    "default": 1
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "dark-sight-boost",
+      "source": "hunt-showdown"
+    }
+  }
+}

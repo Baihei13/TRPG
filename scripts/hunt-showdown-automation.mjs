@@ -22,6 +22,7 @@ const EFFECT_IDS = {
   stamina: "whbHuntStamFx001",
   fuseeLight: "whbHuntFuseeFx01",
   iai: "whbHuntIaiFx0001",
+  infrared: "whbHuntIrVisFx01",
 };
 
 const SLUGS = {
@@ -46,6 +47,8 @@ const SLUGS = {
   firstAid: "hunt-first-aid-kit",
   bloodless: "hunt-feat-bloodless",
   nitro: "nitro-express",
+  bountyToken: "hunt-bounty-token",
+  infrared: "effect-hunt-infrared-vision",
 };
 
 const FATIGUED_SLUG = "fatigued";
@@ -105,7 +108,10 @@ const ACTION_SLUGS = {
   ambiReload: "hunt-ambi-free-reload",
   necro: "hunt-necromancer-revive",
   dauntless: "hunt-dauntless-defuse",
+  bountyDarkSight: "hunt-bounty-dark-sight",
 };
+
+const BOUNTY_MAX = 5;
 
 const syncing = new Set();
 const handled = new Set();
@@ -164,6 +170,66 @@ async function removeEffectsBySlug(actor, slug) {
     victims.map((i) => i.id)
   );
   return victims.length;
+}
+
+function getBountyToken(actor) {
+  return findBySlug(actor, "equipment", SLUGS.bountyToken);
+}
+
+function getBountyCharges(item) {
+  const max = Number(item?.flags?.[MODULE_ID]?.bountyChargesMax ?? BOUNTY_MAX);
+  const raw = item?.flags?.[MODULE_ID]?.bountyCharges;
+  if (typeof raw === "number") return Math.max(0, Math.min(max, raw));
+  return max;
+}
+
+async function setBountyCharges(item, value) {
+  const max = Number(item.flags?.[MODULE_ID]?.bountyChargesMax ?? BOUNTY_MAX);
+  const next = Math.max(0, Math.min(max, Number(value) || 0));
+  await item.update({
+    [`flags.${MODULE_ID}.bountyCharges`]: next,
+    [`flags.${MODULE_ID}.bountyChargesMax`]: max,
+  });
+  return next;
+}
+
+async function applyInfraredVision(actor, { label } = {}) {
+  await removeEffectsBySlug(actor, SLUGS.infrared);
+  return applyCompendiumEffect(actor, EFFECT_IDS.infrared, {
+    rename: label || undefined,
+  });
+}
+
+async function handleBountyDarkSight(actor) {
+  const tokenItem = getBountyToken(actor);
+  if (!tokenItem) {
+    return ui.notifications.warn("赏金令牌：身上没有赏金令牌。");
+  }
+  const charges = getBountyCharges(tokenItem);
+  if (charges <= 0) {
+    return ui.notifications.warn("赏金令牌：充能耗尽（击杀敌人可回充）。");
+  }
+  const left = await setBountyCharges(tokenItem, charges - 1);
+  await applyInfraredVision(actor);
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `<p><strong>赏金令牌 · 黑视</strong>：${actor.name} 获得红外线视觉（1 回合）。剩余充能 <strong>${left}/${BOUNTY_MAX}</strong>。</p>`,
+  });
+  ui.notifications.info(`赏金令牌：已启用黑视（剩余 ${left}/${BOUNTY_MAX}）。`);
+}
+
+async function restoreBountyCharge(killer, victim) {
+  if (!killer || !canManage(killer)) return false;
+  const tokenItem = getBountyToken(killer);
+  if (!tokenItem) return false;
+  const charges = getBountyCharges(tokenItem);
+  if (charges >= BOUNTY_MAX) return false;
+  const left = await setBountyCharges(tokenItem, charges + 1);
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: killer }),
+    content: `<p><strong>赏金令牌</strong>：击杀 ${victim?.name ?? "敌人"}，充能恢复至 <strong>${left}/${BOUNTY_MAX}</strong>。</p>`,
+  });
+  return true;
 }
 
 async function ensureEffect(actor, effectId, slug, want) {
@@ -564,6 +630,22 @@ async function syncGrantedActions(actor) {
       );
     }
 
+    const bounty = getBountyToken(actor);
+    if (bounty) {
+      const ch = getBountyCharges(bounty);
+      want.set(
+        ACTION_SLUGS.bountyDarkSight,
+        makeAction({
+          slug: ACTION_SLUGS.bountyDarkSight,
+          name: `赏金令牌 · 启用黑视（${ch}/${BOUNTY_MAX}）`,
+          actions: null,
+          actionType: "free",
+          img: "systems/pf2e/icons/actions/FreeAction.webp",
+          description: `<p>自由动作：消耗 1 点充能，获得红外线视觉 1 回合。当前充能 ${ch}/${BOUNTY_MAX}。击杀敌人可回充（上限 ${BOUNTY_MAX}）。</p>`,
+        })
+      );
+    }
+
     const existing = actor.itemTypes.action.filter((a) => a.flags?.[MODULE_ID]?.huntGrantedAction);
     const toDelete = [];
     const have = new Set();
@@ -576,7 +658,18 @@ async function syncGrantedActions(actor) {
 
     const toCreate = [];
     for (const [slug, data] of want) {
-      if (have.has(slug)) continue;
+      if (have.has(slug)) {
+        if (slug === ACTION_SLUGS.bountyDarkSight) {
+          const cur = existing.find((a) => a.flags?.[MODULE_ID]?.huntGrantedAction === slug);
+          if (cur && cur.name !== data.name) {
+            await cur.update({
+              name: data.name,
+              "system.description.value": data.system.description.value,
+            });
+          }
+        }
+        continue;
+      }
       toCreate.push(data);
     }
     if (toCreate.length) {
@@ -1435,6 +1528,7 @@ function installActionHandler() {
     else if (slug === ACTION_SLUGS.dauntless) await handleDauntless(actor);
     else if (slug === ACTION_SLUGS.swiftStep) await handleSwiftStep(actor, item);
     else if (slug === ACTION_SLUGS.ambiReload) await handleAmbiReload(actor);
+    else if (slug === ACTION_SLUGS.bountyDarkSight) await handleBountyDarkSight(actor);
     else if (HUNTER_ACTION_HANDLERS[slug]) {
       await HUNTER_ACTION_HANDLERS[slug](actor);
     }
@@ -1534,6 +1628,49 @@ function installHitEffectHook() {
   });
 }
 
+/** 赏金令牌：击杀回充 + 物品入包时同步动作 */
+function installBountyTokenHooks() {
+  Hooks.on("createChatMessage", async (message) => {
+    if (message.author?.id !== game.user.id) return;
+    const ctx = message.flags?.pf2e?.context;
+    if (!ctx || ctx.type !== "damage-roll") return;
+    if (ctx.outcome === "failure" || ctx.outcome === "criticalFailure") return;
+    const attacker = message.actor;
+    if (!attacker || !getBountyToken(attacker)) return;
+
+    const targets = await resolveTargetActors(message);
+    if (!targets.length) return;
+
+    // 等伤害落地后再看 HP / 濒死
+    setTimeout(async () => {
+      try {
+        for (const victim of targets) {
+          if (!victim || victim === attacker) continue;
+          const hp = Number(victim.system?.attributes?.hp?.value ?? 1);
+          const dying =
+            victim.hasCondition?.(DYING_SLUG) ||
+            !!findBySlug(victim, "condition", DYING_SLUG);
+          if (hp > 0 && !dying) continue;
+          const key = `bountyKill:${attacker.id}:${victim.id}:${game.combat?.round ?? 0}`;
+          if (handled.has(key)) continue;
+          handled.add(key);
+          setTimeout(() => handled.delete(key), 8000);
+          await restoreBountyCharge(attacker, victim);
+          await syncGrantedActions(attacker);
+        }
+      } catch (err) {
+        console.warn(`${MODULE_ID} | bounty kill restore`, err);
+      }
+    }, 400);
+  });
+
+  Hooks.on("updateItem", (item) => {
+    if (item.type !== "equipment") return;
+    if ((item.system?.slug ?? item.slug) !== SLUGS.bountyToken) return;
+    if (item.parent) syncGrantedActions(item.parent).catch(() => {});
+  });
+}
+
 function installSyncHooks() {
   const sync = (doc) => {
     const actor = doc?.actor ?? (doc?.documentName === "Actor" ? doc : null);
@@ -1561,6 +1698,110 @@ function installSyncHooks() {
   });
 }
 
+/** 要塞货气球：战斗每轮按开阀数推进充气进度（货箱本身不记账）。 */
+function installCargoBalloonHooks() {
+  const FLAG_KEY = "cargoBalloon";
+  const PROGRESS_MAX = 12;
+
+  const isBalloon = (a) => {
+    if (!a) return false;
+    if (a.getFlag?.(MODULE_ID, "huntProp") === "cargo-balloon") return true;
+    return /货气球|Cargo Balloon/i.test(String(a.name ?? ""));
+  };
+
+  Hooks.on("combatRound", async (combat, _update, _opts) => {
+    if (!game.user.isGM) return;
+    if (!combat?.started) return;
+    const seen = new Set();
+    for (const c of combat.combatants) {
+      const actor = c.actor;
+      if (!actor || !isBalloon(actor) || seen.has(actor.id)) continue;
+      seen.add(actor.id);
+      const st = actor.getFlag(MODULE_ID, FLAG_KEY) || {};
+      if (st.launched) continue;
+      const valves = Math.max(0, Math.min(3, Number(st.valvesOpen) || 0));
+      if (!valves) continue;
+      const prev = Math.max(0, Number(st.progress) || 0);
+      if (prev >= PROGRESS_MAX) continue;
+      const progress = Math.min(PROGRESS_MAX, prev + valves);
+      await actor.setFlag(MODULE_ID, FLAG_KEY, {
+        valvesOpen: valves,
+        progress,
+        launched: false,
+      });
+      const ready = progress >= PROGRESS_MAX;
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong> 充气 ${progress}/${PROGRESS_MAX}（本轮 +${valves}）${
+          ready ? " — <em>可以放飞</em>" : ""
+        }</p>`,
+      }).catch(() => {});
+    }
+  });
+}
+
+/** 放逐标记：战斗每轮推进进度，并刷新 Token 名。 */
+function installBanishingHooks() {
+  const FLAG_KEY = "banishing";
+  const HUNT_PROP = "banishing-site";
+
+  const isSite = (a) => {
+    if (!a) return false;
+    if (a.getFlag?.(MODULE_ID, "huntProp") === HUNT_PROP) return true;
+    return /放逐|Banishing/i.test(String(a.name ?? ""));
+  };
+
+  const syncLabel = async (actor, st) => {
+    const max = Math.max(1, Number(st.max) || 10);
+    const progress = Math.max(0, Math.min(max, Number(st.progress) || 0));
+    let label = `放逐点 · ${st.bossName || "Boss"}`;
+    if (st.complete) label = `放逐完成 · ${st.bossName || "Boss"}`;
+    else if (st.active) label = `放逐中 · ${st.bossName || "Boss"} ${progress}/${max}`;
+    for (const t of actor.getActiveTokens?.(true) ?? []) {
+      const doc = t.document ?? t;
+      if (doc?.name !== label) await doc.update({ name: label }).catch(() => {});
+    }
+  };
+
+  Hooks.on("combatRound", async (combat) => {
+    if (!game.user.isGM) return;
+    if (!combat?.started) return;
+    const seen = new Set();
+    const candidates = [
+      ...combat.combatants.map((c) => c.actor),
+      ...(canvas.tokens?.placeables ?? []).map((t) => t.actor),
+    ];
+    for (const actor of candidates) {
+      if (!actor || !isSite(actor) || seen.has(actor.id)) continue;
+      seen.add(actor.id);
+      const st = actor.getFlag(MODULE_ID, FLAG_KEY) || {};
+      if (!st.active || st.complete) continue;
+      const max = Math.max(1, Number(st.max) || 10);
+      const prev = Math.max(0, Number(st.progress) || 0);
+      if (prev >= max) continue;
+      const progress = Math.min(max, prev + 1);
+      const next = {
+        active: true,
+        progress,
+        max,
+        bossName: st.bossName || "Boss",
+        complete: false,
+      };
+      await actor.setFlag(MODULE_ID, FLAG_KEY, next);
+      await syncLabel(actor, next);
+      const filled = Math.min(10, Math.round((progress / max) * 10));
+      const bar = "█".repeat(filled) + "░".repeat(10 - filled);
+      const full = progress >= max;
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>放逐 · ${next.bossName}</strong>
+          <code>${bar}</code> ${progress}/${max}
+          ${full ? " — <em>可完成结算</em>" : ""}</p>`,
+      }).catch(() => {});
+    }
+  });
+}
+
 export function installHuntShowdownAutomation() {
   installStackingHook();
   installPoisonTick();
@@ -1574,6 +1815,9 @@ export function installHuntShowdownAutomation() {
   installReloadHook();
   installFireFieldTick();
   installHitEffectHook();
+  installBountyTokenHooks();
+  installCargoBalloonHooks();
+  installBanishingHooks();
   installSyncHooks();
-  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.28 nitro/bloodless/mines)`);
+  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.34 banishing)`);
 }

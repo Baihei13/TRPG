@@ -1,0 +1,52 @@
+{
+  "_id": "whbHuntCrgStd001",
+  "folder": "whbHntFldCargo01",
+  "name": "标准货箱 Standard Cargo Crate",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/big-dynamite-bundle.png",
+  "system": {
+    "description": {
+      "value": "<p>要塞货箱（标准档）。装进吊舱即可；<strong>无领取标记</strong>，奖励<strong>事后发</strong>。</p>\n<blockquote><p><strong>货箱 · STANDARD</strong> Bulk 2 · 事后结算参考</p></blockquote>\n<hr />\n<p><strong>携带 / 装舱</strong> 同磨损箱。</p>\n<p><strong>事后结算参考</strong> — 1d6：</p>\n<ol>\n<li>猎金约 250（约 25 gp）</li>\n<li>猎金约 250</li>\n<li>稀缺弹药 ×2</li>\n<li>稀缺弹药 ×2</li>\n<li>随机消耗品 1～2 件</li>\n<li>猎金约 250 + 稀缺弹药 ×1</li>\n</ol>",
+      "gm": "<p>无标记。放飞后按表发。</p>"
+    },
+    "rules": [],
+    "slug": "hunt-standard-cargo-crate",
+    "traits": {
+      "value": [],
+      "rarity": "uncommon",
+      "otherTags": ["hunt-showdown", "hunt-cargo-crate"]
+    },
+    "publication": {
+      "title": "猎杀对决 — 货箱",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": { "value": 1 },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": { "value": 2 },
+    "price": { "value": {} },
+    "equipped": { "carryType": "held", "hands": { "value": 2 }, "invested": null },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "钉死的木箱",
+        "img": "systems/pf2e/icons/unidentified_item_icons/adventuring-gear.webp",
+        "data": { "description": { "value": "<p>沉甸甸的木箱。</p>" } }
+      },
+      "misidentified": {}
+    },
+    "usage": { "value": "held-in-two-hands" }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "cargo",
+      "enName": "Standard Cargo Crate",
+      "cargoTier": "standard"
+    }
+  }
+}
