@@ -1,12 +1,12 @@
 {
   "_id": "whbHuntQuest0001",
   "folder": "whbHntJrRules001",
-  "name": "猎杀对决 · 赏金狩猎",
-  "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+  "name": "猎杀对决 · 寻找并放逐屠夫",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/butcher.png",
   "pages": [
     {
       "_id": "whbHuntQuestP001",
-      "name": "赏金狩猎",
+      "name": "寻找并放逐屠夫",
       "type": "text",
       "title": {
         "show": true,
@@ -15,7 +15,7 @@
       "image": {},
       "text": {
         "format": 1,
-        "content": "<p><strong>任务描述:</strong></p>\n<p>腐化在路易斯安那的沼泽与废镇间蔓延。猎人受命进入猎场：循着血迹、尖叫与焦糊气味搜集线索，锁定目标赏金；完成放逐后，带着令牌从撤离点活着离开。</p>\n<ul>\n<li>搜集线索寻找赏金</li>\n<li>带着赏金撤离</li>\n</ul>\n<hr />\n<section class=\"secret\">\n<p>有人在猎场里另藏了一份赏金——不标在合同上，只留给仍肯往更深处走的人。</p>\n<ul>\n<li>寻找被隐藏的赏金</li>\n</ul>\n</section>\n<p><strong>奖励：</strong>赏金令牌 1～2 枚；猎金按完成度结算</p>"
+        "content": "<p><strong>任务描述:</strong></p>\n<p>腐化在路易斯安那的沼泽与废镇间蔓延。猎人受命进入猎场：循着血迹、尖叫与焦糊气味搜集线索，锁定目标赏金——<strong>屠夫</strong>。完成放逐后，带着令牌从撤离点活着离开。</p>\n<ul>\n<li>搜集线索，寻找屠夫</li>\n<li>放逐屠夫</li>\n<li>带着赏金撤离</li>\n</ul>\n<hr />\n<section class=\"secret\">\n<p>有人在猎场里另藏了一份赏金——不标在合同上，只留给仍肯往更深处走的人。</p>\n<ul>\n<li>寻找被隐藏的赏金</li>\n</ul>\n</section>\n<p><strong>奖励：</strong>赏金令牌；猎金按完成度结算</p>"
       },
       "video": {
         "controls": true,

@@ -1,0 +1,46 @@
+{
+  "_id": "whbHuntQuestSg01",
+  "folder": "whbHntJrRules001",
+  "name": "猎杀对决 · 情况有变！",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/fortress.png",
+  "pages": [
+    {
+      "_id": "whbHuntQstSgPg01",
+      "name": "情况有变！",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>任务描述:</strong></p>\n<p><strong>任务2：情况有变！</strong>要塞遭遇了神秘势力的围攻。帮助26军团，或者加入围攻方——无论如何你们都将收获颇丰。</p>\n<ul>\n<li>抵达被围攻的要塞</li>\n<li>选择：帮助26军团，或加入围攻方</li>\n<li>在冲突中活着拿到报酬</li>\n</ul>\n<hr />\n<section class=\"secret\">\n<p>两边开价都会抬高。谁先付钱、谁先开枪，也许比谁更正义更重要。</p>\n<ul>\n<li>（可选）同时榨取双方情报或报酬</li>\n</ul>\n</section>\n<p><strong>奖励：</strong>依所选阵营发放；双方开价均可观</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "quest"
+        }
+      }
+    }
+  ],
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "quest"
+    }
+  }
+}

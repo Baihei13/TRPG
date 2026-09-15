@@ -1,0 +1,19 @@
+{
+  "_id": "whbHuntRoadMac01",
+  "name": "路上随机表（d20）",
+  "type": "script",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "scope": "global",
+  "command": "/**\n * 猎杀对决 · 路上随机表\n * - 若世界没有 RollTable，则创建\n * - 然后掷一次并贴到聊天\n */\nconst TABLE_NAME = \"猎杀对决 · 路上随机表\";\nconst RESULTS = [\n  { range: [1, 1], text: \"【死寂路段】暂无遭遇。可休整/整理弹药，或远处一声枪响（氛围）。\" },\n  { range: [2, 2], text: \"【血迹未干】新鲜拖痕。Survival/Perception DC18：找线索；大失败引 1d4 僵尸。\" },\n  { range: [3, 3], text: \"【杂兵游荡】2d4 徒手/砍刀僵尸从灌木钻出，以拖延为主。\" },\n  { range: [4, 4], text: \"【火把僵尸】1d3 火把杂兵；死后火把可能点燃油/拌雷。\" },\n  { range: [5, 5], text: \"【遗弃辎重】马车/气球残骸。有弹药或针剂；Perception DC20 否则踩警报拌雷。\" },\n  { range: [6, 6], text: \"【别人的绊线】路中央隐藏铁丝网/毒气拌雷（隐匿 DC19）。察觉→绕开/拆/引爆。\" },\n  { range: [7, 7], text: \"【26军团哨兵】1～2 名疲惫侦察兵（或一具尸体）。可换情报、护送或被误认敌对。\" },\n  { range: [8, 8], text: \"【炊烟疑云】炖肉香料味——神秘厨师方向？营地或诱饵。\" },\n  { range: [9, 9], text: \"【腐化动物】不对劲的鸟/沼鳄挡路。威吓或绕路；开战为短遭遇。\" },\n  { range: [10, 10], text: \"【浓雾迷路】Survival DC20，失败多耗 1 小时且下次随机 +2（上限 20）。\" },\n  { range: [11, 11], text: \"【敌对猎人】要过路费或抢情报。谈判/恐吓/短冲突后散开。\" },\n  { range: [12, 12], text: \"【蜂鸣与蛭影】预告附近蜂巢/肉头。可主动猎或加速撤。\" },\n  { range: [13, 13], text: \"【焦土余烬】喷火怪/狱生足迹。Nature DC18 判断时间；可能有灼烬格。\" },\n  { range: [14, 14], text: \"【树上悬赏】过期/错误合同，或指向隐藏赏金的半真线索。\" },\n  { range: [15, 15], text: \"【断桥洪水】搭路或绕远；绕远则再骰一次路上表。\" },\n  { range: [16, 16], text: \"【腐化低语】Will DC18；失败惊惧1或短时幻觉。\" },\n  { range: [17, 17], text: \"【真补给/假好意】路边药箱。Crafting/Medicine DC18：真回复 / 假毒气或毒绷带。\" },\n  { range: [18, 18], text: \"【血月先兆】天色异红。下场战斗可轻血月（怪+1）或提示开血月开关。\" },\n  { range: [19, 19], text: \"【放逐残响】发现令牌碎片/残渣，或听见 Boss 方向低吼（推主线）。\" },\n  { range: [20, 20], text: \"【屠夫的记号】血手印/挂钩/半扇兽尸。强线索向屠夫巢——或恐吓伪装。\" },\n];\n\nif (!game.user.isGM) {\n  return ui.notifications.warn(\"需要 GM 才能掷路上随机表。\");\n}\n\nlet table = game.tables.find((t) => t.name === TABLE_NAME);\nif (!table) {\n  const results = RESULTS.map((r, i) => ({\n    type: CONST.TABLE_RESULT_TYPES?.TEXT ?? \"text\",\n    range: r.range,\n    text: r.text,\n    weight: 1,\n    drawn: false,\n  }));\n  table = await RollTable.create({\n    name: TABLE_NAME,\n    description: \"猎杀对决路易斯安那路上遭遇。行军/换区时掷。\",\n    formula: \"1d20\",\n    replacement: true,\n    displayRoll: true,\n    results,\n  });\n  ui.notifications.info(`已创建掷骰表：「${TABLE_NAME}」`);\n}\n\nconst draw = await table.draw({ displayChat: true });\n",
+  "folder": "whbHntFldMac0001",
+  "sort": 140,
+  "ownership": {
+    "default": 1
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "hunt-road-random-d20",
+      "source": "hunt-showdown"
+    }
+  }
+}

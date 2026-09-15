@@ -1,0 +1,46 @@
+{
+  "_id": "whbHuntRoadTbl01",
+  "folder": "whbHntJrRules001",
+  "name": "猎杀对决 · 路上随机表（d20）",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "pages": [
+    {
+      "_id": "whbHuntRoadPg001",
+      "name": "腐沼路遇 d20",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>用法</strong>：行军 / 换区 / 「往下一处据点走」时掷 <strong>1d20</strong>。可用宏「路上随机表」一键生成可掷骰表并投掷。</p>\n<p><em>偏向猎杀对决：腐化沼泽、赏金、26 军团、陷阱与其他猎人。</em></p>\n<hr />\n<ol>\n<li><strong>死寂路段</strong> — 暂无遭遇。可让每人恢复 1 Focus / 整理弹药，或听见远处一声枪响（纯氛围）。</li>\n<li><strong>血迹未干</strong> — 泥路上有新鲜血迹与拖痕。@Check[survival|dc:18] 或 @Check[perception|dc:18]：成功指向最近线索/尸体；大失败引来 1d4 僵尸。</li>\n<li><strong>杂兵游荡</strong> — 2d4 徒手/砍刀僵尸从灌木钻出，目标是拖延而非歼灭。</li>\n<li><strong>火把僵尸</strong> — 1d3 火把杂兵；小心死后掉火把点燃油桶/拌雷。</li>\n<li><strong>遗弃辎重</strong> — 翻倒马车或气球残骸补给。搜刮可得弹药/针剂；@Check[perception|dc:20] 否则踩中警报拌雷。</li>\n<li><strong>别人的绊线</strong> — 路中央有隐藏铁丝网/毒气拌雷（隐匿 DC 19）。先察觉，再决定绕开、拆除或故意引爆。</li>\n<li><strong>26 军团哨兵</strong> — 1～2 名筋疲力尽的侦察兵（或其中一人已死）。可交易情报、护送，或被误认为敌对猎人。</li>\n<li><strong>炊烟疑云</strong> — 风里有炖肉与香料味。「神秘厨师」方向？跟随可能找到营地——或诱饵。</li>\n<li><strong>腐化动物</strong> — 一群不对劲的鸟/沼鳄挡路。威吓或绕路；开战则短遭遇，死时可能爆出小团腐化脓。</li>\n<li><strong>浓雾迷路</strong> — 白雾吞没道路。@Check[survival|dc:20] 否则多耗 1 小时且下一次随机表 +2（上限 20）。</li>\n<li><strong>敌对猎人</strong> — 另一队猎人要「过路费」或抢赏金情报。可谈判、恐吓、或短冲突后散开（不必打到死）。</li>\n<li><strong>蜂鸣与蛭影</strong> — 远处蜂巢嗡鸣或水蛭爬痕。预告附近有蜂巢/肉头；可主动狩猎或加速撤离。</li>\n<li><strong>焦土余烬</strong> — 路面焦黑，残留喷火怪/狱生足迹。@Check[nature|dc:18] 判断离开多久；可能仍有灼烬陷阱格。</li>\n<li><strong>钉在树上的悬赏</strong> — 旧告示：错误目标、过期合同，或指向隐藏赏金的半真线索。</li>\n<li><strong>断桥洪水</strong> — 桥塌或涨水。Athletics/Crafting 搭路，或绕远多遇一次随机（再骰一次）。</li>\n<li><strong>腐化低语</strong> — 精神污染。每人 @Check[will|dc:18]；失败获得惊惧 1 或短时幻觉（看见已死队友）。</li>\n<li><strong>真补给 / 假好意</strong> — 路边药箱与子弹。@Check[crafting|dc:18] 或 Medicine：真则回复；假则毒气瓶/沾毒绷带。</li>\n<li><strong>血月先兆</strong> — 天色异红一刻钟。本场下一场战斗视为「轻血月」：怪物 AC/攻击临时 +1（或提示可开血月开关）。</li>\n<li><strong>放逐残响</strong> — 空气像被撕开。发现放逐相关残渣/令牌碎片，或听到 Boss 方向的低吼（推进主线）。</li>\n<li><strong>屠夫的记号</strong> — 树上刻着钩与血手印，或挂着半扇兽尸。强线索指向屠夫巢穴；也可能是模仿犯/其他猎人的恐吓。</li>\n</ol>\n<hr />\n<p><strong>GM 速调</strong>：团太虚则把奇数项当氛围；团太闲则把 3/4/6/11 权重加倍（骰出后可改邻项）。</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "random-table"
+        }
+      }
+    }
+  ],
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "random-table"
+    }
+  }
+}

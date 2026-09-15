@@ -329,14 +329,10 @@ export function installHuntFullAuto(api) {
       await ChatMessage.create({ content: `<p><strong>狼途追猎</strong>：获得一次免费快步（追猎节奏）。</p>` });
     },
     "emilia-trap": async (actor) => {
-      const pack = game.packs.get(PACK_ITEMS);
-      const src = pack ? await pack.getDocument("whbHuntBearTrp01") : null;
-      if (src) {
-        const data = src.toObject();
-        delete data._id;
-        await Item.createDocuments([data], { parent: actor, render: false });
-      }
-      await ChatMessage.create({ content: `<p><strong>林间陷阱</strong>：已尝试放入捕熊陷阱到物品栏。</p>` });
+      // 主文件 installTripMineHooks 会布置熊陷阱危境；此处仅作后备提示
+      await ChatMessage.create({
+        content: `<p><strong>林间陷阱</strong>：若未自动出现危境，请确认模块已刷新，或使用物品栏「熊陷阱」。</p>`,
+      });
     },
     "emilia-wolf-skull": async (actor) => {
       const t = primaryTarget(actor);

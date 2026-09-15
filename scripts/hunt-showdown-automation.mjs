@@ -12,6 +12,13 @@ import {
 
 export { toggleBloodMoon, isBloodMoonActive, applyBloodMoonToActor, removeBloodMoonFromActor };
 
+/** 控制台调试：选中红鸦后调用 game.modules.get("wang-pf2e-homebrew").api.debugDeployTripMine() */
+export async function debugDeployTripMine(actor) {
+  actor = actor || canvas.tokens?.controlled?.[0]?.actor;
+  if (!actor) return ui.notifications.warn("选中猎人");
+  return deployTripMineFromActor(actor, TRIP_MINE_ACTIONS["red-raven-toxic"]);
+}
+
 const MODULE_ID = "wang-pf2e-homebrew";
 const FLAG = "huntShowdown";
 const PACK = `${MODULE_ID}.homebrew-items`;
@@ -34,6 +41,7 @@ const EFFECT_IDS = {
   fuseeLight: "whbHuntFuseeFx01",
   iai: "whbHuntIaiFx0001",
   infrared: "whbHuntIrVisFx01",
+  wire: "whbHuntWireFx001",
 };
 
 const SLUGS = {
@@ -74,7 +82,7 @@ const MEDICAL_HEAL_SLUGS = new Set([
   "weak-vitality-shot",
 ]);
 
-/** 拌雷消耗品 → 危境 Actor id */
+/** 拌雷消耗品 slug → 危境 Actor id */
 const TRIP_MINE_HAZARDS = {
   "alert-trip-mine": "whbHuntHzAlert01",
   "heavy-footfalls": "whbHuntHzAlert01",
@@ -82,7 +90,41 @@ const TRIP_MINE_HAZARDS = {
   "damn-footsteps": "whbHuntHzConc001",
   "poison-trip-mine": "whbHuntHzPois001",
   "toxic-footfalls": "whbHuntHzPois001",
+  "bear-trap": "whbHuntHzBear001",
 };
+
+/** 布置动作 slug → 危境 + 消耗品 slug 列表 */
+const TRIP_MINE_ACTIONS = {
+  "flymander-heavy": {
+    hazardId: "whbHuntHzAlert01",
+    itemSlugs: ["heavy-footfalls", "alert-trip-mine"],
+    label: "沉重的脚步声",
+  },
+  "red-raven-damn": {
+    hazardId: "whbHuntHzConc001",
+    itemSlugs: ["damn-footsteps", "concertina-trip-mine"],
+    label: "该死的脚步",
+  },
+  "red-raven-toxic": {
+    hazardId: "whbHuntHzPois001",
+    itemSlugs: ["toxic-footfalls", "poison-trip-mine"],
+    label: "剧毒脚步",
+  },
+  "emilia-trap": {
+    hazardId: "whbHuntHzBear001",
+    itemSlugs: ["bear-trap"],
+    label: "林间陷阱",
+  },
+};
+
+/** 按中文名兜底匹配（世界里旧动作可能缺 slug） */
+const TRIP_MINE_NAME_RE = [
+  { re: /剧毒脚步|有毒脚步|毒气拌雷|toxic\s*foot/i, key: "red-raven-toxic" },
+  { re: /该死的脚步|铁丝网拌雷|damn\s*foot|concertina/i, key: "red-raven-damn" },
+  { re: /沉重的?脚步|警示拌雷|警报拌雷|heavy\s*foot|alert\s*trip/i, key: "flymander-heavy" },
+  { re: /熊陷阱|林间陷阱|bear\s*trap/i, key: "emilia-trap" },
+];
+
 
 /** Bornheim 系：装备时授予速射扳机 */
 const BORNHEIM_SLUGS = new Set([
@@ -1356,19 +1398,16 @@ const HUNTER_ACTION_HANDLERS = {
     });
   },
   "flymander-heavy": async (actor) => {
-    await ChatMessage.create({
-      content: `<p><strong>沉重脚步</strong>：请使用物品栏警示拌雷（heavy-footfalls），布置后触发自动化危境。</p>`,
-    });
+    await deployTripMineFromActor(actor, TRIP_MINE_ACTIONS["flymander-heavy"]);
   },
   "red-raven-damn": async (actor) => {
-    await ChatMessage.create({
-      content: `<p><strong>该死的脚步</strong>：请使用铁丝网拌雷布置（自动化危境）。</p>`,
-    });
+    await deployTripMineFromActor(actor, TRIP_MINE_ACTIONS["red-raven-damn"]);
   },
   "red-raven-toxic": async (actor) => {
-    await ChatMessage.create({
-      content: `<p><strong>有毒脚步</strong>：请使用毒气拌雷布置（自动化危境）。</p>`,
-    });
+    await deployTripMineFromActor(actor, TRIP_MINE_ACTIONS["red-raven-toxic"]);
+  },
+  "emilia-trap": async (actor) => {
+    await deployTripMineFromActor(actor, TRIP_MINE_ACTIONS["emilia-trap"]);
   },
   "riggins-question": async (actor) => {
     const target = primaryTarget(actor);
@@ -1512,58 +1551,423 @@ function installBloodlessHook() {
   });
 }
 
+async function resolveMessageItem(message) {
+  try {
+    if (message.item) return message.item;
+  } catch (_) {
+    /* pf2e getter may throw */
+  }
+  const uuid =
+    message.flags?.pf2e?.origin?.uuid ||
+    message.flags?.pf2e?.itemUuid ||
+    message.flags?.core?.sourceId;
+  if (uuid) {
+    try {
+      const doc = await fromUuid(uuid);
+      if (doc?.documentName === "Item" || doc?.type) return doc;
+    } catch (_) {
+      /* ignore */
+    }
+  }
+  return null;
+}
+
+function findActorToken(actor) {
+  if (!actor) return null;
+  const linked = actor.getActiveTokens?.(true, true)?.[0];
+  if (linked) return linked;
+  const controlled = canvas.tokens?.controlled?.find(
+    (t) => t.actor?.id === actor.id || t.actor?.uuid === actor.uuid,
+  );
+  if (controlled) return controlled;
+  return (
+    canvas.tokens?.placeables?.find(
+      (t) => t.actor?.id === actor.id || t.actor?.uuid === actor.uuid || t.actor?.name === actor.name,
+    ) ?? null
+  );
+}
+
+function resolveTripMineSpec(item) {
+  if (!item) return null;
+  const slug = item.system?.slug || item.flags?.[MODULE_ID]?.huntGrantedAction || "";
+  if (TRIP_MINE_ACTIONS[slug]) return TRIP_MINE_ACTIONS[slug];
+  if (TRIP_MINE_HAZARDS[slug]) {
+    return {
+      hazardId: TRIP_MINE_HAZARDS[slug],
+      itemSlugs: [slug],
+      label: item.name,
+    };
+  }
+  const name = item.name || "";
+  for (const row of TRIP_MINE_NAME_RE) {
+    if (row.re.test(name) && TRIP_MINE_ACTIONS[row.key]) return TRIP_MINE_ACTIONS[row.key];
+  }
+  return null;
+}
+
 async function placeTripMineHazard(actor, hazardId, itemName) {
-  const pack = game.packs.get(`${MODULE_ID}.homebrew-actors`);
-  if (!pack) {
-    ui.notifications.warn("找不到 homebrew-actors 合集");
-    return;
+  try {
+    const pack = game.packs.get(`${MODULE_ID}.homebrew-actors`);
+    if (!pack) {
+      ui.notifications.error("找不到 homebrew-actors 合集，无法布置拌雷");
+      return null;
+    }
+    const src = await pack.getDocument(hazardId);
+    if (!src) {
+      ui.notifications.error(`缺少危境 ${hazardId}（请确认合集已 pack）`);
+      return null;
+    }
+    const token = findActorToken(actor);
+    if (!token || !canvas.scene) {
+      ui.notifications.error("请先把猎人令牌放在场景上，并选中/保持可见后再布置拌雷");
+      return null;
+    }
+    const kind =
+      hazardId === "whbHuntHzConc001"
+        ? "concertina"
+        : hazardId === "whbHuntHzPois001"
+          ? "poison"
+          : hazardId === "whbHuntHzBear001"
+            ? "bear"
+            : "alert";
+    const data = src.toObject();
+    delete data._id;
+    data.folder = null;
+    data.ownership = { default: 0, [game.user.id]: 3 };
+    data.flags = data.flags || {};
+    data.flags[MODULE_ID] = {
+      ...(data.flags[MODULE_ID] || {}),
+      source: "hunt-showdown",
+      tripMine: kind,
+      tripMineArmed: true,
+      tripMinePlacedBy: actor.id,
+    };
+    const [created] = await Actor.createDocuments([data]);
+    if (!created) {
+      ui.notifications.error("创建危境 Actor 失败");
+      return null;
+    }
+    const grid = canvas.grid.size;
+    const width = Number(created.prototypeToken?.width || src.prototypeToken?.width || 1);
+    const height = Number(created.prototypeToken?.height || src.prototypeToken?.height || 1);
+    const tx = token.document.x + token.document.width * grid;
+    const ty = token.document.y;
+    const td = foundry.utils.mergeObject(created.prototypeToken.toObject(), {
+      actorId: created.id,
+      actorLink: true,
+      x: tx,
+      y: ty,
+      width,
+      height,
+      name: created.name,
+      hidden: true,
+    });
+    td.flags = td.flags || {};
+    td.flags[MODULE_ID] = { tripMine: kind, tripMineArmed: true };
+    const [tok] = await canvas.scene.createEmbeddedDocuments("Token", [td]);
+    ui.notifications.info(`${itemName}：已布置隐藏危境「${created.name}」（邻格，可拖动）`);
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>${itemName}</strong>：已在邻格放置<strong>隐藏</strong>危境 <em>${created.name}</em>。靠近约 10 尺会自动察觉；踩上绊线格会自动触发。</p>`,
+    });
+    return tok ?? created;
+  } catch (err) {
+    console.error(`${MODULE_ID} | placeTripMineHazard`, err);
+    ui.notifications.error(`布置拌雷失败：${err?.message || err}`);
+    return null;
   }
-  const src = await pack.getDocument(hazardId);
-  if (!src) {
-    ui.notifications.warn(`缺少危境 ${hazardId}`);
-    return;
+}
+
+/**
+ * 猎人招牌「布置拌雷」动作 / 消耗品：放下危境并尽量扣数量。
+ */
+async function deployTripMineFromActor(actor, spec) {
+  if (!spec?.hazardId) return null;
+  const item = (spec.itemSlugs || [])
+    .map((s) => findBySlug(actor, "consumable", s))
+    .find(Boolean);
+  const placed = await placeTripMineHazard(actor, spec.hazardId, item?.name || spec.label);
+  if (!placed) return null;
+  if (item) {
+    const qty = Number(item.system?.quantity ?? 1);
+    if (qty > 1) await item.update({ "system.quantity": qty - 1 });
+    else await item.delete().catch(() => {});
+  } else {
+    ui.notifications.info(`${spec.label}：物品栏没有对应消耗品，已仍放置危境。`);
   }
-  const token = actor.getActiveTokens?.(true, true)?.[0];
-  if (!token || !canvas.scene) {
-    ui.notifications.warn("请先将角色令牌放在场景上再布置拌雷");
-    return;
+  return placed;
+}
+
+function tripMineKind(actor) {
+  if (!actor || actor.type !== "hazard") return null;
+  const f = actor.flags?.[MODULE_ID] || {};
+  if (f.tripMine) return f.tripMine;
+  const paired = f.pairedItem || "";
+  if (paired.includes("Conc") || /铁丝网/.test(actor.name || "")) return "concertina";
+  if (paired.includes("Pois") || /毒气/.test(actor.name || "")) return "poison";
+  if (paired.includes("Bear") || /熊陷阱/.test(actor.name || "")) return "bear";
+  if (paired.includes("Alrt") || paired.includes("Alert") || /警报|警示/.test(actor.name || "")) {
+    return "alert";
   }
-  const data = src.toObject();
-  delete data._id;
-  data.folder = null;
-  data.ownership = { default: 0, [game.user.id]: 3 };
-  const [created] = await Actor.createDocuments([data]);
-  const grid = canvas.grid.size;
-  const tx = token.document.x + token.document.width * grid;
-  const ty = token.document.y;
-  const td = foundry.utils.mergeObject(created.prototypeToken.toObject(), {
-    actorId: created.id,
-    actorLink: true,
-    x: tx,
-    y: ty,
-    name: created.name,
-  });
-  await canvas.scene.createEmbeddedDocuments("Token", [td]);
-  await ChatMessage.create({
+  return null;
+}
+
+function tripMineStealthDc(hazard) {
+  const ste = Number(hazard.system?.attributes?.stealth?.value ?? 0);
+  return 10 + ste;
+}
+
+function tokensOverlap(a, b) {
+  if (!a || !b) return false;
+  const ax1 = a.document.x;
+  const ay1 = a.document.y;
+  const ax2 = ax1 + a.w;
+  const ay2 = ay1 + a.h;
+  const bx1 = b.document.x;
+  const by1 = b.document.y;
+  const bx2 = bx1 + b.w;
+  const by2 = by1 + b.h;
+  return ax1 < bx2 && ax2 > bx1 && ay1 < by2 && ay2 > by1;
+}
+
+function tokensWithinFeet(a, b, feet) {
+  if (!a || !b || !canvas.grid) return false;
+  try {
+    return canvas.grid.measurePath([a.center, b.center]).distance <= feet;
+  } catch {
+    return false;
+  }
+}
+
+async function dealSimpleDamage(actor, formula, { type = "untyped", token = null, label = "" } = {}) {
+  if (!actor) return;
+  const roll = await new Roll(String(formula)).evaluate();
+  await roll.toMessage({
     speaker: ChatMessage.getSpeaker({ actor }),
-    content: `<p><strong>${itemName}</strong>：已在邻格放置危境 <em>${created.name}</em>（可再拖动微调位置）。</p>`,
+    flavor: label || `伤害（${type}）`,
   });
+  try {
+    if (typeof actor.applyDamage === "function") {
+      await actor.applyDamage({
+        damage: roll,
+        token: token?.document ?? actor.getActiveTokens?.(true, true)?.[0]?.document,
+        damageType: type,
+      });
+    } else {
+      const hp = actor.system?.attributes?.hp;
+      if (hp) {
+        await actor.update({
+          "system.attributes.hp.value": Math.max(0, Number(hp.value) - Number(roll.total)),
+        });
+      }
+    }
+  } catch (err) {
+    console.warn(`${MODULE_ID} | tripMine damage`, err);
+  }
+}
+
+async function noticeTripMine(mover, hazardTok) {
+  const hazard = hazardTok.actor;
+  if (!hazard) return false;
+  const noticed = hazard.getFlag(MODULE_ID, "tripMineNoticed") || [];
+  if (noticed.includes(mover.id)) return true;
+  const dc = tripMineStealthDc(hazard);
+  let total = null;
+  try {
+    if (typeof mover.perception?.roll === "function") {
+      const roll = await mover.perception.roll({
+        dc: { value: dc },
+        skipDialog: true,
+        extraRollOptions: ["action:seek", "hunt-trip-mine"],
+      });
+      total = roll?.total ?? roll?.dice?.[0]?.total ?? null;
+      if (total === null && roll?.degreeOfSuccess !== undefined) {
+        // degreeOfSuccess: 0 crit fail … 3 crit success; success if >= 2
+        if (roll.degreeOfSuccess >= 2) total = dc;
+        else total = dc - 1;
+      }
+    }
+  } catch (err) {
+    console.warn(`${MODULE_ID} | perception roll`, err);
+  }
+  if (total === null) {
+    try {
+      const mod = Number(mover.perception?.mod ?? mover.system?.perception?.mod ?? 0);
+      const roll = await new Roll(`1d20+${mod}`).evaluate();
+      await roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: mover }),
+        flavor: `察觉拌雷（DC ${dc}）`,
+      });
+      total = roll.total;
+    } catch {
+      return false;
+    }
+  }
+  const ok = Number(total) >= dc;
+  if (ok) {
+    await hazard.setFlag(MODULE_ID, "tripMineNoticed", [...noticed, mover.id]);
+    if (hazardTok.document.hidden) {
+      await hazardTok.document.update({ hidden: false });
+    }
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: mover }),
+      content: `<p><strong>察觉</strong>：${mover.name} 发现了 <em>${hazard.name}</em>（DC ${dc}）。</p>`,
+    });
+    return true;
+  }
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: mover }),
+    whisper: ChatMessage.getWhisperRecipients("GM").map((u) => u.id),
+    content: `<p><strong>察觉</strong>：${mover.name} 未发现附近的拌雷（DC ${dc}）。</p>`,
+  });
+  return false;
+}
+
+async function triggerTripMine(moverTok, hazardTok) {
+  const hazard = hazardTok.actor;
+  const mover = moverTok.actor;
+  if (!hazard || !mover) return;
+  if (hazard.getFlag(MODULE_ID, "tripMineTriggered")) return;
+  const kind = tripMineKind(hazard);
+  if (!kind) return;
+
+  await hazard.setFlag(MODULE_ID, "tripMineTriggered", true);
+  await hazard.setFlag(MODULE_ID, "tripMineArmed", false);
+  if (hazardTok.document.hidden) await hazardTok.document.update({ hidden: false });
+
+  if (kind === "concertina") {
+    const victims = (canvas.tokens?.placeables ?? []).filter(
+      (t) => t.actor && t.actor.type !== "hazard" && tokensWithinFeet(t, hazardTok, 10),
+    );
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: hazard }),
+      content: `<p><strong>铁丝网拌雷 · 刀丝展开</strong>：${mover.name} 踩上绊线！约 2×2 格刀丝网展开。</p>`,
+    });
+    for (const t of victims) {
+      await dealSimpleDamage(t.actor, "1d6", {
+        type: "slashing",
+        token: t,
+        label: "刀丝展开",
+      });
+      const dos = await rollSave(t.actor, "reflex", 19, ["trap"]);
+      if (dos !== null && dos <= 1) await applyPF2eCondition(t.actor, "slowed", 1);
+      await applyCompendiumEffect(t.actor, EFFECT_IDS.wire);
+    }
+  } else if (kind === "poison") {
+    const victims = (canvas.tokens?.placeables ?? []).filter(
+      (t) => t.actor && t.actor.type !== "hazard" && tokensWithinFeet(t, hazardTok, 5),
+    );
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: hazard }),
+      content: `<p><strong>毒气拌雷</strong>：${mover.name} 触发！5 尺毒云（持续 3 轮，请在回合开始继续结算）。</p>`,
+    });
+    for (const t of victims) {
+      await dealSimpleDamage(t.actor, "1d6", { type: "poison", token: t, label: "毒气拌雷" });
+      await applyCompendiumEffect(t.actor, EFFECT_IDS.poison);
+    }
+  } else if (kind === "bear") {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: hazard }),
+      content: `<p><strong>熊陷阱 · 钢颚咬合</strong>：${mover.name} 踩中捕兽夹！</p>`,
+    });
+    await dealSimpleDamage(mover, "1d10", { type: "bludgeoning", token: moverTok, label: "钢颚咬合" });
+    const dos = await rollSave(mover, "reflex", 20, ["trap"]);
+    if (dos !== null && dos <= 1) {
+      await applyCompendiumEffect(mover, "whbHuntBearFx001");
+      await applyPF2eCondition(mover, "restrained");
+      try {
+        const roll = await new Roll(dos <= 0 ? "1d8" : "1d6").evaluate();
+        await roll.toMessage({ flavor: "熊陷阱持续流血" });
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  } else {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: hazard }),
+      content: `<p><strong>警报拌雷 · 烟花示警</strong>：${mover.name} 触发！约 150 尺内可闻巨响；闪光短暂照亮邻格。</p>`,
+    });
+    await dealSimpleDamage(mover, "1d4", { type: "fire", token: moverTok, label: "信号焰灼伤" });
+    const dos = await rollSave(mover, "fortitude", 16, ["fire", "visual"]);
+    if (dos !== null && dos <= 1) await applyPF2eCondition(mover, "dazzled");
+  }
+
+  // 危境耗尽：HP 归零提示
+  try {
+    const hp = hazard.system?.attributes?.hp;
+    if (hp) await hazard.update({ "system.attributes.hp.value": 0 });
+  } catch (_) {
+    /* ignore */
+  }
 }
 
 function installTripMineHooks() {
+  // 消耗品 / 动作布置：统一入口（延迟一帧以等 PF2e 填好 message.item）
   Hooks.on("createChatMessage", async (message) => {
-    if (message.author?.id !== game.user.id) return;
-    const item = message.item;
+    if (message.author?.id !== game.user.id && message.user?.id !== game.user.id) return;
+    await foundry.utils.delay(50);
     const actor = message.actor;
-    if (!item || !actor || !canManage(actor)) return;
-    if (item.type !== "consumable") return;
-    const slug = item.system?.slug ?? "";
-    const hazardId = TRIP_MINE_HAZARDS[slug];
-    if (!hazardId) return;
-    const key = `mine:${message.id}`;
+    if (!actor || !canManage(actor)) return;
+
+    const item = await resolveMessageItem(message);
+    const key = `mineDeploy:${message.id}`;
     if (handled.has(key)) return;
+
+    let spec = resolveTripMineSpec(item);
+    if (!spec) {
+      // 聊天标题/内容兜底（有些动作卡 item 为空）
+      const blob = `${item?.name || ""} ${message.flavor || ""} ${message.content || ""}`;
+      for (const row of TRIP_MINE_NAME_RE) {
+        if (row.re.test(blob) && TRIP_MINE_ACTIONS[row.key]) {
+          spec = TRIP_MINE_ACTIONS[row.key];
+          break;
+        }
+      }
+    }
+    if (!spec) return;
+
+    // 仅处理动作或消耗品卡
+    const typ = item?.type;
+    if (typ && typ !== "action" && typ !== "consumable") return;
+
     handled.add(key);
-    await placeTripMineHazard(actor, hazardId, item.name);
+    setTimeout(() => handled.delete(key), 8000);
+    await deployTripMineFromActor(actor, spec);
+  });
+
+  // 靠近自动察觉；踩上绊线格自动触发
+  Hooks.on("updateToken", async (tokenDoc, changes) => {
+    if (!game.user.isGM) return;
+    if (changes.x === undefined && changes.y === undefined) return;
+    const moverTok = tokenDoc.object;
+    const mover = tokenDoc.actor;
+    if (!moverTok || !mover || mover.type === "hazard") return;
+    if (mover.flags?.[MODULE_ID]?.tripMine) return;
+
+    const hazards = (canvas.tokens?.placeables ?? []).filter((t) => {
+      const a = t.actor;
+      if (!a || a.type !== "hazard") return false;
+      if (a.getFlag(MODULE_ID, "tripMineTriggered")) return false;
+      return Boolean(tripMineKind(a));
+    });
+
+    for (const hz of hazards) {
+      const noticedKey = `notice:${tokenDoc.id}:${hz.id}`;
+      if (tokensWithinFeet(moverTok, hz, 10) && !handled.has(noticedKey)) {
+        const noticed = hz.actor.getFlag(MODULE_ID, "tripMineNoticed") || [];
+        if (!noticed.includes(mover.id)) {
+          handled.add(noticedKey);
+          setTimeout(() => handled.delete(noticedKey), 8000);
+          await noticeTripMine(mover, hz);
+        }
+      }
+      if (tokensOverlap(moverTok, hz)) {
+        const trigKey = `trig:${hz.id}`;
+        if (handled.has(trigKey)) continue;
+        handled.add(trigKey);
+        await triggerTripMine(moverTok, hz);
+      }
+    }
   });
 }
 
@@ -1687,13 +2091,18 @@ function installNitroHook() {
 
 function installActionHandler() {
   Hooks.on("createChatMessage", async (message) => {
-    if (message.author?.id !== game.user.id) return;
-    const item = message.item;
+    if (message.author?.id !== game.user.id && message.user?.id !== game.user.id) return;
+    await foundry.utils.delay(50);
     const actor = message.actor;
-    if (!item || !actor || !canManage(actor)) return;
-    if (item.type !== "action") return;
+    if (!actor || !canManage(actor)) return;
+    const item = await resolveMessageItem(message);
+    if (!item || item.type !== "action") return;
+
+    // 拌雷布置已由 installTripMineHooks 统一处理，这里跳过避免双布置
+    if (resolveTripMineSpec(item)) return;
+
     const slug = item.flags?.[MODULE_ID]?.huntGrantedAction ?? item.system?.slug;
-    if (!slug) return; // 无 slug 交由 full-auto 按名称/描述结算
+    if (!slug) return;
 
     const isKnown =
       slug === ACTION_SLUGS.bornheim ||
@@ -1703,7 +2112,7 @@ function installActionHandler() {
       slug === ACTION_SLUGS.ambiReload ||
       slug === ACTION_SLUGS.bountyDarkSight ||
       Boolean(HUNTER_ACTION_HANDLERS[slug]);
-    if (!isKnown) return; // 其余交由 full-auto EXTRA_HUNTER / 描述解析
+    if (!isKnown) return;
 
     const key = `${message.id}:${slug}`;
     if (handled.has(key)) return;
@@ -2215,5 +2624,5 @@ export function installHuntShowdownAutomation() {
     findBySlug,
     getPackItem,
   });
-  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.36.9 blood-moon)`);
+  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.36.12 trip-mine harden)`);
 }

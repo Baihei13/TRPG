@@ -1,0 +1,46 @@
+{
+  "_id": "whbHuntQuest2601",
+  "folder": "whbHntJrRules001",
+  "name": "猎杀对决 · 26军团的抵抗",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/whitlaw.png",
+  "pages": [
+    {
+      "_id": "whbHuntQst26Pg01",
+      "name": "26军团的抵抗",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p><strong>任务描述:</strong></p>\n<p>惠特洛军官委派你们寻找失踪的侦察兵，并提醒你们提防神秘的厨师。沼泽里的枪声与炊烟一样可疑——别让任何人轻易摸到你们的后背。</p>\n<ul>\n<li>寻找失踪的侦察兵</li>\n<li>向惠特洛军官复命</li>\n<li>提防神秘的厨师</li>\n</ul>\n<p><strong>奖励：</strong>26军团补给与人情；按侦察兵生还情况结算猎金</p>"
+      },
+      "video": {
+        "controls": true,
+        "loop": false,
+        "autoplay": false,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "quest"
+        }
+      }
+    }
+  ],
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "quest"
+    }
+  }
+}
