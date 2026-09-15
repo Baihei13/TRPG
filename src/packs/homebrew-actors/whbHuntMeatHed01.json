@@ -12,9 +12,16 @@
       "sort": 100000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 13 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 13
+        },
         "damageRolls": {
           "whbMthDmgCleav01": {
             "damage": "2d10+6",
@@ -32,8 +39,12 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
-        "traits": { "value": ["reach-10"] }
+        "slug": "巨型劈刃",
+        "traits": {
+          "value": [
+            "reach-10"
+          ]
+        }
       }
     },
     {
@@ -43,9 +54,18 @@
       "sort": 200000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": ["push"] },
-        "bonus": { "value": 13 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": [
+            "push"
+          ]
+        },
+        "bonus": {
+          "value": 13
+        },
         "damageRolls": {
           "whbMthDmgSlam001": {
             "damage": "1d8+6",
@@ -63,8 +83,10 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "肥躯撞击",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -74,8 +96,12 @@
       "sort": 500000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "defensive",
         "description": {
           "value": "<p>肉头怪没有头颅，也没有精密视觉。它<strong>免疫目盲</strong>带来的额外惩罚（本就近乎目盲），但对视觉效果（如幻术）通常无效或由 GM 裁定。</p>\n<p>感知主要依赖听觉（不精确，30 尺）与水蛭的粗糙反馈：若有己方水蛭能感知到某生物（见水蛭「有限视力」），肉头怪将该生物视为处于<strong>隐蔽</strong>（攻击前通常需 @Check[flat|dc:5]，除非毒素感知生效）。</p>"
@@ -87,8 +113,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "几乎失明",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -98,8 +126,12 @@
       "sort": 510000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>肉头怪能「闻」到毒素。对下列生物，它在 <strong>60 尺</strong>内拥有<strong>不精确</strong>感知，在 <strong>30 尺</strong>内视为拥有足够信息直接打击（无需因隐蔽做 DC 5 持平检定）：</p>\n<ul>\n<li>带有 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntPsnFx0001]{猎杀中毒}；</li>\n<li>正受到<strong>毒素</strong>伤害或<strong>持续毒素</strong>伤害；</li>\n<li>带有毒类条件（如恶心且来源为毒素，GM 裁定）；</li>\n<li>上一轮曾受到毒素伤害。</li>\n</ul>\n<p>对中毒猎人，肉头怪会优先追击。</p>"
@@ -111,8 +143,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "毒素感知",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -122,8 +156,12 @@
       "sort": 520000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "offensive",
         "description": {
           "value": "<p>遭遇开始时，肉头怪身边通常有 <strong>4</strong> 只 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntLeech0001]{腐沼水蛭}（散布在周围约 15 尺内）。场上己方水蛭同时最多 <strong>4</strong> 只。</p>\n<p>水蛭被杀后，肉头怪会再生成新的（见「滋生水蛭」）。</p>"
@@ -135,8 +173,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "leech-guard",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -146,8 +186,12 @@
       "sort": 600000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "offensive",
         "description": {
           "value": "<p>从颈腔与身上的蛭巢挤出新虫。在邻接空格生成 1 只 @UUID[Compendium.wang-pf2e-homebrew.homebrew-actors.Actor.whbHuntLeech0001]{腐沼水蛭}。若场上已有 4 只己方水蛭，则此动作无效。</p>"
@@ -159,8 +203,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "spawn-leeches",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -170,8 +216,12 @@
       "sort": 700000,
       "type": "action",
       "system": {
-        "actionType": { "value": "reaction" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "offensive",
         "description": {
           "value": "<p><strong>频率</strong> 每轮一次</p>\n<p><strong>触发</strong> 30 尺内一只己方腐沼水蛭被降至 0 HP</p>\n<p><strong>效果</strong> 立刻在该水蛭原位置或邻接空格生成 1 只新的腐沼水蛭（仍受场上最多 4 只限制）。</p>"
@@ -183,8 +233,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "蛭巢反哺",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -194,8 +246,12 @@
       "sort": 800000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>肉头怪死亡时掉落一枚<strong>随机特性残渣</strong>（Trait Spur）。掷 1d8，或由 GM 自选等价奖励：</p>\n<ol>\n<li>获得临时 HP 等于等级×2，持续 10 分钟</li>\n<li>下次打击额外 +1d6 精密伤害（一次）</li>\n<li>获得抵抗毒素 5，持续 1 小时</li>\n<li>恢复 2d8 HP</li>\n<li>速度 +5 尺，持续 10 分钟</li>\n<li>下一次豁免获得 +2 环境加值</li>\n<li>获得 1 点英雄点（若桌规不允许，改为恢复 4d8 HP）</li>\n<li>稀有：选择以上任意两项</li>\n</ol>\n<p><em>猎杀原作：必掉随机猎人特性。台上可换成一次性强力增益，或允许学习一个≤3 级相关专长（需正常代价，GM 裁定）。</em></p>"
@@ -207,39 +263,70 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "特性残渣-死亡",
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 4 },
-      "dex": { "mod": 0 },
-      "con": { "mod": 4 },
-      "int": { "mod": -4 },
-      "wis": { "mod": 1 },
-      "cha": { "mod": -2 }
+      "str": {
+        "mod": 4
+      },
+      "dex": {
+        "mod": 0
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": -4
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -2
+      }
     },
     "attributes": {
-      "ac": { "details": "", "value": 17 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "",
+        "value": 17
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "臃肿脂躯；对落单爆炸较怕，但能扛住零散火力",
         "max": 80,
         "temp": 0,
         "value": 80
       },
-      "speed": { "value": 20, "otherSpeeds": [] },
-      "immunities": [{ "type": "blinded" }],
+      "speed": {
+        "value": 20,
+        "otherSpeeds": []
+      },
+      "immunities": [
+        {
+          "type": "blinded"
+        }
+      ],
       "weaknesses": [],
       "resistances": []
     },
     "details": {
       "blurb": "猎杀对决 · 营地游荡巨怪",
-      "languages": { "details": "无语言", "value": [] },
-      "level": { "value": 3 },
+      "languages": {
+        "details": "无语言",
+        "value": []
+      },
+      "level": {
+        "value": 3
+      },
       "privateNotes": "<p>四人 2 级团的 +1 怪（Creature 3）。建议配 4 水蛭；远程炸药/弓弩风筝是原作正解。镰刀变体给劈刃加持续流血。</p>",
       "publicNotes": "<p>体型庞大、无头的异形，颈腔与躯干爬满水蛭。它们在营地附近游荡：几乎失明，却会追杀中毒的猎物；水蛭被灭会再滋生。死亡时留下随机特性残渣。</p>\n<p><em>四人 2 级团 · Creature 3（+1）· 蛮力坦克</em></p>",
       "publication": {
@@ -249,29 +336,56 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
+    "initiative": {
+      "statistic": "perception"
+    },
     "perception": {
       "details": "几乎失明；毒素感知 60 尺（不精确）/ 30 尺（可直接打击）",
       "mod": 8,
       "senses": [
-        { "type": "hearing", "acuity": "imprecise", "range": 30 },
-        { "type": "scent", "acuity": "imprecise", "range": 30 }
+        {
+          "type": "hearing",
+          "acuity": "imprecise",
+          "range": 30
+        },
+        {
+          "type": "scent",
+          "acuity": "imprecise",
+          "range": 30
+        }
       ]
     },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 13 },
-      "reflex": { "saveDetail": "", "value": 6 },
-      "will": { "saveDetail": "", "value": 8 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 13
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 6
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 8
+      }
     },
     "skills": {
-      "athletics": { "base": 13 },
-      "intimidation": { "base": 7 }
+      "athletics": {
+        "base": 13
+      },
+      "intimidation": {
+        "base": 7
+      }
     },
     "traits": {
       "rarity": "uncommon",
-      "size": { "value": "lg" },
-      "value": ["aberration"]
+      "size": {
+        "value": "lg"
+      },
+      "value": [
+        "aberration"
+      ]
     }
   },
   "prototypeToken": {
@@ -285,12 +399,23 @@
     },
     "disposition": -1,
     "displayBars": 40,
-    "bar1": { "attribute": "attributes.hp" },
-    "sight": { "enabled": false },
-    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": false
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
     "actorLink": false
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",

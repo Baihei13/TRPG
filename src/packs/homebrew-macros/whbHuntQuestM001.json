@@ -1,0 +1,20 @@
+{
+  "_id": "whbHuntQuestM001",
+  "name": "猎杀对决·赏金任务",
+  "type": "script",
+  "author": "",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/poetic-justice.png",
+  "scope": "global",
+  "command": "/**\n * 把「猎杀对决 · 赏金狩猎」写入当前世界，供 Simple Quest / 简单任务使用。\n * 结构：同一栏两条主目标 + secret 单列隐藏赏金。\n * 热栏运行即可；不要包 (async () => {})()。\n */\nconst TITLE = \"猎杀对决 · 赏金狩猎\";\nconst PAGE_NAME = \"赏金狩猎\";\nconst FOLDER_NAME = \"猎杀对决·任务\";\nconst CONTENT = `<p><strong>任务描述:</strong></p>\n<p>腐化在路易斯安那的沼泽与废镇间蔓延。猎人受命进入猎场：循着血迹、尖叫与焦糊气味搜集线索，锁定目标赏金；完成放逐后，带着令牌从撤离点活着离开。</p>\n<ul>\n<li>搜集线索寻找赏金</li>\n<li>带着赏金撤离</li>\n</ul>\n<hr />\n<section class=\"secret\">\n<p>有人在猎场里另藏了一份赏金——不标在合同上，只留给仍肯往更深处走的人。</p>\n<ul>\n<li>寻找被隐藏的赏金</li>\n</ul>\n</section>\n<p><strong>奖励：</strong>赏金令牌 1～2 枚；猎金按完成度结算</p>`;\n\nif (!game.user.isGM) {\n  return ui.notifications.warn(\"需要 GM 才能创建任务日记。\");\n}\n\nlet folder = game.folders.find(\n  (f) => f.type === \"JournalEntry\" && f.name === FOLDER_NAME\n);\nif (!folder) {\n  folder = await Folder.create({\n    name: FOLDER_NAME,\n    type: \"JournalEntry\",\n    sorting: \"a\",\n  });\n}\n\nlet journal = game.journals.find((j) => j.name === TITLE && j.folder?.id === folder.id)\n  ?? game.journals.find((j) => j.name === TITLE);\n\nif (!journal) {\n  journal = await JournalEntry.create({\n    name: TITLE,\n    folder: folder.id,\n    pages: [\n      {\n        name: PAGE_NAME,\n        type: \"text\",\n        text: { format: 1, content: CONTENT },\n      },\n    ],\n  });\n  ui.notifications.info(`已创建任务日记：「${TITLE}」`);\n} else {\n  const page = journal.pages.contents[0];\n  if (page) {\n    await page.update({ name: PAGE_NAME, \"text.content\": CONTENT });\n  } else {\n    await journal.createEmbeddedDocuments(\"JournalEntryPage\", [\n      { name: PAGE_NAME, type: \"text\", text: { format: 1, content: CONTENT } },\n    ]);\n  }\n  ui.notifications.info(`已更新任务日记：「${TITLE}」`);\n}\n\nawait journal.sheet?.render(true);\n",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "purpose": "quest-create"
+    }
+  }
+}

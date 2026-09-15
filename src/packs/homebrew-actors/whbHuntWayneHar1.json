@@ -483,6 +483,11 @@
         "the-noose",
         "peacemaker",
         "brass-flower"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntTheNoose1",
+        "whbHuntPeaceMkr1",
+        "whbHuntBrassFlw1"
       ]
     }
   }

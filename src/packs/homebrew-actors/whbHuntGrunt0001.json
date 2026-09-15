@@ -39,7 +39,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "撕抓",
         "traits": {
           "value": [
             "agile"
@@ -71,7 +71,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "扑近",
         "traits": {
           "value": []
         }
@@ -101,7 +101,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "腐沼骚扰",
         "traits": {
           "value": []
         }

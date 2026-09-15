@@ -1,0 +1,1028 @@
+{
+  "_id": "whbHuntMidShad01",
+  "folder": "whbfolderHntHt01",
+  "name": "午夜之影 艾比盖尔·海瑟薇",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/midnights-shadow.png",
+  "items": [
+    {
+      "_id": "whbMsAutoEmbed01",
+      "name": "Auto-5 半自动霰弹枪",
+      "type": "weapon",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/auto-5.png",
+      "system": {
+        "description": {
+          "value": "<p>半自动霰弹：管匣连发，近距撕开成群飞蛾与血渴者。</p>\n<blockquote><p><strong>兵器之书 · BROWNING AUTO-5</strong> 早期半自动霰弹；后坐力驱动退壳上膛，射速高、噪音更大。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>30 尺</strong>；装填 1；容量 5</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、scatter、capacity-5</p>\n<hr />\n<p><strong>连匣扫射</strong>（开关）开启时，一次操作发动<strong>两次</strong>此武器打击，各 −3 环境，共享同一 MAP。每回合限 1 次后建议关闭。</p>",
+          "gm": "<p>Hunt 原型 Auto-5。1d10 scatter、30ft、cap5；扫射开关双击 −3。</p>"
+        },
+        "rules": [
+          {
+            "key": "MartialProficiency",
+            "label": "猎杀武装熟练",
+            "kind": "attack",
+            "definition": [
+              "item:id:{item|_id}"
+            ],
+            "value": 1,
+            "requiresInvestment": false
+          },
+          {
+            "key": "RollOption",
+            "domain": "attack",
+            "option": "hunt-auto5-spray",
+            "toggleable": true,
+            "placement": "actions",
+            "label": "Auto-5 — 连匣扫射（本回合）"
+          },
+          {
+            "key": "FlatModifier",
+            "selector": "strike-attack-roll",
+            "type": "circumstance",
+            "value": -3,
+            "label": "连匣扫射",
+            "predicate": [
+              "hunt-auto5-spray",
+              "item:id:{item|_id}"
+            ],
+            "hideIfDisabled": true
+          }
+        ],
+        "slug": "auto-5",
+        "traits": {
+          "value": [
+            "concussive",
+            "scatter",
+            "capacity-5"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-weapon"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 装备",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 2
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 32
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "handsHeld": 2
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "半自动霰弹枪",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+            "data": {
+              "description": {
+                "value": "<p>半自动霰弹枪。</p>"
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "category": "martial",
+        "group": "firearm",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d10",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 30,
+        "expend": 1,
+        "ammo": {
+          "baseType": "rounds",
+          "builtIn": false,
+          "capacity": 5
+        },
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "weapon",
+          "huntSlots": 3,
+          "enName": "Auto-5",
+          "wikiIcon": "Weapon_Auto-5.png",
+          "baseWeapon": "auto-5"
+        }
+      }
+    },
+    {
+      "_id": "whbMsLematEmbed1",
+      "name": "LeMat Mark II 左轮",
+      "type": "weapon",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+      "system": {
+        "description": {
+          "value": "<p>九连发左轮，枪管下另有霰弹筒「重拳」。</p>\n<blockquote><p><strong>兵器之书 · LEMAT MARK II</strong> 弹巢九发 + 中央霰弹筒。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>左轮</strong> 单手；40 尺；装填 1；容量 9；1d8 穿刺；震荡、capacity-9</p>\n<p><strong>重拳</strong> 动作栏另有霰弹打击：20 尺、1d8 穿刺（散射感）、容量 1（每场建议 1–2 发）。</p>",
+          "gm": "<p>Hunt 原型 LeMat。1d8/40/cap9 + Strike 重拳霰弹。</p>"
+        },
+        "rules": [
+          {
+            "key": "MartialProficiency",
+            "label": "猎杀武装熟练",
+            "kind": "attack",
+            "definition": [
+              "item:id:{item|_id}"
+            ],
+            "value": 1,
+            "requiresInvestment": false
+          },
+          {
+            "key": "Strike",
+            "category": "martial",
+            "group": "firearm",
+            "slug": "lemat-punch",
+            "label": "LeMat · 重拳（霰弹）",
+            "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+            "damage": {
+              "base": {
+                "damageType": "piercing",
+                "dice": 1,
+                "die": "d8"
+              }
+            },
+            "traits": [
+              "concussive",
+              "scatter"
+            ],
+            "range": {
+              "increment": 20
+            }
+          }
+        ],
+        "slug": "lemat-mark-ii",
+        "traits": {
+          "value": [
+            "concussive",
+            "capacity-9"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-weapon"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 装备",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 22
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "九连发左轮",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+            "data": {
+              "description": {
+                "value": "<p>九连发左轮。</p>"
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "martial",
+        "group": "firearm",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 40,
+        "expend": 1,
+        "ammo": {
+          "baseType": "rounds",
+          "builtIn": false,
+          "capacity": 9
+        },
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "weapon",
+          "huntSlots": 2,
+          "enName": "LeMat Mark II",
+          "wikiIcon": "Weapon_LeMat.png",
+          "baseWeapon": "lemat-mark-ii"
+        }
+      }
+    },
+    {
+      "_id": "whbMsXbowEmbed01",
+      "name": "手弩 Hand Crossbow",
+      "type": "weapon",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/hand-crossbow-plain.png",
+      "system": {
+        "description": {
+          "value": "<p>单手轻弩：安静、致命，适合黑暗里送人「穿过帷幕」。</p>\n<blockquote><p><strong>兵器之书 · HAND CROSSBOW</strong> 短弩臂，拔弦上箭；枪声喧哗时它几乎不说话。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用弩；负载 1；单手；射程增量 <strong>60 尺</strong>；装填 1；容量 1</p>\n<p><strong>伤害</strong> 1d8 穿刺；特质：致命 d8</p>\n<hr />\n<p><strong>无声致命</strong> 此武器打击不带 auditory 特质；对未察觉你的目标，攻击 +1 环境。</p>",
+          "gm": "<p>Hunt 原型 Hand Crossbow。1d8 deadly-d8、60ft；无声；对未察觉 +1。</p>"
+        },
+        "rules": [
+          {
+            "key": "MartialProficiency",
+            "label": "猎杀武装熟练",
+            "kind": "attack",
+            "definition": [
+              "item:id:{item|_id}"
+            ],
+            "value": 1,
+            "requiresInvestment": false
+          },
+          {
+            "key": "RollOption",
+            "domain": "attack",
+            "option": "hunt-target-unaware",
+            "toggleable": true,
+            "placement": "actions",
+            "label": "手弩 — 目标未察觉你"
+          },
+          {
+            "key": "FlatModifier",
+            "selector": "strike-attack-roll",
+            "type": "circumstance",
+            "value": 1,
+            "label": "无声致命",
+            "predicate": [
+              "hunt-target-unaware",
+              "item:id:{item|_id}"
+            ],
+            "hideIfDisabled": true
+          }
+        ],
+        "slug": "hand-crossbow",
+        "traits": {
+          "value": [
+            "deadly-d8"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-weapon"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 装备",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 2
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 12
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "手弩",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+            "data": {
+              "description": {
+                "value": "<p>短臂弩。</p>"
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "martial",
+        "group": "bow",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d8",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 60,
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "weapon",
+          "huntSlots": 1,
+          "enName": "Hand Crossbow",
+          "wikiIcon": "Weapon_Hand_Crossbow.png",
+          "baseWeapon": "hand-crossbow"
+        }
+      }
+    },
+    {
+      "_id": "whbMsCalyEmbed01",
+      "name": "卡吕普特拉 Calyptra",
+      "type": "equipment",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/calyptra.png",
+      "system": {
+        "description": {
+          "value": "<p>这枚护身符曾是午夜之影在成为赏金猎人之前佩戴在胸前的胸针。如今，它装饰着她用来实现内心目标的武器：终结所有嗜血之人的生命，让他们化为飞蛾。</p>\n<hr />\n<p><strong>用法</strong> 佩戴（投资）。</p>\n<p><strong>嗜血猎手</strong> 对 GM 认定为「嗜血者 / 亡灵吸血者 / 白发女巫同党」的目标，你的打击伤害 +1 状态。</p>\n<p><strong>化为飞蛾</strong>（开关）本场 1 次：下次命中令目标 @Check[will|dc:resolve(@actor.level*2+14)|traits:emotion,fear,mental,occult]{意志}，失败则 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟），并视为「飞蛾」——对你下一次打击措手不及。</p>",
+          "gm": "<p>Charm Calyptra。对嗜血目标 +1 伤；化为飞蛾 1/场惊惧。</p>"
+        },
+        "rules": [
+          {
+            "key": "RollOption",
+            "domain": "damage",
+            "option": "hunt-bloodthirsty-target",
+            "toggleable": true,
+            "placement": "actions",
+            "label": "卡吕普特拉 — 目标为嗜血者（GM）"
+          },
+          {
+            "key": "FlatModifier",
+            "selector": "damage",
+            "type": "status",
+            "value": 1,
+            "label": "嗜血猎手",
+            "predicate": [
+              "hunt-bloodthirsty-target"
+            ],
+            "hideIfDisabled": true
+          },
+          {
+            "key": "RollOption",
+            "domain": "attack",
+            "option": "hunt-calyptra-moth",
+            "toggleable": true,
+            "placement": "actions",
+            "label": "卡吕普特拉 — 化为飞蛾（本场1次）"
+          },
+          {
+            "key": "Note",
+            "selector": "strike-damage",
+            "title": "化为飞蛾",
+            "text": "命中：意志失败则惊惧 1，且对你下一次打击措手不及。关闭开关。",
+            "predicate": [
+              "hunt-calyptra-moth"
+            ]
+          }
+        ],
+        "slug": "calyptra",
+        "traits": {
+          "value": [
+            "invested"
+          ],
+          "rarity": "rare",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-charm",
+            "midnights-shadow"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 战术",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 0
+        },
+        "price": {
+          "value": {
+            "gp": 25
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": true
+        },
+        "containerId": null,
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "飞蛾胸针",
+            "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+            "data": {
+              "description": {
+                "value": "<p>暗色飞蛾纹样胸针。</p>"
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "usage": {
+          "value": "worn"
+        }
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "tactic",
+          "enName": "Calyptra",
+          "theme": "midnights-shadow"
+        }
+      }
+    },
+    {
+      "_id": "whbMsAutoStrike1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/auto-5.png",
+      "name": "Auto-5",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 15
+        },
+        "damageRolls": {
+          "whbMsAutoStrike1dmg": {
+            "damage": "2d10+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAuto5Base]{Auto-5}。射程 <strong>30 尺</strong>。</p>\n<p>把某些飞蛾送往<strong>吞噬它们的光</strong>——不是温暖，是焚尽。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 30,
+        "rules": [],
+        "slug": "ms-auto5",
+        "traits": {
+          "value": [
+            "concussive",
+            "scatter"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbMsLematStr001",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+      "name": "LeMat",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbMsLematStr001dmg": {
+            "damage": "2d8+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>腋下安慰枪 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntLeMat0001]{LeMat}。40 尺；亦可打<strong>重拳</strong>霰弹。</p>\n<p>一种如同她脾气般短暂的、发自内心的死亡。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 40,
+        "rules": [],
+        "slug": "ms-lemat",
+        "traits": {
+          "value": [
+            "concussive"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbMsXbowStrike1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/hand-crossbow-plain.png",
+      "name": "手弩",
+      "sort": 250000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbMsXbowStrike1dmg": {
+            "damage": "2d8+3",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntHandXbow1]{手弩}。60 尺；黑暗中快速而无声。</p>\n<p>弩箭把夜行生物化作飞蛾，送回它们真正该去的地方。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 60,
+        "rules": [],
+        "slug": "ms-hand-xbow",
+        "traits": {
+          "value": [
+            "deadly-d8"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbMsMothCurse01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "飞蛾之刑",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>指定 30 尺内一名你看见的生物：@Check[will|dc:22|traits:emotion,fear,mental,occult,visual]{意志 DC 22}。</p>\n<p>失败：惊惧 1，且视为「飞蛾」——对你的下一次打击措手不及。大失败惊惧 2。每场每目标 1 次。</p>\n<p>有些灵魂不配安宁；她确保他们永远找不到。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ms-moth-doom",
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "occult"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbMsDevourLite1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/auto-5.png",
+      "name": "吞噬之光",
+      "sort": 350000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>频率</strong> 每场 1 次。以 Auto-5 打击；若目标带惊惧或「飞蛾」，伤害额外 @Damage[2d6[fire]] 并施加 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBurnFx001]{猎杀灼烬} 1 层。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ms-devouring-light",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbMsNightFall01",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/hand-crossbow-plain.png",
+      "name": "夜幕降临",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>在微光或黑暗中：以手弩打击，若你此前本回合已成功潜行或躲藏，该次打击视为对目标隐蔽（对方需持平），且命中后可免费快步 5 尺。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ms-nightfall",
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbMsCavalryAlt1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/1890-cavalry.png",
+      "name": "备选：1890 骑兵卡宾",
+      "sort": 700000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>GM 可把 Auto-5 换成 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntCavalry01]{1890 Cavalry}（死神之蜜皮 lore）：单发 80 尺、fatal-d10，专斩白发女巫与嗜血者。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ms-cavalry-alt",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbMsTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "午夜之影战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：暗影处决者——先标飞蛾，再无声或焚尽。</p>\n<ol>\n<li><strong>飞蛾之刑</strong> 点名</li>\n<li>黑暗里手弩 <strong>夜幕降临</strong>，或贴脸 LeMat 重拳</li>\n<li>群敌用 Auto-5；对飞蛾打出 <strong>吞噬之光</strong></li>\n<li>卡吕普特拉开关对准嗜血者</li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "ms-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 3
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "宽檐帽影 + 菱纹皮甲 + 弹带",
+        "value": 22
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "午夜之影：不给灵魂安息",
+        "max": 78,
+        "temp": 0,
+        "value": 78
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "午夜之影 · 飞蛾与复仇",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>艾比盖尔·海瑟薇「午夜之影」。飞蛾=死亡象征；她拒绝让嗜血者安息。装载：Auto-5 + LeMat + 手弩 + 卡吕普特拉。可选换 1890 Cavalry。皮肤不做独立物品。</p>\n<p>Creature 4 暗影处决。</p>",
+      "publicNotes": "<p>帽檐压住眼睛，红唇是唯一亮色。她把灵魂当成飞蛾——有的该扑向光，有的该被光吞掉。午夜不是掩护，是判决。</p>\n<p><em>四人 2 级团 · Creature 4 · 暗影处决/反嗜血</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "帽檐阴影；黑暗中仍能「看见」该灭的灵魂",
+      "mod": 13,
+      "senses": [
+        {
+          "type": "darkvision",
+          "range": 60
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 12
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐惧/心灵若来自亡灵",
+        "value": 13
+      }
+    },
+    "skills": {
+      "athletics": {
+        "base": 11
+      },
+      "intimidation": {
+        "base": 12
+      },
+      "occultism": {
+        "base": 12
+      },
+      "religion": {
+        "base": 11
+      },
+      "stealth": {
+        "base": 15
+      },
+      "survival": {
+        "base": 12
+      },
+      "thievery": {
+        "base": 13
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "午夜之影",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/midnights-shadow.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "darkvision"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "midnights-shadow",
+      "theme": "blood-testament",
+      "preferredLoadout": [
+        "auto-5",
+        "lemat-mark-ii",
+        "hand-crossbow",
+        "calyptra"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntAuto5Base",
+        "whbHuntLeMat0001",
+        "whbHuntHandXbow1",
+        "whbHuntCalyptra1"
+      ],
+      "alternateLoadout": [
+        "1890-cavalry"
+      ]
+    }
+  }
+}

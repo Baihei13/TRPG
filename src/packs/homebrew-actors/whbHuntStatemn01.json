@@ -597,6 +597,17 @@
       "loreLinks": [
         "commander-whitlaw",
         "pale-judge"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntDebateEd1",
+        "whbHuntNewHeir01",
+        "whbHuntFilibust1",
+        "whbHuntBirthrgt1",
+        "whbHuntNobleEx01",
+        "whbHuntDeathSen1",
+        "whbHuntFinlCon01",
+        "whbHuntGoldLust1",
+        "whbHuntStonewl01"
       ]
     }
   }

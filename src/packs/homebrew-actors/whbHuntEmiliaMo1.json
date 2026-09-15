@@ -564,6 +564,12 @@
         "caldwell-pax",
         "hunt-throwing-axes",
         "bear-trap"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntFront73C1",
+        "whbHuntPax000001",
+        "whbHuntThrAxe001",
+        "whbHuntBearTrp01"
       ]
     }
   }

@@ -12,9 +12,16 @@
       "sort": 100000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 7 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 7
+        },
         "damageRolls": {
           "whbLchDmgBite001": {
             "damage": "1d4+1",
@@ -32,8 +39,12 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
-        "traits": { "value": ["agile"] }
+        "slug": "叮咬",
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
       }
     },
     {
@@ -43,8 +54,12 @@
       "sort": 500000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>水蛭视力极差：仅有不精确视觉 <strong>15 尺</strong>。察觉到生物后会朝其爬去，并把位置「反馈」给所属肉头怪（见肉头怪「几乎失明」）。</p>"
@@ -56,8 +71,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "有限视力",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -67,8 +84,12 @@
       "sort": 600000,
       "type": "action",
       "system": {
-        "actionType": { "value": "free" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "free"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p><strong>触发</strong> 你以有限视力察觉到一个先前未察觉的敌人，或对该敌人造成毒素伤害</p>\n<p><strong>效果</strong> 60 尺内的所属肉头怪立即知晓该敌人的位置（对该敌人启用毒素感知的「可直接打击」待遇，持续至战斗结束或目标离开 60 尺）。</p>"
@@ -80,24 +101,43 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "示警宿主",
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 1 },
-      "dex": { "mod": 3 },
-      "con": { "mod": 1 },
-      "int": { "mod": -5 },
-      "wis": { "mod": 1 },
-      "cha": { "mod": -4 }
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 3
+      },
+      "con": {
+        "mod": 1
+      },
+      "int": {
+        "mod": -5
+      },
+      "wis": {
+        "mod": 1
+      },
+      "cha": {
+        "mod": -4
+      }
     },
     "attributes": {
-      "ac": { "details": "", "value": 15 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "",
+        "value": 15
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "",
         "max": 8,
@@ -106,13 +146,23 @@
       },
       "speed": {
         "value": 20,
-        "otherSpeeds": [{ "type": "climb", "value": 15 }]
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 15
+          }
+        ]
       }
     },
     "details": {
       "blurb": "肉头怪伴生 · 侦查与上毒",
-      "languages": { "details": "", "value": [] },
-      "level": { "value": -1 },
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
       "privateNotes": "<p>僵尸。打死会触发宿主「蛭巢反哺」。XP 可忽略或按僵尸计。</p>",
       "publicNotes": "<p>从肉头怪身躯滋生的腐沼水蛭。视力极差，却会爬向猎人叮咬上毒，把位置暴露给几乎失明的宿主。</p>\n<p><em>Creature −1 · 肉头怪护卫</em></p>",
       "publication": {
@@ -122,29 +172,57 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
+    "initiative": {
+      "statistic": "perception"
+    },
     "perception": {
       "details": "有限视力 15 尺（不精确）",
       "mod": 5,
       "senses": [
-        { "type": "low-light-vision", "acuity": "imprecise", "range": 15 },
-        { "type": "scent", "acuity": "imprecise", "range": 30 }
+        {
+          "type": "low-light-vision",
+          "acuity": "imprecise",
+          "range": 15
+        },
+        {
+          "type": "scent",
+          "acuity": "imprecise",
+          "range": 30
+        }
       ]
     },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 5 },
-      "reflex": { "saveDetail": "", "value": 7 },
-      "will": { "saveDetail": "", "value": 3 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 5
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 7
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 3
+      }
     },
     "skills": {
-      "athletics": { "base": 5 },
-      "stealth": { "base": 7 }
+      "athletics": {
+        "base": 5
+      },
+      "stealth": {
+        "base": 7
+      }
     },
     "traits": {
       "rarity": "common",
-      "size": { "value": "tiny" },
-      "value": ["animal", "mindless"]
+      "size": {
+        "value": "tiny"
+      },
+      "value": [
+        "animal",
+        "mindless"
+      ]
     }
   },
   "prototypeToken": {
@@ -158,12 +236,25 @@
     },
     "disposition": -1,
     "displayBars": 40,
-    "bar1": { "attribute": "attributes.hp" },
-    "sight": { "enabled": true, "range": 5, "visionMode": "basic" },
-    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 5,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
     "actorLink": false
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",

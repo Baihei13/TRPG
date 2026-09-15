@@ -1,0 +1,782 @@
+{
+  "_id": "whbHuntDsrtRose1",
+  "folder": "whbfolderHntHt01",
+  "name": "沙漠玫瑰 梅西·斯克里布纳",
+  "type": "npc",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/desert-rose.png",
+  "items": [
+    {
+      "_id": "whbDrMakoEmbed01",
+      "name": "Mako 1895 杠杆步枪",
+      "type": "weapon",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+      "system": {
+        "description": {
+          "value": "<p>美制杠杆步枪，循环快、单发伤高，可随时补弹。</p>\n<blockquote><p><strong>兵器之书 · MAKO 1895</strong> 同族 Winfield 杠杆枪的亲戚：威力换精度；厂方曾吹嘘沿海农夫可用它打短鳍鲭鲨。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>80 尺</strong>；装填 1；容量 5</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、volley、capacity-5</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}。</p>\n<hr />\n<p><strong>补弹循环</strong> 此武器打击不引发借机；装填后可免费快步 5 尺（每轮 1 次，见自动化）。</p>",
+          "gm": "<p>Hunt 原型 Mako 1895。1d10 P、80ft、cap5。补弹后免费快步（Swift 系）。</p>"
+        },
+        "rules": [
+          {
+            "key": "MartialProficiency",
+            "label": "猎杀武装熟练",
+            "kind": "attack",
+            "definition": [
+              "item:id:{item|_id}"
+            ],
+            "value": 1,
+            "requiresInvestment": false
+          },
+          {
+            "key": "Note",
+            "selector": "strike-attack-roll",
+            "title": "补弹循环",
+            "text": "打击不引发借机；装填后可免费快步（每轮 1）。",
+            "predicate": [
+              "item:id:{item|_id}"
+            ]
+          }
+        ],
+        "slug": "mako-1895",
+        "traits": {
+          "value": [
+            "concussive",
+            "volley",
+            "capacity-5"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-weapon"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 装备",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 2
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 28
+          }
+        },
+        "equipped": {
+          "carryType": "held",
+          "handsHeld": 2
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "杠杆步枪",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+            "data": {
+              "description": {
+                "value": "<p>杠杆步枪。</p>"
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-two-hands"
+        },
+        "category": "martial",
+        "group": "firearm",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d10",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 80,
+        "expend": 1,
+        "ammo": {
+          "baseType": "rounds",
+          "builtIn": false,
+          "capacity": 5
+        },
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "weapon",
+          "huntSlots": 3,
+          "enName": "Mako 1895",
+          "wikiIcon": "Weapon_Mako_1895.png",
+          "baseWeapon": "mako-1895"
+        }
+      }
+    },
+    {
+      "name": "Bornheim No.3 半自动手枪",
+      "type": "weapon",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+      "system": {
+        "description": {
+          "value": "<p>小型半自动手枪，射速快、后坐力小。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO. 3</strong>（另见半自动手枪）外观超前的 Bornheim No. 3 是最早的半自动手枪之一，配五发弹匣。以设计地城镇命名，商业上成就有限。设计师 Louis Schmeisser 后来设计了更多成功火器。第三型针对瑞士、德国与比利时军试中暴露的缺陷，强化了结构。</p></blockquote>\n<p><strong>熟练</strong> 持用此武器期间视为对其拥有<strong>受训</strong>熟练（无需火器或其他武器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> L；<strong>单手</strong>；<strong>射程增量</strong> 30 尺；<strong>装填</strong> 1；<strong>弹匣容量</strong> 5</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：震荡、横扫、capacity-5</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoPsn01]{毒弹}。</p>\n<hr />\n<p><strong>速射扳机</strong> <span class=\"action-glyph\">1</span> 你以一次操作对同一目标或不同目标进行<strong>两次</strong>以此武器的打击。两次攻击检定各承受 <strong>−3 环境减值</strong>，且<strong>共享同一多重攻击减值</strong>（都按你当前 MAP 结算，不在两次之间加深）。装备时动作栏会出现「Bornheim · 速射扳机」自动结算。</p>",
+          "gm": "<p>Hunt Bornheim No.3。12 gp。速射扳机：1 动作打两次，各 −3，同 MAP。</p>"
+        },
+        "rules": [
+          {
+            "key": "MartialProficiency",
+            "label": "猎杀武装熟练",
+            "kind": "attack",
+            "definition": [
+              "item:id:{item|_id}"
+            ],
+            "value": 1,
+            "requiresInvestment": false
+          },
+          {
+            "key": "Note",
+            "selector": "strike-attack-roll",
+            "title": "速射扳机",
+            "text": "可用 1 个动作打两次：各 −3 环境减值，共享同一 MAP。",
+            "predicate": [
+              "item:id:{item|_id}"
+            ]
+          }
+        ],
+        "slug": "bornheim-no-3",
+        "traits": {
+          "value": [
+            "concussive",
+            "sweep",
+            "capacity-5"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-weapon"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 装备",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 2
+        },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "hp": {
+          "value": 0,
+          "max": 0
+        },
+        "hardness": 0,
+        "price": {
+          "value": {
+            "gp": 12
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "handsHeld": 0
+        },
+        "containerId": null,
+        "size": "med",
+        "material": {
+          "type": null,
+          "grade": null
+        },
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "半自动手枪",
+            "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+            "data": {
+              "description": {
+                "value": "<p>造型前卫的短管半自动手枪。</p>"
+              }
+            }
+          }
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "category": "martial",
+        "group": "firearm",
+        "bonus": {
+          "value": 0
+        },
+        "bonusDamage": {
+          "value": 0
+        },
+        "damage": {
+          "dice": 1,
+          "die": "d4",
+          "damageType": "piercing",
+          "persistent": null
+        },
+        "splashDamage": {
+          "value": 0
+        },
+        "range": 30,
+        "expend": 1,
+        "ammo": {
+          "baseType": "rounds",
+          "builtIn": false,
+          "capacity": 5
+        },
+        "reload": {
+          "value": "1"
+        },
+        "grade": null,
+        "runes": {
+          "potency": 0,
+          "striking": 0,
+          "property": []
+        },
+        "specific": null,
+        "subitems": []
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "weapon",
+          "huntSlots": 1,
+          "wikiIcon": "Weapon_Bornheim_No._3.png"
+        }
+      },
+      "_id": "whbDrBornEmbed01"
+    },
+    {
+      "_id": "whbDrStamEmbed01",
+      "name": "耐力针（玫瑰水）",
+      "type": "consumable",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/stamina-shot.png",
+      "system": {
+        "description": {
+          "value": "<p>提神针剂。注入后疲劳一扫而空，脚步与扳机都变得轻快——但那股劲只能用在跑路或开枪上。</p>\n<blockquote><p><strong>医疗 · STAMINA SHOT</strong> 清疲乏，换一分钟的迅捷冲刺/打击。</p></blockquote>\n<hr />\n<p><strong>启动</strong> <span class=\"action-glyph\">1</span>（操作）Interact；<strong>需求</strong> 一只空闲的手握持注射器</p>\n<p><strong>效果</strong> 立即移除 @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{疲乏}。在接下来的 <strong>1 分钟</strong>内，你获得 @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{迅捷}，但由此获得的额外动作<strong>只能</strong>用于「行走（Stride）」或「打击（Strike）」。</p>\n<p>@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStamFx001]{效果：耐力针}</p>",
+          "gm": "<p>Stamina Shot。1 动作。清 Fatigued + Quickened 1 分钟（额外动作限 Stride/Strike）。自动化见 hunt-showdown-automation。</p>"
+        },
+        "rules": [],
+        "slug": "stamina-shot",
+        "traits": {
+          "value": [
+            "alchemical",
+            "consumable",
+            "elixir",
+            "healing"
+          ],
+          "rarity": "uncommon",
+          "otherTags": [
+            "hunt-showdown",
+            "hunt-medical"
+          ]
+        },
+        "publication": {
+          "title": "猎杀对决 — 医疗",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "level": {
+          "value": 3
+        },
+        "quantity": 2,
+        "baseItem": null,
+        "bulk": {
+          "value": 0.1
+        },
+        "price": {
+          "value": {
+            "gp": 25
+          }
+        },
+        "equipped": {
+          "carryType": "worn",
+          "invested": null
+        },
+        "containerId": null,
+        "size": "med",
+        "identification": {
+          "status": "identified",
+          "unidentified": {
+            "name": "提神针剂",
+            "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+            "data": {
+              "description": {
+                "value": "<p>装着琥珀色液体的注射器。</p>"
+              }
+            }
+          },
+          "misidentified": {}
+        },
+        "category": "other",
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "autoDestroy": true
+        },
+        "usage": {
+          "value": "held-in-one-hand"
+        },
+        "stackGroup": null
+      },
+      "flags": {
+        "wang-pf2e-homebrew": {
+          "source": "hunt-showdown",
+          "huntCategory": "medical",
+          "huntSlot": 1,
+          "enName": "Stamina Shot",
+          "grantsEffect": "whbHuntStamFx001"
+        }
+      }
+    },
+    {
+      "_id": "whbDrMakoStrike1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+      "name": "Mako 1895",
+      "sort": 100000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 16
+        },
+        "damageRolls": {
+          "whbDrMakoStrike1dmg": {
+            "damage": "2d10+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>主手嵌入 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntMako18951]{Mako 1895}。射程 <strong>80 尺</strong>。</p>\n<p>团长曾送她「幸运」步枪也救不了马戏团——如今她用同样的准头对准马戏残骸。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 80,
+        "rules": [],
+        "slug": "dr-mako",
+        "traits": {
+          "value": [
+            "concussive",
+            "volley"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbDrBornStrike1",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
+      "name": "Bornheim No.3",
+      "sort": 200000,
+      "type": "melee",
+      "system": {
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 17
+        },
+        "damageRolls": {
+          "whbDrBornStrike1dmg": {
+            "damage": "2d4+4",
+            "damageType": "piercing"
+          }
+        },
+        "description": {
+          "value": "<p>副手 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}。射程 <strong>30 尺</strong>。美貌与凶猛的展示品。</p>\n<p>物品栏中的 Bornheim 可触发<strong>速射扳机</strong>自动化。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "range": 30,
+        "rules": [],
+        "slug": "dr-bornheim",
+        "traits": {
+          "value": [
+            "concussive",
+            "sweep"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbDrRapidFire01",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "神枪连射",
+      "sort": 300000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>以 Bornheim 发动两次打击（各 −3，共享 MAP），或对同一目标声明「爆头排练」：下次射击攻击 +2 环境（本场 1 次，与速射不同时叠）。</p>\n<p>一整天的射击训练让她知道：每一颗子弹都至关重要。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "dr-trick-shot",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbDrRosewater01",
+      "img": "modules/wang-pf2e-homebrew/assets/hunt/stamina-shot.png",
+      "name": "玫瑰水提神",
+      "sort": 400000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "category": "defensive",
+        "description": {
+          "value": "<p>使用物品栏 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntStamShot1]{耐力针}：清除疲乏，获得迅捷 1 分钟（额外动作限行走/打击）。自动化会套用效果。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "dr-rosewater",
+        "traits": {
+          "value": [
+            "manipulate",
+            "healing"
+          ]
+        }
+      }
+    },
+    {
+      "_id": "whbDrCircusVeng1",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "马戏复仇",
+      "sort": 500000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>对 GM 认定为「谋杀马戏团」相关目标（团员、残党、赫利奥石爪牙等）：打击伤害 +2 状态，且恐吓检定 +2 状态。</p>\n<p>波斯特·马龙告诉她真相之后，清醒与怒火同行。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "dr-circus-vengeance",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbDrDeadeye0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "沙漠神枪",
+      "sort": 600000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p>距离 30 尺及以上的射击攻击 +1 环境。重击时忽略目标的标准掩蔽 AC 环境加值。</p>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "dr-deadeye",
+        "traits": {
+          "value": []
+        }
+      }
+    },
+    {
+      "_id": "whbDrTactics0001",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "name": "沙漠玫瑰战术（GM）",
+      "sort": 900000,
+      "type": "action",
+      "system": {
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "category": "offensive",
+        "description": {
+          "value": "<p><strong>定位</strong>：神枪手中距压制——Mako 点名，Bornheim 收尾。</p>\n<ol>\n<li>远距 Mako 点杀优先目标</li>\n<li>逼近用 Bornheim <strong>速射/神枪连射</strong></li>\n<li>听感麻木时立刻 <strong>玫瑰水</strong></li>\n<li>对马戏团残党打出 <strong>马戏复仇</strong></li>\n</ol>"
+        },
+        "publication": {
+          "title": "猎杀对决 — 猎人",
+          "authors": "Wang Homebrew / Hunt: Showdown",
+          "license": "ORC",
+          "remaster": true
+        },
+        "rules": [],
+        "slug": "dr-tactics",
+        "traits": {
+          "value": []
+        }
+      }
+    }
+  ],
+  "effects": [],
+  "system": {
+    "abilities": {
+      "str": {
+        "mod": 2
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 2
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 3
+      }
+    },
+    "attributes": {
+      "ac": {
+        "details": "牛仔帽 + 表演外套 + 勋章绶带",
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      },
+      "hp": {
+        "details": "沙漠玫瑰：准头与怒火",
+        "max": 72,
+        "temp": 0,
+        "value": 72
+      },
+      "speed": {
+        "value": 30,
+        "otherSpeeds": []
+      },
+      "resistances": [],
+      "weaknesses": [],
+      "immunities": []
+    },
+    "details": {
+      "blurb": "沙漠玫瑰 · 神枪手复仇",
+      "languages": {
+        "details": "",
+        "value": [
+          "common"
+        ]
+      },
+      "level": {
+        "value": 4
+      },
+      "privateNotes": "<p>梅西·斯克里布纳（Mercy Scribner）「沙漠玫瑰」。幼年随父习枪，加入谋杀马戏团；赫利奥石来后逃离。波斯特·马龙告知真相后，带清醒与复仇逼近马戏团。</p>\n<p>装载：Mako 1895 + Bornheim No.3 + 耐力针×2（玫瑰水皮 lore）。皮肤不做独立物品。</p>\n<p>Creature 4 神枪手。</p>",
+      "publicNotes": "<p>勋章挂满前襟，红领带在风里抖。她曾是马戏团的神枪明星——如今准星对准的是当年的班子。美貌仍在，凶猛不再表演。</p>\n<p><em>四人 2 级团 · Creature 4 · 神枪手/马戏复仇</em></p>",
+      "publication": {
+        "title": "猎杀对决 — 猎人",
+        "authors": "Wang Homebrew / Hunt: Showdown",
+        "license": "ORC",
+        "remaster": true
+      }
+    },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "神枪手视力；对哑火与「霉运」异常敏感",
+      "mod": 14,
+      "senses": [
+        {
+          "type": "low-light-vision"
+        }
+      ]
+    },
+    "resources": {},
+    "saves": {
+      "fortitude": {
+        "saveDetail": "",
+        "value": 11
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐吓若来自马戏残党",
+        "value": 12
+      }
+    },
+    "skills": {
+      "acrobatics": {
+        "base": 14
+      },
+      "athletics": {
+        "base": 10
+      },
+      "deception": {
+        "base": 12
+      },
+      "intimidation": {
+        "base": 13
+      },
+      "performance": {
+        "base": 14
+      },
+      "stealth": {
+        "base": 12
+      },
+      "survival": {
+        "base": 12
+      }
+    },
+    "traits": {
+      "rarity": "unique",
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
+    }
+  },
+  "prototypeToken": {
+    "name": "沙漠玫瑰",
+    "width": 1,
+    "height": 1,
+    "texture": {
+      "src": "modules/wang-pf2e-homebrew/assets/hunt/desert-rose.png",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "disposition": -1,
+    "displayBars": 40,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "basic"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
+    "actorLink": false
+  },
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntHunter": "desert-rose",
+      "theme": "murder-circus",
+      "preferredLoadout": [
+        "mako-1895",
+        "bornheim-no-3",
+        "stamina-shot"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntMako18951",
+        "whbHuntBornheim1",
+        "whbHuntStamShot1"
+      ]
+    }
+  }
+}

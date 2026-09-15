@@ -1,6 +1,17 @@
 /**
  * 猎杀对决：武器皮肤、命中状态、招牌动作、双形态效果自动化。
  */
+import { installHuntFullAuto } from "./hunt-full-auto.mjs";
+import {
+  installHuntBloodMoon,
+  toggleBloodMoon,
+  isBloodMoonActive,
+  applyBloodMoonToActor,
+  removeBloodMoonFromActor,
+} from "./hunt-blood-moon.mjs";
+
+export { toggleBloodMoon, isBloodMoonActive, applyBloodMoonToActor, removeBloodMoonFromActor };
+
 const MODULE_ID = "wang-pf2e-homebrew";
 const FLAG = "huntShowdown";
 const PACK = `${MODULE_ID}.homebrew-items`;
@@ -85,6 +96,11 @@ const SWIFT_SLUGS = new Set([
   "winfield-m1873-swift",
   "redmartin-swift",
   "noble-execution",
+  "mako-1895",
+  "the-redmartin",
+  "redmartin-aperture",
+  "false-inheritance",
+  "debates-end",
 ]);
 
 /** 命中成功 → 叠灼烬 */
@@ -97,10 +113,37 @@ const BURN_ON_HIT = new Set([
   "fire-bomb",
   "liquid-fire-bomb",
   "hellfire-bomb",
+  "chefs-kiss",
+  "path-revelation-punch",
+  "lemat-punch",
 ]);
 
 /** 命中 → 绞索减速 */
 const NOOSE_SLUGS = new Set(["the-noose", "hardin-noose"]);
+
+/** 命中（或重击）→ 尝试惊惧提示 / 条件 */
+const FEAR_ON_HIT = new Set([
+  "widows-son",
+  "betrayed-loyalty",
+  "batters-eye",
+  "empty-cairn-bayonet",
+  "calyptra",
+]);
+
+/** 达姆弹等 → 流血提示（持续流血由 GM/系统处理；此处叠备注） */
+const BLEED_AMMO_SLUGS = new Set(["hunt-dumdum-ammo", "dumdum"]);
+
+/** 怪物命中施加灼烬（按 huntMonster） */
+const MONSTER_BURN = new Set(["immolator", "hellborn", "butcher"]);
+
+/** 怪物命中施加猎杀中毒 */
+const MONSTER_POISON = new Set(["hive-swarm", "meathead-leech", "grunt-doctor", "hive"]);
+
+/** 怪物 melee/action 名关键词 → 灼烬 */
+const MONSTER_BURN_NAME_RE = /喷焰|熔岩|燃烧|火把|焦爪|肉钩|自燃|火球|熔溅/;
+
+/** 怪物名关键词 → 中毒 */
+const MONSTER_POISON_NAME_RE = /叮刺|叮咬|毒锯|毒蜂|水蛭/;
 
 const ACTION_SLUGS = {
   bornheim: "hunt-bornheim-rapid",
@@ -126,9 +169,12 @@ function findBySlug(actor, type, slug) {
 }
 
 function findWeaponBySlugs(actor, slugSet) {
-  return (actor?.itemTypes?.weapon ?? []).find(
-    (w) => slugSet.has(w.system?.slug) && (w.isEquipped || w.system?.equipped?.carryType === "held")
-  );
+  return (actor?.itemTypes?.weapon ?? []).find((w) => {
+    if (!slugSet.has(w.system?.slug)) return false;
+    const carry = w.system?.equipped?.carryType;
+    // NPC 猎人常把配枪标为 worn；只要没扔掉就算可用
+    return w.isEquipped || carry === "held" || carry === "worn" || carry == null;
+  });
 }
 
 function roundKey() {
@@ -1204,6 +1250,135 @@ const HUNTER_ACTION_HANDLERS = {
   "giggles-curtain": handleGigglesCurtain,
   "giggles-misdirect": handleGigglesMisdirect,
   "edward-burst": (a) => handleDoubleStrike(a, "edward-thats-life", "无情连射"),
+  "edward-fight-back": async (actor) => {
+    const src = await getPackItem("whbHuntFightBk01");
+    if (src) {
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>奋起反击</strong>：请使用物品栏中的奋起反击针，或手动结算治疗 + 再生效果。</p>`,
+      });
+    }
+    const half = Number(actor.system?.attributes?.hp?.max ?? 0) / 2;
+    const hp = Number(actor.system?.attributes?.hp?.value ?? 0);
+    if (hp <= half) {
+      await ChatMessage.create({
+        content: `<p>半血以下：另得 10 临时生命值（请手动加）。</p>`,
+      });
+    }
+  },
+  "dr-rosewater": async (actor) => {
+    const shot = findBySlug(actor, "consumable", SLUGS.stamina);
+    try {
+      if (typeof actor.decreaseCondition === "function") await actor.decreaseCondition(FATIGUED_SLUG, { forceRemove: true });
+      else if (typeof actor.toggleCondition === "function") await actor.toggleCondition(FATIGUED_SLUG, { active: false });
+    } catch {
+      /* ignore */
+    }
+    if (shot) {
+      await removeEffectsBySlug(actor, "effect-stamina-shot");
+      await applyCompendiumEffect(actor, EFFECT_IDS.stamina);
+      const qty = Number(shot.system?.quantity ?? 1);
+      if (qty > 1) await shot.update({ "system.quantity": qty - 1 });
+      else if (shot.system?.uses) {
+        const left = Math.max(0, Number(shot.system.uses.value ?? 1) - 1);
+        if (left <= 0 && shot.system.uses.autoDestroy) await shot.delete();
+        else await shot.update({ "system.uses.value": left });
+      } else await shot.delete().catch(() => {});
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>玫瑰水提神</strong>：已尝试清除疲乏并施加耐力针效果。</p>`,
+      });
+    } else {
+      await applyCompendiumEffect(actor, EFFECT_IDS.stamina);
+      await ChatMessage.create({
+        content: `<p><strong>玫瑰水</strong>：无耐力针物品，仍施加耐力效果（GM 可扣消耗）。</p>`,
+      });
+    }
+  },
+  "dr-trick-shot": async (actor) => {
+    await handleBornheimRapid(actor);
+  },
+  "ms-moth-doom": async (actor) => {
+    const target = primaryTarget(actor);
+    if (!target) return ui.notifications.warn("请选中飞蛾之刑目标");
+    const dos = await rollSave(target, "will", 22, ["emotion", "fear", "mental", "occult", "visual"]);
+    if (dos !== null && dos <= 1) {
+      await applyPF2eCondition(target, "frightened", dos <= 0 ? 2 : 1);
+      await applyPF2eCondition(target, "off-guard");
+    }
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>飞蛾之刑</strong>：已对 ${target.name} 结算意志 DC 22。</p>`,
+    });
+  },
+  "ms-devouring-light": async (actor) => {
+    const target = primaryTarget(actor);
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>吞噬之光</strong>：对本场 1 次 Auto-5 打击；若目标惊惧/飞蛾，额外火焰并叠灼烬。请手动完成打击。</p>`,
+    });
+    if (target) await applyCompendiumEffect(target, EFFECT_IDS.burn);
+  },
+  "ms-nightfall": async (actor) => {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>夜幕降临</strong>：黑暗中手弩打击视为隐蔽，命中后可免费快步 5 尺。</p>`,
+    });
+    await grantSwiftStep(actor);
+  },
+  "jv-pierce-black-heart": async (actor) => {
+    const target = primaryTarget(actor);
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>刺穿黑心</strong>：下次刺刀/步枪打击 +2；命中额外 2d6 心灵 + 1d4 持续心灵。请手动完成打击。</p>`,
+    });
+    if (target) {
+      await ChatMessage.create({
+        content: `<p>目标 ${target.name}：命中后请结算心灵伤害。</p>`,
+      });
+    }
+  },
+  "cook-broth": async (actor) => {
+    const allies = targetsInRange(actor, 30, { enemiesOnly: false }).filter(
+      (a) => a !== actor
+    );
+    const list = allies.length ? allies : [actor];
+    for (const a of list.slice(0, 4)) {
+      await ChatMessage.create({
+        content: `<p><strong>骨汤</strong>：${a.name} 恢复 @Damage[(2d8+4)[healing]]（请点击结算）。</p>`,
+      });
+    }
+  },
+  "laura-sneak-attack": async (actor) => {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>消音狙伏击</strong>：对未察觉/隐蔽目标下次梅纳德打击额外精密（见角色卡）。</p>`,
+    });
+  },
+  "flymander-heavy": async (actor) => {
+    await ChatMessage.create({
+      content: `<p><strong>沉重脚步</strong>：请使用物品栏警示拌雷（heavy-footfalls），布置后触发自动化危境。</p>`,
+    });
+  },
+  "red-raven-damn": async (actor) => {
+    await ChatMessage.create({
+      content: `<p><strong>该死的脚步</strong>：请使用铁丝网拌雷布置（自动化危境）。</p>`,
+    });
+  },
+  "red-raven-toxic": async (actor) => {
+    await ChatMessage.create({
+      content: `<p><strong>有毒脚步</strong>：请使用毒气拌雷布置（自动化危境）。</p>`,
+    });
+  },
+  "riggins-question": async (actor) => {
+    const target = primaryTarget(actor);
+    if (!target) return ui.notifications.warn("请选中扪心自问目标");
+    const dos = await rollSave(target, "will", 22, ["emotion", "mental", "auditory"]);
+    if (dos !== null && dos <= 1) await applyPF2eCondition(target, "frightened", 1);
+    await ChatMessage.create({
+      content: `<p><strong>扪心自问 / 点名册</strong>：已对 ${target.name} 结算意志。</p>`,
+    });
+  },
   "hardin-unreliable": async (actor) => {
     const target = primaryTarget(actor);
     await ChatMessage.create({
@@ -1518,6 +1693,18 @@ function installActionHandler() {
     if (!item || !actor || !canManage(actor)) return;
     if (item.type !== "action") return;
     const slug = item.flags?.[MODULE_ID]?.huntGrantedAction ?? item.system?.slug;
+    if (!slug) return; // 无 slug 交由 full-auto 按名称/描述结算
+
+    const isKnown =
+      slug === ACTION_SLUGS.bornheim ||
+      slug === ACTION_SLUGS.necro ||
+      slug === ACTION_SLUGS.dauntless ||
+      slug === ACTION_SLUGS.swiftStep ||
+      slug === ACTION_SLUGS.ambiReload ||
+      slug === ACTION_SLUGS.bountyDarkSight ||
+      Boolean(HUNTER_ACTION_HANDLERS[slug]);
+    if (!isKnown) return; // 其余交由 full-auto EXTRA_HUNTER / 描述解析
+
     const key = `${message.id}:${slug}`;
     if (handled.has(key)) return;
     handled.add(key);
@@ -1591,22 +1778,36 @@ function installHitEffectHook() {
 
     const item = message.item;
     const slug = item?.system?.slug ?? message.flags?.pf2e?.origin?.slug ?? "";
+    const itemName = item?.name ?? "";
     const options = ctx.options ?? [];
     const optionStr = options.join(" ");
+    const flavor = `${slug} ${optionStr} ${message.flavor ?? ""} ${itemName}`;
 
     const targets = await resolveTargetActors(message);
     if (!targets.length) return;
 
+    const attacker = message.actor;
+    const huntMonster = attacker?.flags?.[MODULE_ID]?.huntMonster;
+
     const isBurn =
       BURN_ON_HIT.has(slug) ||
       options.some((o) => [...BURN_ON_HIT].some((s) => o.includes(s))) ||
-      /marksmans-delight|brass-flower|火弩|龙息|灼烬/.test(`${slug} ${optionStr} ${message.flavor ?? ""}`);
+      /marksmans-delight|brass-flower|火弩|龙息|灼烬|chef.?s.?kiss|主厨之吻/.test(flavor) ||
+      (MONSTER_BURN.has(huntMonster) && (MONSTER_BURN_NAME_RE.test(itemName) || /fire|火焰|灼烬/.test(flavor))) ||
+      (MONSTER_BURN.has(huntMonster) && item?.type === "melee" && /火|焰|熔|焦|燃/.test(itemName));
 
     if (isBurn) {
       for (const t of targets) await applyCompendiumEffect(t, EFFECT_IDS.burn);
     }
 
-    if (NOOSE_SLUGS.has(slug) || /the-noose|绞索/.test(`${slug} ${optionStr}`)) {
+    const isPoisonMonster =
+      MONSTER_POISON.has(huntMonster) &&
+      (MONSTER_POISON_NAME_RE.test(itemName) || item?.type === "melee" || /poison|毒/.test(flavor));
+    if (isPoisonMonster) {
+      for (const t of targets) await applyCompendiumEffect(t, EFFECT_IDS.poison);
+    }
+
+    if (NOOSE_SLUGS.has(slug) || /the-noose|绞索/.test(flavor)) {
       for (const t of targets) await applyCompendiumEffect(t, EFFECT_IDS.nooseSlow);
     }
 
@@ -1624,6 +1825,32 @@ function installHitEffectHook() {
       /hunt-poison-ammo|毒弹/.test(`${message.flavor ?? ""}`);
     if (isPoisonAmmo) {
       for (const t of targets) await applyCompendiumEffect(t, EFFECT_IDS.poison);
+    }
+
+    const isBleedAmmo =
+      BLEED_AMMO_SLUGS.has(ammoSlug) ||
+      /dumdum|达姆/.test(`${ammoSlug ?? ""} ${message.flavor ?? ""}`);
+    if (isBleedAmmo) {
+      for (const t of targets) {
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor: attacker }),
+          content: `<p><strong>达姆弹</strong>：请对 ${t.name} 施加持续流血（若尚未施加）。</p>`,
+        });
+      }
+    }
+
+    // 惊惧类武器：重击或 Note 开关时提示豁免
+    if (
+      (FEAR_ON_HIT.has(slug) || /widows-son|betrayed-loyalty|batters-eye|寡妇|背叛的忠诚|击球手/.test(flavor)) &&
+      (ctx.outcome === "criticalSuccess" || /fear|惊惧|诅咒刻痕|点名册/.test(flavor))
+    ) {
+      const dc = 14 + 2 * Number(attacker?.level ?? attacker?.system?.details?.level?.value ?? 4);
+      for (const t of targets) {
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor: attacker }),
+          content: `<p><strong>精神冲击</strong>：${t.name} 请进行 @Check[will|dc:${dc}|traits:emotion,fear,mental]{意志 DC ${dc}}（失败惊惧 1）。</p>`,
+        });
+      }
     }
   });
 }
@@ -1674,7 +1901,10 @@ function installBountyTokenHooks() {
 function installSyncHooks() {
   const sync = (doc) => {
     const actor = doc?.actor ?? (doc?.documentName === "Actor" ? doc : null);
-    if (actor) syncGrantedActions(actor).catch(console.error);
+    if (actor) {
+      syncGrantedActions(actor).catch(console.error);
+      syncHunterInventory(actor).catch(console.error);
+    }
   };
   Hooks.on("createItem", (item) => {
     if (item.parent) sync(item.parent);
@@ -1694,8 +1924,86 @@ function installSyncHooks() {
     if (tokenDoc.actor) sync(tokenDoc.actor);
   });
   Hooks.once("ready", () => {
-    for (const a of game.actors.contents) syncGrantedActions(a).catch(() => {});
+    for (const a of game.actors.contents) {
+      syncGrantedActions(a).catch(() => {});
+      syncHunterInventory(a).catch(() => {});
+    }
   });
+}
+
+/**
+ * 猎人物品栏同步：按 preferredLoadoutIds / preferredLoadout 从合集嵌入缺失的原型装备。
+ * 解决多数猎人只有 melee 打击、没有真实武器/消耗品因而无法触发自动化的问题。
+ */
+async function syncHunterInventory(actor) {
+  if (!actor || actor.type !== "npc") return;
+  if (!game.user.isGM && !actor.isOwner) return;
+  const flags = actor.flags?.[MODULE_ID];
+  if (!flags?.huntHunter) return;
+  if (syncing.has(actor.id)) return;
+  syncing.add(actor.id);
+  try {
+    const pack = game.packs.get(PACK);
+    if (!pack) return;
+
+    const ids = Array.isArray(flags.preferredLoadoutIds) ? flags.preferredLoadoutIds.filter(Boolean) : [];
+    const slugs = Array.isArray(flags.preferredLoadout) ? flags.preferredLoadout.filter(Boolean) : [];
+
+    /** @type {string[]} */
+    let toFetch = [...ids];
+    if (!toFetch.length && slugs.length) {
+      const index = pack.index?.size ? pack.index : await pack.getIndex({ fields: ["system.slug"] });
+      for (const slug of slugs) {
+        const hit = [...index].find((e) => e.system?.slug === slug || e.slug === slug);
+        if (hit?._id) toFetch.push(hit._id);
+      }
+    }
+    if (!toFetch.length) return;
+
+    const existingSlugs = new Set(
+      actor.items.contents
+        .map((i) => i.system?.slug)
+        .filter(Boolean),
+    );
+    const createData = [];
+    for (const id of toFetch) {
+      const src = await pack.getDocument(id);
+      if (!src) continue;
+      const slug = src.system?.slug;
+      if (slug && existingSlugs.has(slug)) continue;
+      // 已有同名嵌入（无 slug）也跳过
+      if (actor.items.find((i) => i.name === src.name && i.type === src.type)) continue;
+      const data = src.toObject();
+      delete data._id;
+      delete data.folder;
+      if (data.type === "consumable") {
+        data.system = data.system ?? {};
+        data.system.quantity = Math.max(1, Number(data.system.quantity) || 1);
+      }
+      createData.push(data);
+      if (slug) existingSlugs.add(slug);
+    }
+    if (!createData.length) return;
+    await Item.createDocuments(createData, { parent: actor, render: false });
+    await syncGrantedActions(actor);
+  } catch (err) {
+    console.warn(`${MODULE_ID} | syncHunterInventory`, err);
+  } finally {
+    syncing.delete(actor.id);
+  }
+}
+
+/** 供宏 / 控制台：强制为选中猎人同步装载 */
+export async function forceSyncHunterInventory(actor) {
+  if (!actor) {
+    actor = canvas.tokens?.controlled?.[0]?.actor ?? game.user.character;
+  }
+  if (!actor) {
+    ui.notifications.warn("请先选中一名猎人 Token / Actor");
+    return;
+  }
+  await syncHunterInventory(actor);
+  ui.notifications.info(`已尝试同步装载：${actor.name}`);
 }
 
 /** 要塞货气球：战斗每轮按开阀数推进充气进度（货箱本身不记账）。 */
@@ -1819,6 +2127,61 @@ function installBanishingHooks() {
   });
 }
 
+/** 怪物阶段：屠夫狂暴/断头、喷火怪临终提示 */
+function installMonsterPhaseHooks() {
+  Hooks.on("updateActor", async (actor, changes) => {
+    if (!game.user.isGM) return;
+    const monster = actor.flags?.[MODULE_ID]?.huntMonster;
+    if (!monster) return;
+    const hp = changes.system?.attributes?.hp?.value;
+    if (typeof hp !== "number") return;
+    const max = Number(actor.system?.attributes?.hp?.max ?? 0);
+    if (!max) return;
+
+    if (monster === "butcher") {
+      const flagged = actor.getFlag(MODULE_ID, "butcherPhases") || {};
+      if (hp <= max * (2 / 3) && !flagged.rage) {
+        await actor.setFlag(MODULE_ID, "butcherPhases", { ...flagged, rage: true });
+        const has = findBySlug(actor, "effect", "effect-butcher-rage") || findBySlug(actor, "effect", "butcher-rage");
+        if (!has) await applyCompendiumEffect(actor, "whbHuntBtcRgFx01");
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          content: `<p><strong>屠夫 · 狂暴</strong>：已尝试施加狂暴效果（2/3 血）。</p>`,
+        });
+      }
+      if (hp <= max * 0.25 && !flagged.headless) {
+        await actor.setFlag(MODULE_ID, "butcherPhases", { ...flagged, rage: true, headless: true });
+        await applyCompendiumEffect(actor, "whbHuntBtcHdFx01");
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          content: `<p><strong>屠夫 · 断头</strong>：已尝试施加断头效果（1/4 血）。</p>`,
+        });
+      }
+    }
+
+    if (monster === "immolator" && hp <= 0) {
+      const key = `immolatorDeath:${actor.id}`;
+      if (handled.has(key)) return;
+      handled.add(key);
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>喷火怪 · 临终喷焰</strong>：以尸体为中心 5 尺爆发 2d6 火焰 + 灼烬（毒素击杀除外）。请对邻接生物结算。</p>`,
+      });
+    }
+
+    if (monster === "hellborn" && hp <= max * 0.5) {
+      const flagged = actor.getFlag(MODULE_ID, "hellbornHalf");
+      if (!flagged) {
+        await actor.setFlag(MODULE_ID, "hellbornHalf", true);
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          content: `<p><strong>狱生 · 半血</strong>：熔岩连射改为 4 枚火球。</p>`,
+        });
+      }
+    }
+  });
+}
+
 export function installHuntShowdownAutomation() {
   installStackingHook();
   installPoisonTick();
@@ -1835,6 +2198,22 @@ export function installHuntShowdownAutomation() {
   installBountyTokenHooks();
   installCargoBalloonHooks();
   installBanishingHooks();
+  installMonsterPhaseHooks();
   installSyncHooks();
-  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.34 banishing)`);
+  installHuntBloodMoon();
+  installHuntFullAuto({
+    canManage,
+    handled,
+    applyCompendiumEffect,
+    applyPF2eCondition,
+    rollSave,
+    primaryTarget,
+    targetsInRange,
+    grantSwiftStep,
+    handleDoubleStrike,
+    handleBornheimRapid,
+    findBySlug,
+    getPackItem,
+  });
+  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.36.9 blood-moon)`);
 }

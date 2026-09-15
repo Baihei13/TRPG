@@ -1,0 +1,19 @@
+{
+  "_id": "whbHuntBldMoonM1",
+  "name": "血月（场景开关）",
+  "type": "script",
+  "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+  "scope": "global",
+  "command": "/**\n * 切换当前场景「血月」：\n * 开 → 全场猎杀怪物 +1 挑战等级并抬数据\n * 关 → 按快照还原\n */\nconst api = game.modules.get(\"wang-pf2e-homebrew\")?.api;\nif (!api?.toggleBloodMoon) {\n  ui.notifications.error(\"模块 API 未就绪：toggleBloodMoon\");\n} else {\n  await api.toggleBloodMoon();\n}\n",
+  "folder": "whbHntFldMac0001",
+  "sort": 130,
+  "ownership": {
+    "default": 1
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "purpose": "hunt-blood-moon-toggle",
+      "source": "hunt-showdown"
+    }
+  }
+}

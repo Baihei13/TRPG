@@ -518,6 +518,11 @@
         "thats-life",
         "widows-son",
         "fight-back"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntThatsLi01",
+        "whbHuntWidowSo01",
+        "whbHuntFightBk01"
       ]
     }
   }

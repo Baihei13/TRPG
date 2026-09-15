@@ -1,0 +1,152 @@
+{
+  "_id": "whbHuntAuto5Base",
+  "folder": "whbHntFldWpn0001",
+  "name": "Auto-5 半自动霰弹枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/auto-5.png",
+  "system": {
+    "description": {
+      "value": "<p>半自动霰弹：管匣连发，近距撕开成群飞蛾与血渴者。</p>\n<blockquote><p><strong>兵器之书 · BROWNING AUTO-5</strong> 早期半自动霰弹；后坐力驱动退壳上膛，射速高、噪音更大。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>30 尺</strong>；装填 1；容量 5</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、scatter、capacity-5</p>\n<hr />\n<p><strong>连匣扫射</strong>（开关）开启时，一次操作发动<strong>两次</strong>此武器打击，各 −3 环境，共享同一 MAP。每回合限 1 次后建议关闭。</p>",
+      "gm": "<p>Hunt 原型 Auto-5。1d10 scatter、30ft、cap5；扫射开关双击 −3。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-auto5-spray",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "Auto-5 — 连匣扫射（本回合）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": -3,
+        "label": "连匣扫射",
+        "predicate": [
+          "hunt-auto5-spray",
+          "item:id:{item|_id}"
+        ],
+        "hideIfDisabled": true
+      }
+    ],
+    "slug": "auto-5",
+    "traits": {
+      "value": [
+        "concussive",
+        "scatter",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 32
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "半自动霰弹枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>半自动霰弹枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 30,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Auto-5",
+      "wikiIcon": "Weapon_Auto-5.png",
+      "baseWeapon": "auto-5"
+    }
+  }
+}

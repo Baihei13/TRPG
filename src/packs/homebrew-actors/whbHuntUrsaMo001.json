@@ -12,9 +12,16 @@
       "sort": 100000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 14 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 14
+        },
         "damageRolls": {
           "whbUrsDmgClaw001": {
             "damage": "2d8+7",
@@ -32,8 +39,12 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
-        "traits": { "value": ["agile"] }
+        "slug": "利爪",
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
       }
     },
     {
@@ -43,9 +54,16 @@
       "sort": 200000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 14 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 14
+        },
         "damageRolls": {
           "whbUrsDmgBite001": {
             "damage": "2d10+7",
@@ -63,8 +81,10 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "双头撕咬",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -74,8 +94,12 @@
       "sort": 500000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>死神熊能嗅到鲜血。对正在受到<strong>持续流血</strong>的生物：</p>\n<ul>\n<li>在 <strong>60 尺</strong>内拥有<strong>不精确</strong>感知；</li>\n<li>在 <strong>30 尺</strong>内可直接锁定打击（无视隐蔽所需的 DC 5 持平检定）；</li>\n<li>对其打击获得 +1 环境加值。</li>\n</ul>"
@@ -87,8 +111,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "血腥嗅觉",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -98,8 +124,12 @@
       "sort": 510000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "offensive",
         "description": {
           "value": "<p>当死神熊受到某个生物的伤害时，它会将该生物记为<strong>猎物</strong>（同时只保留最近一个）。只要猎物在 120 尺内，死神熊在自己回合必须以至少一次 Stride / Climb 朝猎物靠近（无法靠近时改为朝最近听到的方向），并优先对猎物发动打击。</p>\n<p>若猎物带有持续流血，死神熊在朝其 Stride 时速度视为 +10 尺。</p>"
@@ -111,8 +141,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "血腥追猎",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -122,8 +154,12 @@
       "sort": 600000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "offensive",
         "description": {
           "value": "<p>以两只利爪对同一目标各发动一次打击（第二次受多重攻击罚值）。两次皆命中时，额外造成 @Damage[1d6[persistent,bleed]]（与爪击流血合并取高，不叠加骰数）。</p>"
@@ -135,8 +171,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "四臂撕扯",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -146,8 +184,12 @@
       "sort": 610000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "offensive",
         "description": {
           "value": "<p>双头齐吼，声浪震裂耳膜。30 尺内每个敌人受到 @Damage[3d6[sonic]] 音波伤害，并尝试 @Check[fortitude|basic|dc:20|traits:auditory,sonic]{基础强韧豁免 DC 20}。失败还获得 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{惊惧 1}（大失败惊惧 2）。</p>\n<p><strong>频率</strong> 每 1d4 轮一次（吼完后掷骰）。</p>"
@@ -159,8 +201,13 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": ["auditory", "sonic"] }
+        "slug": "死亡咆哮",
+        "traits": {
+          "value": [
+            "auditory",
+            "sonic"
+          ]
+        }
       }
     },
     {
@@ -170,8 +217,12 @@
       "sort": 700000,
       "type": "action",
       "system": {
-        "actionType": { "value": "reaction" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "reaction"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "defensive",
         "description": {
           "value": "<p><strong>频率</strong> 每轮一次</p>\n<p><strong>触发</strong> 一个生物在你的触及内使用操作、或对你造成伤害后仍在触及内</p>\n<p><strong>效果</strong> 对该生物发动一次利爪打击。</p>"
@@ -183,8 +234,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "双头警觉",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -194,8 +247,12 @@
       "sort": 800000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "defensive",
         "description": {
           "value": "<p>温和天性已被太阳石的邪语腐蚀。对精神、魅惑类效果的豁免获得 +2 环境加值；若因此豁免成功，可立刻将最近的敌人记为猎物（见「血腥追猎」）。</p>"
@@ -207,8 +264,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "太阳石低语",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -218,8 +277,12 @@
       "sort": 900000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>死神熊死亡时掉落一枚<strong>随机特性残渣</strong>。掷 1d8（与肉头怪表相同，或 GM 自选）；若掷出 8，改为「稀有：任选两项，且其中一项可换成恢复全部英雄点 / 一次免费的 3 级治疗效果」。</p>"
@@ -231,36 +294,68 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "特性残渣-死亡",
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 5 },
-      "dex": { "mod": 1 },
-      "con": { "mod": 4 },
-      "int": { "mod": -3 },
-      "wis": { "mod": 2 },
-      "cha": { "mod": 0 }
+      "str": {
+        "mod": 5
+      },
+      "dex": {
+        "mod": 1
+      },
+      "con": {
+        "mod": 4
+      },
+      "int": {
+        "mod": -3
+      },
+      "wis": {
+        "mod": 2
+      },
+      "cha": {
+        "mod": 0
+      }
     },
     "attributes": {
-      "ac": { "details": "", "value": 18 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "",
+        "value": 18
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "比肉头怪更厚的蛮力 Boss；活动场/马戏团遭遇用",
         "max": 110,
         "temp": 0,
         "value": 110
       },
-      "speed": { "value": 30, "otherSpeeds": [{ "type": "climb", "value": 15 }] }
+      "speed": {
+        "value": 30,
+        "otherSpeeds": [
+          {
+            "type": "climb",
+            "value": 15
+          }
+        ]
+      }
     },
     "details": {
       "blurb": "猎杀对决 · 马戏团 Boss",
-      "languages": { "details": "无语言；低沉咆哮", "value": [] },
-      "level": { "value": 3 },
+      "languages": {
+        "details": "无语言；低沉咆哮",
+        "value": []
+      },
+      "level": {
+        "value": 3
+      },
       "privateNotes": "<p>四人 2 级团 +1，但比肉头怪（AC17/HP80）更强：AC18/HP110，攻击与咆哮更凶。建议单独遭遇或配少量僵尸，勿与肉头怪同场。</p>",
       "publicNotes": "<p>双头四臂的巨型熊。孤儿连体小熊被遗弃后，温和天性遭太阳石邪语腐蚀，化为冷酷残暴的擂台野兽。拉丁名 Ursa Mortis——死亡之熊。常在马戏团活动场出没；被激怒后会追出场地。</p>\n<p>受击后死追猎人，爪牙带血；能嗅到流血；死亡咆哮震伤附近所有人。死后掉落随机特性。</p>\n<p><em>四人 2 级团 · Creature 3（+1，强于肉头怪）</em></p>",
       "publication": {
@@ -270,30 +365,58 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
+    "initiative": {
+      "statistic": "perception"
+    },
     "perception": {
       "details": "血腥嗅觉；黑暗视觉",
       "mod": 10,
       "senses": [
-        { "type": "darkvision" },
-        { "type": "scent", "acuity": "imprecise", "range": 60 }
+        {
+          "type": "darkvision"
+        },
+        {
+          "type": "scent",
+          "acuity": "imprecise",
+          "range": 60
+        }
       ]
     },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 14 },
-      "reflex": { "saveDetail": "", "value": 8 },
-      "will": { "saveDetail": "", "value": 10 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 8
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 10
+      }
     },
     "skills": {
-      "athletics": { "base": 14 },
-      "intimidation": { "base": 10 },
-      "survival": { "base": 10 }
+      "athletics": {
+        "base": 14
+      },
+      "intimidation": {
+        "base": 10
+      },
+      "survival": {
+        "base": 10
+      }
     },
     "traits": {
       "rarity": "rare",
-      "size": { "value": "lg" },
-      "value": ["beast", "bear"]
+      "size": {
+        "value": "lg"
+      },
+      "value": [
+        "beast",
+        "bear"
+      ]
     }
   },
   "prototypeToken": {
@@ -307,12 +430,25 @@
     },
     "disposition": -1,
     "displayBars": 40,
-    "bar1": { "attribute": "attributes.hp" },
-    "sight": { "enabled": true, "range": 60, "visionMode": "darkvision" },
-    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": true,
+      "range": 60,
+      "visionMode": "darkvision"
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
     "actorLink": false
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",

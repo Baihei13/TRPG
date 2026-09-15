@@ -1,0 +1,112 @@
+{
+  "_id": "whbHuntCalyptra1",
+  "folder": "whbHntFldTact001",
+  "name": "卡吕普特拉 Calyptra",
+  "type": "equipment",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/calyptra.png",
+  "system": {
+    "description": {
+      "value": "<p>这枚护身符曾是午夜之影在成为赏金猎人之前佩戴在胸前的胸针。如今，它装饰着她用来实现内心目标的武器：终结所有嗜血之人的生命，让他们化为飞蛾。</p>\n<hr />\n<p><strong>用法</strong> 佩戴（投资）。</p>\n<p><strong>嗜血猎手</strong> 对 GM 认定为「嗜血者 / 亡灵吸血者 / 白发女巫同党」的目标，你的打击伤害 +1 状态。</p>\n<p><strong>化为飞蛾</strong>（开关）本场 1 次：下次命中令目标 @Check[will|dc:resolve(@actor.level*2+14)|traits:emotion,fear,mental,occult]{意志}，失败则 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 分钟），并视为「飞蛾」——对你下一次打击措手不及。</p>",
+      "gm": "<p>Charm Calyptra。对嗜血目标 +1 伤；化为飞蛾 1/场惊惧。</p>"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "hunt-bloodthirsty-target",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "卡吕普特拉 — 目标为嗜血者（GM）"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "status",
+        "value": 1,
+        "label": "嗜血猎手",
+        "predicate": [
+          "hunt-bloodthirsty-target"
+        ],
+        "hideIfDisabled": true
+      },
+      {
+        "key": "RollOption",
+        "domain": "attack",
+        "option": "hunt-calyptra-moth",
+        "toggleable": true,
+        "placement": "actions",
+        "label": "卡吕普特拉 — 化为飞蛾（本场1次）"
+      },
+      {
+        "key": "Note",
+        "selector": "strike-damage",
+        "title": "化为飞蛾",
+        "text": "命中：意志失败则惊惧 1，且对你下一次打击措手不及。关闭开关。",
+        "predicate": [
+          "hunt-calyptra-moth"
+        ]
+      }
+    ],
+    "slug": "calyptra",
+    "traits": {
+      "value": [
+        "invested"
+      ],
+      "rarity": "rare",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-charm",
+        "midnights-shadow"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 战术",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "gp": 25
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "invested": true
+    },
+    "containerId": null,
+    "size": "med",
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "飞蛾胸针",
+        "img": "systems/pf2e/icons/unidentified_item_icons/other-consumables.webp",
+        "data": {
+          "description": {
+            "value": "<p>暗色飞蛾纹样胸针。</p>"
+          }
+        }
+      },
+      "misidentified": {}
+    },
+    "usage": {
+      "value": "worn"
+    }
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "tactic",
+      "enName": "Calyptra",
+      "theme": "midnights-shadow"
+    }
+  }
+}

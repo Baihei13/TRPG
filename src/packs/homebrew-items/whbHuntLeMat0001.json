@@ -1,0 +1,153 @@
+{
+  "_id": "whbHuntLeMat0001",
+  "folder": "whbHntFldWpn0001",
+  "name": "LeMat Mark II 左轮",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+  "system": {
+    "description": {
+      "value": "<p>九连发左轮，枪管下另有霰弹筒「重拳」。</p>\n<blockquote><p><strong>兵器之书 · LEMAT MARK II</strong> 弹巢九发 + 中央霰弹筒。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>左轮</strong> 单手；40 尺；装填 1；容量 9；1d8 穿刺；震荡、capacity-9</p>\n<p><strong>重拳</strong> 动作栏另有霰弹打击：20 尺、1d8 穿刺（散射感）、容量 1（每场建议 1–2 发）。</p>",
+      "gm": "<p>Hunt 原型 LeMat。1d8/40/cap9 + Strike 重拳霰弹。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Strike",
+        "category": "martial",
+        "group": "firearm",
+        "slug": "lemat-punch",
+        "label": "LeMat · 重拳（霰弹）",
+        "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
+        "damage": {
+          "base": {
+            "damageType": "piercing",
+            "dice": 1,
+            "die": "d8"
+          }
+        },
+        "traits": [
+          "concussive",
+          "scatter"
+        ],
+        "range": {
+          "increment": 20
+        }
+      }
+    ],
+    "slug": "lemat-mark-ii",
+    "traits": {
+      "value": [
+        "concussive",
+        "capacity-9"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 1
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 22
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "九连发左轮",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>九连发左轮。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d8",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 40,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 9
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 2,
+      "enName": "LeMat Mark II",
+      "wikiIcon": "Weapon_LeMat.png",
+      "baseWeapon": "lemat-mark-ii"
+    }
+  }
+}

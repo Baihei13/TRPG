@@ -409,6 +409,10 @@
       "preferredLoadout": [
         "overcall",
         "caldwell-pax"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntOvercall1",
+        "whbHuntPax000001"
       ]
     }
   }

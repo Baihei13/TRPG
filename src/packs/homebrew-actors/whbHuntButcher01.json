@@ -43,7 +43,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "燃烧肉钩",
         "traits": {
           "value": [
             "reach-10",
@@ -88,7 +88,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "猪躯撞击",
         "traits": {
           "value": []
         }
@@ -118,7 +118,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "肉钩喷焰",
         "traits": {
           "value": [
             "fire"
@@ -157,7 +157,7 @@
             ]
           }
         ],
-        "slug": null,
+        "slug": "自燃躯壳",
         "traits": {
           "value": [
             "aura",
@@ -190,7 +190,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "窒息熄火-复燃",
         "traits": {
           "value": []
         }
@@ -220,7 +220,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "butcher-rage",
         "traits": {
           "value": []
         }
@@ -250,7 +250,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "第三狂怒-断头",
         "traits": {
           "value": []
         }
@@ -280,7 +280,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "尸体驱逐-赏金",
         "traits": {
           "value": []
         }

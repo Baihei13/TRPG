@@ -43,7 +43,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "bite",
         "traits": {
           "value": []
         }
@@ -73,7 +73,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "扑咬",
         "traits": {
           "value": []
         }
@@ -103,7 +103,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "群猎",
         "traits": {
           "value": []
         }
@@ -133,7 +133,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "贴身狂袭",
         "traits": {
           "value": []
         }

@@ -1,0 +1,141 @@
+{
+  "_id": "whbHuntMako18951",
+  "folder": "whbHntFldWpn0001",
+  "name": "Mako 1895 杠杆步枪",
+  "type": "weapon",
+  "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
+  "system": {
+    "description": {
+      "value": "<p>美制杠杆步枪，循环快、单发伤高，可随时补弹。</p>\n<blockquote><p><strong>兵器之书 · MAKO 1895</strong> 同族 Winfield 杠杆枪的亲戚：威力换精度；厂方曾吹嘘沿海农夫可用它打短鳍鲭鲨。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 2；双手；射程增量 <strong>80 尺</strong>；装填 1；容量 5</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、volley、capacity-5</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}。</p>\n<hr />\n<p><strong>补弹循环</strong> 此武器打击不引发借机；装填后可免费快步 5 尺（每轮 1 次，见自动化）。</p>",
+      "gm": "<p>Hunt 原型 Mako 1895。1d10 P、80ft、cap5。补弹后免费快步（Swift 系）。</p>"
+    },
+    "rules": [
+      {
+        "key": "MartialProficiency",
+        "label": "猎杀武装熟练",
+        "kind": "attack",
+        "definition": [
+          "item:id:{item|_id}"
+        ],
+        "value": 1,
+        "requiresInvestment": false
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "title": "补弹循环",
+        "text": "打击不引发借机；装填后可免费快步（每轮 1）。",
+        "predicate": [
+          "item:id:{item|_id}"
+        ]
+      }
+    ],
+    "slug": "mako-1895",
+    "traits": {
+      "value": [
+        "concussive",
+        "volley",
+        "capacity-5"
+      ],
+      "rarity": "uncommon",
+      "otherTags": [
+        "hunt-showdown",
+        "hunt-weapon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 装备",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 3
+    },
+    "quantity": 1,
+    "baseItem": null,
+    "bulk": {
+      "value": 2
+    },
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "hardness": 0,
+    "price": {
+      "value": {
+        "gp": 28
+      }
+    },
+    "equipped": {
+      "carryType": "worn",
+      "handsHeld": 0
+    },
+    "containerId": null,
+    "size": "med",
+    "material": {
+      "type": null,
+      "grade": null
+    },
+    "identification": {
+      "status": "identified",
+      "unidentified": {
+        "name": "杠杆步枪",
+        "img": "systems/pf2e/icons/unidentified_item_icons/weapons.webp",
+        "data": {
+          "description": {
+            "value": "<p>杠杆步枪。</p>"
+          }
+        }
+      }
+    },
+    "usage": {
+      "value": "held-in-two-hands"
+    },
+    "category": "martial",
+    "group": "firearm",
+    "bonus": {
+      "value": 0
+    },
+    "bonusDamage": {
+      "value": 0
+    },
+    "damage": {
+      "dice": 1,
+      "die": "d10",
+      "damageType": "piercing",
+      "persistent": null
+    },
+    "splashDamage": {
+      "value": 0
+    },
+    "range": 80,
+    "expend": 1,
+    "ammo": {
+      "baseType": "rounds",
+      "builtIn": false,
+      "capacity": 5
+    },
+    "reload": {
+      "value": "1"
+    },
+    "grade": null,
+    "runes": {
+      "potency": 0,
+      "striking": 0,
+      "property": []
+    },
+    "specific": null,
+    "subitems": []
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "huntCategory": "weapon",
+      "huntSlots": 3,
+      "enName": "Mako 1895",
+      "wikiIcon": "Weapon_Mako_1895.png",
+      "baseWeapon": "mako-1895"
+    }
+  }
+}

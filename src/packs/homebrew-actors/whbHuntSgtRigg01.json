@@ -435,6 +435,10 @@
       "preferredLoadout": [
         "poetic-justice",
         "betrayed-loyalty"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntPoetJust1",
+        "whbHuntBetrLoy01"
       ]
     }
   }

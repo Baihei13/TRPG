@@ -476,6 +476,12 @@
         "swamp-tears-firebomb",
         "fire-beetle",
         "liquid-fire-bomb"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntMarkDlgt1",
+        "whbHuntSwmpTear1",
+        "whbHuntFireBt001",
+        "whbHuntLiqFire01"
       ]
     }
   }

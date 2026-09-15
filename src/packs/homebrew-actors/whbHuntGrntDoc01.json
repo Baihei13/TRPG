@@ -39,7 +39,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "毒锯",
         "traits": {
           "value": []
         }
@@ -69,7 +69,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "drop-medkit",
         "traits": {
           "value": []
         }
@@ -99,7 +99,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "腐沼骚扰",
         "traits": {
           "value": []
         }

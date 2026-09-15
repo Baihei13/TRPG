@@ -1,0 +1,54 @@
+{
+  "_id": "whbHuntBldMoonFx",
+  "folder": "whbHntFldFx00001",
+  "name": "效果：血月 Blood Moon",
+  "type": "effect",
+  "img": "icons/magic/unholy/silhouette-robe-evil-glow.webp",
+  "system": {
+    "description": {
+      "value": "<p>血月当空。此生物被场景级诅咒强化。</p>\n<ul>\n<li>挑战等级 +1</li>\n<li>AC、豁免、感知、技能 +1</li>\n<li>近战攻击与伤害上调</li>\n<li>生命值上限提高</li>\n</ul>\n<p>由场景「血月」开关施加；关闭血月时自动还原基础数据。</p>",
+      "gm": "<p>数值已写入 Actor 本体（带快照）。本效果仅作标记与令牌图标。勿手动叠层。</p>"
+    },
+    "rules": [],
+    "slug": "effect-blood-moon",
+    "traits": {
+      "value": [],
+      "rarity": "unique",
+      "otherTags": [
+        "hunt-showdown",
+        "blood-moon"
+      ]
+    },
+    "publication": {
+      "title": "猎杀对决 — 场景",
+      "authors": "Wang Homebrew / Hunt: Showdown",
+      "license": "ORC",
+      "remaster": true
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "badge": null,
+    "context": null,
+    "unidentified": false
+  },
+  "flags": {
+    "wang-pf2e-homebrew": {
+      "source": "hunt-showdown",
+      "bloodMoonEffect": true
+    }
+  }
+}

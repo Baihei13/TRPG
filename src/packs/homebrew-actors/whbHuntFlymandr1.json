@@ -478,6 +478,12 @@
         "path-of-revelation",
         "heavy-footfalls",
         "pride-point"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntTheHound1",
+        "whbHuntPathRev01",
+        "whbHuntHvyFoot01",
+        "whbHuntPridePt01"
       ]
     }
   }

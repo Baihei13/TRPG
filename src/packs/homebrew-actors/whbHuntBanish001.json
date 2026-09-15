@@ -12,8 +12,12 @@
       "sort": 100000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>拖到 Boss 巢穴或<strong>大地图</strong>上；更省事：打开目标场景后直接运行宏 @UUID[Compendium.wang-pf2e-homebrew.homebrew-macros.Macro.whbHuntBanishM01]{放逐仪式} →「落点并开始」。</p>\n<ul>\n<li>会在当前场景落下 <strong>Token（常显名）</strong> + <strong>地图便签</strong>，大地图也看得见。</li>\n<li>进度推进时 Token 名与便签同步更新。</li>\n<li>战斗每轮自动 +1。</li>\n</ul>\n<p>默认 10 格 ≈ 探索约 3 分钟。</p>"
@@ -25,39 +29,66 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "用法",
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 0 },
-      "dex": { "mod": 0 },
-      "con": { "mod": 0 },
-      "int": { "mod": 0 },
-      "wis": { "mod": 0 },
-      "cha": { "mod": 0 }
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 0
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 0
+      }
     },
     "attributes": {
-      "ac": { "details": "场景标记", "value": 5 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "场景标记",
+        "value": 5
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "不可攻击；仅作放逐进度标记",
         "max": 1,
         "temp": 0,
         "value": 1
       },
-      "speed": { "value": 0, "otherSpeeds": [] },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": []
+      },
       "immunities": [],
       "weaknesses": [],
       "resistances": []
     },
     "details": {
       "blurb": "猎杀对决 · 放逐进度标记",
-      "languages": { "details": "", "value": [] },
-      "level": { "value": -1 },
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
       "privateNotes": "<p>flags.wang-pf2e-homebrew.banishing 存进度。宏 whbHuntBanishM01；战斗 combatRound 自动推进。</p>",
       "publicNotes": "<p>Boss 死后放于此地：标记<strong>正在放逐</strong>并显示进度条。用宏「放逐仪式」操作。</p>",
       "publication": {
@@ -67,18 +98,35 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
-    "perception": { "details": "标记", "mod": 0, "senses": [] },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "标记",
+      "mod": 0,
+      "senses": []
+    },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 0 },
-      "reflex": { "saveDetail": "", "value": 0 },
-      "will": { "saveDetail": "", "value": 0 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
     },
     "skills": {},
     "traits": {
       "rarity": "unique",
-      "size": { "value": "med" },
+      "size": {
+        "value": "med"
+      },
       "value": []
     }
   },
@@ -94,19 +142,34 @@
     "disposition": 0,
     "displayName": 30,
     "displayBars": 0,
-    "bar1": { "attribute": null },
-    "sight": { "enabled": false },
+    "bar1": {
+      "attribute": null
+    },
+    "sight": {
+      "enabled": false
+    },
     "light": {
       "bright": 0,
       "dim": 15,
       "color": "#4a7cff",
       "alpha": 0.35,
-      "animation": { "type": "pulse", "speed": 2, "intensity": 3 }
+      "animation": {
+        "type": "pulse",
+        "speed": 2,
+        "intensity": 3
+      }
     },
-    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
     "actorLink": true
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",

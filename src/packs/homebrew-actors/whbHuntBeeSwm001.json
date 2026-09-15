@@ -39,7 +39,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "蜂群叮刺",
         "traits": {
           "value": [
             "agile",
@@ -73,7 +73,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "追随猎人",
         "traits": {
           "value": []
         }
@@ -103,7 +103,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "脆弱蜂群",
         "traits": {
           "value": []
         }

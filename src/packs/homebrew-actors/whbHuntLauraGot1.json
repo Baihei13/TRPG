@@ -12,9 +12,16 @@
       "sort": 100000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 14 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 14
+        },
         "damageRolls": {
           "whbLrDmgMayn001": {
             "damage": "2d10+4",
@@ -34,7 +41,11 @@
         "rules": [],
         "slug": "laura-silenced-shot",
         "traits": {
-          "value": ["concussive", "fatal-d10", "propulsive"]
+          "value": [
+            "concussive",
+            "fatal-d10",
+            "propulsive"
+          ]
         }
       }
     },
@@ -45,9 +56,16 @@
       "sort": 200000,
       "type": "melee",
       "system": {
-        "action": { "value": "" },
-        "attackEffects": { "custom": "", "value": [] },
-        "bonus": { "value": 12 },
+        "action": {
+          "value": ""
+        },
+        "attackEffects": {
+          "custom": "",
+          "value": []
+        },
+        "bonus": {
+          "value": 12
+        },
         "damageRolls": {
           "whbLrDmgButt001": {
             "damage": "1d6+2",
@@ -66,7 +84,11 @@
         "range": null,
         "rules": [],
         "slug": "laura-buttstroke",
-        "traits": { "value": ["agile"] }
+        "traits": {
+          "value": [
+            "agile"
+          ]
+        }
       }
     },
     {
@@ -76,8 +98,12 @@
       "sort": 300000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "offensive",
         "description": {
           "value": "<p>当目标对她措手不及时，她的<strong>消音狙击</strong>额外造成 @Damage[1d6[precision]]{1d6 精密}伤害。</p>"
@@ -90,7 +116,9 @@
         },
         "rules": [],
         "slug": "laura-sneak-attack",
-        "traits": { "value": [] }
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -100,8 +128,12 @@
       "sort": 400000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "offensive",
         "description": {
           "value": "<p><strong>需求</strong> 她相对目标处于隐蔽、躲藏或未被发现</p>\n<p>发动一次<strong>消音狙击</strong>。目标对此次打击措手不及（并触发偷袭）。若命中，她可立刻尝试一次 Hide（不另耗动作），用射击后的硝烟与枝叶掩护。</p>"
@@ -114,7 +146,9 @@
         },
         "rules": [],
         "slug": "laura-silent-ambush",
-        "traits": { "value": [] }
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -124,8 +158,12 @@
       "sort": 500000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 1 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
         "category": "offensive",
         "description": {
           "value": "<p><strong>频率</strong> 每轮 1 次；<strong>需求</strong> 本回合她已用远程打击命中，或回合开始时相对至少一个敌人处于隐蔽/躲藏</p>\n<p>Stride。此次移动<strong>不引发</strong>来自她已命中之目标的借机攻击。若结束移动时有掩体或植被，可立刻尝试 Hide。</p>"
@@ -138,7 +176,11 @@
         },
         "rules": [],
         "slug": "laura-kite",
-        "traits": { "value": ["move"] }
+        "traits": {
+          "value": [
+            "move"
+          ]
+        }
       }
     },
     {
@@ -148,8 +190,12 @@
       "sort": 600000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 1 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
         "category": "defensive",
         "description": {
           "value": "<p>Step 或 Stride 至多 15 尺，然后 Hide。若处于自然地形（林木、灌丛、雾沼、碎石堆等），Hide 检定获得 <strong>+2 环境加值</strong>（与「枯枝伪装」叠加时由 GM 取高，不叠）。</p>"
@@ -162,7 +208,11 @@
         },
         "rules": [],
         "slug": "laura-fade",
-        "traits": { "value": ["move"] }
+        "traits": {
+          "value": [
+            "move"
+          ]
+        }
       }
     },
     {
@@ -172,8 +222,12 @@
       "sort": 700000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "offensive",
         "description": {
           "value": "<p>完成梅纳德的两段式装填（等同 reload 2）。若她处于隐蔽或躲藏，装填不会自动暴露位置（仍可能被看见动作，GM 裁定）。</p>"
@@ -186,7 +240,11 @@
         },
         "rules": [],
         "slug": "laura-reload",
-        "traits": { "value": ["manipulate"] }
+        "traits": {
+          "value": [
+            "manipulate"
+          ]
+        }
       }
     },
     {
@@ -196,8 +254,12 @@
       "sort": 800000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "defensive",
         "description": {
           "value": "<p>肩头枯枝与粗麻兜帽打散轮廓。在自然地形中，Stealth 与 Hide 相关检定获得 <strong>+2 环境加值</strong>；若她未移动且有部分掩体，察觉她的 Perception DC 视为提高 2。</p>"
@@ -210,7 +272,9 @@
         },
         "rules": [],
         "slug": "laura-ghillie",
-        "traits": { "value": [] }
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -220,8 +284,12 @@
       "sort": 900000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>艾萨克·鲍威尔「猎人之夜」邪教的放逐者。目睹雕塑家扭曲杰作后，她对末日与超自然不再恐惧，只剩冷硬的虚无。</p>\n<p>对抗恐惧、情绪与 demoralize 的意志豁免获得 <strong>+2 状态加值</strong>。她可用 Intimidation 恐吓：口中低语末日预言，失败的敌人获得 @UUID[Compendium.pf2e.conditionitems.Item.TBSHQidQVSrGRTuq]{惊惧 1}（1 轮）。</p>"
@@ -234,7 +302,14 @@
         },
         "rules": [],
         "slug": "laura-cult-nihilism",
-        "traits": { "value": ["emotion", "fear", "mental", "auditory"] }
+        "traits": {
+          "value": [
+            "emotion",
+            "fear",
+            "mental",
+            "auditory"
+          ]
+        }
       }
     },
     {
@@ -244,8 +319,12 @@
       "sort": 950000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "offensive",
         "description": {
           "value": "<p><strong>典型回合</strong></p>\n<ol>\n<li>隐蔽处 <strong>无声伏击</strong>（2）→ 偷袭爆头</li>\n<li><strong>抽身远遁</strong>（1）拉开 30～50 尺并再 Hide</li>\n<li>下一轮若需装填：先 <strong>枝影隐没</strong> / Hide，再 <strong>冷静装填</strong>；绝不贴脸硬刚</li>\n</ol>\n<p>理想交战距离 <strong>80～120 尺</strong>。被近身后优先 Step+Stride 拉开，用枪托仅作最后手段。她会放弃击杀也要保持「打一枪就消失」。</p>"
@@ -258,23 +337,42 @@
         },
         "rules": [],
         "slug": "laura-tactics",
-        "traits": { "value": [] }
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 1 },
-      "dex": { "mod": 4 },
-      "con": { "mod": 2 },
-      "int": { "mod": 1 },
-      "wis": { "mod": 3 },
-      "cha": { "mod": 2 }
+      "str": {
+        "mod": 1
+      },
+      "dex": {
+        "mod": 4
+      },
+      "con": {
+        "mod": 2
+      },
+      "int": {
+        "mod": 1
+      },
+      "wis": {
+        "mod": 3
+      },
+      "cha": {
+        "mod": 2
+      }
     },
     "attributes": {
-      "ac": { "details": "皮衣 + 闪避", "value": 21 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "皮衣 + 闪避",
+        "value": 21
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "玻璃大炮狙击手；被围速逃",
         "max": 55,
@@ -293,9 +391,13 @@
       "blurb": "猎人之夜放逐者 · 消音狙",
       "languages": {
         "details": "",
-        "value": ["common"]
+        "value": [
+          "common"
+        ]
       },
-      "level": { "value": 4 },
+      "level": {
+        "value": 4
+      },
       "privateNotes": "<p>接种疫苗前的领导者，现为艾萨克·鲍威尔「猎人之夜」放逐信徒。雕塑家的扭曲作品让她改信虚无；因争权被逐，却仍怀着邪教种下的暴力。末日来临时，她要看旧同伴跪地求饶。</p>\n<p>武器：梅纳德消音 + 亚音速。Creature 4，对 4×2 级团为严厉单挑/侧翼狙杀位。</p>",
       "publicNotes": "<p>兜帽遮脸，肩头插着枯枝，像会走路的稻草人。她曾是领袖，在目睹不可名状的雕塑后投入「猎人之夜」；被逐出教门后仍带着冷酷的虚无主义傲慢。</p>\n<p>她几乎从不开口，只在枪响之后消失在树影里。</p>\n<p><em>四人 2 级团 · Creature 4 · 风筝狙</em></p>",
       "publication": {
@@ -305,32 +407,62 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
+    "initiative": {
+      "statistic": "perception"
+    },
     "perception": {
       "details": "",
       "mod": 13,
       "senses": [
-        { "type": "low-light-vision" }
+        {
+          "type": "low-light-vision"
+        }
       ]
     },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 10 },
-      "reflex": { "saveDetail": "", "value": 14 },
-      "will": { "saveDetail": "+2 vs 恐惧/情绪", "value": 12 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 10
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 14
+      },
+      "will": {
+        "saveDetail": "+2 vs 恐惧/情绪",
+        "value": 12
+      }
     },
     "skills": {
-      "acrobatics": { "base": 12 },
-      "deception": { "base": 10 },
-      "intimidation": { "base": 11 },
-      "religion": { "base": 10 },
-      "stealth": { "base": 15 },
-      "survival": { "base": 12 }
+      "acrobatics": {
+        "base": 12
+      },
+      "deception": {
+        "base": 10
+      },
+      "intimidation": {
+        "base": 11
+      },
+      "religion": {
+        "base": 10
+      },
+      "stealth": {
+        "base": 15
+      },
+      "survival": {
+        "base": 12
+      }
     },
     "traits": {
       "rarity": "unique",
-      "size": { "value": "med" },
-      "value": ["human", "humanoid"]
+      "size": {
+        "value": "med"
+      },
+      "value": [
+        "human",
+        "humanoid"
+      ]
     }
   },
   "prototypeToken": {
@@ -344,7 +476,9 @@
     },
     "disposition": -1,
     "displayBars": 40,
-    "bar1": { "attribute": "attributes.hp" },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
     "sight": {
       "enabled": true,
       "range": 60,
@@ -358,13 +492,22 @@
     },
     "actorLink": false
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",
       "huntHunter": "laura-gottschalk",
       "lore": "hunter-night-cult",
-      "preferredLoadout": ["maynard-sniper-silencer", "hunt-subsonic-ammo"]
+      "preferredLoadout": [
+        "maynard-sniper-silencer",
+        "hunt-subsonic-ammo"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntMaynSil01",
+        "whbHuntAmmoSub01"
+      ]
     }
   }
 }

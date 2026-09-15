@@ -548,6 +548,11 @@
         "bornheim-no-3",
         "batters-eye",
         "sticky-bomb"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntBornheim1",
+        "whbHuntSlugEye01",
+        "whbHuntSticky001"
       ]
     }
   }

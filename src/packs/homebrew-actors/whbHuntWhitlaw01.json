@@ -604,6 +604,16 @@
         "a-strong-constitution",
         "dream-of-glory",
         "golden-signet"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntDueProc01",
+        "whbHuntPatrShad1",
+        "whbHuntFreeSong1",
+        "whbHuntCounterp1",
+        "whbHuntCavBlade1",
+        "whbHuntStrConst1",
+        "whbHuntDreamGl01",
+        "whbHuntGoldLust1"
       ]
     }
   }

@@ -43,7 +43,7 @@
         },
         "range": null,
         "rules": [],
-        "slug": null,
+        "slug": "燃烧火把",
         "traits": {
           "value": []
         }
@@ -73,7 +73,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "火把落地",
         "traits": {
           "value": []
         }
@@ -103,7 +103,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "腐沼骚扰",
         "traits": {
           "value": []
         }

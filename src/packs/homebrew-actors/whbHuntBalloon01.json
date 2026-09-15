@@ -12,8 +12,12 @@
       "sort": 100000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>最多 <strong>4</strong> 货箱 + <strong>1</strong> 枚赏金令牌。把物品拖进本 Actor 物品栏即装货。</p>\n<p>货箱<strong>不</strong>做领取标记；奖励在放飞后<strong>事后发</strong>。</p>\n<p>气球只带走货，不带走猎人。</p>"
@@ -25,8 +29,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "吊舱容量",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -36,8 +42,12 @@
       "sort": 200000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 1 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
         "category": "interaction",
         "description": {
           "value": "<p>运行宏 @UUID[Compendium.wang-pf2e-homebrew.homebrew-macros.Macro.whbHuntBalloonM1]{要塞货气球}（参数 <code>valve</code>），或点宏菜单「开阀」。</p>\n<p>最多 3 阀。战斗中每轮按阀数推进充气（满 12 可放飞）。非战斗可用宏 <code>ready</code> 跳过等待。</p>\n<p>气阀 Tile 可绑 Active Tiles → 运行该宏，参数写 <code>valve</code> / <code>close</code>。</p>"
@@ -49,8 +59,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "开气阀",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -60,8 +72,12 @@
       "sort": 300000,
       "type": "action",
       "system": {
-        "actionType": { "value": "action" },
-        "actions": { "value": 2 },
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
         "category": "interaction",
         "description": {
           "value": "<p>充气满后运行宏「要塞货气球」→ <code>launch</code>。</p>\n<p>聊天输出<strong>事后发奖清单</strong>，并清空吊舱内货箱/令牌。不自动发金币或物品。</p>"
@@ -73,8 +89,10 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "放飞抽出",
+        "traits": {
+          "value": []
+        }
       }
     },
     {
@@ -84,8 +102,12 @@
       "sort": 400000,
       "type": "action",
       "system": {
-        "actionType": { "value": "passive" },
-        "actions": { "value": null },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
         "category": "interaction",
         "description": {
           "value": "<p>见 @UUID[Compendium.wang-pf2e-homebrew.homebrew-journals.JournalEntry.whbHuntBlnGm0001]{要塞货气球 · 场景流程}。</p>\n<ol>\n<li>拖本 Actor 进要塞（建议 Link）。</li>\n<li>3 个气阀 Tile/Token；可选绑宏 <code>valve</code>。</li>\n<li>散放货箱；玩家扛箱拖进本物品栏。</li>\n<li>开阀 →（战斗自动充气 / ready）→ 放飞出清单 → GM 事后发奖。</li>\n</ol>"
@@ -97,39 +119,66 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
-        "traits": { "value": [] }
+        "slug": "场景摆法",
+        "traits": {
+          "value": []
+        }
       }
     }
   ],
   "effects": [],
   "system": {
     "abilities": {
-      "str": { "mod": 0 },
-      "dex": { "mod": 0 },
-      "con": { "mod": 0 },
-      "int": { "mod": 0 },
-      "wis": { "mod": 0 },
-      "cha": { "mod": 0 }
+      "str": {
+        "mod": 0
+      },
+      "dex": {
+        "mod": 0
+      },
+      "con": {
+        "mod": 0
+      },
+      "int": {
+        "mod": 0
+      },
+      "wis": {
+        "mod": 0
+      },
+      "cha": {
+        "mod": 0
+      }
     },
     "attributes": {
-      "ac": { "details": "吊舱；非战斗可忽略", "value": 10 },
-      "allSaves": { "value": "" },
+      "ac": {
+        "details": "吊舱；非战斗可忽略",
+        "value": 10
+      },
+      "allSaves": {
+        "value": ""
+      },
       "hp": {
         "details": "场景道具；气阀可被射击关闭（宏 close）",
         "max": 40,
         "temp": 0,
         "value": 40
       },
-      "speed": { "value": 0, "otherSpeeds": [] },
+      "speed": {
+        "value": 0,
+        "otherSpeeds": []
+      },
       "immunities": [],
       "weaknesses": [],
       "resistances": []
     },
     "details": {
       "blurb": "猎杀对决 · 要塞货气球",
-      "languages": { "details": "", "value": [] },
-      "level": { "value": -1 },
+      "languages": {
+        "details": "",
+        "value": []
+      },
+      "level": {
+        "value": -1
+      },
       "privateNotes": "<p>自动化：宏 whbHuntBalloonM1 + 战斗每轮充气。货箱无标记，放飞只出事后清单。</p>",
       "publicNotes": "<p>要塞热气球：开阀充气、装货、放飞。货只抽出，人不撤离。奖励事后发。</p>\n<p><em>用宏「要塞货气球」操作</em></p>",
       "publication": {
@@ -139,18 +188,35 @@
         "remaster": true
       }
     },
-    "initiative": { "statistic": "perception" },
-    "perception": { "details": "道具", "mod": 0, "senses": [] },
+    "initiative": {
+      "statistic": "perception"
+    },
+    "perception": {
+      "details": "道具",
+      "mod": 0,
+      "senses": []
+    },
     "resources": {},
     "saves": {
-      "fortitude": { "saveDetail": "", "value": 0 },
-      "reflex": { "saveDetail": "", "value": 0 },
-      "will": { "saveDetail": "", "value": 0 }
+      "fortitude": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "reflex": {
+        "saveDetail": "",
+        "value": 0
+      },
+      "will": {
+        "saveDetail": "",
+        "value": 0
+      }
     },
     "skills": {},
     "traits": {
       "rarity": "unique",
-      "size": { "value": "lg" },
+      "size": {
+        "value": "lg"
+      },
       "value": []
     }
   },
@@ -165,12 +231,23 @@
     },
     "disposition": 0,
     "displayBars": 0,
-    "bar1": { "attribute": "attributes.hp" },
-    "sight": { "enabled": false },
-    "flags": { "pf2e": { "linkToActorSize": true, "autoscale": true } },
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "sight": {
+      "enabled": false
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": true,
+        "autoscale": true
+      }
+    },
     "actorLink": true
   },
-  "ownership": { "default": 0 },
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "wang-pf2e-homebrew": {
       "source": "hunt-showdown",

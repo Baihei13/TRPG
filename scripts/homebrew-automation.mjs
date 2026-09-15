@@ -30,7 +30,7 @@ import { createAllAiMonsterLoreBooks } from "./hunt-ai-monster-lores.mjs";
 import { openPartyTrapDialog, applyPartyTrap } from "./party-trap-macro.mjs";
 import { installCharredRingIwrPatch } from "./charred-ring-iwr.mjs";
 import { installNightweaverRewards } from "./nightweaver-rewards.mjs";
-import { installHuntShowdownAutomation } from "./hunt-showdown-automation.mjs";
+import { installHuntShowdownAutomation, forceSyncHunterInventory, toggleBloodMoon, isBloodMoonActive } from "./hunt-showdown-automation.mjs";
 
 const MODULE_ID = "wang-pf2e-homebrew";
 
@@ -735,6 +735,9 @@ Hooks.once("init", () => {
       createAllAiMonsterLoreBooks,
       openPartyTrapDialog,
       applyPartyTrap,
+      forceSyncHunterInventory,
+      toggleBloodMoon,
+      isBloodMoonActive,
     };
   }
   installNightweaverRewards();

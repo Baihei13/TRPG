@@ -656,6 +656,11 @@
         "last-heirloom",
         "alice-farm-machete",
         "rival-nightmare-tea"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntLastHeir1",
+        "whbHuntDorMache1",
+        "whbHuntNightRiv1"
       ]
     }
   }

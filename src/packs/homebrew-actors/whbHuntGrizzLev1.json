@@ -459,6 +459,13 @@
         "tastemaker",
         "bone-broth",
         "final-sip"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntChefKiss1",
+        "whbHuntForkRoad1",
+        "whbHuntTasteMkr1",
+        "whbHuntBoneBroth",
+        "whbHuntFinalSip1"
       ]
     }
   }

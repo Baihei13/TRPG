@@ -593,6 +593,12 @@
       ],
       "loreLinks": [
         "dorothy-alice"
+      ],
+      "preferredLoadoutIds": [
+        "whbHuntRmSwift01",
+        "whbHuntRmApert01",
+        "whbHuntRmTalon01",
+        "whbHuntRedMart01"
       ]
     }
   }

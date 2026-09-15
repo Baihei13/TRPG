@@ -29,7 +29,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "尖锐嘶鸣",
         "traits": {
           "value": [
             "auditory"
@@ -61,7 +61,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "侧垂头颅",
         "traits": {
           "value": []
         }
@@ -91,7 +91,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "不直接攻击",
         "traits": {
           "value": []
         }
@@ -121,7 +121,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "release-bees",
         "traits": {
           "value": []
         }
@@ -151,7 +151,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "release-bees-again",
         "traits": {
           "value": []
         }
@@ -181,7 +181,7 @@
           "remaster": true
         },
         "rules": [],
-        "slug": null,
+        "slug": "惧火",
         "traits": {
           "value": []
         }
