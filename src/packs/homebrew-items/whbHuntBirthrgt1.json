@@ -6,7 +6,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
   "system": {
     "description": {
-      "value": "<p>政治家从一个愚蠢之人的尸体上夺走了这把博恩海姆 3 号手枪，那人根本不知道如何正确使用它。现在它以正义的精准度执行任务，就像某人的天赋权利一样自然，击倒任何阻碍它实现目标的人。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO.3 · BIRTHRIGHT</strong> 从死人手里拿走的「天赋」。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p>同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}：30 尺、1d4、capacity-5、速射扳机（1 动作两次各 −3 同 MAP）。</p>\n<hr />\n<p><strong>天赋权利</strong> 对「挡路/阻挠你目标」的生物（GM 或已标记）攻击 +1 环境。速射时该加值仍适用。</p>",
+      "value": "<p>政治家从一个愚蠢之人的尸体上夺走了这把博恩海姆 3 号手枪，那人根本不知道如何正确使用它。现在它以正义的精准度执行任务，就像某人的天赋权利一样自然，击倒任何阻碍它实现目标的人。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO.3 · BIRTHRIGHT</strong> 从死人手里拿走的「天赋」。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p>同 @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntBornheim1]{Bornheim No.3}：30 尺、1d4、capacity-5、速射扳机（1 动作两次各 −3 同 MAP）。</p>\n<hr />\n<p><strong>天赋权利</strong> 对「挡路/阻挠你目标」的生物（GM 或已标记）攻击 +1 环境。速射时该加值仍适用。</p>",
       "gm": "<p>Bornheim skin「天赋权利」。速射 + 挡路目标 +1。</p>"
     },
     "rules": [
@@ -19,6 +19,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "RollOption",

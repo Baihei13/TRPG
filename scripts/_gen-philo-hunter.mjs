@@ -205,28 +205,33 @@ const resilience = featBase({
 
 const vigilant = featBase({
   id: "whbHuntFtVigil01",
-  name: "专长：警戒 Vigilant",
+  name: "专长：高度警觉 Vigilant",
   slug: "hunt-feat-vigilant",
   img: imgVig,
   cost: 1,
   category: "exploration",
   desc:
-    "<p>暗视中高亮附近陷阱与甲虫。</p>\n<p><strong>猎杀特性花费</strong> 1 点（普通）</p>\n<hr />\n<p>你可以侦察到 <strong>30 尺</strong>内的陷阱与埋伏，即使它们处于隐蔽——对相关 @UUID[Compendium.pf2e.actionspf2e.Item.BlACk2YbfTKJFUBY]{寻求} / 察觉检定获得 <strong>+2 环境加值</strong>（对抗陷阱、拌索、埋伏，打开开关）。</p>",
-  gm: "<p>Hunt Vigilant。1 点。30 尺感知陷阱/埋伏；Seek vs 陷阱 +2（开关）。</p>",
+    "<p>暗视中高亮附近陷阱与甲虫——沼地里谁埋了绊线，你一眼就能感觉到。</p>\n<p><strong>猎杀特性花费</strong> 1 点（普通）</p>\n<hr />\n<p><strong>陷阱感知</strong>（被动）你自动感知 <strong>30 尺</strong>内拌雷、熊陷阱等猎杀陷阱的<strong>存在</strong>（无需掷骰）：隐藏令牌会被揭开，并在聊天提示「高度警觉」。踩上绊线仍会触发。</p>\n<p>对相关 @UUID[Compendium.pf2e.actionspf2e.Item.BlACk2YbfTKJFUBY]{寻求} / 察觉检定（对抗陷阱、拌索、埋伏）还可打开开关获得 <strong>+2 环境加值</strong>。</p>",
+  gm: "<p>Hunt Vigilant / 高度警觉。1 点。30 尺内自动发现拌雷等（揭 hidden）；Seek vs 陷阱 +2（开关）。</p>",
   rules: [
+    {
+      key: "RollOption",
+      domain: "all",
+      option: "self:feat:hunt-feat-vigilant",
+    },
     {
       key: "RollOption",
       option: "hunt-vigilant-traps",
       toggleable: true,
       placement: "actions",
-      label: "警戒 — 侦测陷阱/埋伏",
+      label: "高度警觉 — 侦测陷阱/埋伏（+2）",
     },
     {
       key: "FlatModifier",
       selector: ["perception", "skill-check"],
       type: "circumstance",
       value: 2,
-      label: "警戒",
+      label: "高度警觉",
       predicate: ["hunt-vigilant-traps"],
       hideIfDisabled: true,
     },

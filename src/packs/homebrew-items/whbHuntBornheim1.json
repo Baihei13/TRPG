@@ -5,7 +5,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/bornheim-no3.png",
   "system": {
     "description": {
-      "value": "<p>小型半自动手枪，射速快、后坐力小。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO. 3</strong>（另见半自动手枪）外观超前的 Bornheim No. 3 是最早的半自动手枪之一，配五发弹匣。以设计地城镇命名，商业上成就有限。设计师 Louis Schmeisser 后来设计了更多成功火器。第三型针对瑞士、德国与比利时军试中暴露的缺陷，强化了结构。</p></blockquote>\n<p><strong>熟练</strong> 持用此武器期间视为对其拥有<strong>受训</strong>熟练（无需火器或其他武器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> L；<strong>单手</strong>；<strong>射程增量</strong> 30 尺；<strong>装填</strong> 1；<strong>弹匣容量</strong> 5</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：震荡、横扫、capacity-5</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoPsn01]{毒弹}。</p>\n<hr />\n<p><strong>速射扳机</strong> <span class=\"action-glyph\">1</span> 你以一次操作对同一目标或不同目标进行<strong>两次</strong>以此武器的打击。两次攻击检定各承受 <strong>−3 环境减值</strong>，且<strong>共享同一多重攻击减值</strong>（都按你当前 MAP 结算，不在两次之间加深）。装备时动作栏会出现「Bornheim · 速射扳机」自动结算。</p>",
+      "value": "<p>小型半自动手枪，射速快、后坐力小。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · BORNHEIM NO. 3</strong>（另见半自动手枪）外观超前的 Bornheim No. 3 是最早的半自动手枪之一，配五发弹匣。以设计地城镇命名，商业上成就有限。设计师 Louis Schmeisser 后来设计了更多成功火器。第三型针对瑞士、德国与比利时军试中暴露的缺陷，强化了结构。</p></blockquote>\n<p><strong>熟练</strong> 持用此武器期间视为对其拥有<strong>受训</strong>熟练（无需火器或其他武器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> L；<strong>单手</strong>；<strong>射程增量</strong> 30 尺；<strong>装填</strong> 1；<strong>弹匣容量</strong> 5</p>\n<p><strong>伤害</strong> 1d4 穿刺；特质：震荡、横扫、capacity-5</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：@UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoPsn01]{毒弹}。</p>\n<hr />\n<p><strong>速射扳机</strong> <span class=\"action-glyph\">1</span> 你以一次操作对同一目标或不同目标进行<strong>两次</strong>以此武器的打击。两次攻击检定各承受 <strong>−3 环境减值</strong>，且<strong>共享同一多重攻击减值</strong>（都按你当前 MAP 结算，不在两次之间加深）。装备时动作栏会出现「Bornheim · 速射扳机」自动结算。</p>",
       "gm": "<p>Hunt Bornheim No.3。12 gp。速射扳机：1 动作打两次，各 −3，同 MAP。</p>"
     },
     "rules": [
@@ -18,6 +18,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "Note",

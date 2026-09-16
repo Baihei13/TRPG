@@ -6,7 +6,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/lemat-mark-ii.png",
   "system": {
     "description": {
-      "value": "<p>哈丁警长最喜欢的配枪，据说在<strong>危急时刻</strong>威力十足。</p>\n<blockquote><p><strong>兵器之书 · LEMAT MARK II · BRASS FLOWER</strong> 九连发 + 霰弹筒；危急时砸下去最响。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>左轮模式</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 9；伤害 1d8 穿刺；震荡、capacity-9</p>\n<p><strong>重拳（霰弹）</strong> 动作栏打击：射程增量 <strong>20 尺</strong>；1d8 穿刺；每场建议 1–2 发。命中：强韧 DC（14+等级×2）失败则 @UUID[Compendium.pf2e.conditionitems.Item.i3OJUmM1V6L8Lkbg]{击倒}（或退 5 尺）。</p>\n<hr />\n<p><strong>危急时刻</strong>（开关或半血自动）当你 HP ≤ 一半，或打开开关时：以此武器造成的伤害额外 @Damage[1d6[piercing]]。他最爱的配枪——筹码见底时才最狠。</p>",
+      "value": "<p>哈丁警长最喜欢的配枪，据说在<strong>危急时刻</strong>威力十足。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · LEMAT MARK II · BRASS FLOWER</strong> 九连发 + 霰弹筒；危急时砸下去最响。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>左轮模式</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 9；伤害 1d8 穿刺；震荡、capacity-9</p>\n<p><strong>重拳（霰弹）</strong> 动作栏打击：射程增量 <strong>20 尺</strong>；1d8 穿刺；每场建议 1–2 发。命中：强韧 DC（14+等级×2）失败则 @UUID[Compendium.pf2e.conditionitems.Item.i3OJUmM1V6L8Lkbg]{击倒}（或退 5 尺）。</p>\n<hr />\n<p><strong>危急时刻</strong>（开关或半血自动）当你 HP ≤ 一半，或打开开关时：以此武器造成的伤害额外 @Damage[1d6[piercing]]。他最爱的配枪——筹码见底时才最狠。</p>",
       "gm": "<p>LeMat skin「黄铜花」。1d8/40/cap9 + 霰弹。危急时刻 +1d6。</p>"
     },
     "rules": [
@@ -19,6 +19,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "RollOption",

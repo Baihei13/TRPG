@@ -6,7 +6,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/mako-1895.png",
   "system": {
     "description": {
-      "value": "<p>人们常说政治没有金钱可赚——也就是说，为职位服务没有金钱可赚。然而，友谊和人情关系随着时间的推移却能带来丰厚的回报，而这位马科可以立即完成剩下的工作。</p>\n<blockquote><p><strong>兵器之书 · MAKO 1895 · FALSE INHERITANCE</strong> 人情收尾，枪做公证人。</p></blockquote>\n<p>同辩论结束基底：1d12、110 尺、fatal-d12。</p>\n<hr />\n<p><strong>人情公证</strong> 若目标本场曾与你交涉成功/失败，或你宣称「人情债」（GM），命中造成额外 @Damage[1d8[precision]]（一次了结）。</p>",
+      "value": "<p>人们常说政治没有金钱可赚——也就是说，为职位服务没有金钱可赚。然而，友谊和人情关系随着时间的推移却能带来丰厚的回报，而这位马科可以立即完成剩下的工作。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · MAKO 1895 · FALSE INHERITANCE</strong> 人情收尾，枪做公证人。</p></blockquote>\n<p>同辩论结束基底：1d12、110 尺、fatal-d12。</p>\n<hr />\n<p><strong>人情公证</strong> 若目标本场曾与你交涉成功/失败，或你宣称「人情债」（GM），命中造成额外 @Damage[1d8[precision]]（一次了结）。</p>",
       "gm": "<p>Mako skin「虚假的继承」。人情债 +1d8 精密。</p>"
     },
     "rules": [
@@ -19,6 +19,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "RollOption",

@@ -6,7 +6,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/officer.png",
   "system": {
     "description": {
-      "value": "<p>这把左轮手枪被惠特洛指挥官发现后，经过重新改装，恢复了最佳状态，得以继续它最初的用途：让子弹划破夜空，发出呼啸的声响，为每一个勇敢扣动扳机的人带来<strong>自由</strong>。</p>\n<blockquote><p><strong>兵器之书 · OFFICER · LET FREEDOM SING</strong> 纳甘军官双动：射速高，枪声像自由的歌。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 7</p>\n<p><strong>伤害</strong> 1d6 穿刺；特质：震荡、agile、capacity-7</p>\n<hr />\n<p><strong>自由之歌</strong> 你可以一次操作发动两次此武器打击，共享 MAP，第二次 −2 环境（双动射速）。</p>\n<p><strong>稳住手</strong> 持用此武器期间，对抗恐惧与颤抖类效应的豁免 +1 环境（枪稳住手——也对准盟友）。</p>",
+      "value": "<p>这把左轮手枪被惠特洛指挥官发现后，经过重新改装，恢复了最佳状态，得以继续它最初的用途：让子弹划破夜空，发出呼啸的声响，为每一个勇敢扣动扳机的人带来<strong>自由</strong>。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · OFFICER · LET FREEDOM SING</strong> 纳甘军官双动：射速高，枪声像自由的歌。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；负载 1；单手；射程增量 <strong>40 尺</strong>；装填 1；弹巢 7</p>\n<p><strong>伤害</strong> 1d6 穿刺；特质：震荡、agile、capacity-7</p>\n<hr />\n<p><strong>自由之歌</strong> 你可以一次操作发动两次此武器打击，共享 MAP，第二次 −2 环境（双动射速）。</p>\n<p><strong>稳住手</strong> 持用此武器期间，对抗恐惧与颤抖类效应的豁免 +1 环境（枪稳住手——也对准盟友）。</p>",
       "gm": "<p>Officer skin「Let Freedom Sing / 让自由之歌」。1d6 agile、40ft、cap7。双动双击；持枪抗恐惧 +1。</p>"
     },
     "rules": [
@@ -19,6 +19,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "FlatModifier",

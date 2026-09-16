@@ -6,7 +6,7 @@
   "img": "modules/wang-pf2e-homebrew/assets/hunt/mosin-avtomat.png",
   "system": {
     "description": {
-      "value": "<p>铁甲战士不在乎什么隐蔽或委婉。这支<strong>莫辛-纳甘自动步枪</strong>是他最爱用来展现残忍死亡的手段。这支步枪扫射出的子弹完全无视受害者的立场。</p>\n<blockquote><p><strong>兵器之书 · MOSIN-NAGANT AVTOMAT · THAT'S LIFE</strong> 俄制栓动步枪改装自动机与加大弹匣：昂贵、嘈杂、弹药饥渴——却是权力对峙时最直白的答案。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训（无需火器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 100 尺；<strong>装填</strong> 1；弹匣容量 15</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、volley、capacity-15</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：达姆/毒/穿甲等同族长弹。</p>\n<hr />\n<p><strong>无视立场</strong> 以此武器发动的打击<strong>忽略</strong>目标因<strong>掩蔽</strong>与<strong>举盾</strong>获得的 AC 环境加值，并忽略目标的 @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{隐蔽}（无需持平检定；对躲藏等更强隐蔽无效，GM 裁定）。</p>\n<p><strong>扫射连发</strong>（开关）开启时，你可用一次操作发动<strong>两次</strong>此武器打击，各附加 −3 环境罚值，共享同一 MAP（弹药各耗 1）。每回合限用 1 次成功结算后建议关闭开关。</p>",
+      "value": "<p>铁甲战士不在乎什么隐蔽或委婉。这支<strong>莫辛-纳甘自动步枪</strong>是他最爱用来展现残忍死亡的手段。这支步枪扫射出的子弹完全无视受害者的立场。</p>\n<p><strong>主属性</strong> 装备/获取时自选本枪<strong>攻击与伤害</strong>使用的主属性（力量/敏捷/体质/智力/感知/魅力）；默认火器敏捷加成会被替换。</p>\n<blockquote><p><strong>兵器之书 · MOSIN-NAGANT AVTOMAT · THAT'S LIFE</strong> 俄制栓动步枪改装自动机与加大弹匣：昂贵、嘈杂、弹药饥渴——却是权力对峙时最直白的答案。</p></blockquote>\n<p><strong>熟练</strong> 持用期间视为受训（无需火器熟练）。</p>\n<hr />\n<p><strong>类别</strong> 军用火器；<strong>负载</strong> 2；<strong>双手</strong>；<strong>射程增量</strong> 100 尺；<strong>装填</strong> 1；弹匣容量 15</p>\n<p><strong>伤害</strong> 1d10 穿刺；特质：震荡、volley、capacity-15</p>\n<p><strong>弹药</strong> @UUID[Compendium.wang-pf2e-homebrew.homebrew-items.Item.whbHuntAmmoStd01]{标准枪弹}；特殊：达姆/毒/穿甲等同族长弹。</p>\n<hr />\n<p><strong>无视立场</strong> 以此武器发动的打击<strong>忽略</strong>目标因<strong>掩蔽</strong>与<strong>举盾</strong>获得的 AC 环境加值，并忽略目标的 @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{隐蔽}（无需持平检定；对躲藏等更强隐蔽无效，GM 裁定）。</p>\n<p><strong>扫射连发</strong>（开关）开启时，你可用一次操作发动<strong>两次</strong>此武器打击，各附加 −3 环境罚值，共享同一 MAP（弹药各耗 1）。每回合限用 1 次成功结算后建议关闭开关。</p>",
       "gm": "<p>Hunt Mosin-Nagant Avtomat skin「That's Life / 这就是人生」。铁甲战士主题。1d10 P、capacity-15、无视掩蔽/举盾 circ 与隐蔽。扫射开关双击 −3。</p>"
     },
     "rules": [
@@ -19,6 +19,182 @@
         ],
         "value": 1,
         "requiresInvestment": false
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "huntFirearmAbility",
+        "prompt": "选择本枪攻击与伤害使用的主属性",
+        "adjustName": false,
+        "rollOption": "hunt-firearm-ability",
+        "choices": [
+          {
+            "label": "力量",
+            "value": "str"
+          },
+          {
+            "label": "敏捷",
+            "value": "dex"
+          },
+          {
+            "label": "体质",
+            "value": "con"
+          },
+          {
+            "label": "智力",
+            "value": "int"
+          },
+          {
+            "label": "感知",
+            "value": "wis"
+          },
+          {
+            "label": "魅力",
+            "value": "cha"
+          }
+        ]
+      },
+      {
+        "key": "AdjustModifier",
+        "selector": "{item|_id}-attack",
+        "predicate": [
+          "modifier:type:ability",
+          {
+            "not": "modifier:slug:hunt-firearm-ability"
+          }
+        ],
+        "suppress": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "str",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·力量",
+        "predicate": [
+          "hunt-firearm-ability:str"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "dex",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·敏捷",
+        "predicate": [
+          "hunt-firearm-ability:dex"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "con",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·体质",
+        "predicate": [
+          "hunt-firearm-ability:con"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "int",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·智力",
+        "predicate": [
+          "hunt-firearm-ability:int"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "wis",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·感知",
+        "predicate": [
+          "hunt-firearm-ability:wis"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-attack",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "{item|_id}-damage",
+        "type": "ability",
+        "ability": "cha",
+        "slug": "hunt-firearm-ability-damage",
+        "label": "猎杀武装·魅力",
+        "predicate": [
+          "hunt-firearm-ability:cha"
+        ]
       },
       {
         "key": "RollOption",

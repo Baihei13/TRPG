@@ -1766,11 +1766,78 @@ async function dealSimpleDamage(actor, formula, { type = "untyped", token = null
   }
 }
 
+function actorHasVigilant(actor) {
+  if (!actor) return false;
+  if (actor.getFlag?.(MODULE_ID, "huntVigilant")) return true;
+  const feats = actor.itemTypes?.feat ?? actor.items?.filter?.((i) => i.type === "feat") ?? [];
+  for (const f of feats) {
+    if (f.flags?.[MODULE_ID]?.huntVigilant) return true;
+    if (f.id === "whbHuntFtVigil01" || f.sourceId?.includes?.("whbHuntFtVigil01")) return true;
+    if (f.slug === "hunt-feat-vigilant" || f.system?.slug === "hunt-feat-vigilant") return true;
+    if (/高度警觉|警戒\s*Vigilant|\bVigilant\b/i.test(f.name || "")) return true;
+  }
+  try {
+    if (actor.rollOptions?.all?.["self:feat:hunt-feat-vigilant"]) return true;
+  } catch (_) {
+    /* ignore */
+  }
+  return false;
+}
+
+/** 高度警觉：范围内直接感知陷阱存在（无需掷骰），并揭开隐藏令牌 */
+async function revealTripMineToVigilant(viewer, hazardTok, { rangeFeet = 30 } = {}) {
+  const hazard = hazardTok?.actor;
+  if (!viewer || !hazard) return false;
+  const noticed = hazard.getFlag(MODULE_ID, "tripMineNoticed") || [];
+  if (noticed.includes(viewer.id)) {
+    // 已发现过：若仍 hidden，再揭一次（例如 GM 又藏了）
+    if (hazardTok.document.hidden) await hazardTok.document.update({ hidden: false });
+    return true;
+  }
+  await hazard.setFlag(MODULE_ID, "tripMineNoticed", [...noticed, viewer.id]);
+  if (hazardTok.document.hidden) {
+    await hazardTok.document.update({ hidden: false });
+  }
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: viewer }),
+    content: `<p><strong>高度警觉</strong>：${viewer.name} 感知到 <strong>${rangeFeet} 尺</strong>内有陷阱 — <em>${hazard.name}</em>。</p>`,
+  });
+  return true;
+}
+
+async function runVigilantTrapSense(viewerTok, { rangeFeet = 30 } = {}) {
+  const viewer = viewerTok?.actor;
+  if (!viewerTok || !viewer || !actorHasVigilant(viewer)) return;
+  if (viewer.type === "hazard") return;
+
+  const hazards = (canvas.tokens?.placeables ?? []).filter((t) => {
+    const a = t.actor;
+    if (!a || a.type !== "hazard") return false;
+    if (a.getFlag(MODULE_ID, "tripMineTriggered")) return false;
+    return Boolean(tripMineKind(a));
+  });
+
+  for (const hz of hazards) {
+    if (!tokensWithinFeet(viewerTok, hz, rangeFeet)) continue;
+    const key = `vigilant:${viewerTok.id}:${hz.id}`;
+    if (handled.has(key)) continue;
+    handled.add(key);
+    setTimeout(() => handled.delete(key), 4000);
+    await revealTripMineToVigilant(viewer, hz, { rangeFeet });
+  }
+}
+
 async function noticeTripMine(mover, hazardTok) {
   const hazard = hazardTok.actor;
   if (!hazard) return false;
   const noticed = hazard.getFlag(MODULE_ID, "tripMineNoticed") || [];
   if (noticed.includes(mover.id)) return true;
+
+  // 高度警觉：无需掷骰即可发现
+  if (actorHasVigilant(mover)) {
+    return revealTripMineToVigilant(mover, hazardTok, { rangeFeet: 30 });
+  }
+
   const dc = tripMineStealthDc(hazard);
   let total = null;
   try {
@@ -1935,7 +2002,7 @@ function installTripMineHooks() {
     await deployTripMineFromActor(actor, spec);
   });
 
-  // 靠近自动察觉；踩上绊线格自动触发
+  // 靠近自动察觉；踩上绊线格自动触发；高度警觉被动感知
   Hooks.on("updateToken", async (tokenDoc, changes) => {
     if (!game.user.isGM) return;
     if (changes.x === undefined && changes.y === undefined) return;
@@ -1943,6 +2010,13 @@ function installTripMineHooks() {
     const mover = tokenDoc.actor;
     if (!moverTok || !mover || mover.type === "hazard") return;
     if (mover.flags?.[MODULE_ID]?.tripMine) return;
+
+    // 高度警觉：30 尺内直接看到陷阱存在
+    await runVigilantTrapSense(moverTok, { rangeFeet: 30 });
+    for (const t of canvas.tokens?.placeables ?? []) {
+      if (t === moverTok || !t.actor || t.actor.type === "hazard") continue;
+      if (actorHasVigilant(t.actor)) await runVigilantTrapSense(t, { rangeFeet: 30 });
+    }
 
     const hazards = (canvas.tokens?.placeables ?? []).filter((t) => {
       const a = t.actor;
@@ -1968,6 +2042,23 @@ function installTripMineHooks() {
         await triggerTripMine(moverTok, hz);
       }
     }
+  });
+
+  // 新放下的拌雷：立刻被附近高度警觉猎人感知
+  Hooks.on("createToken", async (tokenDoc) => {
+    if (!game.user.isGM) return;
+    await foundry.utils.delay(100);
+    const tok = tokenDoc.object;
+    const actor = tokenDoc.actor;
+    if (!tok || !actor) return;
+    if (actor.type === "hazard" && tripMineKind(actor)) {
+      for (const t of canvas.tokens?.placeables ?? []) {
+        if (!t.actor || t.actor.type === "hazard") continue;
+        if (actorHasVigilant(t.actor)) await runVigilantTrapSense(t, { rangeFeet: 30 });
+      }
+      return;
+    }
+    if (actorHasVigilant(actor)) await runVigilantTrapSense(tok, { rangeFeet: 30 });
   });
 }
 
@@ -2624,5 +2715,5 @@ export function installHuntShowdownAutomation() {
     findBySlug,
     getPackItem,
   });
-  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.36.12 trip-mine harden)`);
+  console.log(`${MODULE_ID} | Hunt: Showdown automation ready (v1.36.14 vigilant trap sense)`);
 }
